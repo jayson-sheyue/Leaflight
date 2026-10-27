@@ -1,0 +1,1330 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "en-ielts",
+      "language": "en",
+      "title": {
+        "zh": "雅思题型训练",
+        "en": "IELTS-style practice",
+        "ja": "IELTS 形式の練習"
+      }
+    },
+    {
+      "id": "ja-eju",
+      "language": "ja",
+      "title": {
+        "zh": "EJU 记述型训练",
+        "en": "EJU-style essays",
+        "ja": "EJU 記述形式の練習"
+      }
+    },
+    {
+      "id": "ja-daily",
+      "language": "ja",
+      "title": {
+        "zh": "日语生活场景",
+        "en": "Japanese everyday situations",
+        "ja": "日常場面の日本語"
+      }
+    },
+    {
+      "id": "en-primary",
+      "language": "en",
+      "title": {
+        "zh": "小学 · 观察与叙事",
+        "en": "Elementary · observation & storytelling",
+        "ja": "小学校 · 観察と物語"
+      }
+    },
+    {
+      "id": "en-middle",
+      "language": "en",
+      "title": {
+        "zh": "初中 · 说明与观点",
+        "en": "Middle school · explanation & opinions",
+        "ja": "中学校 · 説明と意見"
+      }
+    },
+    {
+      "id": "en-high",
+      "language": "en",
+      "title": {
+        "zh": "高中 · 分析与论证",
+        "en": "High school · analysis & argument",
+        "ja": "高校 · 分析と論証"
+      }
+    },
+    {
+      "id": "en-university",
+      "language": "en",
+      "title": {
+        "zh": "大学 · 综合与思辨",
+        "en": "University · synthesis & critical writing",
+        "ja": "大学 · 統合と批判的思考"
+      }
+    },
+    {
+      "id": "ja-primary",
+      "language": "ja",
+      "title": {
+        "zh": "小学 · 观察与叙事",
+        "en": "Elementary · observation & storytelling",
+        "ja": "小学校 · 観察と物語"
+      }
+    },
+    {
+      "id": "ja-middle",
+      "language": "ja",
+      "title": {
+        "zh": "初中 · 说明与观点",
+        "en": "Middle school · explanation & opinions",
+        "ja": "中学校 · 説明と意見"
+      }
+    },
+    {
+      "id": "ja-high",
+      "language": "ja",
+      "title": {
+        "zh": "高中 · 分析与论证",
+        "en": "High school · analysis & argument",
+        "ja": "高校 · 分析と論証"
+      }
+    },
+    {
+      "id": "ja-university",
+      "language": "ja",
+      "title": {
+        "zh": "大学 · 综合与思辨",
+        "en": "University · synthesis & critical writing",
+        "ja": "大学 · 統合と批判的思考"
+      }
+    }
+  ],
+  "topics": [
+    {
+      "id": "en-ielts-library",
+      "version": 1,
+      "language": "en",
+      "category": "en-ielts",
+      "title": {
+        "zh": "图表描述：图书馆活动",
+        "en": "Table report: library activities",
+        "ja": "図表説明：図書館の活動"
+      },
+      "prompt": "A community library recorded attendance at three types of workshop in 2019 and 2024. Write a report for the library committee describing the main features of the table and making relevant comparisons. Write at least 150 words.",
+      "requirements": [
+        "Include an overview of the main changes.",
+        "Compare categories and support comparisons with figures.",
+        "Report only what the supplied data shows; do not invent causes."
+      ],
+      "focus": [
+        "Overview before detail",
+        "Accurate comparisons and quantities",
+        "Neutral reporting style"
+      ],
+      "planning": [
+        "Which activity changed most?",
+        "Which category remained most popular?",
+        "How can you group similar trends?"
+      ],
+      "length": {
+        "min": 150,
+        "max": 200,
+        "unit": "words"
+      },
+      "minutes": 20,
+      "materials": "Original simulated data — workshop attendances (not unique people):\nActivity | 2019 | 2024\nCreative writing | 80 | 140\nDigital skills | 160 | 220\nLocal history | 120 | 100"
+    },
+    {
+      "id": "en-ielts-process",
+      "version": 1,
+      "language": "en",
+      "category": "en-ielts",
+      "title": {
+        "zh": "流程说明：循环使用杯子",
+        "en": "Process report: reusable cups",
+        "ja": "工程説明：リユースカップ"
+      },
+      "prompt": "The sequence below shows how a campus café operates its reusable-cup system. Describe the process for someone unfamiliar with it. Write at least 150 words.",
+      "requirements": [
+        "Give an overview of the cycle.",
+        "Cover every supplied stage in a clear order.",
+        "Distinguish the customer steps from the café steps."
+      ],
+      "focus": [
+        "Sequencing",
+        "Passive and active voice",
+        "Precise process vocabulary"
+      ],
+      "planning": [
+        "Where does the cycle begin and end?",
+        "Which steps are performed by staff?",
+        "Which details must not be added?"
+      ],
+      "length": {
+        "min": 150,
+        "max": 200,
+        "unit": "words"
+      },
+      "minutes": 20,
+      "materials": "Original process information:\n1. Customer pays a deposit and receives a reusable cup.\n2. After use, the cup goes into a return kiosk.\n3. Kiosk refunds the deposit.\n4. Staff collect returned cups.\n5. Cups are washed, inspected and dried.\n6. Clean cups return to the café counter."
+    },
+    {
+      "id": "en-ielts-transport",
+      "version": 1,
+      "language": "en",
+      "category": "en-ielts",
+      "title": {
+        "zh": "观点论证：公共交通",
+        "en": "Opinion essay: public transport",
+        "ja": "意見文：公共交通"
+      },
+      "prompt": "Some people believe cities should make public transport free for all residents. To what extent do you agree or disagree? Write at least 250 words, giving reasons and relevant examples.",
+      "requirements": [
+        "State a clear position and maintain it.",
+        "Develop at least two reasons with examples.",
+        "Consider a cost or limitation rather than claiming the policy solves every problem."
+      ],
+      "focus": [
+        "Task response",
+        "Supported argument",
+        "Concessions and coherent paragraphs"
+      ],
+      "planning": [
+        "Who benefits most?",
+        "Who would pay for the service?",
+        "Would your view change in a small town?"
+      ],
+      "length": {
+        "min": 250,
+        "max": 320,
+        "unit": "words"
+      },
+      "minutes": 40,
+      "materials": ""
+    },
+    {
+      "id": "en-ielts-study",
+      "version": 1,
+      "language": "en",
+      "category": "en-ielts",
+      "title": {
+        "zh": "双边讨论：线上与课堂",
+        "en": "Discussion: online and classroom study",
+        "ja": "両論の検討：オンラインと教室"
+      },
+      "prompt": "Some people think online courses are the best way for adults to learn new skills. Others prefer learning in a classroom. Discuss both views and give your own opinion. Write at least 250 words.",
+      "requirements": [
+        "Explain both views fairly.",
+        "Give your own opinion, supported by reasons.",
+        "Use examples relevant to adult learning."
+      ],
+      "focus": [
+        "Balanced discussion",
+        "Clear personal position",
+        "Links between claims and examples"
+      ],
+      "planning": [
+        "What does flexibility change?",
+        "When does direct feedback matter?",
+        "Can your conclusion depend on the skill being learned?"
+      ],
+      "length": {
+        "min": 250,
+        "max": 320,
+        "unit": "words"
+      },
+      "minutes": 40,
+      "materials": ""
+    },
+    {
+      "id": "en-ielts-waste",
+      "version": 1,
+      "language": "en",
+      "category": "en-ielts",
+      "title": {
+        "zh": "问题解决：食物浪费",
+        "en": "Problem–solution: food waste",
+        "ja": "問題と解決：食品ロス"
+      },
+      "prompt": "Many households throw away food that could still be eaten. What are the main causes, and what practical measures could reduce this waste? Write at least 250 words.",
+      "requirements": [
+        "Explain causes rather than only describing the problem.",
+        "Connect each proposed measure to a cause.",
+        "Discuss one realistic obstacle to implementation."
+      ],
+      "focus": [
+        "Cause and effect",
+        "Specific solutions",
+        "Scope and feasibility"
+      ],
+      "planning": [
+        "At which point is food wasted?",
+        "What could a household change this week?",
+        "Which measure needs action outside the home?"
+      ],
+      "length": {
+        "min": 250,
+        "max": 320,
+        "unit": "words"
+      },
+      "minutes": 40,
+      "materials": ""
+    },
+    {
+      "id": "en-ielts-letter",
+      "version": 1,
+      "language": "en",
+      "category": "en-ielts",
+      "title": {
+        "zh": "场景书信：活动时间调整",
+        "en": "Letter: changing a workshop time",
+        "ja": "場面別の手紙：講座の時間変更"
+      },
+      "prompt": "You attend a weekly community writing workshop, but its new starting time conflicts with your work. Write a letter to the organiser. Write at least 150 words.",
+      "requirements": [
+        "Explain the conflict and how it affects attendance.",
+        "Describe why you want to continue the workshop.",
+        "Suggest an alternative and ask for a response."
+      ],
+      "focus": [
+        "Clear communicative purpose",
+        "Appropriate semi-formal tone",
+        "Covering all three points"
+      ],
+      "planning": [
+        "What should the organiser know immediately?",
+        "How can you make a practical request politely?",
+        "What response do you need?"
+      ],
+      "length": {
+        "min": 150,
+        "max": 200,
+        "unit": "words"
+      },
+      "minutes": 20,
+      "materials": ""
+    },
+    {
+      "id": "en-primary-place",
+      "version": 1,
+      "language": "en",
+      "category": "en-primary",
+      "title": {
+        "zh": "观察描写：一个熟悉的地方",
+        "en": "A place you know well",
+        "ja": "よく知っている場所"
+      },
+      "prompt": "Describe a place you know well for a friend who has never visited it. It may be a room, a shop, a park or an imagined place.",
+      "requirements": [
+        "Say where the place is.",
+        "Describe at least three details you can see, hear or smell.",
+        "Explain how you feel there."
+      ],
+      "focus": [
+        "Concrete nouns and adjectives",
+        "Simple complete sentences",
+        "An opening and a closing"
+      ],
+      "planning": [
+        "What would your friend notice first?",
+        "Which detail makes the place special?",
+        "Can the reader picture it without a photograph?"
+      ],
+      "length": {
+        "min": 50,
+        "max": 90,
+        "unit": "words"
+      },
+      "minutes": 10,
+      "materials": ""
+    },
+    {
+      "id": "en-primary-change",
+      "version": 1,
+      "language": "en",
+      "category": "en-primary",
+      "title": {
+        "zh": "小故事：计划改变的一天",
+        "en": "A day when the plan changed",
+        "ja": "予定が変わった一日"
+      },
+      "prompt": "Tell a short story about a day when a small surprise changed a plan. The event can be real or invented.",
+      "requirements": [
+        "Introduce the original plan.",
+        "Tell what changed and what happened next.",
+        "Finish with a feeling or lesson."
+      ],
+      "focus": [
+        "Beginning, middle and end",
+        "Past-tense consistency",
+        "Time words"
+      ],
+      "planning": [
+        "What was supposed to happen?",
+        "What decision did someone make?",
+        "How did the day end?"
+      ],
+      "length": {
+        "min": 60,
+        "max": 100,
+        "unit": "words"
+      },
+      "minutes": 15,
+      "materials": ""
+    },
+    {
+      "id": "en-primary-club",
+      "version": 1,
+      "language": "en",
+      "category": "en-primary",
+      "title": {
+        "zh": "表达愿望：为社团选活动",
+        "en": "Choose an activity for a club",
+        "ja": "クラブの活動を選ぼう"
+      },
+      "prompt": "Your school or community club can hold one new activity next month. Suggest an activity and persuade the members to try it.",
+      "requirements": [
+        "Name the activity and your opinion.",
+        "Give two different reasons.",
+        "End with a clear recommendation."
+      ],
+      "focus": [
+        "Opinion and reasons",
+        "Because and so",
+        "Respectful persuasion"
+      ],
+      "planning": [
+        "Who would enjoy it?",
+        "What would members learn or gain?",
+        "What simple materials would it need?"
+      ],
+      "length": {
+        "min": 60,
+        "max": 100,
+        "unit": "words"
+      },
+      "minutes": 15,
+      "materials": ""
+    },
+    {
+      "id": "en-middle-explain",
+      "version": 1,
+      "language": "en",
+      "category": "en-middle",
+      "title": {
+        "zh": "步骤说明：把技能教给别人",
+        "en": "Teach someone a useful skill",
+        "ja": "役立つ技能を教える"
+      },
+      "prompt": "Write instructions for a new club member who wants to learn a useful skill you know, such as planning a short walk or organising a study session.",
+      "requirements": [
+        "State the goal and any preparation needed.",
+        "Explain the main steps in a logical order.",
+        "Warn about one common mistake and explain how to avoid it."
+      ],
+      "focus": [
+        "Audience awareness",
+        "Clear sequencing",
+        "Specific verbs"
+      ],
+      "planning": [
+        "What does a beginner not know?",
+        "Which step depends on an earlier one?",
+        "How can the reader check that they succeeded?"
+      ],
+      "length": {
+        "min": 150,
+        "max": 220,
+        "unit": "words"
+      },
+      "minutes": 25,
+      "materials": ""
+    },
+    {
+      "id": "en-middle-policy",
+      "version": 1,
+      "language": "en",
+      "category": "en-middle",
+      "title": {
+        "zh": "提出建议：图书馆安静区",
+        "en": "Should a library have a quiet zone?",
+        "ja": "図書館の静かなエリア"
+      },
+      "prompt": "A local library wants to choose between adding more quiet desks and adding a group-discussion area. Write a recommendation to the librarian.",
+      "requirements": [
+        "State which option you recommend.",
+        "Give reasons and a concrete example.",
+        "Acknowledge one benefit of the other option."
+      ],
+      "focus": [
+        "Claim, evidence and explanation",
+        "Paragraph unity",
+        "Acknowledging another view"
+      ],
+      "planning": [
+        "Who uses the library at different times?",
+        "What example supports your claim?",
+        "Is a compromise possible?"
+      ],
+      "length": {
+        "min": 180,
+        "max": 250,
+        "unit": "words"
+      },
+      "minutes": 30,
+      "materials": ""
+    },
+    {
+      "id": "en-middle-decision",
+      "version": 1,
+      "language": "en",
+      "category": "en-middle",
+      "title": {
+        "zh": "叙事反思：一次困难选择",
+        "en": "A difficult choice",
+        "ja": "難しい選択"
+      },
+      "prompt": "Write a story for a class or community magazine about a person who has to choose between keeping a promise and accepting an unexpected opportunity.",
+      "requirements": [
+        "Show the situation and both options.",
+        "Use an action or dialogue to reveal the decision.",
+        "Reflect on a consequence without simply stating a moral."
+      ],
+      "focus": [
+        "Cause and consequence",
+        "Dialogue punctuation",
+        "Reflection grounded in events"
+      ],
+      "planning": [
+        "Why do both options matter?",
+        "Which detail shows hesitation?",
+        "What changes after the decision?"
+      ],
+      "length": {
+        "min": 180,
+        "max": 260,
+        "unit": "words"
+      },
+      "minutes": 30,
+      "materials": ""
+    },
+    {
+      "id": "en-high-evidence",
+      "version": 1,
+      "language": "en",
+      "category": "en-high",
+      "title": {
+        "zh": "论证写作：校园手机规则",
+        "en": "Argument: a campus phone policy",
+        "ja": "論証：校内のスマートフォン規則"
+      },
+      "prompt": "Write an argument for a student newspaper about whether phones should be kept out of lessons. Use the supplied scenario and consider a counterargument.",
+      "requirements": [
+        "Present a qualified claim.",
+        "Use the supplied information accurately.",
+        "Address an opposing argument and acknowledge what the information cannot prove."
+      ],
+      "focus": [
+        "Claim and counterclaim",
+        "Evidence limitations",
+        "Formal yet readable style"
+      ],
+      "planning": [
+        "Do the figures prove a causal link?",
+        "How might an exception work?",
+        "Which objection is strongest?"
+      ],
+      "length": {
+        "min": 300,
+        "max": 450,
+        "unit": "words"
+      },
+      "minutes": 40,
+      "materials": "Original fictional scenario: In a voluntary survey of 80 students, 46 reported checking messages during lessons. Of 12 teachers interviewed, 8 supported phone-free lessons and 4 favoured teacher discretion. No comparison of grades was conducted."
+    },
+    {
+      "id": "en-high-reading",
+      "version": 1,
+      "language": "en",
+      "category": "en-high",
+      "title": {
+        "zh": "文本分析：门口的钥匙",
+        "en": "Close reading: a key at the door",
+        "ja": "文章分析：戸口の鍵"
+      },
+      "prompt": "Analyse how the short passage uses actions and objects to suggest an emotion that is never named. Develop one interpretation using evidence from the passage.",
+      "requirements": [
+        "State an interpretive claim.",
+        "Discuss at least two specific textual details.",
+        "Explain an alternative interpretation or an uncertainty."
+      ],
+      "focus": [
+        "Close reading",
+        "Analysis rather than plot summary",
+        "Short quotations with explanation"
+      ],
+      "planning": [
+        "What does the key represent in this scene?",
+        "What does the narrator leave unsaid?",
+        "Could the actions suggest more than one feeling?"
+      ],
+      "length": {
+        "min": 300,
+        "max": 450,
+        "unit": "words"
+      },
+      "minutes": 40,
+      "materials": "Original passage: At the door, Nora put the key in the lock, then drew it out. Through the glass she could see two cups on the table. She straightened the mat with her shoe, although it was already straight. When a chair moved inside, she slipped the key into her pocket and knocked."
+    },
+    {
+      "id": "en-high-perspective",
+      "version": 1,
+      "language": "en",
+      "category": "en-high",
+      "title": {
+        "zh": "叙事技巧：同一场景的两种声音",
+        "en": "Two voices, one scene",
+        "ja": "同じ場面、二つの声"
+      },
+      "prompt": "Write a scene in which two people remember a shared event differently. Let the contrast emerge through dialogue, details and a shift in perspective.",
+      "requirements": [
+        "Keep the underlying event consistent.",
+        "Give each character a distinct but plausible viewpoint.",
+        "Use an ending that changes the reader’s understanding."
+      ],
+      "focus": [
+        "Point of view",
+        "Subtext and selective detail",
+        "Controlled transitions"
+      ],
+      "planning": [
+        "What does each person notice or omit?",
+        "Where can a small detail expose the difference?",
+        "How will the reader know whose perspective is active?"
+      ],
+      "length": {
+        "min": 350,
+        "max": 500,
+        "unit": "words"
+      },
+      "minutes": 45,
+      "materials": ""
+    },
+    {
+      "id": "en-university-synthesis",
+      "version": 1,
+      "language": "en",
+      "category": "en-university",
+      "title": {
+        "zh": "材料综合：混合式学习",
+        "en": "Synthesis: hybrid learning",
+        "ja": "資料の統合：ハイブリッド学習"
+      },
+      "prompt": "Write an analytical essay answering: under what conditions might hybrid courses improve access without reducing interaction? Use both supplied source notes and distinguish evidence from your own proposals.",
+      "requirements": [
+        "Develop a focused thesis instead of listing pros and cons.",
+        "Put both sources into conversation and attribute them as Source A and Source B.",
+        "Acknowledge limitations and propose a conditional conclusion."
+      ],
+      "focus": [
+        "Synthesis and attribution",
+        "Qualified claims",
+        "Evidence versus interpretation"
+      ],
+      "planning": [
+        "Where do the sources agree?",
+        "Does access mean the same thing for every learner?",
+        "What evidence would you need before generalising?"
+      ],
+      "length": {
+        "min": 600,
+        "max": 850,
+        "unit": "words"
+      },
+      "minutes": 60,
+      "materials": "Original fictional source notes, created for this exercise:\nSource A: A commuter college piloted recorded lectures in one evening course. Some students reported easier scheduling, but the voluntary survey did not include students who withdrew.\nSource B: In interviews with a different course, several students valued live discussion for clarifying misunderstandings; others said small online groups made speaking easier. Neither source measured long-term learning gains."
+    },
+    {
+      "id": "en-university-proposal",
+      "version": 1,
+      "language": "en",
+      "category": "en-university",
+      "title": {
+        "zh": "方案论证：共享自习空间",
+        "en": "Proposal: shared study spaces",
+        "ja": "提案：共用の学習スペース"
+      },
+      "prompt": "Write a proposal to a university committee for allocating an unused room between silent study and collaborative work. Make your assumptions explicit and develop an implementable plan.",
+      "requirements": [
+        "Define the problem and the groups affected.",
+        "Compare at least two options with criteria and trade-offs.",
+        "Propose a trial, a way to evaluate it and a response if it fails."
+      ],
+      "focus": [
+        "Problem definition",
+        "Feasibility and trade-offs",
+        "Evaluation design"
+      ],
+      "planning": [
+        "Which constraints matter most?",
+        "What would a fair trial measure?",
+        "Who might be disadvantaged by your preferred plan?"
+      ],
+      "length": {
+        "min": 600,
+        "max": 850,
+        "unit": "words"
+      },
+      "minutes": 60,
+      "materials": "Original fictional constraints: One room seats 30 people. The budget permits movable dividers but not soundproofing. The room is busiest from 16:00 to 20:00. No reliable counts of user preferences are available."
+    },
+    {
+      "id": "en-university-critical",
+      "version": 1,
+      "language": "en",
+      "category": "en-university",
+      "title": {
+        "zh": "批判阅读：相关性与因果",
+        "en": "Critical response: correlation and cause",
+        "ja": "批判的応答：相関と因果"
+      },
+      "prompt": "Write a critical response to the claim in the supplied note. Explain what the evidence supports, what it does not establish, and how a better study could test the claim.",
+      "requirements": [
+        "Reconstruct the claim fairly before challenging it.",
+        "Identify plausible alternative explanations.",
+        "Propose an ethical comparison and explain its remaining limits."
+      ],
+      "focus": [
+        "Analytical thesis",
+        "Causal reasoning",
+        "Constructive critique"
+      ],
+      "planning": [
+        "Who chose to join the programme?",
+        "What baseline information is missing?",
+        "What outcome would actually test the claim?"
+      ],
+      "length": {
+        "min": 600,
+        "max": 850,
+        "unit": "words"
+      },
+      "minutes": 60,
+      "materials": "Original fictional note: A university blog reports that members of a reading club submitted more essays on time than non-members during one term. The blog concludes that joining the club causes better time management. Students chose whether to join, and no prior submission records were compared."
+    },
+    {
+      "id": "ja-eju-group",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-eju",
+      "title": {
+        "zh": "观点记述：个人学习与小组学习",
+        "en": "Essay: studying alone or in groups",
+        "ja": "一人学習とグループ学習"
+      },
+      "prompt": "大学で学ぶとき、一人で勉強する方法とグループで勉強する方法があります。あなたはどのような場合にどちらの方法がよいと考えますか。自分の立場を示し、理由と具体例を挙げて論じてください。",
+      "requirements": [
+        "自分の考えを最初に示す。",
+        "理由と具体例を区別して述べる。",
+        "もう一方の方法の利点も踏まえて結論をまとめる。"
+      ],
+      "focus": [
+        "主張と根拠",
+        "対比と条件",
+        "一貫した文体"
+      ],
+      "planning": [
+        "何を学ぶ場面を想定するか。",
+        "具体例は主張をどう支えるか。",
+        "条件によって結論は変わるか。"
+      ],
+      "length": {
+        "min": 400,
+        "max": 500,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": ""
+    },
+    {
+      "id": "ja-eju-library",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-eju",
+      "title": {
+        "zh": "观点记述：图书馆的新角色",
+        "en": "Essay: the role of libraries",
+        "ja": "図書館の新しい役割"
+      },
+      "prompt": "地域の図書館は、本を借りる場所だけでなく、人が交流する場所にもなるべきだという考えがあります。あなたはこの考えをどう思いますか。利用者の違いにも触れながら、理由を挙げて述べてください。",
+      "requirements": [
+        "賛否または条件付きの立場を明確にする。",
+        "異なる利用者への影響を説明する。",
+        "実現上の課題を一つ取り上げる。"
+      ],
+      "focus": [
+        "課題への応答",
+        "根拠の具体性",
+        "段落のつながり"
+      ],
+      "planning": [
+        "静かさと交流は両立するか。",
+        "誰の利用を見落としていないか。",
+        "具体的にどのような工夫ができるか。"
+      ],
+      "length": {
+        "min": 400,
+        "max": 500,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": ""
+    },
+    {
+      "id": "ja-eju-experience",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-eju",
+      "title": {
+        "zh": "观点记述：实践与知识",
+        "en": "Essay: experience and knowledge",
+        "ja": "経験と知識"
+      },
+      "prompt": "新しいことを学ぶとき、まず知識を身につけることと、まず実際に試すことのどちらを重視しますか。具体的な学習場面を想定し、自分の考えを理由とともに述べてください。",
+      "requirements": [
+        "学習場面と自分の立場を示す。",
+        "具体例を用いて理由を説明する。",
+        "自分の方法が適さない場合にも触れる。"
+      ],
+      "focus": [
+        "論理的な展開",
+        "例示と一般化の区別",
+        "条件付きの結論"
+      ],
+      "planning": [
+        "どんな技能なら安全に試せるか。",
+        "知識だけでは足りない点は何か。",
+        "反対の立場からどんな指摘があるか。"
+      ],
+      "length": {
+        "min": 400,
+        "max": 500,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": ""
+    },
+    {
+      "id": "ja-daily-request",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-daily",
+      "title": {
+        "zh": "场景邮件：预约时间变更",
+        "en": "Email: rescheduling an appointment",
+        "ja": "予約変更のメール"
+      },
+      "prompt": "地域の講座に申し込みましたが、仕事の都合で予約した日に参加できなくなりました。担当者に日程変更を相談するメールを書いてください。",
+      "requirements": [
+        "何の予約について連絡したかを伝える。",
+        "簡潔な理由と参加できる日時を示す。",
+        "相手の都合を尋ね、丁寧に結ぶ。"
+      ],
+      "focus": [
+        "依頼の表現",
+        "必要情報の整理",
+        "相手に合う丁寧さ"
+      ],
+      "planning": [
+        "担当者が確認するために何が必要か。",
+        "理由を長く説明しすぎていないか。",
+        "返事を求める内容は明確か。"
+      ],
+      "length": {
+        "min": 200,
+        "max": 350,
+        "unit": "characters"
+      },
+      "minutes": 20,
+      "materials": ""
+    },
+    {
+      "id": "ja-daily-report",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-daily",
+      "title": {
+        "zh": "场景说明：交接一件小事",
+        "en": "Handover: a small work task",
+        "ja": "小さな仕事の引き継ぎ"
+      },
+      "prompt": "あなたが休む日に、同僚が共有スペースの管理を代わります。初めて担当する人が迷わないように、引き継ぎメモを書いてください。",
+      "requirements": [
+        "作業の目的と順序を説明する。",
+        "確認すべき点と困ったときの対応を書く。",
+        "曖昧な指示語を避ける。"
+      ],
+      "focus": [
+        "順序立てた説明",
+        "具体的な動詞",
+        "読み手への配慮"
+      ],
+      "planning": [
+        "何を先に準備するか。",
+        "失敗しやすい点は何か。",
+        "完了したかどう確認するか。"
+      ],
+      "length": {
+        "min": 250,
+        "max": 400,
+        "unit": "characters"
+      },
+      "minutes": 20,
+      "materials": ""
+    },
+    {
+      "id": "ja-daily-explain",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-daily",
+      "title": {
+        "zh": "场景表达：向朋友说明误会",
+        "en": "Explain a misunderstanding to a friend",
+        "ja": "友人に誤解を説明する"
+      },
+      "prompt": "友人との約束について小さな誤解が起きました。責める言い方を避けながら、何が起きたかと今後どうしたいかを伝えるメッセージを書いてください。",
+      "requirements": [
+        "事実と自分の気持ちを分けて伝える。",
+        "相手の立場を想像する。",
+        "次の行動を具体的に提案する。"
+      ],
+      "focus": [
+        "気持ちの表現",
+        "因果関係",
+        "場面に合う文体"
+      ],
+      "planning": [
+        "確認できる事実は何か。",
+        "相手に決めつけていないか。",
+        "どのように関係を修復したいか。"
+      ],
+      "length": {
+        "min": 200,
+        "max": 350,
+        "unit": "characters"
+      },
+      "minutes": 20,
+      "materials": ""
+    },
+    {
+      "id": "ja-primary-place",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-primary",
+      "title": {
+        "zh": "观察描写：常去的地方",
+        "en": "Describe a familiar place",
+        "ja": "よく行く場所"
+      },
+      "prompt": "友だちに、自分がよく行く場所を紹介する文を書きましょう。家の中、公園、お店など、どこでもかまいません。",
+      "requirements": [
+        "どこにある場所かを書く。",
+        "見えるものや聞こえる音を二つ以上書く。",
+        "その場所でどんな気持ちになるかを書く。"
+      ],
+      "focus": [
+        "具体的な言葉",
+        "短い文のまとまり",
+        "紹介の始めと終わり"
+      ],
+      "planning": [
+        "最初に何が目に入るか。",
+        "一番伝えたいことは何か。",
+        "読んだ人が場所を想像できるか。"
+      ],
+      "length": {
+        "min": 100,
+        "max": 200,
+        "unit": "characters"
+      },
+      "minutes": 15,
+      "materials": ""
+    },
+    {
+      "id": "ja-primary-surprise",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-primary",
+      "title": {
+        "zh": "生活叙事：意外的一天",
+        "en": "A surprising day",
+        "ja": "思いがけない一日"
+      },
+      "prompt": "予定とは少し違うことが起きた一日について、短いお話を書きましょう。本当にあったことでも、作ったお話でもかまいません。",
+      "requirements": [
+        "最初の予定を書く。",
+        "何が起きて、どうしたかを順番に書く。",
+        "最後に気持ちの変化を書く。"
+      ],
+      "focus": [
+        "出来事の順序",
+        "過去の表現",
+        "気持ちと行動"
+      ],
+      "planning": [
+        "いつ、どこでの話か。",
+        "何が予定を変えたか。",
+        "最後はどうなったか。"
+      ],
+      "length": {
+        "min": 150,
+        "max": 250,
+        "unit": "characters"
+      },
+      "minutes": 20,
+      "materials": ""
+    },
+    {
+      "id": "ja-primary-choice",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-primary",
+      "title": {
+        "zh": "表达意见：选一项活动",
+        "en": "Choose an activity",
+        "ja": "活動を一つ選ぼう"
+      },
+      "prompt": "学校や地域のグループで、新しい活動を一つ行います。自分がすすめたい活動と、その理由を書きましょう。",
+      "requirements": [
+        "すすめる活動をはっきり書く。",
+        "理由を二つ書く。",
+        "読んだ人に伝えたいことを最後にまとめる。"
+      ],
+      "focus": [
+        "考えと理由",
+        "「なぜなら」などのつなぎ",
+        "相手に伝わる言い方"
+      ],
+      "planning": [
+        "だれが楽しめるか。",
+        "どんなよさがあるか。",
+        "準備するものは何か。"
+      ],
+      "length": {
+        "min": 150,
+        "max": 250,
+        "unit": "characters"
+      },
+      "minutes": 20,
+      "materials": ""
+    },
+    {
+      "id": "ja-middle-explain",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-middle",
+      "title": {
+        "zh": "说明写作：教会新人一项技能",
+        "en": "Explain a skill to a newcomer",
+        "ja": "初めての人に技能を教える"
+      },
+      "prompt": "自分ができることを初めて挑戦する人に説明してください。料理、道具の使い方、学習の工夫など、身近な題材を一つ選びましょう。",
+      "requirements": [
+        "必要な準備と手順を整理する。",
+        "注意点には理由を添える。",
+        "読み手が成功を確かめる方法を書く。"
+      ],
+      "focus": [
+        "説明の順序",
+        "具体性",
+        "読み手の知識への配慮"
+      ],
+      "planning": [
+        "前提として必要な知識は何か。",
+        "省くと困る手順はどれか。",
+        "どこでつまずきやすいか。"
+      ],
+      "length": {
+        "min": 400,
+        "max": 600,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": ""
+    },
+    {
+      "id": "ja-middle-opinion",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-middle",
+      "title": {
+        "zh": "意见写作：自习室怎样使用",
+        "en": "Opinion: how to use a study room",
+        "ja": "自習室の使い方への意見"
+      },
+      "prompt": "地域の自習室で、静かに勉強する時間と、相談しながら学ぶ時間を分ける案が出ています。利用者に向けて、自分の意見を書いてください。",
+      "requirements": [
+        "自分の立場を示す。",
+        "理由と具体的な場面を挙げる。",
+        "反対の立場にも配慮して提案をまとめる。"
+      ],
+      "focus": [
+        "根拠のある意見",
+        "事実と考えの区別",
+        "段落の役割"
+      ],
+      "planning": [
+        "だれにとって便利な案か。",
+        "不便になる人はいないか。",
+        "改善案は考えられるか。"
+      ],
+      "length": {
+        "min": 400,
+        "max": 600,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": ""
+    },
+    {
+      "id": "ja-middle-reflect",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-middle",
+      "title": {
+        "zh": "叙事反思：一次失败后的改变",
+        "en": "Reflection: learning after a setback",
+        "ja": "失敗のあとに変わったこと"
+      },
+      "prompt": "うまくいかなかった経験を一つ取り上げ、その後に考え方や行動がどう変わったかを書いてください。個人的な体験が書きにくければ、架空の人物でもかまいません。",
+      "requirements": [
+        "出来事と当時の考えを描く。",
+        "変化のきっかけを具体的に示す。",
+        "教訓を述べるだけでなく、その後の行動を書く。"
+      ],
+      "focus": [
+        "経験と振り返り",
+        "因果関係",
+        "具体的な描写"
+      ],
+      "planning": [
+        "どんな期待があったか。",
+        "何に気づいたか。",
+        "次の行動で変化を示せるか。"
+      ],
+      "length": {
+        "min": 400,
+        "max": 650,
+        "unit": "characters"
+      },
+      "minutes": 35,
+      "materials": ""
+    },
+    {
+      "id": "ja-high-argument",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-high",
+      "title": {
+        "zh": "论证写作：校内手机使用",
+        "en": "Argument: phones during lessons",
+        "ja": "授業中のスマートフォン利用"
+      },
+      "prompt": "授業中のスマートフォン利用を一律に禁止するべきか、条件付きで認めるべきか。生徒向けの文章として、資料を使いながら論じてください。",
+      "requirements": [
+        "明確な主張と根拠を示す。",
+        "反対意見を公平に扱う。",
+        "資料から分かることと推測を区別する。"
+      ],
+      "focus": [
+        "主張と反論",
+        "資料の限界",
+        "説得的な構成"
+      ],
+      "planning": [
+        "数字は因果関係を示しているか。",
+        "どんな例外が必要か。",
+        "運用上の難しさをどう扱うか。"
+      ],
+      "length": {
+        "min": 800,
+        "max": 1100,
+        "unit": "characters"
+      },
+      "minutes": 45,
+      "materials": "この練習のために作った架空の資料：任意の調査に答えた生徒80人のうち46人が、授業中にメッセージを確認したと回答した。教員12人のうち8人は禁止、4人は担当教員の判断を支持した。成績の比較は行っていない。"
+    },
+    {
+      "id": "ja-high-reading",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-high",
+      "title": {
+        "zh": "文本分析：没有说出的情绪",
+        "en": "Close reading: an unnamed emotion",
+        "ja": "書かれていない感情を読む"
+      },
+      "prompt": "下の短い文章では、人物の感情が直接説明されていません。行動や物の描写が何を示しているか、一つの解釈を立てて論じてください。",
+      "requirements": [
+        "解釈を最初に示す。",
+        "本文の二つ以上の表現を根拠として分析する。",
+        "別の読み方の可能性にも触れる。"
+      ],
+      "focus": [
+        "表現に基づく解釈",
+        "引用と説明",
+        "あらすじと分析の区別"
+      ],
+      "planning": [
+        "鍵は場面でどんな役割を持つか。",
+        "書かれていないことは何か。",
+        "別の感情でも説明できるか。"
+      ],
+      "length": {
+        "min": 800,
+        "max": 1100,
+        "unit": "characters"
+      },
+      "minutes": 45,
+      "materials": "この練習のための創作短文：美緒は鍵を差し込み、また抜いた。ガラス越しに、湯飲みが二つ見えた。もう十分そろっている玄関の靴を、つま先で少し直した。中で椅子の音がすると、鍵をポケットに戻して戸をたたいた。"
+    },
+    {
+      "id": "ja-high-perspective",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-high",
+      "title": {
+        "zh": "叙事技巧：不同的记忆",
+        "en": "Narrative: different memories",
+        "ja": "同じ出来事と違う記憶"
+      },
+      "prompt": "同じ出来事を違うように覚えている二人の場面を書いてください。説明だけに頼らず、会話や細部の描写で違いを伝えましょう。",
+      "requirements": [
+        "出来事そのものの基本的な事実を保つ。",
+        "二人の視点を区別する。",
+        "読者の理解が変わる結びを考える。"
+      ],
+      "focus": [
+        "視点の制御",
+        "会話の含み",
+        "細部の選択"
+      ],
+      "planning": [
+        "各人物は何を覚えているか。",
+        "なぜ記憶が違うのか。",
+        "視点が変わる場所は明確か。"
+      ],
+      "length": {
+        "min": 800,
+        "max": 1200,
+        "unit": "characters"
+      },
+      "minutes": 50,
+      "materials": ""
+    },
+    {
+      "id": "ja-university-synthesis",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-university",
+      "title": {
+        "zh": "材料综合：混合式课程",
+        "en": "Synthesis: hybrid courses",
+        "ja": "ハイブリッド授業の資料統合"
+      },
+      "prompt": "ハイブリッド授業は、どのような条件で参加のしやすさと対話の質を両立できるでしょうか。二つの資料を関連づけ、自分の主張を論じてください。",
+      "requirements": [
+        "単なる賛否の列挙ではなく、焦点を絞った主張を立てる。",
+        "資料A・資料Bと明示し、両者を関連づける。",
+        "資料の限界と自分の提案を区別する。"
+      ],
+      "focus": [
+        "複数資料の統合",
+        "出典の明示",
+        "条件付きの主張"
+      ],
+      "planning": [
+        "参加しやすさは誰にとってのものか。",
+        "二つの資料はどこで補い合うか。",
+        "一般化するには何が足りないか。"
+      ],
+      "length": {
+        "min": 1200,
+        "max": 1800,
+        "unit": "characters"
+      },
+      "minutes": 60,
+      "materials": "練習用の架空の資料A：通学型大学のある夜間科目で録画講義を導入した。任意のアンケートでは予定を調整しやすくなったという声があったが、履修をやめた学生は回答していない。\n練習用の架空の資料B：別の科目の聞き取りでは、対面の対話が誤解の解消に役立つという声と、少人数のオンライン活動の方が発言しやすいという声があった。どちらの資料も長期的な学習成果は測定していない。"
+    },
+    {
+      "id": "ja-university-proposal",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-university",
+      "title": {
+        "zh": "方案论证：共享学习空间",
+        "en": "Proposal: a shared learning space",
+        "ja": "共用学習スペースの提案"
+      },
+      "prompt": "大学の空き教室を、静かな自習と共同作業にどう割り当てるか、委員会向けの提案を書いてください。前提と制約を明示し、実行可能な案を示しましょう。",
+      "requirements": [
+        "問題と関係者を整理する。",
+        "二つ以上の案を基準とトレードオフで比較する。",
+        "試行、評価方法、うまくいかない場合の対応を提案する。"
+      ],
+      "focus": [
+        "課題設定",
+        "実現可能性",
+        "評価の設計"
+      ],
+      "planning": [
+        "どの制約を優先するか。",
+        "何を測れば改善を判断できるか。",
+        "不利益を受ける人にどう配慮するか。"
+      ],
+      "length": {
+        "min": 1200,
+        "max": 1800,
+        "unit": "characters"
+      },
+      "minutes": 60,
+      "materials": "練習用の架空の条件：教室の定員は30人。予算で可動式の仕切りは買えるが、防音工事はできない。利用が多いのは16時から20時。利用者の希望について信頼できる集計はない。"
+    },
+    {
+      "id": "ja-university-critical",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-university",
+      "title": {
+        "zh": "批判阅读：相関与因果",
+        "en": "Critical response: correlation and causation",
+        "ja": "相関と因果を検討する"
+      },
+      "prompt": "下の主張を公平に整理したうえで、資料が支えることと、まだ明らかでないことを論じてください。よりよい調査の案も示しましょう。",
+      "requirements": [
+        "主張を批判する前に正確に言い換える。",
+        "別の説明と不足する情報を挙げる。",
+        "実施可能で倫理的な比較と、その限界を提案する。"
+      ],
+      "focus": [
+        "批判的な読解",
+        "因果関係の検討",
+        "建設的な提案"
+      ],
+      "planning": [
+        "参加者の選び方に偏りはないか。",
+        "導入前の情報はあるか。",
+        "どんな結果なら主張を検証できるか。"
+      ],
+      "length": {
+        "min": 1200,
+        "max": 1800,
+        "unit": "characters"
+      },
+      "minutes": 60,
+      "materials": "この練習のための架空の記事要約：ある大学のブログは、読書会の参加者が、参加していない学生よりも課題を期限内に提出していたと紹介し、読書会への参加が時間管理能力を高めたと結論づけた。参加は自由で、過去の提出状況は比較していない。"
+    }
+  ]
+}

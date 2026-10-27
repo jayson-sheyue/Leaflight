@@ -1,0 +1,3535 @@
+{
+  "version": 1,
+  "categories": [
+    {
+      "id": "en-science-physical",
+      "language": "en",
+      "title": {
+        "zh": "科学冒险 · 物理 · 力与能量",
+        "en": "Science adventures · Physics · forces and energy",
+        "ja": "科学の冒険・物理・力とエネルギー"
+      }
+    },
+    {
+      "id": "en-science-chemical",
+      "language": "en",
+      "title": {
+        "zh": "科学冒险 · 化学 · 物质与粒子",
+        "en": "Science adventures · Chemistry · matter and particles",
+        "ja": "科学の冒険・化学・物質と粒子"
+      }
+    },
+    {
+      "id": "en-science-life",
+      "language": "en",
+      "title": {
+        "zh": "科学冒险 · 生命 · 生物与生态",
+        "en": "Science adventures · Life · organisms and ecology",
+        "ja": "科学の冒険・生命・生物と生態"
+      }
+    },
+    {
+      "id": "en-science-earth",
+      "language": "en",
+      "title": {
+        "zh": "科学冒险 · 地球与宇宙",
+        "en": "Science adventures · Earth and space",
+        "ja": "科学の冒険・地球と宇宙"
+      }
+    },
+    {
+      "id": "ja-science-physical",
+      "language": "ja",
+      "title": {
+        "zh": "科学冒险 · 物理 · 力与能量",
+        "en": "Science adventures · Physics · forces and energy",
+        "ja": "科学の冒険・物理・力とエネルギー"
+      }
+    },
+    {
+      "id": "ja-science-chemical",
+      "language": "ja",
+      "title": {
+        "zh": "科学冒险 · 化学 · 物质与粒子",
+        "en": "Science adventures · Chemistry · matter and particles",
+        "ja": "科学の冒険・化学・物質と粒子"
+      }
+    },
+    {
+      "id": "ja-science-life",
+      "language": "ja",
+      "title": {
+        "zh": "科学冒险 · 生命 · 生物与生态",
+        "en": "Science adventures · Life · organisms and ecology",
+        "ja": "科学の冒険・生命・生物と生態"
+      }
+    },
+    {
+      "id": "ja-science-earth",
+      "language": "ja",
+      "title": {
+        "zh": "科学冒险 · 地球与宇宙",
+        "en": "Science adventures · Earth and space",
+        "ja": "科学の冒険・地球と宇宙"
+      }
+    }
+  ],
+  "topics": [
+    {
+      "id": "en-science-light-shadows-story",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-physical",
+      "title": {
+        "zh": "基础 / 光与影子的密室 · 探险手记",
+        "en": "Foundations / The room of light and shadows · Expedition journal",
+        "ja": "基礎 / 光と影の密室 · 探検の手記"
+      },
+      "prompt": "A museum explorer must identify a moving shadow that appears to contradict the position of a hidden lamp. Write an original scene or field journal in which an investigator uses observation and the supplied science to make a decision. Invent characters and a problem, not new scientific laws.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Use a clear narrative turning point and ending."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Character-driven discovery"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 100,
+        "max": 180,
+        "unit": "words"
+      },
+      "minutes": 20,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. We see an object when light from it enters our eyes; most everyday objects reflect light rather than produce it.\n2. A shadow forms when an opaque object blocks light from a source.\n3. With a fixed light source, moving an object changes the position and size of its shadow.\nCommon misconception to avoid: A shadow is not a substance that leaks out of an object.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "light-shadows"
+    },
+    {
+      "id": "en-science-light-shadows-evidence",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-physical",
+      "title": {
+        "zh": "基础 / 光与影子的密室 · 证据报告",
+        "en": "Foundations / The room of light and shadows · Evidence report",
+        "ja": "基礎 / 光と影の密室 · 証拠の報告"
+      },
+      "prompt": "A museum explorer must identify a moving shadow that appears to contradict the position of a hidden lamp. Write a reasoned report that separates what is observed, what is inferred and what remains unknown. You may propose an invented observation, but label it as fictional rather than a real measurement.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Discuss an alternative explanation and what further evidence would help."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Claims with evidence and limits"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 100,
+        "max": 180,
+        "unit": "words"
+      },
+      "minutes": 20,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. We see an object when light from it enters our eyes; most everyday objects reflect light rather than produce it.\n2. A shadow forms when an opaque object blocks light from a source.\n3. With a fixed light source, moving an object changes the position and size of its shadow.\nCommon misconception to avoid: A shadow is not a substance that leaks out of an object.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "light-shadows"
+    },
+    {
+      "id": "en-science-circuit-paths-story",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-physical",
+      "title": {
+        "zh": "基础 / 发光地图与电路 · 探险手记",
+        "en": "Foundations / The luminous map and the circuit · Expedition journal",
+        "ja": "基礎 / 光る地図と電気の道 · 探検の手記"
+      },
+      "prompt": "An expedition team repairs a low-voltage luminous map by tracing which branch of its circuit is open. Write an original scene or field journal in which an investigator uses observation and the supplied science to make a decision. Invent characters and a problem, not new scientific laws.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Use a clear narrative turning point and ending."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Character-driven discovery"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 100,
+        "max": 180,
+        "unit": "words"
+      },
+      "minutes": 20,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. A simple battery-powered circuit needs a continuous conducting path for steady current to flow.\n2. A switch opens or closes a circuit; an open path stops current in that branch.\n3. Metals generally conduct electricity well, while materials such as dry plastic are useful insulators.\nCommon misconception to avoid: A bulb does not consume the current; energy is transferred while charge continues around the circuit.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "circuit-paths"
+    },
+    {
+      "id": "en-science-circuit-paths-evidence",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-physical",
+      "title": {
+        "zh": "基础 / 发光地图与电路 · 证据报告",
+        "en": "Foundations / The luminous map and the circuit · Evidence report",
+        "ja": "基礎 / 光る地図と電気の道 · 証拠の報告"
+      },
+      "prompt": "An expedition team repairs a low-voltage luminous map by tracing which branch of its circuit is open. Write a reasoned report that separates what is observed, what is inferred and what remains unknown. You may propose an invented observation, but label it as fictional rather than a real measurement.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Discuss an alternative explanation and what further evidence would help."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Claims with evidence and limits"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 100,
+        "max": 180,
+        "unit": "words"
+      },
+      "minutes": 20,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. A simple battery-powered circuit needs a continuous conducting path for steady current to flow.\n2. A switch opens or closes a circuit; an open path stops current in that branch.\n3. Metals generally conduct electricity well, while materials such as dry plastic are useful insulators.\nCommon misconception to avoid: A bulb does not consume the current; energy is transferred while charge continues around the circuit.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "circuit-paths"
+    },
+    {
+      "id": "en-science-forces-motion-story",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-physical",
+      "title": {
+        "zh": "机制 / 悬浮列车的失衡 · 探险手记",
+        "en": "Mechanisms / The unbalanced sky train · Expedition journal",
+        "ja": "仕組み / 空中列車のつり合い · 探検の手記"
+      },
+      "prompt": "A sky-train investigator separates a fictional levitation device from the real forces controlling a carriage’s motion. Write an original scene or field journal in which an investigator uses observation and the supplied science to make a decision. Invent characters and a problem, not new scientific laws.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Use a clear narrative turning point and ending."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Character-driven discovery"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 180,
+        "max": 300,
+        "unit": "words"
+      },
+      "minutes": 30,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. A force can change an object’s velocity; velocity includes both speed and direction.\n2. If the resultant force on an object is zero, it remains at rest or moves at constant velocity in an inertial frame.\n3. Friction opposes relative sliding or the tendency to slide at a contact and can transfer energy to heating.\nCommon misconception to avoid: Constant motion does not require a continuing unbalanced force; acceleration does.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "forces-motion"
+    },
+    {
+      "id": "en-science-forces-motion-evidence",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-physical",
+      "title": {
+        "zh": "机制 / 悬浮列车的失衡 · 证据报告",
+        "en": "Mechanisms / The unbalanced sky train · Evidence report",
+        "ja": "仕組み / 空中列車のつり合い · 証拠の報告"
+      },
+      "prompt": "A sky-train investigator separates a fictional levitation device from the real forces controlling a carriage’s motion. Write a reasoned report that separates what is observed, what is inferred and what remains unknown. You may propose an invented observation, but label it as fictional rather than a real measurement.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Discuss an alternative explanation and what further evidence would help."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Claims with evidence and limits"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 180,
+        "max": 300,
+        "unit": "words"
+      },
+      "minutes": 30,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. A force can change an object’s velocity; velocity includes both speed and direction.\n2. If the resultant force on an object is zero, it remains at rest or moves at constant velocity in an inertial frame.\n3. Friction opposes relative sliding or the tendency to slide at a contact and can transfer energy to heating.\nCommon misconception to avoid: Constant motion does not require a continuing unbalanced force; acceleration does.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "forces-motion"
+    },
+    {
+      "id": "en-science-energy-heat-story",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-physical",
+      "title": {
+        "zh": "机制 / 冰城的热量账本 · 探险手记",
+        "en": "Mechanisms / The ice city’s energy ledger · Expedition journal",
+        "ja": "仕組み / 氷の町のエネルギー帳簿 · 探検の手記"
+      },
+      "prompt": "A courier in an imaginary ice city must find where a real energy budget fails before a medicine container warms. Write an original scene or field journal in which an investigator uses observation and the supplied science to make a decision. Invent characters and a problem, not new scientific laws.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Use a clear narrative turning point and ending."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Character-driven discovery"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 180,
+        "max": 300,
+        "unit": "words"
+      },
+      "minutes": 30,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Energy can be transferred between stores; the total energy of an isolated system is conserved.\n2. Without external work, energy is transferred by heating from a hotter object to a colder one.\n3. Conduction, convection and thermal radiation are different mechanisms of energy transfer; insulation reduces some transfers rather than creating cold.\nCommon misconception to avoid: A colder object does not send a substance called cold into a warmer object.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "energy-heat"
+    },
+    {
+      "id": "en-science-energy-heat-evidence",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-physical",
+      "title": {
+        "zh": "机制 / 冰城的热量账本 · 证据报告",
+        "en": "Mechanisms / The ice city’s energy ledger · Evidence report",
+        "ja": "仕組み / 氷の町のエネルギー帳簿 · 証拠の報告"
+      },
+      "prompt": "A courier in an imaginary ice city must find where a real energy budget fails before a medicine container warms. Write a reasoned report that separates what is observed, what is inferred and what remains unknown. You may propose an invented observation, but label it as fictional rather than a real measurement.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Discuss an alternative explanation and what further evidence would help."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Claims with evidence and limits"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 180,
+        "max": 300,
+        "unit": "words"
+      },
+      "minutes": 30,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Energy can be transferred between stores; the total energy of an isolated system is conserved.\n2. Without external work, energy is transferred by heating from a hotter object to a colder one.\n3. Conduction, convection and thermal radiation are different mechanisms of energy transfer; insulation reduces some transfers rather than creating cold.\nCommon misconception to avoid: A colder object does not send a substance called cold into a warmer object.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "energy-heat"
+    },
+    {
+      "id": "en-science-waves-signals-story",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-physical",
+      "title": {
+        "zh": "模型 / 无声宇宙中的信号 · 探险手记",
+        "en": "Models / Signals in a silent universe · Expedition journal",
+        "ja": "モデル / 音のない宇宙の信号 · 探検の手記"
+      },
+      "prompt": "A starship crew receives a coded light signal but no sound, and must separate signal evidence from a fictional alien claim. Write an original scene or field journal in which an investigator uses observation and the supplied science to make a decision. Invent characters and a problem, not new scientific laws.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Use a clear narrative turning point and ending."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Character-driven discovery"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 300,
+        "max": 500,
+        "unit": "words"
+      },
+      "minutes": 45,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Waves transfer energy and information without a net transport of the medium over a complete cycle in the simple wave model.\n2. Sound is a mechanical wave and needs a material medium; electromagnetic waves can travel through a vacuum.\n3. For a wave in a given medium, speed, frequency and wavelength are related by v = f × wavelength.\nCommon misconception to avoid: An explosion in empty space does not send ordinary sound through the vacuum to a distant ship.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "waves-signals"
+    },
+    {
+      "id": "en-science-waves-signals-evidence",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-physical",
+      "title": {
+        "zh": "模型 / 无声宇宙中的信号 · 证据报告",
+        "en": "Models / Signals in a silent universe · Evidence report",
+        "ja": "モデル / 音のない宇宙の信号 · 証拠の報告"
+      },
+      "prompt": "A starship crew receives a coded light signal but no sound, and must separate signal evidence from a fictional alien claim. Write a reasoned report that separates what is observed, what is inferred and what remains unknown. You may propose an invented observation, but label it as fictional rather than a real measurement.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Discuss an alternative explanation and what further evidence would help."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Claims with evidence and limits"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 300,
+        "max": 500,
+        "unit": "words"
+      },
+      "minutes": 45,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Waves transfer energy and information without a net transport of the medium over a complete cycle in the simple wave model.\n2. Sound is a mechanical wave and needs a material medium; electromagnetic waves can travel through a vacuum.\n3. For a wave in a given medium, speed, frequency and wavelength are related by v = f × wavelength.\nCommon misconception to avoid: An explosion in empty space does not send ordinary sound through the vacuum to a distant ship.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "waves-signals"
+    },
+    {
+      "id": "en-science-electric-power-story",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-physical",
+      "title": {
+        "zh": "模型 / 风暴城的能源危机 · 探险手记",
+        "en": "Models / The storm city’s power problem · Expedition journal",
+        "ja": "モデル / 嵐の町の電力問題 · 探検の手記"
+      },
+      "prompt": "A fictional storm-powered city must ration low-voltage devices using power, run time and an honest energy budget. Write an original scene or field journal in which an investigator uses observation and the supplied science to make a decision. Invent characters and a problem, not new scientific laws.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Use a clear narrative turning point and ending."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Character-driven discovery"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 300,
+        "max": 500,
+        "unit": "words"
+      },
+      "minutes": 45,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Potential difference is energy transferred per unit charge; current is charge passing per unit time.\n2. Electrical power is P = V × I, and energy transferred over time t at constant power is E = P × t.\n3. In a simple series circuit the current is the same through each component; parallel branches share the potential difference across their common endpoints.\nCommon misconception to avoid: Power and energy are different quantities; a high-power device is not necessarily the largest energy user if it runs briefly.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "electric-power"
+    },
+    {
+      "id": "en-science-electric-power-evidence",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-physical",
+      "title": {
+        "zh": "模型 / 风暴城的能源危机 · 证据报告",
+        "en": "Models / The storm city’s power problem · Evidence report",
+        "ja": "モデル / 嵐の町の電力問題 · 証拠の報告"
+      },
+      "prompt": "A fictional storm-powered city must ration low-voltage devices using power, run time and an honest energy budget. Write a reasoned report that separates what is observed, what is inferred and what remains unknown. You may propose an invented observation, but label it as fictional rather than a real measurement.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Discuss an alternative explanation and what further evidence would help."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Claims with evidence and limits"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 300,
+        "max": 500,
+        "unit": "words"
+      },
+      "minutes": 45,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Potential difference is energy transferred per unit charge; current is charge passing per unit time.\n2. Electrical power is P = V × I, and energy transferred over time t at constant power is E = P × t.\n3. In a simple series circuit the current is the same through each component; parallel branches share the potential difference across their common endpoints.\nCommon misconception to avoid: Power and energy are different quantities; a high-power device is not necessarily the largest energy user if it runs briefly.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "electric-power"
+    },
+    {
+      "id": "en-science-materials-mixtures-story",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-chemical",
+      "title": {
+        "zh": "基础 / 炼金集市的混合物 · 探险手记",
+        "en": "Foundations / Mixtures at the alchemist’s market · Expedition journal",
+        "ja": "基礎 / 錬金市場の混合物 · 探検の手記"
+      },
+      "prompt": "An apprentice at a fantasy market must separate a mixed delivery without accepting a seller’s magical explanation as chemical evidence. Write an original scene or field journal in which an investigator uses observation and the supplied science to make a decision. Invent characters and a problem, not new scientific laws.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Use a clear narrative turning point and ending."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Character-driven discovery"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 100,
+        "max": 180,
+        "unit": "words"
+      },
+      "minutes": 20,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Materials have properties such as solubility, magnetism and particle size that can help us choose a separation method.\n2. Filtration separates an insoluble solid from a liquid but does not remove dissolved salt from water.\n3. Dissolving spreads a solute through a solvent; the dissolved material has not simply disappeared.\nCommon misconception to avoid: Ordinary filtration does not make salty water into fresh water.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "materials-mixtures"
+    },
+    {
+      "id": "en-science-materials-mixtures-evidence",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-chemical",
+      "title": {
+        "zh": "基础 / 炼金集市的混合物 · 证据报告",
+        "en": "Foundations / Mixtures at the alchemist’s market · Evidence report",
+        "ja": "基礎 / 錬金市場の混合物 · 証拠の報告"
+      },
+      "prompt": "An apprentice at a fantasy market must separate a mixed delivery without accepting a seller’s magical explanation as chemical evidence. Write a reasoned report that separates what is observed, what is inferred and what remains unknown. You may propose an invented observation, but label it as fictional rather than a real measurement.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Discuss an alternative explanation and what further evidence would help."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Claims with evidence and limits"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 100,
+        "max": 180,
+        "unit": "words"
+      },
+      "minutes": 20,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Materials have properties such as solubility, magnetism and particle size that can help us choose a separation method.\n2. Filtration separates an insoluble solid from a liquid but does not remove dissolved salt from water.\n3. Dissolving spreads a solute through a solvent; the dissolved material has not simply disappeared.\nCommon misconception to avoid: Ordinary filtration does not make salty water into fresh water.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "materials-mixtures"
+    },
+    {
+      "id": "en-science-states-water-story",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-chemical",
+      "title": {
+        "zh": "基础 / 雾之旅馆的消失水滴 · 探险手记",
+        "en": "Foundations / The missing droplets at the mist inn · Expedition journal",
+        "ja": "基礎 / 霧の宿の消えた水滴 · 探検の手記"
+      },
+      "prompt": "A guest at a mist-filled inn follows droplets, condensation and evaporation to solve a locked-window puzzle. Write an original scene or field journal in which an investigator uses observation and the supplied science to make a decision. Invent characters and a problem, not new scientific laws.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Use a clear narrative turning point and ending."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Character-driven discovery"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 100,
+        "max": 180,
+        "unit": "words"
+      },
+      "minutes": 20,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Water can change between solid, liquid and gas without becoming a different chemical substance.\n2. Evaporation can occur at a liquid’s surface below its boiling temperature.\n3. Water vapour is an invisible gas; visible mist consists of tiny liquid droplets.\nCommon misconception to avoid: The white cloud near a hot cup is not invisible water vapour itself, but droplets formed as vapour cools and condenses.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "states-water"
+    },
+    {
+      "id": "en-science-states-water-evidence",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-chemical",
+      "title": {
+        "zh": "基础 / 雾之旅馆的消失水滴 · 证据报告",
+        "en": "Foundations / The missing droplets at the mist inn · Evidence report",
+        "ja": "基礎 / 霧の宿の消えた水滴 · 証拠の報告"
+      },
+      "prompt": "A guest at a mist-filled inn follows droplets, condensation and evaporation to solve a locked-window puzzle. Write a reasoned report that separates what is observed, what is inferred and what remains unknown. You may propose an invented observation, but label it as fictional rather than a real measurement.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Discuss an alternative explanation and what further evidence would help."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Claims with evidence and limits"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 100,
+        "max": 180,
+        "unit": "words"
+      },
+      "minutes": 20,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Water can change between solid, liquid and gas without becoming a different chemical substance.\n2. Evaporation can occur at a liquid’s surface below its boiling temperature.\n3. Water vapour is an invisible gas; visible mist consists of tiny liquid droplets.\nCommon misconception to avoid: The white cloud near a hot cup is not invisible water vapour itself, but droplets formed as vapour cools and condenses.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "states-water"
+    },
+    {
+      "id": "en-science-particles-diffusion-story",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-chemical",
+      "title": {
+        "zh": "机制 / 看不见的香气信使 · 探险手记",
+        "en": "Mechanisms / The invisible scent messenger · Expedition journal",
+        "ja": "仕組み / 見えない香りの使者 · 探検の手記"
+      },
+      "prompt": "A scent courier in an enchanted archive tests whether a mysterious smell spread by diffusion or by a hidden air current. Write an original scene or field journal in which an investigator uses observation and the supplied science to make a decision. Invent characters and a problem, not new scientific laws.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Use a clear narrative turning point and ending."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Character-driven discovery"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 180,
+        "max": 300,
+        "unit": "words"
+      },
+      "minutes": 30,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. In the particle model, matter consists of particles with motion and spacing that differ between solids, liquids and gases.\n2. Diffusion is net spreading due to random particle motion, often from higher to lower concentration.\n3. Higher temperature generally means higher average particle kinetic energy; it does not mean each particle becomes larger.\nCommon misconception to avoid: A smell spreading through still air does not require particles to move purposefully toward a person.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "particles-diffusion"
+    },
+    {
+      "id": "en-science-particles-diffusion-evidence",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-chemical",
+      "title": {
+        "zh": "机制 / 看不见的香气信使 · 证据报告",
+        "en": "Mechanisms / The invisible scent messenger · Evidence report",
+        "ja": "仕組み / 見えない香りの使者 · 証拠の報告"
+      },
+      "prompt": "A scent courier in an enchanted archive tests whether a mysterious smell spread by diffusion or by a hidden air current. Write a reasoned report that separates what is observed, what is inferred and what remains unknown. You may propose an invented observation, but label it as fictional rather than a real measurement.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Discuss an alternative explanation and what further evidence would help."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Claims with evidence and limits"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 180,
+        "max": 300,
+        "unit": "words"
+      },
+      "minutes": 30,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. In the particle model, matter consists of particles with motion and spacing that differ between solids, liquids and gases.\n2. Diffusion is net spreading due to random particle motion, often from higher to lower concentration.\n3. Higher temperature generally means higher average particle kinetic energy; it does not mean each particle becomes larger.\nCommon misconception to avoid: A smell spreading through still air does not require particles to move purposefully toward a person.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "particles-diffusion"
+    },
+    {
+      "id": "en-science-reactions-mass-story",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-chemical",
+      "title": {
+        "zh": "机制 / 会变轻的密封箱 · 探险手记",
+        "en": "Mechanisms / The sealed chest that seems lighter · Expedition journal",
+        "ja": "仕組み / 軽く見える密閉箱 · 探検の手記"
+      },
+      "prompt": "A detective in a clockwork city investigates a sealed chest using measurements, possible leaks and a clearly labelled fictional decoy. Write an original scene or field journal in which an investigator uses observation and the supplied science to make a decision. Invent characters and a problem, not new scientific laws.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Use a clear narrative turning point and ending."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Character-driven discovery"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 180,
+        "max": 300,
+        "unit": "words"
+      },
+      "minutes": 30,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. In an ordinary chemical reaction, atoms are rearranged into new substances rather than created or destroyed.\n2. Total mass is conserved in a closed system, including any gases produced or consumed.\n3. A mass change measured in an open container may reflect gas entering or leaving, not a failure of conservation.\nCommon misconception to avoid: Gas has mass even when it is invisible.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "reactions-mass"
+    },
+    {
+      "id": "en-science-reactions-mass-evidence",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-chemical",
+      "title": {
+        "zh": "机制 / 会变轻的密封箱 · 证据报告",
+        "en": "Mechanisms / The sealed chest that seems lighter · Evidence report",
+        "ja": "仕組み / 軽く見える密閉箱 · 証拠の報告"
+      },
+      "prompt": "A detective in a clockwork city investigates a sealed chest using measurements, possible leaks and a clearly labelled fictional decoy. Write a reasoned report that separates what is observed, what is inferred and what remains unknown. You may propose an invented observation, but label it as fictional rather than a real measurement.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Discuss an alternative explanation and what further evidence would help."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Claims with evidence and limits"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 180,
+        "max": 300,
+        "unit": "words"
+      },
+      "minutes": 30,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. In an ordinary chemical reaction, atoms are rearranged into new substances rather than created or destroyed.\n2. Total mass is conserved in a closed system, including any gases produced or consumed.\n3. A mass change measured in an open container may reflect gas entering or leaving, not a failure of conservation.\nCommon misconception to avoid: Gas has mass even when it is invisible.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "reactions-mass"
+    },
+    {
+      "id": "en-science-atoms-bonding-story",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-chemical",
+      "title": {
+        "zh": "模型 / 晶体城的建筑规则 · 探险手记",
+        "en": "Models / The crystal city’s building rules · Expedition journal",
+        "ja": "モデル / 結晶の町の結び方 · 探検の手記"
+      },
+      "prompt": "A crystal architect investigates why fictional enchanted gems can change colour while the ordinary materials obey bonding and charge rules. Write an original scene or field journal in which an investigator uses observation and the supplied science to make a decision. Invent characters and a problem, not new scientific laws.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Use a clear narrative turning point and ending."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Character-driven discovery"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 300,
+        "max": 500,
+        "unit": "words"
+      },
+      "minutes": 45,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. An atom has a nucleus containing protons and usually neutrons, with electrons outside it; proton number identifies the element.\n2. An ion forms when an atom or group gains or loses electrons, changing its net charge.\n3. Ionic, covalent and metallic bonding are different models of how particles are held together and help explain material properties.\nCommon misconception to avoid: Forming an ordinary ion does not change an element’s proton number.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "atoms-bonding"
+    },
+    {
+      "id": "en-science-atoms-bonding-evidence",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-chemical",
+      "title": {
+        "zh": "模型 / 晶体城的建筑规则 · 证据报告",
+        "en": "Models / The crystal city’s building rules · Evidence report",
+        "ja": "モデル / 結晶の町の結び方 · 証拠の報告"
+      },
+      "prompt": "A crystal architect investigates why fictional enchanted gems can change colour while the ordinary materials obey bonding and charge rules. Write a reasoned report that separates what is observed, what is inferred and what remains unknown. You may propose an invented observation, but label it as fictional rather than a real measurement.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Discuss an alternative explanation and what further evidence would help."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Claims with evidence and limits"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 300,
+        "max": 500,
+        "unit": "words"
+      },
+      "minutes": 45,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. An atom has a nucleus containing protons and usually neutrons, with electrons outside it; proton number identifies the element.\n2. An ion forms when an atom or group gains or loses electrons, changing its net charge.\n3. Ionic, covalent and metallic bonding are different models of how particles are held together and help explain material properties.\nCommon misconception to avoid: Forming an ordinary ion does not change an element’s proton number.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "atoms-bonding"
+    },
+    {
+      "id": "en-science-rates-catalysts-story",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-chemical",
+      "title": {
+        "zh": "模型 / 催化师的时间谜案 · 探险手记",
+        "en": "Models / The catalyst keeper’s time puzzle · Expedition journal",
+        "ja": "モデル / 触媒師の時間の謎 · 探検の手記"
+      },
+      "prompt": "A timekeeper compares fictional clock magic with real catalyst evidence, using supplied observations rather than hazardous procedures. Write an original scene or field journal in which an investigator uses observation and the supplied science to make a decision. Invent characters and a problem, not new scientific laws.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Use a clear narrative turning point and ending."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Character-driven discovery"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 300,
+        "max": 500,
+        "unit": "words"
+      },
+      "minutes": 45,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Reaction rate describes how quickly reactants are consumed or products form.\n2. Temperature, concentration and surface area can affect collision frequency or the fraction of collisions with sufficient energy.\n3. A catalyst provides an alternative reaction pathway with lower activation energy and is regenerated overall; it does not supply unlimited energy.\nCommon misconception to avoid: A catalyst changes a pathway and rate, not the basic conservation of atoms or a limitless energy supply.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "rates-catalysts"
+    },
+    {
+      "id": "en-science-rates-catalysts-evidence",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-chemical",
+      "title": {
+        "zh": "模型 / 催化师的时间谜案 · 证据报告",
+        "en": "Models / The catalyst keeper’s time puzzle · Evidence report",
+        "ja": "モデル / 触媒師の時間の謎 · 証拠の報告"
+      },
+      "prompt": "A timekeeper compares fictional clock magic with real catalyst evidence, using supplied observations rather than hazardous procedures. Write a reasoned report that separates what is observed, what is inferred and what remains unknown. You may propose an invented observation, but label it as fictional rather than a real measurement.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Discuss an alternative explanation and what further evidence would help."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Claims with evidence and limits"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 300,
+        "max": 500,
+        "unit": "words"
+      },
+      "minutes": 45,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Reaction rate describes how quickly reactants are consumed or products form.\n2. Temperature, concentration and surface area can affect collision frequency or the fraction of collisions with sufficient energy.\n3. A catalyst provides an alternative reaction pathway with lower activation energy and is regenerated overall; it does not supply unlimited energy.\nCommon misconception to avoid: A catalyst changes a pathway and rate, not the basic conservation of atoms or a limitless energy supply.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "rates-catalysts"
+    },
+    {
+      "id": "en-science-plants-growth-story",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-life",
+      "title": {
+        "zh": "基础 / 温室精灵的失踪叶片 · 探险手记",
+        "en": "Foundations / The greenhouse sprite’s missing leaves · Expedition journal",
+        "ja": "基礎 / 温室の精と消えた葉 · 探検の手記"
+      },
+      "prompt": "A greenhouse sprite asks an adult gardener to investigate changing leaves through fair comparisons rather than a curse explanation. Write an original scene or field journal in which an investigator uses observation and the supplied science to make a decision. Invent characters and a problem, not new scientific laws.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Use a clear narrative turning point and ending."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Character-driven discovery"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 100,
+        "max": 180,
+        "unit": "words"
+      },
+      "minutes": 20,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Green plants use light energy to make sugars from carbon dioxide and water in photosynthesis.\n2. Roots absorb water and mineral nutrients; most plant dry biomass does not come directly from soil material.\n3. Comparing plant growth fairly requires considering light, water, temperature and other changing conditions.\nCommon misconception to avoid: Soil is not the sole food source that accounts for a growing plant’s mass.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "plants-growth"
+    },
+    {
+      "id": "en-science-plants-growth-evidence",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-life",
+      "title": {
+        "zh": "基础 / 温室精灵的失踪叶片 · 证据报告",
+        "en": "Foundations / The greenhouse sprite’s missing leaves · Evidence report",
+        "ja": "基礎 / 温室の精と消えた葉 · 証拠の報告"
+      },
+      "prompt": "A greenhouse sprite asks an adult gardener to investigate changing leaves through fair comparisons rather than a curse explanation. Write a reasoned report that separates what is observed, what is inferred and what remains unknown. You may propose an invented observation, but label it as fictional rather than a real measurement.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Discuss an alternative explanation and what further evidence would help."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Claims with evidence and limits"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 100,
+        "max": 180,
+        "unit": "words"
+      },
+      "minutes": 20,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Green plants use light energy to make sugars from carbon dioxide and water in photosynthesis.\n2. Roots absorb water and mineral nutrients; most plant dry biomass does not come directly from soil material.\n3. Comparing plant growth fairly requires considering light, water, temperature and other changing conditions.\nCommon misconception to avoid: Soil is not the sole food source that accounts for a growing plant’s mass.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "plants-growth"
+    },
+    {
+      "id": "en-science-habitats-foodwebs-story",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-life",
+      "title": {
+        "zh": "基础 / 森林议会与食物网 · 探险手记",
+        "en": "Foundations / The forest council and the food web · Expedition journal",
+        "ja": "基礎 / 森の会議と食物網 · 探検の手記"
+      },
+      "prompt": "A forest council of fictional speaking animals must reason about a real food web before changing a habitat. Write an original scene or field journal in which an investigator uses observation and the supplied science to make a decision. Invent characters and a problem, not new scientific laws.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Use a clear narrative turning point and ending."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Character-driven discovery"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 100,
+        "max": 180,
+        "unit": "words"
+      },
+      "minutes": 20,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Organisms depend on habitat conditions and on other organisms for resources.\n2. A food-chain arrow conventionally points from a food source toward the organism receiving that material and energy.\n3. Food webs contain connected feeding relationships, so changing one population can affect others.\nCommon misconception to avoid: Predators are not simply harmful intruders whose removal always improves an ecosystem.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "habitats-foodwebs"
+    },
+    {
+      "id": "en-science-habitats-foodwebs-evidence",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-life",
+      "title": {
+        "zh": "基础 / 森林议会与食物网 · 证据报告",
+        "en": "Foundations / The forest council and the food web · Evidence report",
+        "ja": "基礎 / 森の会議と食物網 · 証拠の報告"
+      },
+      "prompt": "A forest council of fictional speaking animals must reason about a real food web before changing a habitat. Write a reasoned report that separates what is observed, what is inferred and what remains unknown. You may propose an invented observation, but label it as fictional rather than a real measurement.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Discuss an alternative explanation and what further evidence would help."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Claims with evidence and limits"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 100,
+        "max": 180,
+        "unit": "words"
+      },
+      "minutes": 20,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Organisms depend on habitat conditions and on other organisms for resources.\n2. A food-chain arrow conventionally points from a food source toward the organism receiving that material and energy.\n3. Food webs contain connected feeding relationships, so changing one population can affect others.\nCommon misconception to avoid: Predators are not simply harmful intruders whose removal always improves an ecosystem.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "habitats-foodwebs"
+    },
+    {
+      "id": "en-science-cells-systems-story",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-life",
+      "title": {
+        "zh": "机制 / 微观城的边界守卫 · 探险手记",
+        "en": "Mechanisms / The microscopic city’s boundary guard · Expedition journal",
+        "ja": "仕組み / ミクロの町の境界守 · 探検の手記"
+      },
+      "prompt": "A fictional shrinking explorer uses a city analogy to map a cell, then discovers where the analogy breaks down. Write an original scene or field journal in which an investigator uses observation and the supplied science to make a decision. Invent characters and a problem, not new scientific laws.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Use a clear narrative turning point and ending."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Character-driven discovery"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 180,
+        "max": 300,
+        "unit": "words"
+      },
+      "minutes": 30,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Cells are the basic structural and functional units of living organisms; multicellular organisms have specialised cells.\n2. A cell membrane regulates exchanges with the surroundings, and many cells contain a nucleus carrying genetic material.\n3. Cell models are useful but limited: organelles are not tiny people, and not every cell has every familiar structure.\nCommon misconception to avoid: A cell is not literally a miniature city with conscious workers; that is only an analogy.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "cells-systems"
+    },
+    {
+      "id": "en-science-cells-systems-evidence",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-life",
+      "title": {
+        "zh": "机制 / 微观城的边界守卫 · 证据报告",
+        "en": "Mechanisms / The microscopic city’s boundary guard · Evidence report",
+        "ja": "仕組み / ミクロの町の境界守 · 証拠の報告"
+      },
+      "prompt": "A fictional shrinking explorer uses a city analogy to map a cell, then discovers where the analogy breaks down. Write a reasoned report that separates what is observed, what is inferred and what remains unknown. You may propose an invented observation, but label it as fictional rather than a real measurement.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Discuss an alternative explanation and what further evidence would help."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Claims with evidence and limits"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 180,
+        "max": 300,
+        "unit": "words"
+      },
+      "minutes": 30,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Cells are the basic structural and functional units of living organisms; multicellular organisms have specialised cells.\n2. A cell membrane regulates exchanges with the surroundings, and many cells contain a nucleus carrying genetic material.\n3. Cell models are useful but limited: organelles are not tiny people, and not every cell has every familiar structure.\nCommon misconception to avoid: A cell is not literally a miniature city with conscious workers; that is only an analogy.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "cells-systems"
+    },
+    {
+      "id": "en-science-respiration-energy-story",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-life",
+      "title": {
+        "zh": "机制 / 夜间花园的能量账 · 探险手记",
+        "en": "Mechanisms / The night garden’s energy account · Expedition journal",
+        "ja": "仕組み / 夜の庭のエネルギー収支 · 探検の手記"
+      },
+      "prompt": "A night-garden caretaker investigates oxygen readings without confusing a fantasy night flower with normal plant metabolism. Write an original scene or field journal in which an investigator uses observation and the supplied science to make a decision. Invent characters and a problem, not new scientific laws.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Use a clear narrative turning point and ending."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Character-driven discovery"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 180,
+        "max": 300,
+        "unit": "words"
+      },
+      "minutes": 30,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Photosynthesis transfers light energy into chemical stores in organic molecules.\n2. Aerobic respiration transfers energy from organic molecules using oxygen and produces carbon dioxide and water.\n3. Plants respire both day and night; photosynthesis requires suitable light and other conditions.\nCommon misconception to avoid: Plants do not switch off respiration whenever they photosynthesise.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "respiration-energy"
+    },
+    {
+      "id": "en-science-respiration-energy-evidence",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-life",
+      "title": {
+        "zh": "机制 / 夜间花园的能量账 · 证据报告",
+        "en": "Mechanisms / The night garden’s energy account · Evidence report",
+        "ja": "仕組み / 夜の庭のエネルギー収支 · 証拠の報告"
+      },
+      "prompt": "A night-garden caretaker investigates oxygen readings without confusing a fantasy night flower with normal plant metabolism. Write a reasoned report that separates what is observed, what is inferred and what remains unknown. You may propose an invented observation, but label it as fictional rather than a real measurement.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Discuss an alternative explanation and what further evidence would help."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Claims with evidence and limits"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 180,
+        "max": 300,
+        "unit": "words"
+      },
+      "minutes": 30,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Photosynthesis transfers light energy into chemical stores in organic molecules.\n2. Aerobic respiration transfers energy from organic molecules using oxygen and produces carbon dioxide and water.\n3. Plants respire both day and night; photosynthesis requires suitable light and other conditions.\nCommon misconception to avoid: Plants do not switch off respiration whenever they photosynthesise.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "respiration-energy"
+    },
+    {
+      "id": "en-science-inheritance-dna-story",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-life",
+      "title": {
+        "zh": "模型 / 龙族档案与遗传线索 · 探险手记",
+        "en": "Models / The dragon archive and inheritance · Expedition journal",
+        "ja": "モデル / 竜の記録と遺伝の手がかり · 探検の手記"
+      },
+      "prompt": "An archivist studies explicitly fictional dragon traits while using real inheritance models and declaring their limits. Write an original scene or field journal in which an investigator uses observation and the supplied science to make a decision. Invent characters and a problem, not new scientific laws.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Use a clear narrative turning point and ending."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Character-driven discovery"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 300,
+        "max": 500,
+        "unit": "words"
+      },
+      "minutes": 45,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. DNA carries inherited information; a gene is a DNA sequence with a functional role, often related to making a protein or functional RNA.\n2. Traits can be influenced by multiple genes and environmental conditions, so simple dominant–recessive models have limits.\n3. A mutation is a change in DNA; it is not necessarily beneficial, harmful or caused by an organism’s need.\nCommon misconception to avoid: A dominant allele is not automatically more common, better or stronger.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "inheritance-dna"
+    },
+    {
+      "id": "en-science-inheritance-dna-evidence",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-life",
+      "title": {
+        "zh": "模型 / 龙族档案与遗传线索 · 证据报告",
+        "en": "Models / The dragon archive and inheritance · Evidence report",
+        "ja": "モデル / 竜の記録と遺伝の手がかり · 証拠の報告"
+      },
+      "prompt": "An archivist studies explicitly fictional dragon traits while using real inheritance models and declaring their limits. Write a reasoned report that separates what is observed, what is inferred and what remains unknown. You may propose an invented observation, but label it as fictional rather than a real measurement.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Discuss an alternative explanation and what further evidence would help."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Claims with evidence and limits"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 300,
+        "max": 500,
+        "unit": "words"
+      },
+      "minutes": 45,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. DNA carries inherited information; a gene is a DNA sequence with a functional role, often related to making a protein or functional RNA.\n2. Traits can be influenced by multiple genes and environmental conditions, so simple dominant–recessive models have limits.\n3. A mutation is a change in DNA; it is not necessarily beneficial, harmful or caused by an organism’s need.\nCommon misconception to avoid: A dominant allele is not automatically more common, better or stronger.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "inheritance-dna"
+    },
+    {
+      "id": "en-science-evolution-selection-story",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-life",
+      "title": {
+        "zh": "模型 / 群岛探险与适应 · 探险手记",
+        "en": "Models / The island expedition and adaptation · Expedition journal",
+        "ja": "モデル / 群島の探検と適応 · 探検の手記"
+      },
+      "prompt": "An island expedition compares fictional organisms across generations and resists a convenient story that need alone creates adaptation. Write an original scene or field journal in which an investigator uses observation and the supplied science to make a decision. Invent characters and a problem, not new scientific laws.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Use a clear narrative turning point and ending."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Character-driven discovery"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 300,
+        "max": 500,
+        "unit": "words"
+      },
+      "minutes": 45,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Natural selection requires variation, heritability and differences in reproductive success in a particular environment.\n2. Populations can change over generations; individual organisms do not evolve a needed inherited trait by deciding to do so.\n3. Evolution has no predetermined goal, and what is advantageous can change when the environment changes.\nCommon misconception to avoid: Natural selection is not a conscious plan to improve a species.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "evolution-selection"
+    },
+    {
+      "id": "en-science-evolution-selection-evidence",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-life",
+      "title": {
+        "zh": "模型 / 群岛探险与适应 · 证据报告",
+        "en": "Models / The island expedition and adaptation · Evidence report",
+        "ja": "モデル / 群島の探検と適応 · 証拠の報告"
+      },
+      "prompt": "An island expedition compares fictional organisms across generations and resists a convenient story that need alone creates adaptation. Write a reasoned report that separates what is observed, what is inferred and what remains unknown. You may propose an invented observation, but label it as fictional rather than a real measurement.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Discuss an alternative explanation and what further evidence would help."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Claims with evidence and limits"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 300,
+        "max": 500,
+        "unit": "words"
+      },
+      "minutes": 45,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Natural selection requires variation, heritability and differences in reproductive success in a particular environment.\n2. Populations can change over generations; individual organisms do not evolve a needed inherited trait by deciding to do so.\n3. Evolution has no predetermined goal, and what is advantageous can change when the environment changes.\nCommon misconception to avoid: Natural selection is not a conscious plan to improve a species.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "evolution-selection"
+    },
+    {
+      "id": "en-science-rocks-soils-story",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-earth",
+      "title": {
+        "zh": "基础 / 石头图书馆的旧日记 · 探险手记",
+        "en": "Foundations / Old diaries in the rock library · Expedition journal",
+        "ja": "基礎 / 石の図書館の古い日記 · 探検の手記"
+      },
+      "prompt": "A keeper of a magical rock library reads real geological clues while treating the stones’ spoken memories as fiction. Write an original scene or field journal in which an investigator uses observation and the supplied science to make a decision. Invent characters and a problem, not new scientific laws.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Use a clear narrative turning point and ending."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Character-driven discovery"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 100,
+        "max": 180,
+        "unit": "words"
+      },
+      "minutes": 20,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Rocks differ in properties such as grain size and composition; soils contain mineral particles and may also include organic matter, air and water.\n2. Weathering breaks down or alters rock in place; erosion transports material.\n3. Fossils can provide evidence about past life and environments, but not every rock contains fossils.\nCommon misconception to avoid: A fossil is not necessarily a complete skeleton, and absence of a fossil in one sample does not prove absence of life.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "rocks-soils"
+    },
+    {
+      "id": "en-science-rocks-soils-evidence",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-earth",
+      "title": {
+        "zh": "基础 / 石头图书馆的旧日记 · 证据报告",
+        "en": "Foundations / Old diaries in the rock library · Evidence report",
+        "ja": "基礎 / 石の図書館の古い日記 · 証拠の報告"
+      },
+      "prompt": "A keeper of a magical rock library reads real geological clues while treating the stones’ spoken memories as fiction. Write a reasoned report that separates what is observed, what is inferred and what remains unknown. You may propose an invented observation, but label it as fictional rather than a real measurement.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Discuss an alternative explanation and what further evidence would help."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Claims with evidence and limits"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 100,
+        "max": 180,
+        "unit": "words"
+      },
+      "minutes": 20,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Rocks differ in properties such as grain size and composition; soils contain mineral particles and may also include organic matter, air and water.\n2. Weathering breaks down or alters rock in place; erosion transports material.\n3. Fossils can provide evidence about past life and environments, but not every rock contains fossils.\nCommon misconception to avoid: A fossil is not necessarily a complete skeleton, and absence of a fossil in one sample does not prove absence of life.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "rocks-soils"
+    },
+    {
+      "id": "en-science-sun-moon-seasons-story",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-earth",
+      "title": {
+        "zh": "基础 / 错位的月亮与四季 · 探险手记",
+        "en": "Foundations / The misplaced moon and the seasons · Expedition journal",
+        "ja": "基礎 / ずれた月と四季 · 探検の手記"
+      },
+      "prompt": "A fantasy observatory reports an impossible Moon pattern; an investigator first reconstructs the real Sun–Earth–Moon geometry. Write an original scene or field journal in which an investigator uses observation and the supplied science to make a decision. Invent characters and a problem, not new scientific laws.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Use a clear narrative turning point and ending."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Character-driven discovery"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 100,
+        "max": 180,
+        "unit": "words"
+      },
+      "minutes": 20,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Day and night result from Earth’s rotation relative to sunlight.\n2. Ordinary Moon phases come from our changing view of the Moon’s sunlit half as it orbits Earth, not from Earth’s shadow.\n3. Earth’s axial tilt changes sunlight angle and day length through the year and is the main cause of seasons.\nCommon misconception to avoid: Summer is not mainly caused by Earth being closer to the Sun, and Moon phases are not ordinary eclipses.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "sun-moon-seasons"
+    },
+    {
+      "id": "en-science-sun-moon-seasons-evidence",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-earth",
+      "title": {
+        "zh": "基础 / 错位的月亮与四季 · 证据报告",
+        "en": "Foundations / The misplaced moon and the seasons · Evidence report",
+        "ja": "基礎 / ずれた月と四季 · 証拠の報告"
+      },
+      "prompt": "A fantasy observatory reports an impossible Moon pattern; an investigator first reconstructs the real Sun–Earth–Moon geometry. Write a reasoned report that separates what is observed, what is inferred and what remains unknown. You may propose an invented observation, but label it as fictional rather than a real measurement.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Discuss an alternative explanation and what further evidence would help."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Claims with evidence and limits"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 100,
+        "max": 180,
+        "unit": "words"
+      },
+      "minutes": 20,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Day and night result from Earth’s rotation relative to sunlight.\n2. Ordinary Moon phases come from our changing view of the Moon’s sunlit half as it orbits Earth, not from Earth’s shadow.\n3. Earth’s axial tilt changes sunlight angle and day length through the year and is the main cause of seasons.\nCommon misconception to avoid: Summer is not mainly caused by Earth being closer to the Sun, and Moon phases are not ordinary eclipses.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "sun-moon-seasons"
+    },
+    {
+      "id": "en-science-water-weather-story",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-earth",
+      "title": {
+        "zh": "机制 / 云港的天气疑案 · 探险手记",
+        "en": "Mechanisms / The cloud harbour weather mystery · Expedition journal",
+        "ja": "仕組み / 雲の港の天気の謎 · 探検の手記"
+      },
+      "prompt": "A courier between floating ports compares weather records and a fictional cloud engine, avoiding a forecast based on one clue. Write an original scene or field journal in which an investigator uses observation and the supplied science to make a decision. Invent characters and a problem, not new scientific laws.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Use a clear narrative turning point and ending."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Character-driven discovery"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 180,
+        "max": 300,
+        "unit": "words"
+      },
+      "minutes": 30,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Water cycles between reservoirs through processes including evaporation, condensation, precipitation and runoff.\n2. Air movements and changing temperature and pressure help shape weather; a single observation is rarely enough for a reliable forecast.\n3. Weather describes short-term conditions, while climate concerns patterns and statistics over longer periods.\nCommon misconception to avoid: One cold day does not determine the long-term climate trend.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "water-weather"
+    },
+    {
+      "id": "en-science-water-weather-evidence",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-earth",
+      "title": {
+        "zh": "机制 / 云港的天气疑案 · 证据报告",
+        "en": "Mechanisms / The cloud harbour weather mystery · Evidence report",
+        "ja": "仕組み / 雲の港の天気の謎 · 証拠の報告"
+      },
+      "prompt": "A courier between floating ports compares weather records and a fictional cloud engine, avoiding a forecast based on one clue. Write a reasoned report that separates what is observed, what is inferred and what remains unknown. You may propose an invented observation, but label it as fictional rather than a real measurement.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Discuss an alternative explanation and what further evidence would help."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Claims with evidence and limits"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 180,
+        "max": 300,
+        "unit": "words"
+      },
+      "minutes": 30,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Water cycles between reservoirs through processes including evaporation, condensation, precipitation and runoff.\n2. Air movements and changing temperature and pressure help shape weather; a single observation is rarely enough for a reliable forecast.\n3. Weather describes short-term conditions, while climate concerns patterns and statistics over longer periods.\nCommon misconception to avoid: One cold day does not determine the long-term climate trend.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "water-weather"
+    },
+    {
+      "id": "en-science-plates-earthquakes-story",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-earth",
+      "title": {
+        "zh": "机制 / 地下城的断层信号 · 探险手记",
+        "en": "Mechanisms / Fault signals beneath the underground city · Expedition journal",
+        "ja": "仕組み / 地下の町と断層の信号 · 探検の手記"
+      },
+      "prompt": "An underground-city mapper compares fault evidence with a fantasy prophecy and explains what cannot be predicted. Write an original scene or field journal in which an investigator uses observation and the supplied science to make a decision. Invent characters and a problem, not new scientific laws.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Use a clear narrative turning point and ending."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Character-driven discovery"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 180,
+        "max": 300,
+        "unit": "words"
+      },
+      "minutes": 30,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Earth’s outer rigid layer is divided into tectonic plates that move relative to one another.\n2. Many earthquakes result from sudden slip on faults after elastic strain has accumulated.\n3. A scientific account of seismic risk uses evidence and uncertainty; it does not promise an exact date for a future earthquake.\nCommon misconception to avoid: A fictional prophecy must not be presented as a scientifically reliable earthquake prediction.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "plates-earthquakes"
+    },
+    {
+      "id": "en-science-plates-earthquakes-evidence",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-earth",
+      "title": {
+        "zh": "机制 / 地下城的断层信号 · 证据报告",
+        "en": "Mechanisms / Fault signals beneath the underground city · Evidence report",
+        "ja": "仕組み / 地下の町と断層の信号 · 証拠の報告"
+      },
+      "prompt": "An underground-city mapper compares fault evidence with a fantasy prophecy and explains what cannot be predicted. Write a reasoned report that separates what is observed, what is inferred and what remains unknown. You may propose an invented observation, but label it as fictional rather than a real measurement.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Discuss an alternative explanation and what further evidence would help."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Claims with evidence and limits"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 180,
+        "max": 300,
+        "unit": "words"
+      },
+      "minutes": 30,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Earth’s outer rigid layer is divided into tectonic plates that move relative to one another.\n2. Many earthquakes result from sudden slip on faults after elastic strain has accumulated.\n3. A scientific account of seismic risk uses evidence and uncertainty; it does not promise an exact date for a future earthquake.\nCommon misconception to avoid: A fictional prophecy must not be presented as a scientifically reliable earthquake prediction.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "plates-earthquakes"
+    },
+    {
+      "id": "en-science-carbon-climate-story",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-earth",
+      "title": {
+        "zh": "模型 / 碳档案与温室之城 · 探险手记",
+        "en": "Models / The carbon archive and the greenhouse city · Expedition journal",
+        "ja": "モデル / 炭素の記録と温室の町 · 探検の手記"
+      },
+      "prompt": "An archive detective traces carbon through a fictional enclosed city and distinguishes measured trends from a convenient villain story. Write an original scene or field journal in which an investigator uses observation and the supplied science to make a decision. Invent characters and a problem, not new scientific laws.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Use a clear narrative turning point and ending."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Character-driven discovery"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 300,
+        "max": 500,
+        "unit": "words"
+      },
+      "minutes": 45,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Carbon moves among atmosphere, organisms, oceans and rocks on different timescales.\n2. Greenhouse gases absorb and emit infrared radiation and influence Earth’s energy balance; they do not act exactly like a physical glass roof.\n3. Changing greenhouse-gas concentrations can affect climate, while individual weather events require careful attribution and uncertainty statements.\nCommon misconception to avoid: The greenhouse effect and ozone depletion are different phenomena.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "carbon-climate"
+    },
+    {
+      "id": "en-science-carbon-climate-evidence",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-earth",
+      "title": {
+        "zh": "模型 / 碳档案与温室之城 · 证据报告",
+        "en": "Models / The carbon archive and the greenhouse city · Evidence report",
+        "ja": "モデル / 炭素の記録と温室の町 · 証拠の報告"
+      },
+      "prompt": "An archive detective traces carbon through a fictional enclosed city and distinguishes measured trends from a convenient villain story. Write a reasoned report that separates what is observed, what is inferred and what remains unknown. You may propose an invented observation, but label it as fictional rather than a real measurement.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Discuss an alternative explanation and what further evidence would help."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Claims with evidence and limits"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 300,
+        "max": 500,
+        "unit": "words"
+      },
+      "minutes": 45,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Carbon moves among atmosphere, organisms, oceans and rocks on different timescales.\n2. Greenhouse gases absorb and emit infrared radiation and influence Earth’s energy balance; they do not act exactly like a physical glass roof.\n3. Changing greenhouse-gas concentrations can affect climate, while individual weather events require careful attribution and uncertainty statements.\nCommon misconception to avoid: The greenhouse effect and ozone depletion are different phenomena.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "carbon-climate"
+    },
+    {
+      "id": "en-science-stars-universe-story",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-earth",
+      "title": {
+        "zh": "模型 / 恒星信使的旧光 · 探险手记",
+        "en": "Models / The star messenger’s old light · Expedition journal",
+        "ja": "モデル / 星の使者と昔の光 · 探検の手記"
+      },
+      "prompt": "A fictional star messenger must reconcile an ancient light signal with the timing of a mystery, without treating faster-than-light travel as established physics. Write an original scene or field journal in which an investigator uses observation and the supplied science to make a decision. Invent characters and a problem, not new scientific laws.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Use a clear narrative turning point and ending."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Character-driven discovery"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 300,
+        "max": 500,
+        "unit": "words"
+      },
+      "minutes": 45,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Stars produce energy through nuclear fusion; a star’s evolution depends strongly on its initial mass.\n2. Because light has a finite speed, observing a distant object means observing light emitted in its past.\n3. A light-year is a distance unit, not a duration; evidence about the universe is interpreted through models with limits.\nCommon misconception to avoid: A telescope does not show the distant universe at a single universal present instant.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "stars-universe"
+    },
+    {
+      "id": "en-science-stars-universe-evidence",
+      "version": 1,
+      "language": "en",
+      "category": "en-science-earth",
+      "title": {
+        "zh": "模型 / 恒星信使的旧光 · 证据报告",
+        "en": "Models / The star messenger’s old light · Evidence report",
+        "ja": "モデル / 星の使者と昔の光 · 証拠の報告"
+      },
+      "prompt": "A fictional star messenger must reconcile an ancient light signal with the timing of a mystery, without treating faster-than-light travel as established physics. Write a reasoned report that separates what is observed, what is inferred and what remains unknown. You may propose an invented observation, but label it as fictional rather than a real measurement.",
+      "requirements": [
+        "Apply at least two reference ideas accurately to the situation.",
+        "Explain why a clue supports or fails to support a claim.",
+        "Label any magic, speculative technology or invented data as fictional.",
+        "Discuss an alternative explanation and what further evidence would help."
+      ],
+      "focus": [
+        "Scientific cause and effect",
+        "Fact, inference and fiction",
+        "Claims with evidence and limits"
+      ],
+      "planning": [
+        "What can the investigator actually observe?",
+        "Which reference idea rules out an attractive but mistaken explanation?",
+        "Where does the analogy or fictional premise stop matching real science?"
+      ],
+      "length": {
+        "min": 300,
+        "max": 500,
+        "unit": "words"
+      },
+      "minutes": 45,
+      "materials": "Curated reference notes (not a claim that the fictional case is real):\n1. Stars produce energy through nuclear fusion; a star’s evolution depends strongly on its initial mass.\n2. Because light has a finite speed, observing a distant object means observing light emitted in its past.\n3. A light-year is a distance unit, not a duration; evidence about the universe is interpreted through models with limits.\nCommon misconception to avoid: A telescope does not show the distant universe at a single universal present instant.\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.",
+      "scienceUnitId": "stars-universe"
+    },
+    {
+      "id": "ja-science-light-shadows-story",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-physical",
+      "title": {
+        "zh": "基础 / 光与影子的密室 · 探险手记",
+        "en": "Foundations / The room of light and shadows · Expedition journal",
+        "ja": "基礎 / 光と影の密室 · 探検の手記"
+      },
+      "prompt": "博物館の探検家が、隠された照明の位置と合わないように見える影の謎を追います。 観察と下の科学の考え方を使って判断する場面や手記を書いてください。人物や事件は創作しても、現実の科学法則は勝手に変えないでください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "判断が変わる場面と結びを描く。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "人物を通した発見"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 250,
+        "max": 400,
+        "unit": "characters"
+      },
+      "minutes": 20,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 物が見えるのは、その物から来た光が目に入るためです。多くの身近な物は自ら光らず、光を反射します。\n2. 光を通さない物が光源からの光をさえぎると、影ができます。\n3. 光源を固定したまま物の位置を変えると、影の位置や大きさが変わります。\n避けたい誤解：影は物から流れ出す物質ではありません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "light-shadows"
+    },
+    {
+      "id": "ja-science-light-shadows-evidence",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-physical",
+      "title": {
+        "zh": "基础 / 光与影子的密室 · 证据报告",
+        "en": "Foundations / The room of light and shadows · Evidence report",
+        "ja": "基礎 / 光と影の密室 · 証拠の報告"
+      },
+      "prompt": "博物館の探検家が、隠された照明の位置と合わないように見える影の謎を追います。 観察、推論、まだ分からないことを分けた報告を書いてください。観測を創作する場合は、実際の測定結果ではなく架空の資料だと明示してください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "別の説明と、さらに必要な証拠を検討する。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "根拠と限界のある主張"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 250,
+        "max": 400,
+        "unit": "characters"
+      },
+      "minutes": 20,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 物が見えるのは、その物から来た光が目に入るためです。多くの身近な物は自ら光らず、光を反射します。\n2. 光を通さない物が光源からの光をさえぎると、影ができます。\n3. 光源を固定したまま物の位置を変えると、影の位置や大きさが変わります。\n避けたい誤解：影は物から流れ出す物質ではありません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "light-shadows"
+    },
+    {
+      "id": "ja-science-circuit-paths-story",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-physical",
+      "title": {
+        "zh": "基础 / 发光地图与电路 · 探险手记",
+        "en": "Foundations / The luminous map and the circuit · Expedition journal",
+        "ja": "基礎 / 光る地図と電気の道 · 探検の手記"
+      },
+      "prompt": "探検隊が低電圧で光る地図を直すため、電気の道が切れた場所を探します。 観察と下の科学の考え方を使って判断する場面や手記を書いてください。人物や事件は創作しても、現実の科学法則は勝手に変えないでください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "判断が変わる場面と結びを描く。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "人物を通した発見"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 250,
+        "max": 400,
+        "unit": "characters"
+      },
+      "minutes": 20,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 電池を使う簡単な回路では、電流が流れ続けるために導体でつながった道が必要です。\n2. スイッチは回路を開いたり閉じたりします。道が切れると、その枝には電流が流れません。\n3. 金属は一般に電気を通しやすく、乾いたプラスチックなどは絶縁体として使えます。\n避けたい誤解：電球が電流そのものを使い切るのではありません。電荷が回路を移動する間にエネルギーが移されます。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "circuit-paths"
+    },
+    {
+      "id": "ja-science-circuit-paths-evidence",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-physical",
+      "title": {
+        "zh": "基础 / 发光地图与电路 · 证据报告",
+        "en": "Foundations / The luminous map and the circuit · Evidence report",
+        "ja": "基礎 / 光る地図と電気の道 · 証拠の報告"
+      },
+      "prompt": "探検隊が低電圧で光る地図を直すため、電気の道が切れた場所を探します。 観察、推論、まだ分からないことを分けた報告を書いてください。観測を創作する場合は、実際の測定結果ではなく架空の資料だと明示してください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "別の説明と、さらに必要な証拠を検討する。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "根拠と限界のある主張"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 250,
+        "max": 400,
+        "unit": "characters"
+      },
+      "minutes": 20,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 電池を使う簡単な回路では、電流が流れ続けるために導体でつながった道が必要です。\n2. スイッチは回路を開いたり閉じたりします。道が切れると、その枝には電流が流れません。\n3. 金属は一般に電気を通しやすく、乾いたプラスチックなどは絶縁体として使えます。\n避けたい誤解：電球が電流そのものを使い切るのではありません。電荷が回路を移動する間にエネルギーが移されます。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "circuit-paths"
+    },
+    {
+      "id": "ja-science-forces-motion-story",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-physical",
+      "title": {
+        "zh": "机制 / 悬浮列车的失衡 · 探险手记",
+        "en": "Mechanisms / The unbalanced sky train · Expedition journal",
+        "ja": "仕組み / 空中列車のつり合い · 探検の手記"
+      },
+      "prompt": "空中列車の調査員が、架空の浮上装置と車両の運動に働く現実の力を区別して事故を調べます。 観察と下の科学の考え方を使って判断する場面や手記を書いてください。人物や事件は創作しても、現実の科学法則は勝手に変えないでください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "判断が変わる場面と結びを描く。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "人物を通した発見"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 450,
+        "max": 700,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 力は物体の速度を変えることができます。速度には速さだけでなく向きも含まれます。\n2. 慣性系では、物体に働く力の合力がゼロなら、静止または等速直線運動を続けます。\n3. 摩擦は接触面でのすべりやすべろうとする動きに逆らい、エネルギーを熱へ移すことがあります。\n避けたい誤解：一定の速度で動き続けるために合力が必要なのではなく、速度が変わるときに合力が必要です。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "forces-motion"
+    },
+    {
+      "id": "ja-science-forces-motion-evidence",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-physical",
+      "title": {
+        "zh": "机制 / 悬浮列车的失衡 · 证据报告",
+        "en": "Mechanisms / The unbalanced sky train · Evidence report",
+        "ja": "仕組み / 空中列車のつり合い · 証拠の報告"
+      },
+      "prompt": "空中列車の調査員が、架空の浮上装置と車両の運動に働く現実の力を区別して事故を調べます。 観察、推論、まだ分からないことを分けた報告を書いてください。観測を創作する場合は、実際の測定結果ではなく架空の資料だと明示してください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "別の説明と、さらに必要な証拠を検討する。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "根拠と限界のある主張"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 450,
+        "max": 700,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 力は物体の速度を変えることができます。速度には速さだけでなく向きも含まれます。\n2. 慣性系では、物体に働く力の合力がゼロなら、静止または等速直線運動を続けます。\n3. 摩擦は接触面でのすべりやすべろうとする動きに逆らい、エネルギーを熱へ移すことがあります。\n避けたい誤解：一定の速度で動き続けるために合力が必要なのではなく、速度が変わるときに合力が必要です。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "forces-motion"
+    },
+    {
+      "id": "ja-science-energy-heat-story",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-physical",
+      "title": {
+        "zh": "机制 / 冰城的热量账本 · 探险手记",
+        "en": "Mechanisms / The ice city’s energy ledger · Expedition journal",
+        "ja": "仕組み / 氷の町のエネルギー帳簿 · 探検の手記"
+      },
+      "prompt": "架空の氷の町の配達人が、容器が温まる前にエネルギーの移動経路を突き止めます。 観察と下の科学の考え方を使って判断する場面や手記を書いてください。人物や事件は創作しても、現実の科学法則は勝手に変えないでください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "判断が変わる場面と結びを描く。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "人物を通した発見"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 450,
+        "max": 700,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. エネルギーはさまざまな形で移されます。孤立した系では全体のエネルギーは保存されます。\n2. 外部から仕事を加えない場合、熱によるエネルギー移動は高温の物体から低温の物体へ起こります。\n3. 伝導、対流、熱放射は異なるエネルギー移動の仕組みです。断熱材は移動を減らすのであり、冷たさを作るのではありません。\n避けたい誤解：冷たい物体から「冷たさ」という物質が暖かい物体に流れ込むわけではありません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "energy-heat"
+    },
+    {
+      "id": "ja-science-energy-heat-evidence",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-physical",
+      "title": {
+        "zh": "机制 / 冰城的热量账本 · 证据报告",
+        "en": "Mechanisms / The ice city’s energy ledger · Evidence report",
+        "ja": "仕組み / 氷の町のエネルギー帳簿 · 証拠の報告"
+      },
+      "prompt": "架空の氷の町の配達人が、容器が温まる前にエネルギーの移動経路を突き止めます。 観察、推論、まだ分からないことを分けた報告を書いてください。観測を創作する場合は、実際の測定結果ではなく架空の資料だと明示してください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "別の説明と、さらに必要な証拠を検討する。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "根拠と限界のある主張"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 450,
+        "max": 700,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. エネルギーはさまざまな形で移されます。孤立した系では全体のエネルギーは保存されます。\n2. 外部から仕事を加えない場合、熱によるエネルギー移動は高温の物体から低温の物体へ起こります。\n3. 伝導、対流、熱放射は異なるエネルギー移動の仕組みです。断熱材は移動を減らすのであり、冷たさを作るのではありません。\n避けたい誤解：冷たい物体から「冷たさ」という物質が暖かい物体に流れ込むわけではありません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "energy-heat"
+    },
+    {
+      "id": "ja-science-waves-signals-story",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-physical",
+      "title": {
+        "zh": "模型 / 无声宇宙中的信号 · 探险手记",
+        "en": "Models / Signals in a silent universe · Expedition journal",
+        "ja": "モデル / 音のない宇宙の信号 · 探検の手記"
+      },
+      "prompt": "宇宙船の乗員が、音のない光の暗号を受け取り、観測できる信号と架空の異星人の主張を切り分けます。 観察と下の科学の考え方を使って判断する場面や手記を書いてください。人物や事件は創作しても、現実の科学法則は勝手に変えないでください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "判断が変わる場面と結びを描く。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "人物を通した発見"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 750,
+        "max": 1200,
+        "unit": "characters"
+      },
+      "minutes": 45,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 単純な波のモデルでは、波はエネルギーや情報を運びますが、媒質全体が一周期ごとに同じ向きへ運ばれるわけではありません。\n2. 音は媒質を必要とする力学的な波です。電磁波は真空中でも伝わります。\n3. ある媒質を進む波の速さ、振動数、波長には、速さ＝振動数×波長という関係があります。\n避けたい誤解：真空の宇宙で起きた爆発の音が、通常の音波として遠くの船へ届くわけではありません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "waves-signals"
+    },
+    {
+      "id": "ja-science-waves-signals-evidence",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-physical",
+      "title": {
+        "zh": "模型 / 无声宇宙中的信号 · 证据报告",
+        "en": "Models / Signals in a silent universe · Evidence report",
+        "ja": "モデル / 音のない宇宙の信号 · 証拠の報告"
+      },
+      "prompt": "宇宙船の乗員が、音のない光の暗号を受け取り、観測できる信号と架空の異星人の主張を切り分けます。 観察、推論、まだ分からないことを分けた報告を書いてください。観測を創作する場合は、実際の測定結果ではなく架空の資料だと明示してください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "別の説明と、さらに必要な証拠を検討する。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "根拠と限界のある主張"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 750,
+        "max": 1200,
+        "unit": "characters"
+      },
+      "minutes": 45,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 単純な波のモデルでは、波はエネルギーや情報を運びますが、媒質全体が一周期ごとに同じ向きへ運ばれるわけではありません。\n2. 音は媒質を必要とする力学的な波です。電磁波は真空中でも伝わります。\n3. ある媒質を進む波の速さ、振動数、波長には、速さ＝振動数×波長という関係があります。\n避けたい誤解：真空の宇宙で起きた爆発の音が、通常の音波として遠くの船へ届くわけではありません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "waves-signals"
+    },
+    {
+      "id": "ja-science-electric-power-story",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-physical",
+      "title": {
+        "zh": "模型 / 风暴城的能源危机 · 探险手记",
+        "en": "Models / The storm city’s power problem · Expedition journal",
+        "ja": "モデル / 嵐の町の電力問題 · 探検の手記"
+      },
+      "prompt": "架空の嵐を動力にする町で、低電圧装置の電力と使用時間から供給計画を立てます。 観察と下の科学の考え方を使って判断する場面や手記を書いてください。人物や事件は創作しても、現実の科学法則は勝手に変えないでください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "判断が変わる場面と結びを描く。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "人物を通した発見"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 750,
+        "max": 1200,
+        "unit": "characters"
+      },
+      "minutes": 45,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 電位差は単位電荷あたりに移されるエネルギーで、電流は単位時間に通過する電荷の量です。\n2. 電力は P＝V×I です。電力が一定なら、時間 t に移されるエネルギーは E＝P×t です。\n3. 単純な直列回路では各部分に同じ電流が流れます。並列の枝では共通の両端の電位差が等しくなります。\n避けたい誤解：電力とエネルギーは異なる量です。大きな電力の装置でも、使う時間が短ければ消費エネルギーが最大とは限りません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "electric-power"
+    },
+    {
+      "id": "ja-science-electric-power-evidence",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-physical",
+      "title": {
+        "zh": "模型 / 风暴城的能源危机 · 证据报告",
+        "en": "Models / The storm city’s power problem · Evidence report",
+        "ja": "モデル / 嵐の町の電力問題 · 証拠の報告"
+      },
+      "prompt": "架空の嵐を動力にする町で、低電圧装置の電力と使用時間から供給計画を立てます。 観察、推論、まだ分からないことを分けた報告を書いてください。観測を創作する場合は、実際の測定結果ではなく架空の資料だと明示してください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "別の説明と、さらに必要な証拠を検討する。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "根拠と限界のある主張"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 750,
+        "max": 1200,
+        "unit": "characters"
+      },
+      "minutes": 45,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 電位差は単位電荷あたりに移されるエネルギーで、電流は単位時間に通過する電荷の量です。\n2. 電力は P＝V×I です。電力が一定なら、時間 t に移されるエネルギーは E＝P×t です。\n3. 単純な直列回路では各部分に同じ電流が流れます。並列の枝では共通の両端の電位差が等しくなります。\n避けたい誤解：電力とエネルギーは異なる量です。大きな電力の装置でも、使う時間が短ければ消費エネルギーが最大とは限りません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "electric-power"
+    },
+    {
+      "id": "ja-science-materials-mixtures-story",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-chemical",
+      "title": {
+        "zh": "基础 / 炼金集市的混合物 · 探险手记",
+        "en": "Foundations / Mixtures at the alchemist’s market · Expedition journal",
+        "ja": "基礎 / 錬金市場の混合物 · 探検の手記"
+      },
+      "prompt": "幻想的な市場の見習いが、売り手の魔法の説明を証拠と混同せず、混ざった荷物を分けます。 観察と下の科学の考え方を使って判断する場面や手記を書いてください。人物や事件は創作しても、現実の科学法則は勝手に変えないでください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "判断が変わる場面と結びを描く。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "人物を通した発見"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 250,
+        "max": 400,
+        "unit": "characters"
+      },
+      "minutes": 20,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 物質には溶けやすさ、磁石への反応、粒の大きさなどの性質があり、分け方を考える手がかりになります。\n2. ろ過は液体中の溶けていない固体を分けますが、水に溶けた食塩は通常のろ紙では取り除けません。\n3. 溶けると溶質が溶媒の中に広がります。溶けた物質がなくなったわけではありません。\n避けたい誤解：普通のろ過だけで塩水が真水になるわけではありません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "materials-mixtures"
+    },
+    {
+      "id": "ja-science-materials-mixtures-evidence",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-chemical",
+      "title": {
+        "zh": "基础 / 炼金集市的混合物 · 证据报告",
+        "en": "Foundations / Mixtures at the alchemist’s market · Evidence report",
+        "ja": "基礎 / 錬金市場の混合物 · 証拠の報告"
+      },
+      "prompt": "幻想的な市場の見習いが、売り手の魔法の説明を証拠と混同せず、混ざった荷物を分けます。 観察、推論、まだ分からないことを分けた報告を書いてください。観測を創作する場合は、実際の測定結果ではなく架空の資料だと明示してください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "別の説明と、さらに必要な証拠を検討する。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "根拠と限界のある主張"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 250,
+        "max": 400,
+        "unit": "characters"
+      },
+      "minutes": 20,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 物質には溶けやすさ、磁石への反応、粒の大きさなどの性質があり、分け方を考える手がかりになります。\n2. ろ過は液体中の溶けていない固体を分けますが、水に溶けた食塩は通常のろ紙では取り除けません。\n3. 溶けると溶質が溶媒の中に広がります。溶けた物質がなくなったわけではありません。\n避けたい誤解：普通のろ過だけで塩水が真水になるわけではありません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "materials-mixtures"
+    },
+    {
+      "id": "ja-science-states-water-story",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-chemical",
+      "title": {
+        "zh": "基础 / 雾之旅馆的消失水滴 · 探险手记",
+        "en": "Foundations / The missing droplets at the mist inn · Expedition journal",
+        "ja": "基礎 / 霧の宿の消えた水滴 · 探検の手記"
+      },
+      "prompt": "霧に包まれた宿の客が、水滴、凝結、蒸発を手がかりに閉じた窓の謎を解きます。 観察と下の科学の考え方を使って判断する場面や手記を書いてください。人物や事件は創作しても、現実の科学法則は勝手に変えないでください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "判断が変わる場面と結びを描く。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "人物を通した発見"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 250,
+        "max": 400,
+        "unit": "characters"
+      },
+      "minutes": 20,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 水は固体、液体、気体の間で状態が変わっても、別の化学物質になるわけではありません。\n2. 蒸発は沸点より低い温度でも液体の表面で起こります。\n3. 水蒸気は目に見えない気体で、目に見える霧は小さな液体の水滴です。\n避けたい誤解：温かいカップの近くの白い雲は水蒸気そのものではなく、冷えて凝結した小さな水滴です。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "states-water"
+    },
+    {
+      "id": "ja-science-states-water-evidence",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-chemical",
+      "title": {
+        "zh": "基础 / 雾之旅馆的消失水滴 · 证据报告",
+        "en": "Foundations / The missing droplets at the mist inn · Evidence report",
+        "ja": "基礎 / 霧の宿の消えた水滴 · 証拠の報告"
+      },
+      "prompt": "霧に包まれた宿の客が、水滴、凝結、蒸発を手がかりに閉じた窓の謎を解きます。 観察、推論、まだ分からないことを分けた報告を書いてください。観測を創作する場合は、実際の測定結果ではなく架空の資料だと明示してください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "別の説明と、さらに必要な証拠を検討する。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "根拠と限界のある主張"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 250,
+        "max": 400,
+        "unit": "characters"
+      },
+      "minutes": 20,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 水は固体、液体、気体の間で状態が変わっても、別の化学物質になるわけではありません。\n2. 蒸発は沸点より低い温度でも液体の表面で起こります。\n3. 水蒸気は目に見えない気体で、目に見える霧は小さな液体の水滴です。\n避けたい誤解：温かいカップの近くの白い雲は水蒸気そのものではなく、冷えて凝結した小さな水滴です。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "states-water"
+    },
+    {
+      "id": "ja-science-particles-diffusion-story",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-chemical",
+      "title": {
+        "zh": "机制 / 看不见的香气信使 · 探险手记",
+        "en": "Mechanisms / The invisible scent messenger · Expedition journal",
+        "ja": "仕組み / 見えない香りの使者 · 探検の手記"
+      },
+      "prompt": "魔法の書庫の香りの配達人が、拡散と隠れた空気の流れを見分けます。 観察と下の科学の考え方を使って判断する場面や手記を書いてください。人物や事件は創作しても、現実の科学法則は勝手に変えないでください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "判断が変わる場面と結びを描く。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "人物を通した発見"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 450,
+        "max": 700,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 粒子モデルでは物質は粒子からなり、固体、液体、気体で粒子の運動や間隔が異なります。\n2. 拡散は粒子の不規則な運動による広がりで、全体として濃度の高い側から低い側へ進むことがよくあります。\n3. 温度が高いほど一般に粒子の平均運動エネルギーは大きくなりますが、粒子そのものが大きくなるという意味ではありません。\n避けたい誤解：静かな空気の中で香りが広がるのは、粒子が人に向かって意図的に動くからではありません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "particles-diffusion"
+    },
+    {
+      "id": "ja-science-particles-diffusion-evidence",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-chemical",
+      "title": {
+        "zh": "机制 / 看不见的香气信使 · 证据报告",
+        "en": "Mechanisms / The invisible scent messenger · Evidence report",
+        "ja": "仕組み / 見えない香りの使者 · 証拠の報告"
+      },
+      "prompt": "魔法の書庫の香りの配達人が、拡散と隠れた空気の流れを見分けます。 観察、推論、まだ分からないことを分けた報告を書いてください。観測を創作する場合は、実際の測定結果ではなく架空の資料だと明示してください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "別の説明と、さらに必要な証拠を検討する。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "根拠と限界のある主張"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 450,
+        "max": 700,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 粒子モデルでは物質は粒子からなり、固体、液体、気体で粒子の運動や間隔が異なります。\n2. 拡散は粒子の不規則な運動による広がりで、全体として濃度の高い側から低い側へ進むことがよくあります。\n3. 温度が高いほど一般に粒子の平均運動エネルギーは大きくなりますが、粒子そのものが大きくなるという意味ではありません。\n避けたい誤解：静かな空気の中で香りが広がるのは、粒子が人に向かって意図的に動くからではありません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "particles-diffusion"
+    },
+    {
+      "id": "ja-science-reactions-mass-story",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-chemical",
+      "title": {
+        "zh": "机制 / 会变轻的密封箱 · 探险手记",
+        "en": "Mechanisms / The sealed chest that seems lighter · Expedition journal",
+        "ja": "仕組み / 軽く見える密閉箱 · 探検の手記"
+      },
+      "prompt": "からくりの町の探偵が、測定と漏れの可能性を調べ、架空の仕掛けと質量保存を区別します。 観察と下の科学の考え方を使って判断する場面や手記を書いてください。人物や事件は創作しても、現実の科学法則は勝手に変えないでください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "判断が変わる場面と結びを描く。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "人物を通した発見"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 450,
+        "max": 700,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 通常の化学反応では原子が組み替わって新しい物質になり、原子が新しく生まれたり消えたりするわけではありません。\n2. 発生したり使われたりする気体も含め、閉じた系では全体の質量は保存されます。\n3. 開いた容器で測った質量の変化は、気体の出入りによる場合があり、保存則が破れたとは限りません。\n避けたい誤解：気体は目に見えなくても質量を持ちます。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "reactions-mass"
+    },
+    {
+      "id": "ja-science-reactions-mass-evidence",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-chemical",
+      "title": {
+        "zh": "机制 / 会变轻的密封箱 · 证据报告",
+        "en": "Mechanisms / The sealed chest that seems lighter · Evidence report",
+        "ja": "仕組み / 軽く見える密閉箱 · 証拠の報告"
+      },
+      "prompt": "からくりの町の探偵が、測定と漏れの可能性を調べ、架空の仕掛けと質量保存を区別します。 観察、推論、まだ分からないことを分けた報告を書いてください。観測を創作する場合は、実際の測定結果ではなく架空の資料だと明示してください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "別の説明と、さらに必要な証拠を検討する。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "根拠と限界のある主張"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 450,
+        "max": 700,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 通常の化学反応では原子が組み替わって新しい物質になり、原子が新しく生まれたり消えたりするわけではありません。\n2. 発生したり使われたりする気体も含め、閉じた系では全体の質量は保存されます。\n3. 開いた容器で測った質量の変化は、気体の出入りによる場合があり、保存則が破れたとは限りません。\n避けたい誤解：気体は目に見えなくても質量を持ちます。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "reactions-mass"
+    },
+    {
+      "id": "ja-science-atoms-bonding-story",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-chemical",
+      "title": {
+        "zh": "模型 / 晶体城的建筑规则 · 探险手记",
+        "en": "Models / The crystal city’s building rules · Expedition journal",
+        "ja": "モデル / 結晶の町の結び方 · 探検の手記"
+      },
+      "prompt": "結晶の建築家が、色の変わる架空の魔石と、現実の物質の結合や電荷の規則を分けて調べます。 観察と下の科学の考え方を使って判断する場面や手記を書いてください。人物や事件は創作しても、現実の科学法則は勝手に変えないでください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "判断が変わる場面と結びを描く。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "人物を通した発見"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 750,
+        "max": 1200,
+        "unit": "characters"
+      },
+      "minutes": 45,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 原子は陽子と、通常は中性子も含む原子核と、その外側の電子からなります。陽子数で元素が決まります。\n2. 原子や原子団が電子を受け取ったり失ったりすると、全体の電荷が変わってイオンになります。\n3. イオン結合、共有結合、金属結合は粒子が結びつく異なるモデルで、物質の性質を説明する手がかりになります。\n避けたい誤解：普通のイオンの生成で元素の陽子数が変わるわけではありません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "atoms-bonding"
+    },
+    {
+      "id": "ja-science-atoms-bonding-evidence",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-chemical",
+      "title": {
+        "zh": "模型 / 晶体城的建筑规则 · 证据报告",
+        "en": "Models / The crystal city’s building rules · Evidence report",
+        "ja": "モデル / 結晶の町の結び方 · 証拠の報告"
+      },
+      "prompt": "結晶の建築家が、色の変わる架空の魔石と、現実の物質の結合や電荷の規則を分けて調べます。 観察、推論、まだ分からないことを分けた報告を書いてください。観測を創作する場合は、実際の測定結果ではなく架空の資料だと明示してください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "別の説明と、さらに必要な証拠を検討する。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "根拠と限界のある主張"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 750,
+        "max": 1200,
+        "unit": "characters"
+      },
+      "minutes": 45,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 原子は陽子と、通常は中性子も含む原子核と、その外側の電子からなります。陽子数で元素が決まります。\n2. 原子や原子団が電子を受け取ったり失ったりすると、全体の電荷が変わってイオンになります。\n3. イオン結合、共有結合、金属結合は粒子が結びつく異なるモデルで、物質の性質を説明する手がかりになります。\n避けたい誤解：普通のイオンの生成で元素の陽子数が変わるわけではありません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "atoms-bonding"
+    },
+    {
+      "id": "ja-science-rates-catalysts-story",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-chemical",
+      "title": {
+        "zh": "模型 / 催化师的时间谜案 · 探险手记",
+        "en": "Models / The catalyst keeper’s time puzzle · Expedition journal",
+        "ja": "モデル / 触媒師の時間の謎 · 探検の手記"
+      },
+      "prompt": "時計守が、危険な実験手順ではなく提示された観測から、時計の魔法と触媒の働きを区別します。 観察と下の科学の考え方を使って判断する場面や手記を書いてください。人物や事件は創作しても、現実の科学法則は勝手に変えないでください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "判断が変わる場面と結びを描く。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "人物を通した発見"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 750,
+        "max": 1200,
+        "unit": "characters"
+      },
+      "minutes": 45,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 反応速度は、反応物が減ったり生成物ができたりする速さを表します。\n2. 温度、濃度、表面積は衝突の頻度や、十分なエネルギーを持つ衝突の割合に影響します。\n3. 触媒は活性化エネルギーの低い別の反応経路を与え、全体として再生されます。無限のエネルギーを供給するものではありません。\n避けたい誤解：触媒が変えるのは反応経路や速さであり、原子の保存則を破ったり無限のエネルギーを生んだりしません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "rates-catalysts"
+    },
+    {
+      "id": "ja-science-rates-catalysts-evidence",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-chemical",
+      "title": {
+        "zh": "模型 / 催化师的时间谜案 · 证据报告",
+        "en": "Models / The catalyst keeper’s time puzzle · Evidence report",
+        "ja": "モデル / 触媒師の時間の謎 · 証拠の報告"
+      },
+      "prompt": "時計守が、危険な実験手順ではなく提示された観測から、時計の魔法と触媒の働きを区別します。 観察、推論、まだ分からないことを分けた報告を書いてください。観測を創作する場合は、実際の測定結果ではなく架空の資料だと明示してください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "別の説明と、さらに必要な証拠を検討する。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "根拠と限界のある主張"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 750,
+        "max": 1200,
+        "unit": "characters"
+      },
+      "minutes": 45,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 反応速度は、反応物が減ったり生成物ができたりする速さを表します。\n2. 温度、濃度、表面積は衝突の頻度や、十分なエネルギーを持つ衝突の割合に影響します。\n3. 触媒は活性化エネルギーの低い別の反応経路を与え、全体として再生されます。無限のエネルギーを供給するものではありません。\n避けたい誤解：触媒が変えるのは反応経路や速さであり、原子の保存則を破ったり無限のエネルギーを生んだりしません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "rates-catalysts"
+    },
+    {
+      "id": "ja-science-plants-growth-story",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-life",
+      "title": {
+        "zh": "基础 / 温室精灵的失踪叶片 · 探险手记",
+        "en": "Foundations / The greenhouse sprite’s missing leaves · Expedition journal",
+        "ja": "基礎 / 温室の精と消えた葉 · 探検の手記"
+      },
+      "prompt": "温室の精に頼まれた大人の庭師が、呪いという説明に頼らず、条件を比べて葉の変化を調べます。 観察と下の科学の考え方を使って判断する場面や手記を書いてください。人物や事件は創作しても、現実の科学法則は勝手に変えないでください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "判断が変わる場面と結びを描く。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "人物を通した発見"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 250,
+        "max": 400,
+        "unit": "characters"
+      },
+      "minutes": 20,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 緑色の植物は光合成で光のエネルギーを使い、二酸化炭素と水から糖を作ります。\n2. 根は水や無機養分を吸収しますが、植物の乾燥した体の大部分がそのまま土から来るわけではありません。\n3. 植物の成長を公平に比べるには、光、水、温度などの条件の違いを考える必要があります。\n避けたい誤解：植物の成長による質量の増加を、土だけを食べた結果として説明することはできません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "plants-growth"
+    },
+    {
+      "id": "ja-science-plants-growth-evidence",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-life",
+      "title": {
+        "zh": "基础 / 温室精灵的失踪叶片 · 证据报告",
+        "en": "Foundations / The greenhouse sprite’s missing leaves · Evidence report",
+        "ja": "基礎 / 温室の精と消えた葉 · 証拠の報告"
+      },
+      "prompt": "温室の精に頼まれた大人の庭師が、呪いという説明に頼らず、条件を比べて葉の変化を調べます。 観察、推論、まだ分からないことを分けた報告を書いてください。観測を創作する場合は、実際の測定結果ではなく架空の資料だと明示してください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "別の説明と、さらに必要な証拠を検討する。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "根拠と限界のある主張"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 250,
+        "max": 400,
+        "unit": "characters"
+      },
+      "minutes": 20,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 緑色の植物は光合成で光のエネルギーを使い、二酸化炭素と水から糖を作ります。\n2. 根は水や無機養分を吸収しますが、植物の乾燥した体の大部分がそのまま土から来るわけではありません。\n3. 植物の成長を公平に比べるには、光、水、温度などの条件の違いを考える必要があります。\n避けたい誤解：植物の成長による質量の増加を、土だけを食べた結果として説明することはできません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "plants-growth"
+    },
+    {
+      "id": "ja-science-habitats-foodwebs-story",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-life",
+      "title": {
+        "zh": "基础 / 森林议会与食物网 · 探险手记",
+        "en": "Foundations / The forest council and the food web · Expedition journal",
+        "ja": "基礎 / 森の会議と食物網 · 探検の手記"
+      },
+      "prompt": "言葉を話す架空の動物たちの会議が、生息場所を変える前に現実の食物網を考えます。 観察と下の科学の考え方を使って判断する場面や手記を書いてください。人物や事件は創作しても、現実の科学法則は勝手に変えないでください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "判断が変わる場面と結びを描く。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "人物を通した発見"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 250,
+        "max": 400,
+        "unit": "characters"
+      },
+      "minutes": 20,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 生物は生息場所の条件や、資源を得る相手となるほかの生物に依存しています。\n2. 食物連鎖の矢印は通常、食べ物となる側から、その物質やエネルギーを受け取る側へ向けて描きます。\n3. 食物網では食べる関係がつながっているため、一つの集団の変化がほかにも影響することがあります。\n避けたい誤解：捕食者を取り除けば、いつでも生態系がよくなるわけではありません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "habitats-foodwebs"
+    },
+    {
+      "id": "ja-science-habitats-foodwebs-evidence",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-life",
+      "title": {
+        "zh": "基础 / 森林议会与食物网 · 证据报告",
+        "en": "Foundations / The forest council and the food web · Evidence report",
+        "ja": "基礎 / 森の会議と食物網 · 証拠の報告"
+      },
+      "prompt": "言葉を話す架空の動物たちの会議が、生息場所を変える前に現実の食物網を考えます。 観察、推論、まだ分からないことを分けた報告を書いてください。観測を創作する場合は、実際の測定結果ではなく架空の資料だと明示してください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "別の説明と、さらに必要な証拠を検討する。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "根拠と限界のある主張"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 250,
+        "max": 400,
+        "unit": "characters"
+      },
+      "minutes": 20,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 生物は生息場所の条件や、資源を得る相手となるほかの生物に依存しています。\n2. 食物連鎖の矢印は通常、食べ物となる側から、その物質やエネルギーを受け取る側へ向けて描きます。\n3. 食物網では食べる関係がつながっているため、一つの集団の変化がほかにも影響することがあります。\n避けたい誤解：捕食者を取り除けば、いつでも生態系がよくなるわけではありません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "habitats-foodwebs"
+    },
+    {
+      "id": "ja-science-cells-systems-story",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-life",
+      "title": {
+        "zh": "机制 / 微观城的边界守卫 · 探险手记",
+        "en": "Mechanisms / The microscopic city’s boundary guard · Expedition journal",
+        "ja": "仕組み / ミクロの町の境界守 · 探検の手記"
+      },
+      "prompt": "架空の縮小探検家が、町のたとえで細胞を理解しながら、そのたとえでは説明できない点にも気づきます。 観察と下の科学の考え方を使って判断する場面や手記を書いてください。人物や事件は創作しても、現実の科学法則は勝手に変えないでください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "判断が変わる場面と結びを描く。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "人物を通した発見"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 450,
+        "max": 700,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 細胞は生物の構造と働きの基本単位で、多細胞生物には役割の異なる細胞があります。\n2. 細胞膜は周囲との物質のやり取りを調節し、多くの細胞には遺伝物質を含む核があります。\n3. 細胞のモデルには限界があります。細胞小器官は小さな人間ではなく、すべての細胞が同じ構造を持つわけでもありません。\n避けたい誤解：細胞が意識を持つ働き手の住む小さな町だというのは、文字どおりの事実ではなくたとえです。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "cells-systems"
+    },
+    {
+      "id": "ja-science-cells-systems-evidence",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-life",
+      "title": {
+        "zh": "机制 / 微观城的边界守卫 · 证据报告",
+        "en": "Mechanisms / The microscopic city’s boundary guard · Evidence report",
+        "ja": "仕組み / ミクロの町の境界守 · 証拠の報告"
+      },
+      "prompt": "架空の縮小探検家が、町のたとえで細胞を理解しながら、そのたとえでは説明できない点にも気づきます。 観察、推論、まだ分からないことを分けた報告を書いてください。観測を創作する場合は、実際の測定結果ではなく架空の資料だと明示してください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "別の説明と、さらに必要な証拠を検討する。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "根拠と限界のある主張"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 450,
+        "max": 700,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 細胞は生物の構造と働きの基本単位で、多細胞生物には役割の異なる細胞があります。\n2. 細胞膜は周囲との物質のやり取りを調節し、多くの細胞には遺伝物質を含む核があります。\n3. 細胞のモデルには限界があります。細胞小器官は小さな人間ではなく、すべての細胞が同じ構造を持つわけでもありません。\n避けたい誤解：細胞が意識を持つ働き手の住む小さな町だというのは、文字どおりの事実ではなくたとえです。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "cells-systems"
+    },
+    {
+      "id": "ja-science-respiration-energy-story",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-life",
+      "title": {
+        "zh": "机制 / 夜间花园的能量账 · 探险手记",
+        "en": "Mechanisms / The night garden’s energy account · Expedition journal",
+        "ja": "仕組み / 夜の庭のエネルギー収支 · 探検の手記"
+      },
+      "prompt": "夜の庭の管理人が、架空の夜咲く花と普通の植物の代謝を混同せず、酸素の観測を調べます。 観察と下の科学の考え方を使って判断する場面や手記を書いてください。人物や事件は創作しても、現実の科学法則は勝手に変えないでください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "判断が変わる場面と結びを描く。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "人物を通した発見"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 450,
+        "max": 700,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 光合成は光のエネルギーを有機物に蓄えられる化学的なエネルギーへ移します。\n2. 好気呼吸は酸素を使って有機物からエネルギーを取り出し、二酸化炭素と水を生じます。\n3. 植物は昼も夜も呼吸します。光合成には適した光などの条件が必要です。\n避けたい誤解：植物は光合成をしている間に呼吸を止めるわけではありません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "respiration-energy"
+    },
+    {
+      "id": "ja-science-respiration-energy-evidence",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-life",
+      "title": {
+        "zh": "机制 / 夜间花园的能量账 · 证据报告",
+        "en": "Mechanisms / The night garden’s energy account · Evidence report",
+        "ja": "仕組み / 夜の庭のエネルギー収支 · 証拠の報告"
+      },
+      "prompt": "夜の庭の管理人が、架空の夜咲く花と普通の植物の代謝を混同せず、酸素の観測を調べます。 観察、推論、まだ分からないことを分けた報告を書いてください。観測を創作する場合は、実際の測定結果ではなく架空の資料だと明示してください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "別の説明と、さらに必要な証拠を検討する。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "根拠と限界のある主張"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 450,
+        "max": 700,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 光合成は光のエネルギーを有機物に蓄えられる化学的なエネルギーへ移します。\n2. 好気呼吸は酸素を使って有機物からエネルギーを取り出し、二酸化炭素と水を生じます。\n3. 植物は昼も夜も呼吸します。光合成には適した光などの条件が必要です。\n避けたい誤解：植物は光合成をしている間に呼吸を止めるわけではありません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "respiration-energy"
+    },
+    {
+      "id": "ja-science-inheritance-dna-story",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-life",
+      "title": {
+        "zh": "模型 / 龙族档案与遗传线索 · 探险手记",
+        "en": "Models / The dragon archive and inheritance · Expedition journal",
+        "ja": "モデル / 竜の記録と遺伝の手がかり · 探検の手記"
+      },
+      "prompt": "記録係が架空の竜の形質を調べ、現実の遺伝モデルとその限界を明示します。 観察と下の科学の考え方を使って判断する場面や手記を書いてください。人物や事件は創作しても、現実の科学法則は勝手に変えないでください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "判断が変わる場面と結びを描く。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "人物を通した発見"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 750,
+        "max": 1200,
+        "unit": "characters"
+      },
+      "minutes": 45,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. DNAは受け継がれる情報を担います。遺伝子は機能を持つDNAの配列で、タンパク質や機能を持つRNAの生成などに関わります。\n2. 形質は複数の遺伝子や環境の影響を受けることがあり、単純な顕性・潜性のモデルには限界があります。\n3. 突然変異はDNAの変化で、必ず有利や有害になるわけでも、生物の必要に応じて起きるわけでもありません。\n避けたい誤解：顕性の対立遺伝子が、必ず多い、優れている、強いという意味ではありません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "inheritance-dna"
+    },
+    {
+      "id": "ja-science-inheritance-dna-evidence",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-life",
+      "title": {
+        "zh": "模型 / 龙族档案与遗传线索 · 证据报告",
+        "en": "Models / The dragon archive and inheritance · Evidence report",
+        "ja": "モデル / 竜の記録と遺伝の手がかり · 証拠の報告"
+      },
+      "prompt": "記録係が架空の竜の形質を調べ、現実の遺伝モデルとその限界を明示します。 観察、推論、まだ分からないことを分けた報告を書いてください。観測を創作する場合は、実際の測定結果ではなく架空の資料だと明示してください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "別の説明と、さらに必要な証拠を検討する。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "根拠と限界のある主張"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 750,
+        "max": 1200,
+        "unit": "characters"
+      },
+      "minutes": 45,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. DNAは受け継がれる情報を担います。遺伝子は機能を持つDNAの配列で、タンパク質や機能を持つRNAの生成などに関わります。\n2. 形質は複数の遺伝子や環境の影響を受けることがあり、単純な顕性・潜性のモデルには限界があります。\n3. 突然変異はDNAの変化で、必ず有利や有害になるわけでも、生物の必要に応じて起きるわけでもありません。\n避けたい誤解：顕性の対立遺伝子が、必ず多い、優れている、強いという意味ではありません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "inheritance-dna"
+    },
+    {
+      "id": "ja-science-evolution-selection-story",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-life",
+      "title": {
+        "zh": "模型 / 群岛探险与适应 · 探险手记",
+        "en": "Models / The island expedition and adaptation · Expedition journal",
+        "ja": "モデル / 群島の探検と適応 · 探検の手記"
+      },
+      "prompt": "群島の探検隊が、架空の生物を世代にわたって比べ、必要だから適応が生まれるという説明を検討します。 観察と下の科学の考え方を使って判断する場面や手記を書いてください。人物や事件は創作しても、現実の科学法則は勝手に変えないでください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "判断が変わる場面と結びを描く。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "人物を通した発見"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 750,
+        "max": 1200,
+        "unit": "characters"
+      },
+      "minutes": 45,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 自然選択には、変異、遺伝する性質、特定の環境での繁殖成功の違いが関わります。\n2. 集団は世代を通じて変化しますが、個体が必要だと決めて遺伝する形質を進化させるわけではありません。\n3. 進化にあらかじめ決まった目標はなく、何が有利かは環境が変わると変化します。\n避けたい誤解：自然選択は種をよくしようとする意識的な計画ではありません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "evolution-selection"
+    },
+    {
+      "id": "ja-science-evolution-selection-evidence",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-life",
+      "title": {
+        "zh": "模型 / 群岛探险与适应 · 证据报告",
+        "en": "Models / The island expedition and adaptation · Evidence report",
+        "ja": "モデル / 群島の探検と適応 · 証拠の報告"
+      },
+      "prompt": "群島の探検隊が、架空の生物を世代にわたって比べ、必要だから適応が生まれるという説明を検討します。 観察、推論、まだ分からないことを分けた報告を書いてください。観測を創作する場合は、実際の測定結果ではなく架空の資料だと明示してください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "別の説明と、さらに必要な証拠を検討する。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "根拠と限界のある主張"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 750,
+        "max": 1200,
+        "unit": "characters"
+      },
+      "minutes": 45,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 自然選択には、変異、遺伝する性質、特定の環境での繁殖成功の違いが関わります。\n2. 集団は世代を通じて変化しますが、個体が必要だと決めて遺伝する形質を進化させるわけではありません。\n3. 進化にあらかじめ決まった目標はなく、何が有利かは環境が変わると変化します。\n避けたい誤解：自然選択は種をよくしようとする意識的な計画ではありません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "evolution-selection"
+    },
+    {
+      "id": "ja-science-rocks-soils-story",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-earth",
+      "title": {
+        "zh": "基础 / 石头图书馆的旧日记 · 探险手记",
+        "en": "Foundations / Old diaries in the rock library · Expedition journal",
+        "ja": "基礎 / 石の図書館の古い日記 · 探検の手記"
+      },
+      "prompt": "魔法の石の図書館の管理人が、石の語る記憶は架空だと分けながら、現実の地質の手がかりを読みます。 観察と下の科学の考え方を使って判断する場面や手記を書いてください。人物や事件は創作しても、現実の科学法則は勝手に変えないでください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "判断が変わる場面と結びを描く。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "人物を通した発見"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 250,
+        "max": 400,
+        "unit": "characters"
+      },
+      "minutes": 20,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 岩石は粒の大きさや組成などが異なります。土には鉱物の粒のほか、有機物、空気、水などが含まれます。\n2. 風化は岩石がその場で砕かれたり変化したりすることで、侵食では物質が運ばれます。\n3. 化石は昔の生物や環境の手がかりになりますが、どの岩石にも化石があるわけではありません。\n避けたい誤解：化石が必ず完全な骨格とは限らず、一つの試料に化石がないことだけで生物がいなかったとは言えません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "rocks-soils"
+    },
+    {
+      "id": "ja-science-rocks-soils-evidence",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-earth",
+      "title": {
+        "zh": "基础 / 石头图书馆的旧日记 · 证据报告",
+        "en": "Foundations / Old diaries in the rock library · Evidence report",
+        "ja": "基礎 / 石の図書館の古い日記 · 証拠の報告"
+      },
+      "prompt": "魔法の石の図書館の管理人が、石の語る記憶は架空だと分けながら、現実の地質の手がかりを読みます。 観察、推論、まだ分からないことを分けた報告を書いてください。観測を創作する場合は、実際の測定結果ではなく架空の資料だと明示してください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "別の説明と、さらに必要な証拠を検討する。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "根拠と限界のある主張"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 250,
+        "max": 400,
+        "unit": "characters"
+      },
+      "minutes": 20,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 岩石は粒の大きさや組成などが異なります。土には鉱物の粒のほか、有機物、空気、水などが含まれます。\n2. 風化は岩石がその場で砕かれたり変化したりすることで、侵食では物質が運ばれます。\n3. 化石は昔の生物や環境の手がかりになりますが、どの岩石にも化石があるわけではありません。\n避けたい誤解：化石が必ず完全な骨格とは限らず、一つの試料に化石がないことだけで生物がいなかったとは言えません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "rocks-soils"
+    },
+    {
+      "id": "ja-science-sun-moon-seasons-story",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-earth",
+      "title": {
+        "zh": "基础 / 错位的月亮与四季 · 探险手记",
+        "en": "Foundations / The misplaced moon and the seasons · Expedition journal",
+        "ja": "基礎 / ずれた月と四季 · 探検の手記"
+      },
+      "prompt": "幻想の天文台がありえない月の並びを報告し、調査員がまず現実の太陽・地球・月の位置関係を確かめます。 観察と下の科学の考え方を使って判断する場面や手記を書いてください。人物や事件は創作しても、現実の科学法則は勝手に変えないでください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "判断が変わる場面と結びを描く。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "人物を通した発見"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 250,
+        "max": 400,
+        "unit": "characters"
+      },
+      "minutes": 20,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 昼と夜は、地球が自転し太陽の光を受ける向きが変わることで生じます。\n2. 通常の月の満ち欠けは、公転する月の太陽に照らされた半分の見え方が変わるためで、地球の影が原因ではありません。\n3. 地軸の傾きにより一年を通じて日射の角度や昼の長さが変わり、これが季節の主な原因になります。\n避けたい誤解：夏の主な原因は地球が太陽に近づくことではなく、月の満ち欠けは普通の食現象ではありません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "sun-moon-seasons"
+    },
+    {
+      "id": "ja-science-sun-moon-seasons-evidence",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-earth",
+      "title": {
+        "zh": "基础 / 错位的月亮与四季 · 证据报告",
+        "en": "Foundations / The misplaced moon and the seasons · Evidence report",
+        "ja": "基礎 / ずれた月と四季 · 証拠の報告"
+      },
+      "prompt": "幻想の天文台がありえない月の並びを報告し、調査員がまず現実の太陽・地球・月の位置関係を確かめます。 観察、推論、まだ分からないことを分けた報告を書いてください。観測を創作する場合は、実際の測定結果ではなく架空の資料だと明示してください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "別の説明と、さらに必要な証拠を検討する。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "根拠と限界のある主張"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 250,
+        "max": 400,
+        "unit": "characters"
+      },
+      "minutes": 20,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 昼と夜は、地球が自転し太陽の光を受ける向きが変わることで生じます。\n2. 通常の月の満ち欠けは、公転する月の太陽に照らされた半分の見え方が変わるためで、地球の影が原因ではありません。\n3. 地軸の傾きにより一年を通じて日射の角度や昼の長さが変わり、これが季節の主な原因になります。\n避けたい誤解：夏の主な原因は地球が太陽に近づくことではなく、月の満ち欠けは普通の食現象ではありません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "sun-moon-seasons"
+    },
+    {
+      "id": "ja-science-water-weather-story",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-earth",
+      "title": {
+        "zh": "机制 / 云港的天气疑案 · 探险手记",
+        "en": "Mechanisms / The cloud harbour weather mystery · Expedition journal",
+        "ja": "仕組み / 雲の港の天気の謎 · 探検の手記"
+      },
+      "prompt": "浮かぶ港を行き来する配達人が、天気の記録と架空の雲の装置を比べ、一つの手がかりだけで予報しないようにします。 観察と下の科学の考え方を使って判断する場面や手記を書いてください。人物や事件は創作しても、現実の科学法則は勝手に変えないでください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "判断が変わる場面と結びを描く。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "人物を通した発見"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 450,
+        "max": 700,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 水は蒸発、凝結、降水、流出などによって、さまざまな場所の間を循環します。\n2. 空気の動きや温度、気圧の変化が天気に関わり、一つの観測だけで信頼できる予報をするのは難しいことです。\n3. 天気は短期の状態を表し、気候はより長い期間の傾向や統計に関わります。\n避けたい誤解：寒い日が一日あったことだけで、長期の気候の傾向は決まりません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "water-weather"
+    },
+    {
+      "id": "ja-science-water-weather-evidence",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-earth",
+      "title": {
+        "zh": "机制 / 云港的天气疑案 · 证据报告",
+        "en": "Mechanisms / The cloud harbour weather mystery · Evidence report",
+        "ja": "仕組み / 雲の港の天気の謎 · 証拠の報告"
+      },
+      "prompt": "浮かぶ港を行き来する配達人が、天気の記録と架空の雲の装置を比べ、一つの手がかりだけで予報しないようにします。 観察、推論、まだ分からないことを分けた報告を書いてください。観測を創作する場合は、実際の測定結果ではなく架空の資料だと明示してください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "別の説明と、さらに必要な証拠を検討する。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "根拠と限界のある主張"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 450,
+        "max": 700,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 水は蒸発、凝結、降水、流出などによって、さまざまな場所の間を循環します。\n2. 空気の動きや温度、気圧の変化が天気に関わり、一つの観測だけで信頼できる予報をするのは難しいことです。\n3. 天気は短期の状態を表し、気候はより長い期間の傾向や統計に関わります。\n避けたい誤解：寒い日が一日あったことだけで、長期の気候の傾向は決まりません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "water-weather"
+    },
+    {
+      "id": "ja-science-plates-earthquakes-story",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-earth",
+      "title": {
+        "zh": "机制 / 地下城的断层信号 · 探险手记",
+        "en": "Mechanisms / Fault signals beneath the underground city · Expedition journal",
+        "ja": "仕組み / 地下の町と断層の信号 · 探検の手記"
+      },
+      "prompt": "地下の町の地図係が、断層の証拠と幻想的な予言を比べ、予測できないことも説明します。 観察と下の科学の考え方を使って判断する場面や手記を書いてください。人物や事件は創作しても、現実の科学法則は勝手に変えないでください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "判断が変わる場面と結びを描く。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "人物を通した発見"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 450,
+        "max": 700,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 地球の外側の硬い層はプレートに分かれ、互いに相対的に動いています。\n2. 多くの地震は、弾性的なひずみがたまった後、断層が急にずれることで起こります。\n3. 地震のリスクを科学的に述べるには証拠と不確実性を扱い、次の地震の日時を正確に約束することはできません。\n避けたい誤解：架空の予言を、科学的に信頼できる地震の日時予測として示してはいけません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "plates-earthquakes"
+    },
+    {
+      "id": "ja-science-plates-earthquakes-evidence",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-earth",
+      "title": {
+        "zh": "机制 / 地下城的断层信号 · 证据报告",
+        "en": "Mechanisms / Fault signals beneath the underground city · Evidence report",
+        "ja": "仕組み / 地下の町と断層の信号 · 証拠の報告"
+      },
+      "prompt": "地下の町の地図係が、断層の証拠と幻想的な予言を比べ、予測できないことも説明します。 観察、推論、まだ分からないことを分けた報告を書いてください。観測を創作する場合は、実際の測定結果ではなく架空の資料だと明示してください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "別の説明と、さらに必要な証拠を検討する。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "根拠と限界のある主張"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 450,
+        "max": 700,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 地球の外側の硬い層はプレートに分かれ、互いに相対的に動いています。\n2. 多くの地震は、弾性的なひずみがたまった後、断層が急にずれることで起こります。\n3. 地震のリスクを科学的に述べるには証拠と不確実性を扱い、次の地震の日時を正確に約束することはできません。\n避けたい誤解：架空の予言を、科学的に信頼できる地震の日時予測として示してはいけません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "plates-earthquakes"
+    },
+    {
+      "id": "ja-science-carbon-climate-story",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-earth",
+      "title": {
+        "zh": "模型 / 碳档案与温室之城 · 探险手记",
+        "en": "Models / The carbon archive and the greenhouse city · Expedition journal",
+        "ja": "モデル / 炭素の記録と温室の町 · 探検の手記"
+      },
+      "prompt": "記録の探偵が、架空の閉じた町で炭素の移動を追い、観測された傾向と都合のよい犯人説を区別します。 観察と下の科学の考え方を使って判断する場面や手記を書いてください。人物や事件は創作しても、現実の科学法則は勝手に変えないでください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "判断が変わる場面と結びを描く。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "人物を通した発見"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 750,
+        "max": 1200,
+        "unit": "characters"
+      },
+      "minutes": 45,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 炭素は大気、生物、海洋、岩石などの間を、異なる時間の尺度で移動します。\n2. 温室効果ガスは赤外線を吸収し放出して地球のエネルギー収支に影響しますが、ガラス屋根と全く同じ仕組みではありません。\n3. 温室効果ガス濃度の変化は気候に影響しますが、個々の気象現象の原因を述べるには慎重な分析と不確実性の説明が必要です。\n避けたい誤解：温室効果とオゾン層の破壊は異なる現象です。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "carbon-climate"
+    },
+    {
+      "id": "ja-science-carbon-climate-evidence",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-earth",
+      "title": {
+        "zh": "模型 / 碳档案与温室之城 · 证据报告",
+        "en": "Models / The carbon archive and the greenhouse city · Evidence report",
+        "ja": "モデル / 炭素の記録と温室の町 · 証拠の報告"
+      },
+      "prompt": "記録の探偵が、架空の閉じた町で炭素の移動を追い、観測された傾向と都合のよい犯人説を区別します。 観察、推論、まだ分からないことを分けた報告を書いてください。観測を創作する場合は、実際の測定結果ではなく架空の資料だと明示してください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "別の説明と、さらに必要な証拠を検討する。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "根拠と限界のある主張"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 750,
+        "max": 1200,
+        "unit": "characters"
+      },
+      "minutes": 45,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 炭素は大気、生物、海洋、岩石などの間を、異なる時間の尺度で移動します。\n2. 温室効果ガスは赤外線を吸収し放出して地球のエネルギー収支に影響しますが、ガラス屋根と全く同じ仕組みではありません。\n3. 温室効果ガス濃度の変化は気候に影響しますが、個々の気象現象の原因を述べるには慎重な分析と不確実性の説明が必要です。\n避けたい誤解：温室効果とオゾン層の破壊は異なる現象です。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "carbon-climate"
+    },
+    {
+      "id": "ja-science-stars-universe-story",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-earth",
+      "title": {
+        "zh": "模型 / 恒星信使的旧光 · 探险手记",
+        "en": "Models / The star messenger’s old light · Expedition journal",
+        "ja": "モデル / 星の使者と昔の光 · 探検の手記"
+      },
+      "prompt": "架空の星の使者が、超光速移動を確立した物理法則とせず、昔の光の信号と事件の時刻を照合します。 観察と下の科学の考え方を使って判断する場面や手記を書いてください。人物や事件は創作しても、現実の科学法則は勝手に変えないでください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "判断が変わる場面と結びを描く。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "人物を通した発見"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 750,
+        "max": 1200,
+        "unit": "characters"
+      },
+      "minutes": 45,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 恒星は核融合によってエネルギーを生み、その進化は初めの質量に強く依存します。\n2. 光の速さは有限なので、遠くの天体を見ることは、その天体が過去に出した光を見ることです。\n3. 光年は時間ではなく距離の単位です。宇宙の証拠は、限界のあるモデルを通じて解釈されます。\n避けたい誤解：望遠鏡が遠い宇宙のすべてを、同じ現在の瞬間の姿として示すわけではありません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "stars-universe"
+    },
+    {
+      "id": "ja-science-stars-universe-evidence",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-science-earth",
+      "title": {
+        "zh": "模型 / 恒星信使的旧光 · 证据报告",
+        "en": "Models / The star messenger’s old light · Evidence report",
+        "ja": "モデル / 星の使者と昔の光 · 証拠の報告"
+      },
+      "prompt": "架空の星の使者が、超光速移動を確立した物理法則とせず、昔の光の信号と事件の時刻を照合します。 観察、推論、まだ分からないことを分けた報告を書いてください。観測を創作する場合は、実際の測定結果ではなく架空の資料だと明示してください。",
+      "requirements": [
+        "参考となる考え方を二つ以上、場面に正確に当てはめる。",
+        "手がかりが主張を支えるかどうか、理由を説明する。",
+        "魔法、未確立の技術、創作データは架空だと区別する。",
+        "別の説明と、さらに必要な証拠を検討する。"
+      ],
+      "focus": [
+        "科学的な因果関係",
+        "事実・推論・創作の区別",
+        "根拠と限界のある主張"
+      ],
+      "planning": [
+        "調査する人物に実際に観察できることは何か。",
+        "魅力的でも誤った説明を、どの知識で退けられるか。",
+        "たとえや架空の設定はどこから現実と違うか。"
+      ],
+      "length": {
+        "min": 750,
+        "max": 1200,
+        "unit": "characters"
+      },
+      "minutes": 45,
+      "materials": "参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n1. 恒星は核融合によってエネルギーを生み、その進化は初めの質量に強く依存します。\n2. 光の速さは有限なので、遠くの天体を見ることは、その天体が過去に出した光を見ることです。\n3. 光年は時間ではなく距離の単位です。宇宙の証拠は、限界のあるモデルを通じて解釈されます。\n避けたい誤解：望遠鏡が遠い宇宙のすべてを、同じ現在の瞬間の姿として示すわけではありません。\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。",
+      "scienceUnitId": "stars-universe"
+    }
+  ]
+}

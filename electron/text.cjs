@@ -1,0 +1,11 @@
+// Decode accidental JSON newline escapes in prose, not arbitrary escape sequences.
+// Keep code spans, fenced code, Windows paths and URLs intact.
+function normalizeText(value){
+ if(typeof value!=='string')return value;
+ const parts=value.replace(/\r\n?/g,'\n').split(/(```[\s\S]*?```|`[^`\n]*`|(?:[A-Za-z]:\\|\\\\[A-Za-z0-9_.-]{2,}\\)[^\s]+|https?:\/\/[^\s]+)/g);
+ return parts.map((part,index)=>{if(index%2)return part;const markers=part.match(/\\+n/g)||[];const hasParagraph=/(?:\\+n){2,}|\\+r\\+n/.test(part);if(!hasParagraph&&markers.length<2)return part;return part.replace(/\\+r\\+n/g,'\n').replace(/\\+n/g,'\n').replace(/\n{3,}/g,'\n\n');}).join('');
+}
+function normalizeGenerated(value){if(Array.isArray(value))return value.map(normalizeGenerated);if(!value||typeof value!=='object')return value;return Object.fromEntries(Object.entries(value).map(([key,item])=>[key,['text','sample','synopsis','bible','summary','memory'].includes(key)&&typeof item==='string'?normalizeText(item):key==='outline'&&Array.isArray(item)?item.map(normalizeText):normalizeGenerated(item)]));}
+function normalizeBookmarks(bookmarks){if(!Array.isArray(bookmarks))return bookmarks;const seen=new Set;return bookmarks.filter(mark=>{if(!mark||!Number.isInteger(mark.chapter)||!Number.isFinite(mark.fraction))return true;const key=Number.isInteger(mark.paragraph)&&Number.isInteger(mark.index)?`${mark.chapter}:${mark.paragraph}:${mark.index}`:`${mark.chapter}:${Math.round(mark.fraction*100)}`;if(seen.has(key))return false;seen.add(key);return true;});}
+function normalizeBook(book){const result={...book};for(const key of ['sample','synopsis','bible','memory'])if(typeof result[key]==='string'){const fixed=normalizeText(result[key]);if(fixed!==result[key]&&result[`${key}Original`]===undefined)result[`${key}Original`]=result[key];result[key]=fixed;}if(Array.isArray(result.outline))result.outline=result.outline.map(normalizeText);if(Array.isArray(result.chapters))result.chapters=result.chapters.map(chapter=>{const text=normalizeText(chapter.text);return {...chapter,...(text!==chapter.text&&chapter.originalText===undefined?{originalText:chapter.text}:{}),text,summary:normalizeText(chapter.summary)};});result.bookmarks=normalizeBookmarks(result.bookmarks);return result;}
+module.exports={normalizeText,normalizeGenerated,normalizeBook};

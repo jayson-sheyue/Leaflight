@@ -1,0 +1,1665 @@
+{
+  "version": 1,
+  "verifiedOn": "2026-10-26",
+  "sources": [
+    {
+      "id": "eng-primary",
+      "title": "Department for Education · England primary science",
+      "url": "https://www.gov.uk/government/publications/national-curriculum-in-england-science-programmes-of-study/national-curriculum-in-england-science-programmes-of-study"
+    },
+    {
+      "id": "eng-middle",
+      "title": "Department for Education · England KS3 science",
+      "url": "https://www.gov.uk/government/publications/national-curriculum-in-england-science-programmes-of-study/national-curriculum-in-england-science-programmes-of-study"
+    },
+    {
+      "id": "eng-gcse",
+      "title": "Department for Education · GCSE biology, chemistry and physics",
+      "url": "https://www.gov.uk/government/publications/gcse-single-science/"
+    },
+    {
+      "id": "jp-primary",
+      "title": "文部科学省 · 小学校理科（平成29年告示）",
+      "url": "https://www.mext.go.jp/component/a_menu/education/micro_detail/__icsFiles/afieldfile/2019/03/18/1387017_005_1.pdf"
+    },
+    {
+      "id": "jp-middle",
+      "title": "文部科学省 · 中学校学習指導要領解説（理科へのリンク）",
+      "url": "https://www.mext.go.jp/a_menu/shotou/new-cs/1387016.htm"
+    },
+    {
+      "id": "jp-high",
+      "title": "文部科学省 · 高等学校学習指導要領解説（理科へのリンク）",
+      "url": "https://www.mext.go.jp/a_menu/shotou/new-cs/1407074.htm"
+    },
+    {
+      "id": "nasa-moon",
+      "title": "NASA Science · Moon phases and common questions",
+      "url": "https://science.nasa.gov/moon/top-moon-questions/"
+    },
+    {
+      "id": "nasa-seasons",
+      "title": "NASA Space Place · What causes the seasons?",
+      "url": "https://spaceplace.nasa.gov/seasons/en/"
+    }
+  ],
+  "domains": [
+    {
+      "id": "physical",
+      "title": {
+        "zh": "物理 · 力与能量",
+        "en": "Physics · forces and energy",
+        "ja": "物理・力とエネルギー"
+      }
+    },
+    {
+      "id": "chemical",
+      "title": {
+        "zh": "化学 · 物质与粒子",
+        "en": "Chemistry · matter and particles",
+        "ja": "化学・物質と粒子"
+      }
+    },
+    {
+      "id": "life",
+      "title": {
+        "zh": "生命 · 生物与生态",
+        "en": "Life · organisms and ecology",
+        "ja": "生命・生物と生態"
+      }
+    },
+    {
+      "id": "earth",
+      "title": {
+        "zh": "地球与宇宙",
+        "en": "Earth and space",
+        "ja": "地球と宇宙"
+      }
+    }
+  ],
+  "stages": [
+    {
+      "id": "primary",
+      "title": {
+        "zh": "基础观察 · 小学相关",
+        "en": "Observation · primary foundations",
+        "ja": "観察の基礎・小学校関連"
+      }
+    },
+    {
+      "id": "middle",
+      "title": {
+        "zh": "机制探究 · 初中相关",
+        "en": "Mechanisms · lower secondary",
+        "ja": "仕組みの探究・中学校関連"
+      }
+    },
+    {
+      "id": "high",
+      "title": {
+        "zh": "模型推理 · 高中相关",
+        "en": "Models · upper secondary topics",
+        "ja": "モデルと推論・高校関連"
+      }
+    }
+  ],
+  "units": [
+    {
+      "id": "light-shadows",
+      "version": 1,
+      "domain": "physical",
+      "stage": "primary",
+      "order": 1,
+      "title": {
+        "zh": "光与影子的密室",
+        "en": "The room of light and shadows",
+        "ja": "光と影の密室"
+      },
+      "facts": {
+        "en": [
+          "We see an object when light from it enters our eyes; most everyday objects reflect light rather than produce it.",
+          "A shadow forms when an opaque object blocks light from a source.",
+          "With a fixed light source, moving an object changes the position and size of its shadow."
+        ],
+        "ja": [
+          "物が見えるのは、その物から来た光が目に入るためです。多くの身近な物は自ら光らず、光を反射します。",
+          "光を通さない物が光源からの光をさえぎると、影ができます。",
+          "光源を固定したまま物の位置を変えると、影の位置や大きさが変わります。"
+        ]
+      },
+      "misconception": {
+        "en": "A shadow is not a substance that leaks out of an object.",
+        "ja": "影は物から流れ出す物質ではありません。"
+      },
+      "hook": {
+        "en": "A museum explorer must identify a moving shadow that appears to contradict the position of a hidden lamp.",
+        "ja": "博物館の探検家が、隠された照明の位置と合わないように見える影の謎を追います。"
+      },
+      "terms": [
+        {
+          "en": "light source",
+          "ja": "光源"
+        },
+        {
+          "en": "reflection",
+          "ja": "反射"
+        },
+        {
+          "en": "opaque",
+          "ja": "不透明"
+        },
+        {
+          "en": "shadow",
+          "ja": "影"
+        }
+      ],
+      "prerequisites": [],
+      "references": {
+        "en": [
+          "eng-primary"
+        ],
+        "ja": [
+          "jp-primary"
+        ]
+      },
+      "curriculum": {
+        "en": "England primary science · selected foundations",
+        "ja": "小学校理科・関連する基礎概念"
+      }
+    },
+    {
+      "id": "circuit-paths",
+      "version": 1,
+      "domain": "physical",
+      "stage": "primary",
+      "order": 2,
+      "title": {
+        "zh": "发光地图与电路",
+        "en": "The luminous map and the circuit",
+        "ja": "光る地図と電気の道"
+      },
+      "facts": {
+        "en": [
+          "A simple battery-powered circuit needs a continuous conducting path for steady current to flow.",
+          "A switch opens or closes a circuit; an open path stops current in that branch.",
+          "Metals generally conduct electricity well, while materials such as dry plastic are useful insulators."
+        ],
+        "ja": [
+          "電池を使う簡単な回路では、電流が流れ続けるために導体でつながった道が必要です。",
+          "スイッチは回路を開いたり閉じたりします。道が切れると、その枝には電流が流れません。",
+          "金属は一般に電気を通しやすく、乾いたプラスチックなどは絶縁体として使えます。"
+        ]
+      },
+      "misconception": {
+        "en": "A bulb does not consume the current; energy is transferred while charge continues around the circuit.",
+        "ja": "電球が電流そのものを使い切るのではありません。電荷が回路を移動する間にエネルギーが移されます。"
+      },
+      "hook": {
+        "en": "An expedition team repairs a low-voltage luminous map by tracing which branch of its circuit is open.",
+        "ja": "探検隊が低電圧で光る地図を直すため、電気の道が切れた場所を探します。"
+      },
+      "terms": [
+        {
+          "en": "circuit",
+          "ja": "回路"
+        },
+        {
+          "en": "current",
+          "ja": "電流"
+        },
+        {
+          "en": "switch",
+          "ja": "スイッチ"
+        },
+        {
+          "en": "insulator",
+          "ja": "絶縁体"
+        }
+      ],
+      "prerequisites": [
+        "light-shadows"
+      ],
+      "references": {
+        "en": [
+          "eng-primary"
+        ],
+        "ja": [
+          "jp-primary"
+        ]
+      },
+      "curriculum": {
+        "en": "England primary science · selected foundations",
+        "ja": "小学校理科・関連する基礎概念"
+      }
+    },
+    {
+      "id": "forces-motion",
+      "version": 1,
+      "domain": "physical",
+      "stage": "middle",
+      "order": 3,
+      "title": {
+        "zh": "悬浮列车的失衡",
+        "en": "The unbalanced sky train",
+        "ja": "空中列車のつり合い"
+      },
+      "facts": {
+        "en": [
+          "A force can change an object’s velocity; velocity includes both speed and direction.",
+          "If the resultant force on an object is zero, it remains at rest or moves at constant velocity in an inertial frame.",
+          "Friction opposes relative sliding or the tendency to slide at a contact and can transfer energy to heating."
+        ],
+        "ja": [
+          "力は物体の速度を変えることができます。速度には速さだけでなく向きも含まれます。",
+          "慣性系では、物体に働く力の合力がゼロなら、静止または等速直線運動を続けます。",
+          "摩擦は接触面でのすべりやすべろうとする動きに逆らい、エネルギーを熱へ移すことがあります。"
+        ]
+      },
+      "misconception": {
+        "en": "Constant motion does not require a continuing unbalanced force; acceleration does.",
+        "ja": "一定の速度で動き続けるために合力が必要なのではなく、速度が変わるときに合力が必要です。"
+      },
+      "hook": {
+        "en": "A sky-train investigator separates a fictional levitation device from the real forces controlling a carriage’s motion.",
+        "ja": "空中列車の調査員が、架空の浮上装置と車両の運動に働く現実の力を区別して事故を調べます。"
+      },
+      "terms": [
+        {
+          "en": "resultant force",
+          "ja": "合力"
+        },
+        {
+          "en": "velocity",
+          "ja": "速度"
+        },
+        {
+          "en": "friction",
+          "ja": "摩擦"
+        },
+        {
+          "en": "acceleration",
+          "ja": "加速度"
+        }
+      ],
+      "prerequisites": [
+        "circuit-paths"
+      ],
+      "references": {
+        "en": [
+          "eng-middle"
+        ],
+        "ja": [
+          "jp-middle"
+        ]
+      },
+      "curriculum": {
+        "en": "England KS3 science · selected foundations",
+        "ja": "中学校理科・関連する基礎概念"
+      }
+    },
+    {
+      "id": "energy-heat",
+      "version": 1,
+      "domain": "physical",
+      "stage": "middle",
+      "order": 4,
+      "title": {
+        "zh": "冰城的热量账本",
+        "en": "The ice city’s energy ledger",
+        "ja": "氷の町のエネルギー帳簿"
+      },
+      "facts": {
+        "en": [
+          "Energy can be transferred between stores; the total energy of an isolated system is conserved.",
+          "Without external work, energy is transferred by heating from a hotter object to a colder one.",
+          "Conduction, convection and thermal radiation are different mechanisms of energy transfer; insulation reduces some transfers rather than creating cold."
+        ],
+        "ja": [
+          "エネルギーはさまざまな形で移されます。孤立した系では全体のエネルギーは保存されます。",
+          "外部から仕事を加えない場合、熱によるエネルギー移動は高温の物体から低温の物体へ起こります。",
+          "伝導、対流、熱放射は異なるエネルギー移動の仕組みです。断熱材は移動を減らすのであり、冷たさを作るのではありません。"
+        ]
+      },
+      "misconception": {
+        "en": "A colder object does not send a substance called cold into a warmer object.",
+        "ja": "冷たい物体から「冷たさ」という物質が暖かい物体に流れ込むわけではありません。"
+      },
+      "hook": {
+        "en": "A courier in an imaginary ice city must find where a real energy budget fails before a medicine container warms.",
+        "ja": "架空の氷の町の配達人が、容器が温まる前にエネルギーの移動経路を突き止めます。"
+      },
+      "terms": [
+        {
+          "en": "conservation",
+          "ja": "保存"
+        },
+        {
+          "en": "conduction",
+          "ja": "熱伝導"
+        },
+        {
+          "en": "convection",
+          "ja": "対流"
+        },
+        {
+          "en": "radiation",
+          "ja": "放射"
+        }
+      ],
+      "prerequisites": [
+        "forces-motion"
+      ],
+      "references": {
+        "en": [
+          "eng-middle"
+        ],
+        "ja": [
+          "jp-middle"
+        ]
+      },
+      "curriculum": {
+        "en": "England KS3 science · selected foundations",
+        "ja": "中学校理科・関連する基礎概念"
+      }
+    },
+    {
+      "id": "waves-signals",
+      "version": 1,
+      "domain": "physical",
+      "stage": "high",
+      "order": 5,
+      "title": {
+        "zh": "无声宇宙中的信号",
+        "en": "Signals in a silent universe",
+        "ja": "音のない宇宙の信号"
+      },
+      "facts": {
+        "en": [
+          "Waves transfer energy and information without a net transport of the medium over a complete cycle in the simple wave model.",
+          "Sound is a mechanical wave and needs a material medium; electromagnetic waves can travel through a vacuum.",
+          "For a wave in a given medium, speed, frequency and wavelength are related by v = f × wavelength."
+        ],
+        "ja": [
+          "単純な波のモデルでは、波はエネルギーや情報を運びますが、媒質全体が一周期ごとに同じ向きへ運ばれるわけではありません。",
+          "音は媒質を必要とする力学的な波です。電磁波は真空中でも伝わります。",
+          "ある媒質を進む波の速さ、振動数、波長には、速さ＝振動数×波長という関係があります。"
+        ]
+      },
+      "misconception": {
+        "en": "An explosion in empty space does not send ordinary sound through the vacuum to a distant ship.",
+        "ja": "真空の宇宙で起きた爆発の音が、通常の音波として遠くの船へ届くわけではありません。"
+      },
+      "hook": {
+        "en": "A starship crew receives a coded light signal but no sound, and must separate signal evidence from a fictional alien claim.",
+        "ja": "宇宙船の乗員が、音のない光の暗号を受け取り、観測できる信号と架空の異星人の主張を切り分けます。"
+      },
+      "terms": [
+        {
+          "en": "medium",
+          "ja": "媒質"
+        },
+        {
+          "en": "frequency",
+          "ja": "振動数"
+        },
+        {
+          "en": "wavelength",
+          "ja": "波長"
+        },
+        {
+          "en": "electromagnetic wave",
+          "ja": "電磁波"
+        }
+      ],
+      "prerequisites": [
+        "energy-heat"
+      ],
+      "references": {
+        "en": [
+          "eng-gcse"
+        ],
+        "ja": [
+          "jp-high"
+        ]
+      },
+      "curriculum": {
+        "en": "England GCSE science · selected topics",
+        "ja": "高等学校理科・基礎科目と関連する発展概念"
+      }
+    },
+    {
+      "id": "electric-power",
+      "version": 1,
+      "domain": "physical",
+      "stage": "high",
+      "order": 6,
+      "title": {
+        "zh": "风暴城的能源危机",
+        "en": "The storm city’s power problem",
+        "ja": "嵐の町の電力問題"
+      },
+      "facts": {
+        "en": [
+          "Potential difference is energy transferred per unit charge; current is charge passing per unit time.",
+          "Electrical power is P = V × I, and energy transferred over time t at constant power is E = P × t.",
+          "In a simple series circuit the current is the same through each component; parallel branches share the potential difference across their common endpoints."
+        ],
+        "ja": [
+          "電位差は単位電荷あたりに移されるエネルギーで、電流は単位時間に通過する電荷の量です。",
+          "電力は P＝V×I です。電力が一定なら、時間 t に移されるエネルギーは E＝P×t です。",
+          "単純な直列回路では各部分に同じ電流が流れます。並列の枝では共通の両端の電位差が等しくなります。"
+        ]
+      },
+      "misconception": {
+        "en": "Power and energy are different quantities; a high-power device is not necessarily the largest energy user if it runs briefly.",
+        "ja": "電力とエネルギーは異なる量です。大きな電力の装置でも、使う時間が短ければ消費エネルギーが最大とは限りません。"
+      },
+      "hook": {
+        "en": "A fictional storm-powered city must ration low-voltage devices using power, run time and an honest energy budget.",
+        "ja": "架空の嵐を動力にする町で、低電圧装置の電力と使用時間から供給計画を立てます。"
+      },
+      "terms": [
+        {
+          "en": "potential difference",
+          "ja": "電位差"
+        },
+        {
+          "en": "power",
+          "ja": "電力"
+        },
+        {
+          "en": "energy",
+          "ja": "エネルギー"
+        },
+        {
+          "en": "parallel circuit",
+          "ja": "並列回路"
+        }
+      ],
+      "prerequisites": [
+        "waves-signals"
+      ],
+      "references": {
+        "en": [
+          "eng-gcse"
+        ],
+        "ja": [
+          "jp-high"
+        ]
+      },
+      "curriculum": {
+        "en": "England GCSE science · selected topics",
+        "ja": "高等学校理科・基礎科目と関連する発展概念"
+      }
+    },
+    {
+      "id": "materials-mixtures",
+      "version": 1,
+      "domain": "chemical",
+      "stage": "primary",
+      "order": 1,
+      "title": {
+        "zh": "炼金集市的混合物",
+        "en": "Mixtures at the alchemist’s market",
+        "ja": "錬金市場の混合物"
+      },
+      "facts": {
+        "en": [
+          "Materials have properties such as solubility, magnetism and particle size that can help us choose a separation method.",
+          "Filtration separates an insoluble solid from a liquid but does not remove dissolved salt from water.",
+          "Dissolving spreads a solute through a solvent; the dissolved material has not simply disappeared."
+        ],
+        "ja": [
+          "物質には溶けやすさ、磁石への反応、粒の大きさなどの性質があり、分け方を考える手がかりになります。",
+          "ろ過は液体中の溶けていない固体を分けますが、水に溶けた食塩は通常のろ紙では取り除けません。",
+          "溶けると溶質が溶媒の中に広がります。溶けた物質がなくなったわけではありません。"
+        ]
+      },
+      "misconception": {
+        "en": "Ordinary filtration does not make salty water into fresh water.",
+        "ja": "普通のろ過だけで塩水が真水になるわけではありません。"
+      },
+      "hook": {
+        "en": "An apprentice at a fantasy market must separate a mixed delivery without accepting a seller’s magical explanation as chemical evidence.",
+        "ja": "幻想的な市場の見習いが、売り手の魔法の説明を証拠と混同せず、混ざった荷物を分けます。"
+      },
+      "terms": [
+        {
+          "en": "mixture",
+          "ja": "混合物"
+        },
+        {
+          "en": "solubility",
+          "ja": "溶解性"
+        },
+        {
+          "en": "filtration",
+          "ja": "ろ過"
+        },
+        {
+          "en": "solute",
+          "ja": "溶質"
+        }
+      ],
+      "prerequisites": [],
+      "references": {
+        "en": [
+          "eng-primary"
+        ],
+        "ja": [
+          "jp-primary"
+        ]
+      },
+      "curriculum": {
+        "en": "England primary science · selected foundations",
+        "ja": "小学校理科・関連する基礎概念"
+      }
+    },
+    {
+      "id": "states-water",
+      "version": 1,
+      "domain": "chemical",
+      "stage": "primary",
+      "order": 2,
+      "title": {
+        "zh": "雾之旅馆的消失水滴",
+        "en": "The missing droplets at the mist inn",
+        "ja": "霧の宿の消えた水滴"
+      },
+      "facts": {
+        "en": [
+          "Water can change between solid, liquid and gas without becoming a different chemical substance.",
+          "Evaporation can occur at a liquid’s surface below its boiling temperature.",
+          "Water vapour is an invisible gas; visible mist consists of tiny liquid droplets."
+        ],
+        "ja": [
+          "水は固体、液体、気体の間で状態が変わっても、別の化学物質になるわけではありません。",
+          "蒸発は沸点より低い温度でも液体の表面で起こります。",
+          "水蒸気は目に見えない気体で、目に見える霧は小さな液体の水滴です。"
+        ]
+      },
+      "misconception": {
+        "en": "The white cloud near a hot cup is not invisible water vapour itself, but droplets formed as vapour cools and condenses.",
+        "ja": "温かいカップの近くの白い雲は水蒸気そのものではなく、冷えて凝結した小さな水滴です。"
+      },
+      "hook": {
+        "en": "A guest at a mist-filled inn follows droplets, condensation and evaporation to solve a locked-window puzzle.",
+        "ja": "霧に包まれた宿の客が、水滴、凝結、蒸発を手がかりに閉じた窓の謎を解きます。"
+      },
+      "terms": [
+        {
+          "en": "evaporation",
+          "ja": "蒸発"
+        },
+        {
+          "en": "condensation",
+          "ja": "凝結"
+        },
+        {
+          "en": "water vapour",
+          "ja": "水蒸気"
+        },
+        {
+          "en": "state",
+          "ja": "状態"
+        }
+      ],
+      "prerequisites": [
+        "materials-mixtures"
+      ],
+      "references": {
+        "en": [
+          "eng-primary"
+        ],
+        "ja": [
+          "jp-primary"
+        ]
+      },
+      "curriculum": {
+        "en": "England primary science · selected foundations",
+        "ja": "小学校理科・関連する基礎概念"
+      }
+    },
+    {
+      "id": "particles-diffusion",
+      "version": 1,
+      "domain": "chemical",
+      "stage": "middle",
+      "order": 3,
+      "title": {
+        "zh": "看不见的香气信使",
+        "en": "The invisible scent messenger",
+        "ja": "見えない香りの使者"
+      },
+      "facts": {
+        "en": [
+          "In the particle model, matter consists of particles with motion and spacing that differ between solids, liquids and gases.",
+          "Diffusion is net spreading due to random particle motion, often from higher to lower concentration.",
+          "Higher temperature generally means higher average particle kinetic energy; it does not mean each particle becomes larger."
+        ],
+        "ja": [
+          "粒子モデルでは物質は粒子からなり、固体、液体、気体で粒子の運動や間隔が異なります。",
+          "拡散は粒子の不規則な運動による広がりで、全体として濃度の高い側から低い側へ進むことがよくあります。",
+          "温度が高いほど一般に粒子の平均運動エネルギーは大きくなりますが、粒子そのものが大きくなるという意味ではありません。"
+        ]
+      },
+      "misconception": {
+        "en": "A smell spreading through still air does not require particles to move purposefully toward a person.",
+        "ja": "静かな空気の中で香りが広がるのは、粒子が人に向かって意図的に動くからではありません。"
+      },
+      "hook": {
+        "en": "A scent courier in an enchanted archive tests whether a mysterious smell spread by diffusion or by a hidden air current.",
+        "ja": "魔法の書庫の香りの配達人が、拡散と隠れた空気の流れを見分けます。"
+      },
+      "terms": [
+        {
+          "en": "particle model",
+          "ja": "粒子モデル"
+        },
+        {
+          "en": "diffusion",
+          "ja": "拡散"
+        },
+        {
+          "en": "concentration",
+          "ja": "濃度"
+        },
+        {
+          "en": "kinetic energy",
+          "ja": "運動エネルギー"
+        }
+      ],
+      "prerequisites": [
+        "states-water"
+      ],
+      "references": {
+        "en": [
+          "eng-middle"
+        ],
+        "ja": [
+          "jp-middle"
+        ]
+      },
+      "curriculum": {
+        "en": "England KS3 science · selected foundations",
+        "ja": "中学校理科・関連する基礎概念"
+      }
+    },
+    {
+      "id": "reactions-mass",
+      "version": 1,
+      "domain": "chemical",
+      "stage": "middle",
+      "order": 4,
+      "title": {
+        "zh": "会变轻的密封箱",
+        "en": "The sealed chest that seems lighter",
+        "ja": "軽く見える密閉箱"
+      },
+      "facts": {
+        "en": [
+          "In an ordinary chemical reaction, atoms are rearranged into new substances rather than created or destroyed.",
+          "Total mass is conserved in a closed system, including any gases produced or consumed.",
+          "A mass change measured in an open container may reflect gas entering or leaving, not a failure of conservation."
+        ],
+        "ja": [
+          "通常の化学反応では原子が組み替わって新しい物質になり、原子が新しく生まれたり消えたりするわけではありません。",
+          "発生したり使われたりする気体も含め、閉じた系では全体の質量は保存されます。",
+          "開いた容器で測った質量の変化は、気体の出入りによる場合があり、保存則が破れたとは限りません。"
+        ]
+      },
+      "misconception": {
+        "en": "Gas has mass even when it is invisible.",
+        "ja": "気体は目に見えなくても質量を持ちます。"
+      },
+      "hook": {
+        "en": "A detective in a clockwork city investigates a sealed chest using measurements, possible leaks and a clearly labelled fictional decoy.",
+        "ja": "からくりの町の探偵が、測定と漏れの可能性を調べ、架空の仕掛けと質量保存を区別します。"
+      },
+      "terms": [
+        {
+          "en": "chemical reaction",
+          "ja": "化学反応"
+        },
+        {
+          "en": "closed system",
+          "ja": "閉じた系"
+        },
+        {
+          "en": "conservation of mass",
+          "ja": "質量保存"
+        },
+        {
+          "en": "gas",
+          "ja": "気体"
+        }
+      ],
+      "prerequisites": [
+        "particles-diffusion"
+      ],
+      "references": {
+        "en": [
+          "eng-middle"
+        ],
+        "ja": [
+          "jp-middle"
+        ]
+      },
+      "curriculum": {
+        "en": "England KS3 science · selected foundations",
+        "ja": "中学校理科・関連する基礎概念"
+      }
+    },
+    {
+      "id": "atoms-bonding",
+      "version": 1,
+      "domain": "chemical",
+      "stage": "high",
+      "order": 5,
+      "title": {
+        "zh": "晶体城的建筑规则",
+        "en": "The crystal city’s building rules",
+        "ja": "結晶の町の結び方"
+      },
+      "facts": {
+        "en": [
+          "An atom has a nucleus containing protons and usually neutrons, with electrons outside it; proton number identifies the element.",
+          "An ion forms when an atom or group gains or loses electrons, changing its net charge.",
+          "Ionic, covalent and metallic bonding are different models of how particles are held together and help explain material properties."
+        ],
+        "ja": [
+          "原子は陽子と、通常は中性子も含む原子核と、その外側の電子からなります。陽子数で元素が決まります。",
+          "原子や原子団が電子を受け取ったり失ったりすると、全体の電荷が変わってイオンになります。",
+          "イオン結合、共有結合、金属結合は粒子が結びつく異なるモデルで、物質の性質を説明する手がかりになります。"
+        ]
+      },
+      "misconception": {
+        "en": "Forming an ordinary ion does not change an element’s proton number.",
+        "ja": "普通のイオンの生成で元素の陽子数が変わるわけではありません。"
+      },
+      "hook": {
+        "en": "A crystal architect investigates why fictional enchanted gems can change colour while the ordinary materials obey bonding and charge rules.",
+        "ja": "結晶の建築家が、色の変わる架空の魔石と、現実の物質の結合や電荷の規則を分けて調べます。"
+      },
+      "terms": [
+        {
+          "en": "proton",
+          "ja": "陽子"
+        },
+        {
+          "en": "electron",
+          "ja": "電子"
+        },
+        {
+          "en": "ion",
+          "ja": "イオン"
+        },
+        {
+          "en": "bonding",
+          "ja": "化学結合"
+        }
+      ],
+      "prerequisites": [
+        "reactions-mass"
+      ],
+      "references": {
+        "en": [
+          "eng-gcse"
+        ],
+        "ja": [
+          "jp-high"
+        ]
+      },
+      "curriculum": {
+        "en": "England GCSE science · selected topics",
+        "ja": "高等学校理科・基礎科目と関連する発展概念"
+      }
+    },
+    {
+      "id": "rates-catalysts",
+      "version": 1,
+      "domain": "chemical",
+      "stage": "high",
+      "order": 6,
+      "title": {
+        "zh": "催化师的时间谜案",
+        "en": "The catalyst keeper’s time puzzle",
+        "ja": "触媒師の時間の謎"
+      },
+      "facts": {
+        "en": [
+          "Reaction rate describes how quickly reactants are consumed or products form.",
+          "Temperature, concentration and surface area can affect collision frequency or the fraction of collisions with sufficient energy.",
+          "A catalyst provides an alternative reaction pathway with lower activation energy and is regenerated overall; it does not supply unlimited energy."
+        ],
+        "ja": [
+          "反応速度は、反応物が減ったり生成物ができたりする速さを表します。",
+          "温度、濃度、表面積は衝突の頻度や、十分なエネルギーを持つ衝突の割合に影響します。",
+          "触媒は活性化エネルギーの低い別の反応経路を与え、全体として再生されます。無限のエネルギーを供給するものではありません。"
+        ]
+      },
+      "misconception": {
+        "en": "A catalyst changes a pathway and rate, not the basic conservation of atoms or a limitless energy supply.",
+        "ja": "触媒が変えるのは反応経路や速さであり、原子の保存則を破ったり無限のエネルギーを生んだりしません。"
+      },
+      "hook": {
+        "en": "A timekeeper compares fictional clock magic with real catalyst evidence, using supplied observations rather than hazardous procedures.",
+        "ja": "時計守が、危険な実験手順ではなく提示された観測から、時計の魔法と触媒の働きを区別します。"
+      },
+      "terms": [
+        {
+          "en": "reaction rate",
+          "ja": "反応速度"
+        },
+        {
+          "en": "activation energy",
+          "ja": "活性化エネルギー"
+        },
+        {
+          "en": "catalyst",
+          "ja": "触媒"
+        },
+        {
+          "en": "surface area",
+          "ja": "表面積"
+        }
+      ],
+      "prerequisites": [
+        "atoms-bonding"
+      ],
+      "references": {
+        "en": [
+          "eng-gcse"
+        ],
+        "ja": [
+          "jp-high"
+        ]
+      },
+      "curriculum": {
+        "en": "England GCSE science · selected topics",
+        "ja": "高等学校理科・基礎科目と関連する発展概念"
+      }
+    },
+    {
+      "id": "plants-growth",
+      "version": 1,
+      "domain": "life",
+      "stage": "primary",
+      "order": 1,
+      "title": {
+        "zh": "温室精灵的失踪叶片",
+        "en": "The greenhouse sprite’s missing leaves",
+        "ja": "温室の精と消えた葉"
+      },
+      "facts": {
+        "en": [
+          "Green plants use light energy to make sugars from carbon dioxide and water in photosynthesis.",
+          "Roots absorb water and mineral nutrients; most plant dry biomass does not come directly from soil material.",
+          "Comparing plant growth fairly requires considering light, water, temperature and other changing conditions."
+        ],
+        "ja": [
+          "緑色の植物は光合成で光のエネルギーを使い、二酸化炭素と水から糖を作ります。",
+          "根は水や無機養分を吸収しますが、植物の乾燥した体の大部分がそのまま土から来るわけではありません。",
+          "植物の成長を公平に比べるには、光、水、温度などの条件の違いを考える必要があります。"
+        ]
+      },
+      "misconception": {
+        "en": "Soil is not the sole food source that accounts for a growing plant’s mass.",
+        "ja": "植物の成長による質量の増加を、土だけを食べた結果として説明することはできません。"
+      },
+      "hook": {
+        "en": "A greenhouse sprite asks an adult gardener to investigate changing leaves through fair comparisons rather than a curse explanation.",
+        "ja": "温室の精に頼まれた大人の庭師が、呪いという説明に頼らず、条件を比べて葉の変化を調べます。"
+      },
+      "terms": [
+        {
+          "en": "photosynthesis",
+          "ja": "光合成"
+        },
+        {
+          "en": "root",
+          "ja": "根"
+        },
+        {
+          "en": "mineral nutrient",
+          "ja": "無機養分"
+        },
+        {
+          "en": "fair comparison",
+          "ja": "公平な比較"
+        }
+      ],
+      "prerequisites": [],
+      "references": {
+        "en": [
+          "eng-primary"
+        ],
+        "ja": [
+          "jp-primary"
+        ]
+      },
+      "curriculum": {
+        "en": "England primary science · selected foundations",
+        "ja": "小学校理科・関連する基礎概念"
+      }
+    },
+    {
+      "id": "habitats-foodwebs",
+      "version": 1,
+      "domain": "life",
+      "stage": "primary",
+      "order": 2,
+      "title": {
+        "zh": "森林议会与食物网",
+        "en": "The forest council and the food web",
+        "ja": "森の会議と食物網"
+      },
+      "facts": {
+        "en": [
+          "Organisms depend on habitat conditions and on other organisms for resources.",
+          "A food-chain arrow conventionally points from a food source toward the organism receiving that material and energy.",
+          "Food webs contain connected feeding relationships, so changing one population can affect others."
+        ],
+        "ja": [
+          "生物は生息場所の条件や、資源を得る相手となるほかの生物に依存しています。",
+          "食物連鎖の矢印は通常、食べ物となる側から、その物質やエネルギーを受け取る側へ向けて描きます。",
+          "食物網では食べる関係がつながっているため、一つの集団の変化がほかにも影響することがあります。"
+        ]
+      },
+      "misconception": {
+        "en": "Predators are not simply harmful intruders whose removal always improves an ecosystem.",
+        "ja": "捕食者を取り除けば、いつでも生態系がよくなるわけではありません。"
+      },
+      "hook": {
+        "en": "A forest council of fictional speaking animals must reason about a real food web before changing a habitat.",
+        "ja": "言葉を話す架空の動物たちの会議が、生息場所を変える前に現実の食物網を考えます。"
+      },
+      "terms": [
+        {
+          "en": "habitat",
+          "ja": "生息場所"
+        },
+        {
+          "en": "food web",
+          "ja": "食物網"
+        },
+        {
+          "en": "producer",
+          "ja": "生産者"
+        },
+        {
+          "en": "consumer",
+          "ja": "消費者"
+        }
+      ],
+      "prerequisites": [
+        "plants-growth"
+      ],
+      "references": {
+        "en": [
+          "eng-primary"
+        ],
+        "ja": [
+          "jp-primary"
+        ]
+      },
+      "curriculum": {
+        "en": "England primary science · selected foundations",
+        "ja": "小学校理科・関連する基礎概念"
+      }
+    },
+    {
+      "id": "cells-systems",
+      "version": 1,
+      "domain": "life",
+      "stage": "middle",
+      "order": 3,
+      "title": {
+        "zh": "微观城的边界守卫",
+        "en": "The microscopic city’s boundary guard",
+        "ja": "ミクロの町の境界守"
+      },
+      "facts": {
+        "en": [
+          "Cells are the basic structural and functional units of living organisms; multicellular organisms have specialised cells.",
+          "A cell membrane regulates exchanges with the surroundings, and many cells contain a nucleus carrying genetic material.",
+          "Cell models are useful but limited: organelles are not tiny people, and not every cell has every familiar structure."
+        ],
+        "ja": [
+          "細胞は生物の構造と働きの基本単位で、多細胞生物には役割の異なる細胞があります。",
+          "細胞膜は周囲との物質のやり取りを調節し、多くの細胞には遺伝物質を含む核があります。",
+          "細胞のモデルには限界があります。細胞小器官は小さな人間ではなく、すべての細胞が同じ構造を持つわけでもありません。"
+        ]
+      },
+      "misconception": {
+        "en": "A cell is not literally a miniature city with conscious workers; that is only an analogy.",
+        "ja": "細胞が意識を持つ働き手の住む小さな町だというのは、文字どおりの事実ではなくたとえです。"
+      },
+      "hook": {
+        "en": "A fictional shrinking explorer uses a city analogy to map a cell, then discovers where the analogy breaks down.",
+        "ja": "架空の縮小探検家が、町のたとえで細胞を理解しながら、そのたとえでは説明できない点にも気づきます。"
+      },
+      "terms": [
+        {
+          "en": "cell membrane",
+          "ja": "細胞膜"
+        },
+        {
+          "en": "nucleus",
+          "ja": "核"
+        },
+        {
+          "en": "specialised cell",
+          "ja": "分化した細胞"
+        },
+        {
+          "en": "model",
+          "ja": "モデル"
+        }
+      ],
+      "prerequisites": [
+        "habitats-foodwebs"
+      ],
+      "references": {
+        "en": [
+          "eng-middle"
+        ],
+        "ja": [
+          "jp-middle"
+        ]
+      },
+      "curriculum": {
+        "en": "England KS3 science · selected foundations",
+        "ja": "中学校理科・関連する基礎概念"
+      }
+    },
+    {
+      "id": "respiration-energy",
+      "version": 1,
+      "domain": "life",
+      "stage": "middle",
+      "order": 4,
+      "title": {
+        "zh": "夜间花园的能量账",
+        "en": "The night garden’s energy account",
+        "ja": "夜の庭のエネルギー収支"
+      },
+      "facts": {
+        "en": [
+          "Photosynthesis transfers light energy into chemical stores in organic molecules.",
+          "Aerobic respiration transfers energy from organic molecules using oxygen and produces carbon dioxide and water.",
+          "Plants respire both day and night; photosynthesis requires suitable light and other conditions."
+        ],
+        "ja": [
+          "光合成は光のエネルギーを有機物に蓄えられる化学的なエネルギーへ移します。",
+          "好気呼吸は酸素を使って有機物からエネルギーを取り出し、二酸化炭素と水を生じます。",
+          "植物は昼も夜も呼吸します。光合成には適した光などの条件が必要です。"
+        ]
+      },
+      "misconception": {
+        "en": "Plants do not switch off respiration whenever they photosynthesise.",
+        "ja": "植物は光合成をしている間に呼吸を止めるわけではありません。"
+      },
+      "hook": {
+        "en": "A night-garden caretaker investigates oxygen readings without confusing a fantasy night flower with normal plant metabolism.",
+        "ja": "夜の庭の管理人が、架空の夜咲く花と普通の植物の代謝を混同せず、酸素の観測を調べます。"
+      },
+      "terms": [
+        {
+          "en": "respiration",
+          "ja": "呼吸"
+        },
+        {
+          "en": "oxygen",
+          "ja": "酸素"
+        },
+        {
+          "en": "organic molecule",
+          "ja": "有機分子"
+        },
+        {
+          "en": "energy transfer",
+          "ja": "エネルギー移動"
+        }
+      ],
+      "prerequisites": [
+        "cells-systems"
+      ],
+      "references": {
+        "en": [
+          "eng-middle"
+        ],
+        "ja": [
+          "jp-middle"
+        ]
+      },
+      "curriculum": {
+        "en": "England KS3 science · selected foundations",
+        "ja": "中学校理科・関連する基礎概念"
+      }
+    },
+    {
+      "id": "inheritance-dna",
+      "version": 1,
+      "domain": "life",
+      "stage": "high",
+      "order": 5,
+      "title": {
+        "zh": "龙族档案与遗传线索",
+        "en": "The dragon archive and inheritance",
+        "ja": "竜の記録と遺伝の手がかり"
+      },
+      "facts": {
+        "en": [
+          "DNA carries inherited information; a gene is a DNA sequence with a functional role, often related to making a protein or functional RNA.",
+          "Traits can be influenced by multiple genes and environmental conditions, so simple dominant–recessive models have limits.",
+          "A mutation is a change in DNA; it is not necessarily beneficial, harmful or caused by an organism’s need."
+        ],
+        "ja": [
+          "DNAは受け継がれる情報を担います。遺伝子は機能を持つDNAの配列で、タンパク質や機能を持つRNAの生成などに関わります。",
+          "形質は複数の遺伝子や環境の影響を受けることがあり、単純な顕性・潜性のモデルには限界があります。",
+          "突然変異はDNAの変化で、必ず有利や有害になるわけでも、生物の必要に応じて起きるわけでもありません。"
+        ]
+      },
+      "misconception": {
+        "en": "A dominant allele is not automatically more common, better or stronger.",
+        "ja": "顕性の対立遺伝子が、必ず多い、優れている、強いという意味ではありません。"
+      },
+      "hook": {
+        "en": "An archivist studies explicitly fictional dragon traits while using real inheritance models and declaring their limits.",
+        "ja": "記録係が架空の竜の形質を調べ、現実の遺伝モデルとその限界を明示します。"
+      },
+      "terms": [
+        {
+          "en": "DNA",
+          "ja": "DNA"
+        },
+        {
+          "en": "gene",
+          "ja": "遺伝子"
+        },
+        {
+          "en": "allele",
+          "ja": "対立遺伝子"
+        },
+        {
+          "en": "mutation",
+          "ja": "突然変異"
+        }
+      ],
+      "prerequisites": [
+        "respiration-energy"
+      ],
+      "references": {
+        "en": [
+          "eng-gcse"
+        ],
+        "ja": [
+          "jp-high"
+        ]
+      },
+      "curriculum": {
+        "en": "England GCSE science · selected topics",
+        "ja": "高等学校理科・基礎科目と関連する発展概念"
+      }
+    },
+    {
+      "id": "evolution-selection",
+      "version": 1,
+      "domain": "life",
+      "stage": "high",
+      "order": 6,
+      "title": {
+        "zh": "群岛探险与适应",
+        "en": "The island expedition and adaptation",
+        "ja": "群島の探検と適応"
+      },
+      "facts": {
+        "en": [
+          "Natural selection requires variation, heritability and differences in reproductive success in a particular environment.",
+          "Populations can change over generations; individual organisms do not evolve a needed inherited trait by deciding to do so.",
+          "Evolution has no predetermined goal, and what is advantageous can change when the environment changes."
+        ],
+        "ja": [
+          "自然選択には、変異、遺伝する性質、特定の環境での繁殖成功の違いが関わります。",
+          "集団は世代を通じて変化しますが、個体が必要だと決めて遺伝する形質を進化させるわけではありません。",
+          "進化にあらかじめ決まった目標はなく、何が有利かは環境が変わると変化します。"
+        ]
+      },
+      "misconception": {
+        "en": "Natural selection is not a conscious plan to improve a species.",
+        "ja": "自然選択は種をよくしようとする意識的な計画ではありません。"
+      },
+      "hook": {
+        "en": "An island expedition compares fictional organisms across generations and resists a convenient story that need alone creates adaptation.",
+        "ja": "群島の探検隊が、架空の生物を世代にわたって比べ、必要だから適応が生まれるという説明を検討します。"
+      },
+      "terms": [
+        {
+          "en": "variation",
+          "ja": "変異"
+        },
+        {
+          "en": "heritability",
+          "ja": "遺伝性"
+        },
+        {
+          "en": "natural selection",
+          "ja": "自然選択"
+        },
+        {
+          "en": "population",
+          "ja": "集団"
+        }
+      ],
+      "prerequisites": [
+        "inheritance-dna"
+      ],
+      "references": {
+        "en": [
+          "eng-gcse"
+        ],
+        "ja": [
+          "jp-high"
+        ]
+      },
+      "curriculum": {
+        "en": "England GCSE science · selected topics",
+        "ja": "高等学校理科・基礎科目と関連する発展概念"
+      }
+    },
+    {
+      "id": "rocks-soils",
+      "version": 1,
+      "domain": "earth",
+      "stage": "primary",
+      "order": 1,
+      "title": {
+        "zh": "石头图书馆的旧日记",
+        "en": "Old diaries in the rock library",
+        "ja": "石の図書館の古い日記"
+      },
+      "facts": {
+        "en": [
+          "Rocks differ in properties such as grain size and composition; soils contain mineral particles and may also include organic matter, air and water.",
+          "Weathering breaks down or alters rock in place; erosion transports material.",
+          "Fossils can provide evidence about past life and environments, but not every rock contains fossils."
+        ],
+        "ja": [
+          "岩石は粒の大きさや組成などが異なります。土には鉱物の粒のほか、有機物、空気、水などが含まれます。",
+          "風化は岩石がその場で砕かれたり変化したりすることで、侵食では物質が運ばれます。",
+          "化石は昔の生物や環境の手がかりになりますが、どの岩石にも化石があるわけではありません。"
+        ]
+      },
+      "misconception": {
+        "en": "A fossil is not necessarily a complete skeleton, and absence of a fossil in one sample does not prove absence of life.",
+        "ja": "化石が必ず完全な骨格とは限らず、一つの試料に化石がないことだけで生物がいなかったとは言えません。"
+      },
+      "hook": {
+        "en": "A keeper of a magical rock library reads real geological clues while treating the stones’ spoken memories as fiction.",
+        "ja": "魔法の石の図書館の管理人が、石の語る記憶は架空だと分けながら、現実の地質の手がかりを読みます。"
+      },
+      "terms": [
+        {
+          "en": "weathering",
+          "ja": "風化"
+        },
+        {
+          "en": "erosion",
+          "ja": "侵食"
+        },
+        {
+          "en": "fossil",
+          "ja": "化石"
+        },
+        {
+          "en": "soil",
+          "ja": "土壌"
+        }
+      ],
+      "prerequisites": [],
+      "references": {
+        "en": [
+          "eng-primary"
+        ],
+        "ja": [
+          "jp-primary"
+        ]
+      },
+      "curriculum": {
+        "en": "England primary science · selected foundations",
+        "ja": "小学校理科・関連する基礎概念"
+      }
+    },
+    {
+      "id": "sun-moon-seasons",
+      "version": 1,
+      "domain": "earth",
+      "stage": "primary",
+      "order": 2,
+      "title": {
+        "zh": "错位的月亮与四季",
+        "en": "The misplaced moon and the seasons",
+        "ja": "ずれた月と四季"
+      },
+      "facts": {
+        "en": [
+          "Day and night result from Earth’s rotation relative to sunlight.",
+          "Ordinary Moon phases come from our changing view of the Moon’s sunlit half as it orbits Earth, not from Earth’s shadow.",
+          "Earth’s axial tilt changes sunlight angle and day length through the year and is the main cause of seasons."
+        ],
+        "ja": [
+          "昼と夜は、地球が自転し太陽の光を受ける向きが変わることで生じます。",
+          "通常の月の満ち欠けは、公転する月の太陽に照らされた半分の見え方が変わるためで、地球の影が原因ではありません。",
+          "地軸の傾きにより一年を通じて日射の角度や昼の長さが変わり、これが季節の主な原因になります。"
+        ]
+      },
+      "misconception": {
+        "en": "Summer is not mainly caused by Earth being closer to the Sun, and Moon phases are not ordinary eclipses.",
+        "ja": "夏の主な原因は地球が太陽に近づくことではなく、月の満ち欠けは普通の食現象ではありません。"
+      },
+      "hook": {
+        "en": "A fantasy observatory reports an impossible Moon pattern; an investigator first reconstructs the real Sun–Earth–Moon geometry.",
+        "ja": "幻想の天文台がありえない月の並びを報告し、調査員がまず現実の太陽・地球・月の位置関係を確かめます。"
+      },
+      "terms": [
+        {
+          "en": "rotation",
+          "ja": "自転"
+        },
+        {
+          "en": "orbit",
+          "ja": "公転軌道"
+        },
+        {
+          "en": "phase",
+          "ja": "満ち欠け"
+        },
+        {
+          "en": "axial tilt",
+          "ja": "地軸の傾き"
+        }
+      ],
+      "prerequisites": [
+        "rocks-soils"
+      ],
+      "references": {
+        "en": [
+          "eng-primary",
+          "nasa-moon",
+          "nasa-seasons"
+        ],
+        "ja": [
+          "jp-primary",
+          "nasa-moon",
+          "nasa-seasons"
+        ]
+      },
+      "curriculum": {
+        "en": "England primary science · selected foundations",
+        "ja": "小学校理科・関連する基礎概念"
+      }
+    },
+    {
+      "id": "water-weather",
+      "version": 1,
+      "domain": "earth",
+      "stage": "middle",
+      "order": 3,
+      "title": {
+        "zh": "云港的天气疑案",
+        "en": "The cloud harbour weather mystery",
+        "ja": "雲の港の天気の謎"
+      },
+      "facts": {
+        "en": [
+          "Water cycles between reservoirs through processes including evaporation, condensation, precipitation and runoff.",
+          "Air movements and changing temperature and pressure help shape weather; a single observation is rarely enough for a reliable forecast.",
+          "Weather describes short-term conditions, while climate concerns patterns and statistics over longer periods."
+        ],
+        "ja": [
+          "水は蒸発、凝結、降水、流出などによって、さまざまな場所の間を循環します。",
+          "空気の動きや温度、気圧の変化が天気に関わり、一つの観測だけで信頼できる予報をするのは難しいことです。",
+          "天気は短期の状態を表し、気候はより長い期間の傾向や統計に関わります。"
+        ]
+      },
+      "misconception": {
+        "en": "One cold day does not determine the long-term climate trend.",
+        "ja": "寒い日が一日あったことだけで、長期の気候の傾向は決まりません。"
+      },
+      "hook": {
+        "en": "A courier between floating ports compares weather records and a fictional cloud engine, avoiding a forecast based on one clue.",
+        "ja": "浮かぶ港を行き来する配達人が、天気の記録と架空の雲の装置を比べ、一つの手がかりだけで予報しないようにします。"
+      },
+      "terms": [
+        {
+          "en": "water cycle",
+          "ja": "水循環"
+        },
+        {
+          "en": "pressure",
+          "ja": "気圧"
+        },
+        {
+          "en": "precipitation",
+          "ja": "降水"
+        },
+        {
+          "en": "climate",
+          "ja": "気候"
+        }
+      ],
+      "prerequisites": [
+        "sun-moon-seasons"
+      ],
+      "references": {
+        "en": [
+          "eng-middle"
+        ],
+        "ja": [
+          "jp-middle"
+        ]
+      },
+      "curriculum": {
+        "en": "England KS3 science · selected foundations",
+        "ja": "中学校理科・関連する基礎概念"
+      }
+    },
+    {
+      "id": "plates-earthquakes",
+      "version": 1,
+      "domain": "earth",
+      "stage": "middle",
+      "order": 4,
+      "title": {
+        "zh": "地下城的断层信号",
+        "en": "Fault signals beneath the underground city",
+        "ja": "地下の町と断層の信号"
+      },
+      "facts": {
+        "en": [
+          "Earth’s outer rigid layer is divided into tectonic plates that move relative to one another.",
+          "Many earthquakes result from sudden slip on faults after elastic strain has accumulated.",
+          "A scientific account of seismic risk uses evidence and uncertainty; it does not promise an exact date for a future earthquake."
+        ],
+        "ja": [
+          "地球の外側の硬い層はプレートに分かれ、互いに相対的に動いています。",
+          "多くの地震は、弾性的なひずみがたまった後、断層が急にずれることで起こります。",
+          "地震のリスクを科学的に述べるには証拠と不確実性を扱い、次の地震の日時を正確に約束することはできません。"
+        ]
+      },
+      "misconception": {
+        "en": "A fictional prophecy must not be presented as a scientifically reliable earthquake prediction.",
+        "ja": "架空の予言を、科学的に信頼できる地震の日時予測として示してはいけません。"
+      },
+      "hook": {
+        "en": "An underground-city mapper compares fault evidence with a fantasy prophecy and explains what cannot be predicted.",
+        "ja": "地下の町の地図係が、断層の証拠と幻想的な予言を比べ、予測できないことも説明します。"
+      },
+      "terms": [
+        {
+          "en": "tectonic plate",
+          "ja": "プレート"
+        },
+        {
+          "en": "fault",
+          "ja": "断層"
+        },
+        {
+          "en": "elastic strain",
+          "ja": "弾性ひずみ"
+        },
+        {
+          "en": "uncertainty",
+          "ja": "不確実性"
+        }
+      ],
+      "prerequisites": [
+        "water-weather"
+      ],
+      "references": {
+        "en": [
+          "eng-middle"
+        ],
+        "ja": [
+          "jp-middle"
+        ]
+      },
+      "curriculum": {
+        "en": "England KS3 science · selected foundations",
+        "ja": "中学校理科・関連する基礎概念"
+      }
+    },
+    {
+      "id": "carbon-climate",
+      "version": 1,
+      "domain": "earth",
+      "stage": "high",
+      "order": 5,
+      "title": {
+        "zh": "碳档案与温室之城",
+        "en": "The carbon archive and the greenhouse city",
+        "ja": "炭素の記録と温室の町"
+      },
+      "facts": {
+        "en": [
+          "Carbon moves among atmosphere, organisms, oceans and rocks on different timescales.",
+          "Greenhouse gases absorb and emit infrared radiation and influence Earth’s energy balance; they do not act exactly like a physical glass roof.",
+          "Changing greenhouse-gas concentrations can affect climate, while individual weather events require careful attribution and uncertainty statements."
+        ],
+        "ja": [
+          "炭素は大気、生物、海洋、岩石などの間を、異なる時間の尺度で移動します。",
+          "温室効果ガスは赤外線を吸収し放出して地球のエネルギー収支に影響しますが、ガラス屋根と全く同じ仕組みではありません。",
+          "温室効果ガス濃度の変化は気候に影響しますが、個々の気象現象の原因を述べるには慎重な分析と不確実性の説明が必要です。"
+        ]
+      },
+      "misconception": {
+        "en": "The greenhouse effect and ozone depletion are different phenomena.",
+        "ja": "温室効果とオゾン層の破壊は異なる現象です。"
+      },
+      "hook": {
+        "en": "An archive detective traces carbon through a fictional enclosed city and distinguishes measured trends from a convenient villain story.",
+        "ja": "記録の探偵が、架空の閉じた町で炭素の移動を追い、観測された傾向と都合のよい犯人説を区別します。"
+      },
+      "terms": [
+        {
+          "en": "carbon reservoir",
+          "ja": "炭素の貯蔵庫"
+        },
+        {
+          "en": "infrared radiation",
+          "ja": "赤外線"
+        },
+        {
+          "en": "energy balance",
+          "ja": "エネルギー収支"
+        },
+        {
+          "en": "attribution",
+          "ja": "原因の評価"
+        }
+      ],
+      "prerequisites": [
+        "plates-earthquakes"
+      ],
+      "references": {
+        "en": [
+          "eng-gcse"
+        ],
+        "ja": [
+          "jp-high"
+        ]
+      },
+      "curriculum": {
+        "en": "England GCSE science · selected topics",
+        "ja": "高等学校理科・基礎科目と関連する発展概念"
+      }
+    },
+    {
+      "id": "stars-universe",
+      "version": 1,
+      "domain": "earth",
+      "stage": "high",
+      "order": 6,
+      "title": {
+        "zh": "恒星信使的旧光",
+        "en": "The star messenger’s old light",
+        "ja": "星の使者と昔の光"
+      },
+      "facts": {
+        "en": [
+          "Stars produce energy through nuclear fusion; a star’s evolution depends strongly on its initial mass.",
+          "Because light has a finite speed, observing a distant object means observing light emitted in its past.",
+          "A light-year is a distance unit, not a duration; evidence about the universe is interpreted through models with limits."
+        ],
+        "ja": [
+          "恒星は核融合によってエネルギーを生み、その進化は初めの質量に強く依存します。",
+          "光の速さは有限なので、遠くの天体を見ることは、その天体が過去に出した光を見ることです。",
+          "光年は時間ではなく距離の単位です。宇宙の証拠は、限界のあるモデルを通じて解釈されます。"
+        ]
+      },
+      "misconception": {
+        "en": "A telescope does not show the distant universe at a single universal present instant.",
+        "ja": "望遠鏡が遠い宇宙のすべてを、同じ現在の瞬間の姿として示すわけではありません。"
+      },
+      "hook": {
+        "en": "A fictional star messenger must reconcile an ancient light signal with the timing of a mystery, without treating faster-than-light travel as established physics.",
+        "ja": "架空の星の使者が、超光速移動を確立した物理法則とせず、昔の光の信号と事件の時刻を照合します。"
+      },
+      "terms": [
+        {
+          "en": "fusion",
+          "ja": "核融合"
+        },
+        {
+          "en": "light-year",
+          "ja": "光年"
+        },
+        {
+          "en": "stellar evolution",
+          "ja": "恒星の進化"
+        },
+        {
+          "en": "model limitation",
+          "ja": "モデルの限界"
+        }
+      ],
+      "prerequisites": [
+        "sun-moon-seasons",
+        "waves-signals"
+      ],
+      "references": {
+        "en": [
+          "eng-gcse"
+        ],
+        "ja": [
+          "jp-high"
+        ]
+      },
+      "curriculum": {
+        "en": "England GCSE science · selected topics",
+        "ja": "高等学校理科・基礎科目と関連する発展概念"
+      }
+    }
+  ]
+}

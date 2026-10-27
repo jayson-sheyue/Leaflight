@@ -1,0 +1,2162 @@
+{
+  "我的书房": {
+    "en": "MY READING ROOM",
+    "ja": "マイ書斎"
+  },
+  "故事书架": {
+    "en": "Story library",
+    "ja": "ストーリー本棚"
+  },
+  "创作新故事": {
+    "en": "Create a story",
+    "ja": "物語を作る"
+  },
+  "一个属于你的世界，": {
+    "en": "A world of your own,",
+    "ja": "あなただけの世界、"
+  },
+  "一页恰好的故事。": {
+    "en": "a story at your pace.",
+    "ja": "あなたに合った物語。"
+  },
+  "按你的节奏，慢慢读。": {
+    "en": "Take your time. Turn a page.",
+    "ja": "自分のペースで、ゆっくりと。"
+  },
+  "本地书房 · 离线可读": {
+    "en": "Local library · Offline ready",
+    "ja": "ローカル書斎 · オフライン対応"
+  },
+  "模型与设置": {
+    "en": "Model & settings",
+    "ja": "モデルと設定"
+  },
+  "书房": {
+    "en": "Reading room",
+    "ja": "書斎"
+  },
+  "让故事，适合此刻的你。": {
+    "en": "Stories for who you are today.",
+    "ja": "今のあなたに、ちょうどいい物語。"
+  },
+  "喜欢的题材，刚好的难度。下一段旅程，从这里开始。": {
+    "en": "Your genre. Your level. Your next adventure starts here.",
+    "ja": "好きなジャンル、ちょうどいい難しさ。次の旅は、ここから。"
+  },
+  "新建故事": {
+    "en": "New story",
+    "ja": "新しい物語"
+  },
+  "好故事，从一点好奇开始。": {
+    "en": "A little curiosity. A new story.",
+    "ja": "小さな好奇心から、物語が始まる。"
+  },
+  "为自己创造一部小说，让阅读成为期待。": {
+    "en": "Create a novel of your own, and look forward to reading.",
+    "ja": "自分だけの小説で、読書を楽しみに。"
+  },
+  "已归档 {count} 章": {
+    "en": "{count} chapters saved",
+    "ja": "{count} 章を保存済み"
+  },
+  "继续阅读": {
+    "en": "Continue reading",
+    "ja": "続きを読む"
+  },
+  "设定我的第一个故事": {
+    "en": "Create my first story",
+    "ja": "最初の物語を作る"
+  },
+  "生成一次，随时阅读": {
+    "en": "Create once. Read whenever.",
+    "ja": "一度作れば、いつでも読める。"
+  },
+  "故事与进度保存在这台电脑。": {
+    "en": "Stories and progress stay on this computer.",
+    "ja": "物語も読書の進み具合も、このパソコンに。"
+  },
+  "断开网络，也能翻开下一页。": {
+    "en": "Your next page is ready, even offline.",
+    "ja": "ネットがなくても、次のページへ。"
+  },
+  "全部故事": {
+    "en": "All stories",
+    "ja": "すべて"
+  },
+  "连载中": {
+    "en": "In progress",
+    "ja": "連載中"
+  },
+  "已完结": {
+    "en": "Completed",
+    "ja": "完結"
+  },
+  "搜索故事": {
+    "en": "Search stories",
+    "ja": "物語を検索"
+  },
+  "搜索我的故事…": {
+    "en": "Search your stories…",
+    "ja": "物語を検索…"
+  },
+  "让想象，长成故事": {
+    "en": "Let an idea become a story",
+    "ja": "想像を、物語に。"
+  },
+  "选择语言水平和题材": {
+    "en": "Choose a language level and genre",
+    "ja": "言語レベルとジャンルを選び、"
+  },
+  "开启一段专属连载": {
+    "en": "Start a series of your own",
+    "ja": "あなただけの連載を始める"
+  },
+  "还没有符合条件的作品。": {
+    "en": "No matching stories yet.",
+    "ja": "該当する物語はありません。"
+  },
+  "还没有故事？可以先打开免费离线示例，体验阅读。": {
+    "en": "No stories yet? Try the free offline sample.",
+    "ja": "まずは無料のオフラインサンプルを読んでみましょう。"
+  },
+  "打开三章示例": {
+    "en": "Open the 3-chapter sample",
+    "ja": "全3章のサンプルを開く"
+  },
+  "{current}/{total} 章": {
+    "en": "{current}/{total} chapters",
+    "ja": "{current}/{total} 章"
+  },
+  "离线示例 · 非 API 生成": {
+    "en": "Offline sample · No API call",
+    "ja": "オフラインサンプル · API 未使用"
+  },
+  "{count} {unit} / 章": {
+    "en": "{count} {unit} / chapter",
+    "ja": "1章あたり {count} {unit}"
+  },
+  "词": {
+    "en": "words",
+    "ja": "語"
+  },
+  "字": {
+    "en": "characters",
+    "ja": "字"
+  },
+  "{count} 章": {
+    "en": "{count} chapters",
+    "ja": "全 {count} 章"
+  },
+  "阅读": {
+    "en": "Read",
+    "ja": "読む"
+  },
+  "查看作品": {
+    "en": "View story",
+    "ja": "作品を見る"
+  },
+  "返回书架": {
+    "en": "Back to library",
+    "ja": "本棚に戻る"
+  },
+  "导出": {
+    "en": "Export",
+    "ja": "エクスポート"
+  },
+  "Aa 排版": {
+    "en": "Aa Appearance",
+    "ja": "Aa 表示設定"
+  },
+  "已归档 {current} / {total} 章": {
+    "en": "{current} / {total} chapters saved",
+    "ja": "{current} / {total} 章を保存済み"
+  },
+  "正在生成…": {
+    "en": "Generating…",
+    "ja": "生成中…"
+  },
+  "生成下一章": {
+    "en": "Generate next chapter",
+    "ja": "次の章を生成"
+  },
+  "这个故事，已圆满落幕。": {
+    "en": "This story has reached its ending.",
+    "ja": "この物語は完結しました。"
+  },
+  "取消生成": {
+    "en": "Cancel generation",
+    "ja": "生成をキャンセル"
+  },
+  "把喜欢的地方，留在这里。": {
+    "en": "Keep a favorite place here.",
+    "ja": "お気に入りの場所を、ここに。"
+  },
+  "第 {number} 章": {
+    "en": "Chapter {number}",
+    "ja": "第 {number} 章"
+  },
+  "第 {page} 页": {
+    "en": "Page {page}",
+    "ja": "第 {page} ページ"
+  },
+  "试读": {
+    "en": "Preview",
+    "ja": "試し読み"
+  },
+  "这是开篇试读，尚未生成完整章节。点击左侧「生成下一章」开始。": {
+    "en": "This is an opening preview. Choose “Generate next chapter” to create the first full chapter.",
+    "ja": "これは冒頭の試し読みです。「次の章を生成」で第1章を作成できます。"
+  },
+  "上一页": {
+    "en": "Previous page",
+    "ja": "前のページ"
+  },
+  "下一页": {
+    "en": "Next page",
+    "ja": "次のページ"
+  },
+  "添加书签": {
+    "en": "Add bookmark",
+    "ja": "しおりを追加"
+  },
+  "取消书签": {
+    "en": "Remove bookmark",
+    "ja": "しおりを削除"
+  },
+  "你已经读完这个故事。": {
+    "en": "You have finished this story.",
+    "ja": "この物語を読み終えました。"
+  },
+  "已读到最新章节，可以生成下一章。": {
+    "en": "You are up to date. Generate the next chapter to continue.",
+    "ja": "最新の章まで読みました。続きの章を生成できます。"
+  },
+  "关闭": {
+    "en": "Close",
+    "ja": "閉じる"
+  },
+  "写给成年读者的好故事，用你读得舒服的语言。": {
+    "en": "Stories for adult readers, in language you can enjoy.",
+    "ja": "大人の読者に、心地よく読める言葉で。"
+  },
+  "从预设开始": {
+    "en": "Start with a preset",
+    "ja": "プリセットから始める"
+  },
+  "自定义故事": {
+    "en": "Custom story",
+    "ja": "カスタム設定"
+  },
+  "小说语言": {
+    "en": "Story language",
+    "ja": "小説の言語"
+  },
+  "English · 英文": {
+    "en": "English",
+    "ja": "英語 · English"
+  },
+  "日本語 · 日文": {
+    "en": "Japanese · 日本語",
+    "ja": "日本語"
+  },
+  "语言水平": {
+    "en": "Language level",
+    "ja": "言語レベル"
+  },
+  "英文 CEFR / 日文 JLPT，仅作为难度目标": {
+    "en": "English: CEFR / Japanese: JLPT. Difficulty targets only.",
+    "ja": "英語は CEFR、日本語は JLPT。難易度の目安です。"
+  },
+  "故事题材": {
+    "en": "Genre",
+    "ja": "ジャンル"
+  },
+  "每章目标篇幅": {
+    "en": "Target chapter length",
+    "ja": "1章の目安の長さ"
+  },
+  "故事总章数": {
+    "en": "Total chapters",
+    "ja": "全体の章数"
+  },
+  "1–100 章，有计划地走向结局": {
+    "en": "1–100 chapters, with an ending in mind",
+    "ja": "1〜100章。結末を見据えた構成に。"
+  },
+  "你想读怎样的故事？": {
+    "en": "What would you like to read?",
+    "ja": "どんな物語を読みたいですか？"
+  },
+  "例如：温暖的海边小镇、成年主角、轻悬疑。少用生僻词，不要幼稚化情节。": {
+    "en": "For example: a warm coastal town, an adult protagonist, a gentle mystery. Avoid rare words without making the plot childish.",
+    "ja": "例：温かな海辺の町、大人の主人公、軽いミステリー。難語を控え、幼稚な筋書きにしない。"
+  },
+  "给这组预设起个名字（可选）": {
+    "en": "Name this preset (optional)",
+    "ja": "プリセット名（任意）"
+  },
+  "预设名称": {
+    "en": "Preset name",
+    "ja": "プリセット名"
+  },
+  "保存预设": {
+    "en": "Save preset",
+    "ja": "プリセットを保存"
+  },
+  "先生成简介与短试读，满意后再创建作品。联网调用 Gemini，可能消耗 API 额度。": {
+    "en": "Generate a synopsis and short preview first. Creating with Gemini requires internet and may use paid API quota.",
+    "ja": "まず紹介文と短い試し読みを生成します。Gemini の利用にはネット接続が必要で、API 料金が発生する場合があります。"
+  },
+  "生成故事试读": {
+    "en": "Generate preview",
+    "ja": "試し読みを生成"
+  },
+  "开始一个新故事": {
+    "en": "Start a new story",
+    "ja": "新しい物語を始める"
+  },
+  "你的故事，初见": {
+    "en": "Meet your story",
+    "ja": "あなたの物語との出会い"
+  },
+  "查看章节大纲": {
+    "en": "View chapter outline",
+    "ja": "章の構成を見る"
+  },
+  "调整设定": {
+    "en": "Adjust settings",
+    "ja": "設定を調整"
+  },
+  "创建并加入书架": {
+    "en": "Create & add to library",
+    "ja": "作成して本棚に追加"
+  },
+  "模型与本地设置": {
+    "en": "Model & local settings",
+    "ja": "モデルとローカル設定"
+  },
+  "界面语言": {
+    "en": "Interface language",
+    "ja": "表示言語"
+  },
+  "界面语言与小说语言互相独立。": {
+    "en": "Interface and story languages are independent.",
+    "ja": "表示言語と小説の言語は個別に選べます。"
+  },
+  "Gemini 模型 ID": {
+    "en": "Gemini model ID",
+    "ja": "Gemini モデル ID"
+  },
+  "支持 generateContent 与 JSON 结构化输出的模型，可随时更换。": {
+    "en": "Use a model supporting generateContent and structured JSON output. You can change it anytime.",
+    "ja": "generateContent と JSON 構造化出力に対応するモデルを指定します。いつでも変更できます。"
+  },
+  "已加密保存，留空保持原值": {
+    "en": "Encrypted key saved. Leave blank to keep it.",
+    "ja": "暗号化して保存済み。空欄なら変更しません。"
+  },
+  "粘贴你的 Gemini API Key": {
+    "en": "Paste your Gemini API key",
+    "ja": "Gemini API キーを貼り付け"
+  },
+  "使用系统安全存储加密，仅在调用 Gemini 时使用，不写入备份。": {
+    "en": "Encrypted using system secure storage. Used only for Gemini calls and excluded from backups.",
+    "ja": "システムの安全な保存機能で暗号化します。Gemini 呼び出し時のみ使用し、バックアップには含めません。"
+  },
+  "移除已保存的 API Key": {
+    "en": "Remove saved API key",
+    "ja": "保存した API キーを削除"
+  },
+  "系统安全存储不可用，暂不能保存密钥。": {
+    "en": "System secure storage is unavailable. The key cannot be saved.",
+    "ja": "安全な保存機能が利用できないため、キーを保存できません。"
+  },
+  "生成需要联网；阅读、翻页和进度保存可以离线使用。API 费用由你的 Google 账户承担，免费额度随模型和账户而异。没有自动批量生成或自动重试。": {
+    "en": "Generation requires internet; reading and progress work offline. API costs belong to your Google account. Free quota varies. No automatic batch generation or retries.",
+    "ja": "生成にはネット接続が必要です。読書と進捗保存はオフラインで利用できます。API 料金はご自身の Google アカウントに発生します。無料枠はモデルやアカウントにより異なります。自動一括生成や自動再試行は行いません。"
+  },
+  "最近一次生成总用量：{count} tokens（以服务返回为准）": {
+    "en": "Last generation: {count} tokens (reported by the service)",
+    "ja": "前回の生成：{count} トークン（サービスからの報告値）"
+  },
+  "保存设置": {
+    "en": "Save settings",
+    "ja": "設定を保存"
+  },
+  "备份与迁移": {
+    "en": "Backup & migration",
+    "ja": "バックアップと移行"
+  },
+  "备份作品、书签、进度与创作预设，不包含 API Key。导入时保留同 ID 的现有作品，并恢复备份预设。": {
+    "en": "Back up stories, bookmarks, progress, appearance and presets, without the API key. Import keeps existing stories with matching IDs and restores backed-up settings.",
+    "ja": "作品、しおり、進捗、表示設定、プリセットを保存します。API キーは含みません。同じ ID の既存作品は保持し、設定を復元します。"
+  },
+  "导出备份": {
+    "en": "Export backup",
+    "ja": "バックアップを書き出す"
+  },
+  "导入备份": {
+    "en": "Import backup",
+    "ja": "バックアップを読み込む"
+  },
+  "打开离线示例": {
+    "en": "Open offline sample",
+    "ja": "オフラインサンプルを開く"
+  },
+  "舒服地读下去": {
+    "en": "Make yourself comfortable",
+    "ja": "心地よい読書のために"
+  },
+  "字体": {
+    "en": "Font",
+    "ja": "フォント"
+  },
+  "使用本地字体，缺失时自动回退。": {
+    "en": "Local fonts only; unavailable fonts use a fallback.",
+    "ja": "ローカルフォントを使用し、未搭載の場合は代替フォントを使います。"
+  },
+  "阅读模式": {
+    "en": "Reading mode",
+    "ja": "読書モード"
+  },
+  "连续滚动": {
+    "en": "Continuous scrolling",
+    "ja": "縦スクロール"
+  },
+  "左右分页": {
+    "en": "Horizontal pages",
+    "ja": "横ページ送り"
+  },
+  "字号": {
+    "en": "Font size",
+    "ja": "文字サイズ"
+  },
+  "行距": {
+    "en": "Line spacing",
+    "ja": "行間"
+  },
+  "正文宽度": {
+    "en": "Text width",
+    "ja": "本文の幅"
+  },
+  "设置实时生效并自动保存。← / → 或 Page Up / Page Down 翻页。": {
+    "en": "Changes apply and save automatically. Use ← / → or Page Up / Page Down to turn pages.",
+    "ja": "変更はすぐに反映され、自動保存されます。← / → または Page Up / Page Down でページを送れます。"
+  },
+  "带上你的故事": {
+    "en": "Take your story with you",
+    "ja": "物語を持ち出す"
+  },
+  "导出已归档的 {count} 个章节，可在其他阅读器打开。": {
+    "en": "Export {count} saved chapters to read in another app.",
+    "ja": "保存済みの {count} 章を書き出し、他のリーダーでも読めます。"
+  },
+  "导出 TXT": {
+    "en": "Export TXT",
+    "ja": "TXT に書き出す"
+  },
+  "导出 EPUB": {
+    "en": "Export EPUB",
+    "ja": "EPUB に書き出す"
+  },
+  "故事正在生长": {
+    "en": "Your story is taking shape",
+    "ja": "物語が生まれています"
+  },
+  "正在续写下一章": {
+    "en": "Writing the next chapter",
+    "ja": "次の章を執筆中"
+  },
+  "正在构思与写作": {
+    "en": "Imagining and writing",
+    "ja": "構想・執筆中"
+  },
+  "Gemini 正在生成内容，完成后会保存到本地。": {
+    "en": "Gemini is writing. The result will be saved locally.",
+    "ja": "Gemini が執筆中です。完了するとローカルに保存されます。"
+  },
+  "可能需要一两分钟，请保持联网。": {
+    "en": "This may take a minute or two. Please stay online.",
+    "ja": "1〜2分かかる場合があります。ネット接続を維持してください。"
+  },
+  "取消本次生成": {
+    "en": "Cancel this generation",
+    "ja": "今回の生成をキャンセル"
+  },
+  "请等待当前生成任务完成。": {
+    "en": "Please wait for the current generation.",
+    "ja": "現在の生成が完了するまでお待ちください。"
+  },
+  "请先完成或取消生成。": {
+    "en": "Finish or cancel the current generation first.",
+    "ja": "現在の生成を完了するか、キャンセルしてください。"
+  },
+  "请等待生成完成，或点击取消。": {
+    "en": "Please wait, or choose Cancel.",
+    "ja": "完了まで待つか、キャンセルしてください。"
+  },
+  "生成完整章节后可添加书签。": {
+    "en": "Generate a full chapter before adding bookmarks.",
+    "ja": "章を生成すると、しおりを追加できます。"
+  },
+  "已添加书签": {
+    "en": "Bookmark added",
+    "ja": "しおりを追加しました"
+  },
+  "已取消书签": {
+    "en": "Bookmark removed",
+    "ja": "しおりを削除しました"
+  },
+  "请给预设起个名字。": {
+    "en": "Please name your preset.",
+    "ja": "プリセット名を入力してください。"
+  },
+  "预设已保存": {
+    "en": "Preset saved",
+    "ja": "プリセットを保存しました"
+  },
+  "作品已创建，点击「生成下一章」开始连载。": {
+    "en": "Story created. Choose “Generate next chapter” to begin.",
+    "ja": "作品を作成しました。「次の章を生成」で連載を始めましょう。"
+  },
+  "新章节已归档，可离线阅读。": {
+    "en": "Chapter saved. You can read it offline.",
+    "ja": "章を保存しました。オフラインで読めます。"
+  },
+  "已请求取消，正在结束本次生成…": {
+    "en": "Cancellation requested. Finishing up…",
+    "ja": "キャンセルを要求しました。終了処理中…"
+  },
+  "设置已保存": {
+    "en": "Settings saved",
+    "ja": "設定を保存しました"
+  },
+  "备份已导出": {
+    "en": "Backup exported",
+    "ja": "バックアップを書き出しました"
+  },
+  "备份已导入": {
+    "en": "Backup imported",
+    "ja": "バックアップを読み込みました"
+  },
+  "故事已导出": {
+    "en": "Story exported",
+    "ja": "物語を書き出しました"
+  },
+  "奇幻": {
+    "en": "Fantasy",
+    "ja": "ファンタジー"
+  },
+  "悬疑": {
+    "en": "Mystery",
+    "ja": "ミステリー"
+  },
+  "科幻": {
+    "en": "Science fiction",
+    "ja": "SF"
+  },
+  "冒险": {
+    "en": "Adventure",
+    "ja": "冒険"
+  },
+  "日常": {
+    "en": "Slice of life",
+    "ja": "日常"
+  },
+  "爱情": {
+    "en": "Romance",
+    "ja": "恋愛"
+  },
+  "纸页": {
+    "en": "Paper",
+    "ja": "ペーパー"
+  },
+  "绿意": {
+    "en": "Sage",
+    "ja": "セージ"
+  },
+  "夜读": {
+    "en": "Night",
+    "ja": "ナイト"
+  },
+  "暖砂": {
+    "en": "Sepia",
+    "ja": "セピア"
+  },
+  "雾蓝": {
+    "en": "Mist",
+    "ja": "ミストブルー"
+  },
+  "蔷薇": {
+    "en": "Rose",
+    "ja": "ローズ"
+  },
+  "暮紫": {
+    "en": "Lavender",
+    "ja": "ラベンダー"
+  },
+  "深海": {
+    "en": "Ocean",
+    "ja": "ディープオーシャン"
+  },
+  "墨黑": {
+    "en": "Charcoal",
+    "ja": "チャコール"
+  },
+  "月灰": {
+    "en": "Slate",
+    "ja": "スレート"
+  },
+  "Georgia · 衬线": {
+    "en": "Georgia · Serif",
+    "ja": "Georgia · セリフ"
+  },
+  "Arial · 无衬线": {
+    "en": "Arial · Sans serif",
+    "ja": "Arial · サンセリフ"
+  },
+  "Courier · 等宽": {
+    "en": "Courier · Monospace",
+    "ja": "Courier · 等幅"
+  },
+  "游明朝 / ヒラギノ明朝": {
+    "en": "Hiragino Mincho / Yu Mincho",
+    "ja": "ヒラギノ明朝 / 游明朝"
+  },
+  "游ゴシック / ヒラギノ角ゴ": {
+    "en": "Hiragino Kaku Gothic / Yu Gothic",
+    "ja": "ヒラギノ角ゴ / 游ゴシック"
+  },
+  "宋体 · Songti SC": {
+    "en": "Songti SC · Chinese serif",
+    "ja": "宋体 · Songti SC"
+  },
+  "系统字体": {
+    "en": "System font",
+    "ja": "システムフォント"
+  },
+  "请在 Leaflight 桌面应用中打开。运行 npm run dev 启动。": {
+    "en": "Open the Leaflight desktop app. Run npm run dev to start.",
+    "ja": "Leaflight デスクトップアプリで開いてください。npm run dev で起動できます。"
+  },
+  "操作失败": {
+    "en": "Operation failed",
+    "ja": "操作に失敗しました"
+  },
+  "请在项目目录运行": {
+    "en": "In the project directory, run",
+    "ja": "プロジェクトフォルダで次を実行してください："
+  },
+  "请先在设置中填写 Gemini API Key。": {
+    "en": "Add a Gemini API key in Settings first.",
+    "ja": "まず設定で Gemini API キーを入力してください。"
+  },
+  "模型名称无效，请填写 Gemini 模型 ID。": {
+    "en": "Invalid model name. Enter a Gemini model ID.",
+    "ja": "モデル名が無効です。Gemini モデル ID を入力してください。"
+  },
+  "生成已取消，已归档内容保持完整。": {
+    "en": "Generation cancelled. Saved chapters are intact.",
+    "ja": "生成をキャンセルしました。保存済みの章は保持されています。"
+  },
+  "无法连接 Gemini，请检查网络后重试。": {
+    "en": "Cannot reach Gemini. Check your connection and try again.",
+    "ja": "Gemini に接続できません。ネット接続を確認して再試行してください。"
+  },
+  "请求不被当前模型支持，请检查模型 ID 或更换模型。": {
+    "en": "This request is unsupported. Check the model ID or choose another model.",
+    "ja": "このモデルはリクエストに対応していません。モデル ID を確認するか変更してください。"
+  },
+  "API Key 无效。": {
+    "en": "Invalid API key.",
+    "ja": "API キーが無効です。"
+  },
+  "API Key 没有访问权限，请检查账户和地区设置。": {
+    "en": "This API key lacks access. Check account and region settings.",
+    "ja": "API キーにアクセス権限がありません。アカウントと地域設定を確認してください。"
+  },
+  "找不到此模型，请在设置中修改模型 ID。": {
+    "en": "Model not found. Update the model ID in Settings.",
+    "ja": "モデルが見つかりません。設定でモデル ID を変更してください。"
+  },
+  "Gemini 配额或速率限制，请稍后重试。": {
+    "en": "Gemini quota or rate limit reached. Try again later.",
+    "ja": "Gemini の利用枠またはレート制限に達しました。時間をおいて再試行してください。"
+  },
+  "模型返回的格式无效，未保存，请重试。": {
+    "en": "The model returned invalid data. Nothing was saved; please retry.",
+    "ja": "モデルの出力形式が無効です。保存せずに終了しました。再試行してください。"
+  },
+  "作品预设无效。": {
+    "en": "Invalid story preset.",
+    "ja": "作品のプリセットが無効です。"
+  },
+  "阅读设置无效。": {
+    "en": "Invalid reading settings.",
+    "ja": "読書設定が無効です。"
+  },
+  "找不到这部作品。": {
+    "en": "Story not found.",
+    "ja": "作品が見つかりません。"
+  },
+  "故事规划不完整，请重新生成。": {
+    "en": "The story plan is incomplete. Please generate it again.",
+    "ja": "物語の構成が不完全です。再生成してください。"
+  },
+  "故事已经完结。": {
+    "en": "This story is complete.",
+    "ja": "この物語は完結しています。"
+  },
+  "返回的章节不完整，未写入书架。": {
+    "en": "The chapter is incomplete and was not saved.",
+    "ja": "章が不完全なため、保存しませんでした。"
+  },
+  "阅读位置无效。": {
+    "en": "Invalid reading position.",
+    "ja": "読書位置が無効です。"
+  },
+  "书签位置无效。": {
+    "en": "Invalid bookmark position.",
+    "ja": "しおりの位置が無効です。"
+  },
+  "不是有效的 Leaflight 备份。": {
+    "en": "Not a valid Leaflight backup.",
+    "ja": "有効な Leaflight バックアップではありません。"
+  },
+  "备份中的作品数据无效。": {
+    "en": "Invalid story data in backup.",
+    "ja": "バックアップの作品データが無効です。"
+  },
+  "备份预设无效。": {
+    "en": "Invalid presets in backup.",
+    "ja": "バックアップのプリセットが無効です。"
+  },
+  "界面语言无效。": {
+    "en": "Invalid interface language.",
+    "ja": "表示言語が無効です。"
+  },
+  "无法解密已保存的 API Key，请重新填写。": {
+    "en": "Unable to decrypt the saved key. Enter it again.",
+    "ja": "保存済みの API キーを復号できません。再入力してください。"
+  },
+  "已有生成任务进行中。": {
+    "en": "A generation is already in progress.",
+    "ja": "生成がすでに進行中です。"
+  },
+  "生成已取消。": {
+    "en": "Generation cancelled.",
+    "ja": "生成をキャンセルしました。"
+  },
+  "请填写有效的模型 ID。": {
+    "en": "Enter a valid model ID.",
+    "ja": "有効なモデル ID を入力してください。"
+  },
+  "系统安全存储不可用，无法保存 API Key。": {
+    "en": "System secure storage is unavailable. Cannot save the API key.",
+    "ja": "安全な保存機能が利用できないため、API キーを保存できません。"
+  },
+  "预设数量无效。": {
+    "en": "Invalid number of presets.",
+    "ja": "プリセット数が無効です。"
+  },
+  "预设名称无效。": {
+    "en": "Invalid preset name.",
+    "ja": "プリセット名が無効です。"
+  },
+  "规划返回不完整，请重试。": {
+    "en": "Incomplete story plan. Please try again.",
+    "ja": "物語の構成が不完全です。再試行してください。"
+  },
+  "请先生成试读。": {
+    "en": "Generate a preview first.",
+    "ja": "まず試し読みを生成してください。"
+  },
+  "故事已完结。": {
+    "en": "The story is complete.",
+    "ja": "物語は完結しています。"
+  },
+  "无效的导出格式。": {
+    "en": "Invalid export format.",
+    "ja": "書き出し形式が無効です。"
+  },
+  "备份文件超过 50 MB。": {
+    "en": "The backup exceeds 50 MB.",
+    "ja": "バックアップが 50 MB を超えています。"
+  },
+  "不支持此操作。": {
+    "en": "Unsupported operation.",
+    "ja": "この操作には対応していません。"
+  },
+  "操作失败，请重试。": {
+    "en": "Operation failed. Please try again.",
+    "ja": "操作に失敗しました。再試行してください。"
+  },
+  "Gemini 服务返回错误（{status}），请稍后重试。": {
+    "en": "Gemini returned an error ({status}). Please try again later.",
+    "ja": "Gemini エラー（{status}）。時間をおいて再試行してください。"
+  },
+  "生成没有完整结束（{reason}），未保存，请重试或缩短篇幅。": {
+    "en": "Generation did not finish ({reason}). Nothing was saved. Retry or shorten the chapter.",
+    "ja": "生成が完了しませんでした（{reason}）。保存していません。再試行するか、篇幅を短くしてください。"
+  },
+  "无内容": {
+    "en": "no content",
+    "ja": "内容なし"
+  },
+  "YOUR PRIVATE STORY ROOM": {
+    "en": "YOUR PRIVATE STORY ROOM",
+    "ja": "あなただけの物語の部屋"
+  },
+  "A little reading, every day.": {
+    "en": "A little reading, every day.",
+    "ja": "毎日、少しずつ読書を。"
+  },
+  "STORIES MADE FOR YOU": {
+    "en": "STORIES MADE FOR YOU",
+    "ja": "あなたのための物語"
+  },
+  "PICK UP WHERE YOU LEFT OFF": {
+    "en": "PICK UP WHERE YOU LEFT OFF",
+    "ja": "前回の続きから"
+  },
+  "YOUR NEXT CHAPTER": {
+    "en": "YOUR NEXT CHAPTER",
+    "ja": "次の章へ"
+  },
+  "LOCAL FIRST": {
+    "en": "LOCAL FIRST",
+    "ja": "ローカル保存"
+  },
+  "CRAFTED BY AI. ENJOYED AT YOUR PACE.": {
+    "en": "CRAFTED BY AI. ENJOYED AT YOUR PACE.",
+    "ja": "AI が紡ぐ物語を、自分のペースで。"
+  },
+  "LEAFLIGHT ORIGINAL": {
+    "en": "LEAFLIGHT ORIGINAL",
+    "ja": "LEAFLIGHT オリジナル"
+  },
+  "OFFLINE SAMPLE": {
+    "en": "OFFLINE SAMPLE",
+    "ja": "オフラインサンプル"
+  },
+  "AI FICTION": {
+    "en": "AI FICTION",
+    "ja": "AI 小説"
+  },
+  "CONTENTS": {
+    "en": "CONTENTS",
+    "ja": "目次"
+  },
+  "BOOKMARKS": {
+    "en": "BOOKMARKS",
+    "ja": "しおり"
+  },
+  "THE END": {
+    "en": "THE END",
+    "ja": "完"
+  },
+  "TO BE CONTINUED": {
+    "en": "TO BE CONTINUED",
+    "ja": "つづく"
+  },
+  "YOUR STORY IS READY TO BEGIN": {
+    "en": "YOUR STORY IS READY TO BEGIN",
+    "ja": "物語を始める準備ができました"
+  },
+  "OPENING PREVIEW · 试读片段": {
+    "en": "OPENING PREVIEW",
+    "ja": "冒頭の試し読み"
+  },
+  "LEAFLIGHT STUDIO": {
+    "en": "LEAFLIGHT STUDIO",
+    "ja": "LEAFLIGHT スタジオ"
+  },
+  "睡前轻奇幻 · B1": {
+    "en": "Bedtime fantasy · B1",
+    "ja": "寝る前のファンタジー · B1"
+  },
+  "轻松日常 · A2": {
+    "en": "Everyday moments · A2",
+    "ja": "気軽な日常 · A2"
+  },
+  "周末悬疑 · B2": {
+    "en": "Weekend mystery · B2",
+    "ja": "週末のミステリー · B2"
+  },
+  "海边日常 · 日文 N4": {
+    "en": "Coastal life · Japanese N4",
+    "ja": "海辺の日常 · 日本語 N4"
+  },
+  "不思议之旅 · 日文 N2": {
+    "en": "An unusual journey · Japanese N2",
+    "ja": "不思議な旅 · 日本語 N2"
+  },
+  "难度与反馈": {
+    "en": "Difficulty & feedback",
+    "ja": "難易度とフィードバック"
+  },
+  "难度检查与阅读反馈": {
+    "en": "Difficulty check & reading feedback",
+    "ja": "難易度チェックと読書フィードバック"
+  },
+  "目标等级": {
+    "en": "Target level",
+    "ja": "目標レベル"
+  },
+  "工程参考，非官方测级": {
+    "en": "App guidance, not an official assessment",
+    "ja": "アプリ独自の目安・公式判定ではありません"
+  },
+  "平均句长": {
+    "en": "Average sentence length",
+    "ja": "平均文長"
+  },
+  "长句比例": {
+    "en": "Long sentences",
+    "ja": "長文の割合"
+  },
+  "汉字占比": {
+    "en": "Kanji share",
+    "ja": "漢字の割合"
+  },
+  "长词占比（≥9字母）": {
+    "en": "Long words (9+ letters)",
+    "ja": "長い単語の割合（9文字以上）"
+  },
+  "本级参考平均句长：{min}–{max} {unit}；超过 {long} {unit} 记为长句。": {
+    "en": "App target: {min}–{max} {unit} per sentence on average; over {long} {unit} counts as a long sentence.",
+    "ja": "本アプリの目安：平均 {min}〜{max} {unit}。{long} {unit} を超える文を長文として数えます。"
+  },
+  "平均句长偏长，可能增加理解负担。": {
+    "en": "Sentences are long on average, which may increase reading effort.",
+    "ja": "平均文長が長く、読解の負担が大きくなる可能性があります。"
+  },
+  "平均句长偏短，可能缺少目标等级的表达变化。": {
+    "en": "Sentences are short on average; expression may lack variation for this target.",
+    "ja": "平均文長が短く、目標に対する表現の変化が少ない可能性があります。"
+  },
+  "长句比例偏高，请留意多层修饰和指代。": {
+    "en": "Many sentences are long. Watch for layered clauses and unclear references.",
+    "ja": "長文の割合が高めです。複雑な修飾や指示関係に注意してください。"
+  },
+  "汉字密度偏高，低等级阅读可能吃力。": {
+    "en": "Kanji density is high, which may challenge beginner readers.",
+    "ja": "漢字の密度が高く、初級の読者には負担となる可能性があります。"
+  },
+  "检测到部分较高级语法或书面表达。": {
+    "en": "Some advanced grammar or formal expressions were detected.",
+    "ja": "一部の高度な文法や書き言葉の手がかりが見つかりました。"
+  },
+  "检测到部分文学性或低频用词线索。": {
+    "en": "Some literary or low-frequency vocabulary cues were detected.",
+    "ja": "一部の文学的・低頻度語彙の手がかりが見つかりました。"
+  },
+  "复杂表达线索较少，高等级区分度可能不足。": {
+    "en": "Few complex-expression cues were found; higher-level distinction may be weak.",
+    "ja": "複雑な表現の手がかりが少なく、上級らしい違いが弱い可能性があります。"
+  },
+  "部分汉字没有配套注音。": {
+    "en": "Some kanji lack supplied readings.",
+    "ja": "読みが付いていない漢字があります。"
+  },
+  "文本样本较短，暂不足以判断句式分布。": {
+    "en": "The sample is too short to assess sentence patterns reliably.",
+    "ja": "文章が短いため、文の分布を十分に判断できません。"
+  },
+  "本地检查未发现明显偏离；不代表词汇、语法与叙事难度已经达标。": {
+    "en": "No obvious deviation was found locally. This does not validate vocabulary, grammar or narrative difficulty.",
+    "ja": "ローカルチェックでは明らかな偏りは見つかりませんでした。語彙・文法・物語の難易度を保証するものではありません。"
+  },
+  "请结合实际阅读体验判断。": {
+    "en": "Please judge this alongside your reading experience.",
+    "ja": "実際の読み心地と合わせて判断してください。"
+  },
+  "检查仅依据句长、字形比例和有限表达线索；不覆盖完整词表，也不能认证 CEFR 或 JLPT 等级。": {
+    "en": "Checks use sentence length, script proportions and limited expression cues. They do not cover a complete vocabulary list or certify CEFR/JLPT levels.",
+    "ja": "文長、文字種の割合、限られた表現の手がかりによるチェックです。完全な語彙表は使用せず、CEFR/JLPT レベルを認定するものではありません。"
+  },
+  "这一章读起来怎么样？": {
+    "en": "How did this chapter feel?",
+    "ja": "この章の読み心地は？"
+  },
+  "太难": {
+    "en": "Too hard",
+    "ja": "難しすぎる"
+  },
+  "刚好": {
+    "en": "Just right",
+    "ja": "ちょうどいい"
+  },
+  "太简单": {
+    "en": "Too easy",
+    "ja": "簡単すぎる"
+  },
+  "后续生成：更易读": {
+    "en": "Next chapters: more accessible",
+    "ja": "次の生成：読みやすく"
+  },
+  "后续生成：更有挑战": {
+    "en": "Next chapters: more challenging",
+    "ja": "次の生成：少し難しく"
+  },
+  "后续生成：基础规则": {
+    "en": "Next chapters: baseline rules",
+    "ja": "次の生成：基本ルール"
+  },
+  "仅影响本书后续生成；最近 8 章的反馈参与校准，同一章重复选择会替换原反馈。不会自动生成或改写已有章节。": {
+    "en": "Applies only to future chapters of this book, using the last 8 chapter ratings. Rating the same chapter replaces its earlier rating. No automatic generation or rewriting.",
+    "ja": "この本の今後の生成にのみ適用し、直近8章の評価を使います。同じ章の評価は上書きされます。自動生成や既存章の書き換えは行いません。"
+  },
+  "反馈已保存，下次生成将采用校准后的规则。": {
+    "en": "Feedback saved. The next generation will use adjusted rules.",
+    "ja": "評価を保存しました。次の生成から調整したルールを使います。"
+  },
+  "请先生成完整章节，试读检查可在创建前查看。": {
+    "en": "Generate a full chapter first. Preview checks are available before creating the book.",
+    "ja": "まず章を生成してください。試し読みのチェックは作品作成前に確認できます。"
+  },
+  "查看难度检查": {
+    "en": "Check difficulty",
+    "ja": "難易度チェック"
+  },
+  "返回试读": {
+    "en": "Back to preview",
+    "ja": "試し読みに戻る"
+  },
+  "显示日文注音": {
+    "en": "Show Japanese readings",
+    "ja": "日本語のふりがなを表示"
+  },
+  "注音只在提供读音的新内容中显示，由模型生成，可能有误。": {
+    "en": "Readings appear only in new content that includes them. They are model-generated and may be incorrect.",
+    "ja": "読みが付いた新しい文章のみ表示できます。読みはモデルが生成し、誤りを含む場合があります。"
+  },
+  "同情节难度对照": {
+    "en": "Same-scene level comparison",
+    "ja": "同じ場面のレベル比較"
+  },
+  "用相同人物、事件和结局，对比两个等级的表达。一次生成请求，可能消耗 API 额度。": {
+    "en": "Compare two levels using the same characters, events and outcome. This makes one generation request and may use paid API quota.",
+    "ja": "人物・出来事・結末をそろえて、2つのレベルの表現を比較します。生成リクエストは1回で、API 料金が発生する場合があります。"
+  },
+  "同一段情节": {
+    "en": "Scene to compare",
+    "ja": "比較する場面"
+  },
+  "例如：一个人走进房间，发现自己的钥匙不见了，最后在外套口袋里找到。": {
+    "en": "For example: someone enters a room, notices their keys are missing, and finds them in a coat pocket.",
+    "ja": "例：部屋に入った人が鍵がないことに気づき、最後にコートのポケットで見つける。"
+  },
+  "版本 A": {
+    "en": "Version A",
+    "ja": "バージョン A"
+  },
+  "版本 B": {
+    "en": "Version B",
+    "ja": "バージョン B"
+  },
+  "生成难度对照": {
+    "en": "Generate comparison",
+    "ja": "比較を生成"
+  },
+  "最近一次对照结果保存在本机，可离线查看；需人工检查情节一致性和阅读感受。": {
+    "en": "The latest comparison is saved locally for offline viewing. Check plot consistency and reading difficulty yourself.",
+    "ja": "最新の比較はローカルに保存し、オフラインで確認できます。場面の一致と読み心地はご自身で確認してください。"
+  },
+  "已生成情节": {
+    "en": "Generated scene",
+    "ja": "生成済みの場面"
+  },
+  "请选择两个不同等级。": {
+    "en": "Choose two different levels.",
+    "ja": "異なる2つのレベルを選んでください。"
+  },
+  "难度反馈无效。": {
+    "en": "Invalid difficulty feedback.",
+    "ja": "難易度の評価が無効です。"
+  },
+  "注音数据无效。": {
+    "en": "Invalid reading annotations.",
+    "ja": "ふりがなのデータが無効です。"
+  },
+  "难度对照参数无效。": {
+    "en": "Invalid comparison settings.",
+    "ja": "比較の設定が無効です。"
+  },
+  "新章已归档，难度检查有提示，可在「难度与反馈」查看。": {
+    "en": "Chapter saved. The difficulty check has notes; open “Difficulty & feedback”.",
+    "ja": "章を保存しました。難易度チェックに注意点があります。「難易度とフィードバック」で確認できます。"
+  },
+  "本地难度检查有提示，建议在创建前查看。": {
+    "en": "The local difficulty check has notes. Review them before creating the story.",
+    "ja": "難易度チェックに注意点があります。作品を作成する前に確認してください。"
+  },
+  "可先查看本地难度检查，再决定是否创建作品。": {
+    "en": "Review the local difficulty check before deciding to create this story.",
+    "ja": "作品を作成する前に、難易度チェックを確認できます。"
+  },
+  "回收站": {
+    "en": "Trash",
+    "ja": "ゴミ箱"
+  },
+  "删除": {
+    "en": "Delete",
+    "ja": "削除"
+  },
+  "删除作品": {
+    "en": "Delete story",
+    "ja": "作品を削除"
+  },
+  "删除这部作品？": {
+    "en": "Delete this story?",
+    "ja": "この作品を削除しますか？"
+  },
+  "作品及其章节、书签和进度将移入回收站，可随时恢复。": {
+    "en": "The story, chapters, bookmarks and progress will move to Trash. You can restore them anytime.",
+    "ja": "作品・章・しおり・読書位置をゴミ箱に移します。いつでも復元できます。"
+  },
+  "取消": {
+    "en": "Cancel",
+    "ja": "キャンセル"
+  },
+  "移入回收站": {
+    "en": "Move to Trash",
+    "ja": "ゴミ箱に移す"
+  },
+  "这里的作品不会显示在书架中，恢复时会保留章节和阅读进度。": {
+    "en": "These stories are hidden from your library. Restoring keeps their chapters and reading progress.",
+    "ja": "ここにある作品は本棚に表示されません。復元すると章や読書位置も戻ります。"
+  },
+  "恢复到书架": {
+    "en": "Restore to library",
+    "ja": "本棚に戻す"
+  },
+  "回收站是空的。": {
+    "en": "Trash is empty.",
+    "ja": "ゴミ箱は空です。"
+  },
+  "作品已移入回收站，可在那里恢复。": {
+    "en": "Story moved to Trash. You can restore it there.",
+    "ja": "作品をゴミ箱に移しました。ゴミ箱から復元できます。"
+  },
+  "作品已恢复到书架。": {
+    "en": "Story restored to your library.",
+    "ja": "作品を本棚に戻しました。"
+  },
+  "回收站中找不到这部作品。": {
+    "en": "This story was not found in Trash.",
+    "ja": "ゴミ箱にこの作品が見つかりません。"
+  },
+  "书架中已有同名标识的作品。": {
+    "en": "A story with this identifier already exists in the library.",
+    "ja": "同じ識別子の作品がすでに本棚にあります。"
+  },
+  "回收站备份无效。": {
+    "en": "Invalid Trash backup.",
+    "ja": "ゴミ箱のバックアップが無効です。"
+  },
+  "翻页特效": {
+    "en": "Page transition",
+    "ja": "ページ切り替え効果"
+  },
+  "无特效": {
+    "en": "None",
+    "ja": "なし"
+  },
+  "柔和淡入": {
+    "en": "Soft fade",
+    "ja": "フェード"
+  },
+  "水平滑动": {
+    "en": "Horizontal slide",
+    "ja": "横スライド"
+  },
+  "纸页轻翻": {
+    "en": "Gentle paper turn",
+    "ja": "軽い紙めくり"
+  },
+  "立体翻转": {
+    "en": "3D flip",
+    "ja": "立体フリップ"
+  },
+  "分页模式下对按钮和键盘翻页生效；系统开启减少动态效果时自动停用。": {
+    "en": "Applies to button and keyboard turns in paged mode. Disabled when the system requests reduced motion.",
+    "ja": "ページモードのボタン・キー操作に適用します。システムで視差効果を減らす設定の場合は無効になります。"
+  },
+  "消息盒子": {
+    "en": "Inbox",
+    "ja": "メッセージボックス"
+  },
+  "生成在后台继续，结果保存在本机。": {
+    "en": "Generation continues in the background. Results stay on this device.",
+    "ja": "生成はバックグラウンドで続行され、結果はこの端末に保存されます。"
+  },
+  "关闭消息盒子": {
+    "en": "Close inbox",
+    "ja": "メッセージボックスを閉じる"
+  },
+  "{count} 个进行中": {
+    "en": "{count} active",
+    "ja": "{count} 件進行中"
+  },
+  "全部标为已读": {
+    "en": "Mark all as read",
+    "ja": "すべて既読にする"
+  },
+  "状态记录": {
+    "en": "Status history",
+    "ja": "進行履歴"
+  },
+  "后台生成中 · 查看进度": {
+    "en": "Generating · View status",
+    "ja": "生成中 · 状況を確認"
+  },
+  "故事试读": {
+    "en": "Story preview",
+    "ja": "物語の試し読み"
+  },
+  "章节生成": {
+    "en": "New chapter",
+    "ja": "章の生成"
+  },
+  "难度对照": {
+    "en": "Level comparison",
+    "ja": "難易度の比較"
+  },
+  "排队中": {
+    "en": "Queued",
+    "ja": "待機中"
+  },
+  "生成中": {
+    "en": "Generating",
+    "ja": "生成中"
+  },
+  "取消中": {
+    "en": "Cancelling",
+    "ja": "キャンセル中"
+  },
+  "已完成": {
+    "en": "Completed",
+    "ja": "完了"
+  },
+  "失败": {
+    "en": "Failed",
+    "ja": "失敗"
+  },
+  "已取消": {
+    "en": "Cancelled",
+    "ja": "キャンセル済み"
+  },
+  "已中断": {
+    "en": "Interrupted",
+    "ja": "中断"
+  },
+  "阅读新章": {
+    "en": "Read new chapter",
+    "ja": "新しい章を読む"
+  },
+  "查看结果": {
+    "en": "View result",
+    "ja": "結果を見る"
+  },
+  "重试": {
+    "en": "Retry",
+    "ja": "再試行"
+  },
+  "取消任务": {
+    "en": "Cancel task",
+    "ja": "タスクをキャンセル"
+  },
+  "还没有生成任务。": {
+    "en": "No generation tasks yet.",
+    "ja": "生成タスクはまだありません。"
+  },
+  "试读、章节和难度对照的进度会出现在这里。": {
+    "en": "Preview, chapter and comparison progress will appear here.",
+    "ja": "試し読み、章、難易度比較の進行状況がここに表示されます。"
+  },
+  "已加入后台任务，可继续阅读。": {
+    "en": "Added to background tasks. Keep reading.",
+    "ja": "バックグラウンドに追加しました。読書を続けられます。"
+  },
+  "作品已在回收站，请先恢复。": {
+    "en": "This story is in Trash. Restore it first.",
+    "ja": "この作品はゴミ箱にあります。先に復元してください。"
+  },
+  "已加密保存，输入以替换": {
+    "en": "Saved securely. Type to replace.",
+    "ja": "暗号化して保存済み。入力すると置き換わります。"
+  },
+  "等待执行": {
+    "en": "Waiting to start",
+    "ja": "実行待ち"
+  },
+  "正在请求 Gemini": {
+    "en": "Requesting Gemini",
+    "ja": "Gemini にリクエスト中"
+  },
+  "正在检查试读与难度": {
+    "en": "Checking preview and difficulty",
+    "ja": "試し読みと難易度を確認中"
+  },
+  "正在检查并归档章节": {
+    "en": "Checking and archiving chapter",
+    "ja": "章を確認して保存中"
+  },
+  "正在检查难度对照": {
+    "en": "Checking level comparison",
+    "ja": "難易度比較を確認中"
+  },
+  "生成完成，结果已保存到本机": {
+    "en": "Completed. Results saved on this device.",
+    "ja": "生成完了。結果はこの端末に保存されました。"
+  },
+  "正在取消任务": {
+    "en": "Cancelling task",
+    "ja": "タスクをキャンセル中"
+  },
+  "任务已取消": {
+    "en": "Task cancelled",
+    "ja": "タスクをキャンセルしました"
+  },
+  "生成失败，请查看详情": {
+    "en": "Generation failed. See details.",
+    "ja": "生成に失敗しました。詳細を確認してください。"
+  },
+  "生成超时，请手动重试。": {
+    "en": "Generation timed out. Retry manually.",
+    "ja": "生成がタイムアウトしました。手動で再試行してください。"
+  },
+  "任务因应用退出而中断，请手动重试。": {
+    "en": "Interrupted when the app exited. Retry manually.",
+    "ja": "アプリの終了により中断しました。手動で再試行してください。"
+  },
+  "找不到这个生成任务。": {
+    "en": "Generation task not found.",
+    "ja": "生成タスクが見つかりません。"
+  },
+  "应用正在退出，请稍后重试。": {
+    "en": "The app is closing. Try again later.",
+    "ja": "アプリを終了中です。後でもう一度お試しください。"
+  },
+  "后台任务已达上限，请等待或取消部分任务。": {
+    "en": "Task queue is full. Wait or cancel a task.",
+    "ja": "タスクが上限に達しました。完了を待つか、一部をキャンセルしてください。"
+  },
+  "这部作品正在生成，请先在消息盒子取消相关任务。": {
+    "en": "This story has an active generation task. Cancel it in the inbox first.",
+    "ja": "この作品は生成中です。先にメッセージボックスで関連タスクをキャンセルしてください。"
+  },
+  "此任务暂不能重试。": {
+    "en": "This task cannot be retried yet.",
+    "ja": "このタスクはまだ再試行できません。"
+  },
+  "我的写作": {
+    "en": "My writing",
+    "ja": "自分の執筆"
+  },
+  "写作评审": {
+    "en": "Writing review",
+    "ja": "作文レビュー"
+  },
+  "试读、章节、难度对照和写作评审的进度会出现在这里。": {
+    "en": "Preview, chapter, comparison and writing review progress will appear here.",
+    "ja": "試し読み、章、難易度比較、作文レビューの進行状況がここに表示されます。"
+  },
+  "找不到这篇草稿。": {
+    "en": "Draft not found.",
+    "ja": "下書きが見つかりません。"
+  },
+  "正在保存…": {
+    "en": "Saving…",
+    "ja": "保存中…"
+  },
+  "尚有未保存的修改": {
+    "en": "Unsaved changes",
+    "ja": "未保存の変更があります"
+  },
+  "已保存到本机": {
+    "en": "Saved on this device",
+    "ja": "この端末に保存済み"
+  },
+  "保存失败，请重试": {
+    "en": "Save failed. Please retry.",
+    "ja": "保存に失敗しました。再試行してください"
+  },
+  "{count} {unit} · {chars}/12000 字符": {
+    "en": "{count} {unit} · {chars}/12000 characters",
+    "ja": "{count} {unit} · {chars}/12000 文字"
+  },
+  "当前草稿已有修改；以下评审仅针对提交时的原文。": {
+    "en": "The draft has changed. This review applies only to the submitted version.",
+    "ja": "下書きは変更されています。このレビューは提出時の原文に対するものです。"
+  },
+  "此评审对应当前草稿内容。": {
+    "en": "This review matches the current draft.",
+    "ja": "このレビューは現在の下書きに対応しています。"
+  },
+  "评审进行中 · 查看消息盒子": {
+    "en": "Review in progress · Open inbox",
+    "ja": "レビュー進行中 · メッセージボックスを開く"
+  },
+  "评审历史": {
+    "en": "Review history",
+    "ja": "レビュー履歴"
+  },
+  "选择一份评审": {
+    "en": "Choose a review",
+    "ja": "レビューを選択"
+  },
+  "稿件版本 {version}": {
+    "en": "Draft version {version}",
+    "ja": "下書きバージョン {version}"
+  },
+  "先写下来，再一起打磨。": {
+    "en": "Write first. Refine with feedback.",
+    "ja": "まず書いて、フィードバックで磨く。"
+  },
+  "完成一段文字后，提交 AI 评审。这里会显示四个维度的具体建议、修改理由和练习。": {
+    "en": "Submit your own writing for AI review. Find specific feedback, explanations and practice across four dimensions here.",
+    "ja": "自分で書いた文章を AI レビューに提出すると、4つの観点から具体的な提案、理由、練習がここに表示されます。"
+  },
+  "语法与拼写": {
+    "en": "Grammar & spelling",
+    "ja": "文法・表記"
+  },
+  "词汇与用词": {
+    "en": "Vocabulary & word choice",
+    "ja": "語彙・言葉選び"
+  },
+  "逻辑与衔接": {
+    "en": "Logic & coherence",
+    "ja": "論理・つながり"
+  },
+  "通顺与表达": {
+    "en": "Fluency & expression",
+    "ja": "自然さ・表現"
+  },
+  "写作教练 · AI 评审": {
+    "en": "Writing coach · AI review",
+    "ja": "作文コーチ · AI レビュー"
+  },
+  "值得保留的优点": {
+    "en": "Strengths to keep",
+    "ja": "大切にしたい長所"
+  },
+  "需要修正": {
+    "en": "Correction",
+    "ja": "修正が必要"
+  },
+  "可选润色": {
+    "en": "Optional refinement",
+    "ja": "任意の改善案"
+  },
+  "原文": {
+    "en": "Original",
+    "ja": "原文"
+  },
+  "建议修改": {
+    "en": "Suggested revision",
+    "ja": "修正案"
+  },
+  "删除这段文字": {
+    "en": "Remove this passage",
+    "ja": "この部分を削除"
+  },
+  "在草稿中定位": {
+    "en": "Locate in draft",
+    "ja": "下書き内で確認"
+  },
+  "下一步练习": {
+    "en": "Practice next",
+    "ja": "次の練習"
+  },
+  "查看提交时的原文": {
+    "en": "View submitted original",
+    "ja": "提出時の原文を見る"
+  },
+  "查看完整修订参考稿": {
+    "en": "View complete suggested revision",
+    "ja": "修正参考文の全文を見る"
+  },
+  "参考稿由 AI 提供，请结合修改理由自行判断；原文保持不变。": {
+    "en": "The AI revision is a reference. Use the explanations to decide what to change. Your original is preserved.",
+    "ja": "AI の修正案は参考です。理由を確認して自分で判断してください。原文は保持されます。"
+  },
+  "将修订稿另存为新草稿": {
+    "en": "Save revision as a new draft",
+    "ja": "修正案を新しい下書きとして保存"
+  },
+  "AI 建议可能有误，请自行判断；此评审不代表官方语言等级。": {
+    "en": "AI feedback can be mistaken. Use your judgment; this is not an official language assessment.",
+    "ja": "AI の提案には誤りもあり得ます。自分で判断してください。公式の語学評価ではありません。"
+  },
+  "写出自己的故事，练好每一句。": {
+    "en": "Your own stories. Stronger sentences.",
+    "ja": "自分の物語を、一文ずつ上達させる。"
+  },
+  "新建草稿": {
+    "en": "New draft",
+    "ja": "新しい下書き"
+  },
+  "草稿": {
+    "en": "Drafts",
+    "ja": "下書き"
+  },
+  "已归档": {
+    "en": "Archived",
+    "ja": "アーカイブ済み"
+  },
+  "未命名草稿": {
+    "en": "Untitled draft",
+    "ja": "無題の下書き"
+  },
+  "空白稿纸，等你落笔。": {
+    "en": "A blank page, ready for your words.",
+    "ja": "あなたの言葉を待つ白紙。"
+  },
+  "还没有归档的草稿。": {
+    "en": "No archived drafts.",
+    "ja": "アーカイブした下書きはありません。"
+  },
+  "还没有草稿，写下第一句吧。": {
+    "en": "No drafts yet. Write your first sentence.",
+    "ja": "下書きはまだありません。最初の一文を書きましょう。"
+  },
+  "稿件标题": {
+    "en": "Draft title",
+    "ja": "下書きのタイトル"
+  },
+  "写作语言": {
+    "en": "Writing language",
+    "ja": "執筆言語"
+  },
+  "练习目标（可选）": {
+    "en": "Practice goal (optional)",
+    "ja": "練習の目標（任意）"
+  },
+  "例如：练习过去时、自然对话或清晰的因果表达。": {
+    "en": "For example: past tense, natural dialogue or clear cause and effect.",
+    "ja": "例：過去形、自然な会話、明確な因果関係。"
+  },
+  "写作正文": {
+    "en": "Your writing",
+    "ja": "本文"
+  },
+  "从一个场景、一段经历，或一个想法开始。": {
+    "en": "Start with a scene, an experience or an idea.",
+    "ja": "ある場面、体験、思いつきから始めましょう。"
+  },
+  "保存草稿": {
+    "en": "Save draft",
+    "ja": "下書きを保存"
+  },
+  "恢复草稿": {
+    "en": "Restore draft",
+    "ja": "下書きを戻す"
+  },
+  "归档草稿": {
+    "en": "Archive draft",
+    "ja": "下書きをアーカイブ"
+  },
+  "提交 AI 评审": {
+    "en": "Submit for AI review",
+    "ja": "AI レビューに提出"
+  },
+  "写作与保存可离线使用。点击评审后，当前原文和练习目标会发送给 Gemini，可能产生 API 费用。30–12000 字符；评审解释使用提交时的界面语言。": {
+    "en": "Writing and saving work offline. Submitting sends the current draft and practice goal to Gemini and may incur API charges. 30–12000 characters. Explanations use the interface language at submission.",
+    "ja": "執筆と保存はオフラインで利用できます。レビューの提出時に原文と練習の目標が Gemini に送信され、API 料金が発生する場合があります。30〜12000文字。説明には提出時の画面言語を使用します。"
+  },
+  "属于你的稿纸": {
+    "en": "YOUR OWN WRITING SPACE",
+    "ja": "あなたのための原稿用紙"
+  },
+  "从阅读，到表达。": {
+    "en": "From reading to expressing yourself.",
+    "ja": "読むことから、表現することへ。"
+  },
+  "独立写一段英文或日文，再通过有依据的反馈反复练习。": {
+    "en": "Write in English or Japanese, then practice with feedback grounded in your own words.",
+    "ja": "英語や日本語で自分の文章を書き、原文に基づくフィードバックで繰り返し練習しましょう。"
+  },
+  "开始我的第一篇写作": {
+    "en": "Start my first draft",
+    "ja": "最初の文章を書き始める"
+  },
+  "草稿已保存。": {
+    "en": "Draft saved.",
+    "ja": "下書きを保存しました。"
+  },
+  "草稿已导出。": {
+    "en": "Draft exported.",
+    "ja": "下書きを書き出しました。"
+  },
+  "请填写稿件标题。": {
+    "en": "Enter a draft title.",
+    "ja": "タイトルを入力してください。"
+  },
+  "请先写至少 30 个字符再评审。": {
+    "en": "Write at least 30 characters before requesting a review.",
+    "ja": "レビューを依頼する前に30文字以上書いてください。"
+  },
+  "评审已加入后台，可继续写作或阅读。": {
+    "en": "Review queued. Keep writing or reading.",
+    "ja": "レビューを追加しました。執筆や読書を続けられます。"
+  },
+  "这段原文已被修改，请对照提交时的原文。": {
+    "en": "This passage has changed. Refer to the submitted original.",
+    "ja": "この部分は変更されています。提出時の原文と照らし合わせてください。"
+  },
+  "修订稿超过编辑器上限，请分段参考。": {
+    "en": "The revision exceeds the editor limit. Refer to it in sections.",
+    "ja": "修正案がエディターの上限を超えています。部分ごとに参照してください。"
+  },
+  "修订练习": {
+    "en": "Revision practice",
+    "ja": "修正の練習"
+  },
+  "已另存为新草稿，原文和评审仍然保留。": {
+    "en": "Saved as a new draft. The original and review are preserved.",
+    "ja": "新しい下書きとして保存しました。原文とレビューは保持されます。"
+  },
+  "写作数据无效。": {
+    "en": "Invalid writing data.",
+    "ja": "執筆データが無効です。"
+  },
+  "评审返回不完整，请重试。": {
+    "en": "The review is incomplete. Please retry.",
+    "ja": "レビューが不完全です。再試行してください。"
+  },
+  "评审引用与原文不符，请重试。": {
+    "en": "A review quotation does not match your draft. Please retry.",
+    "ja": "レビューの引用が原文と一致しません。再試行してください。"
+  },
+  "草稿已在别处更新，请重新打开后再编辑。": {
+    "en": "The draft was updated elsewhere. Reopen it before editing.",
+    "ja": "下書きが別の場所で更新されています。開き直してから編集してください。"
+  },
+  "找不到这份评审。": {
+    "en": "Review not found.",
+    "ja": "レビューが見つかりません。"
+  },
+  "正在检查并保存写作评审": {
+    "en": "Checking and saving writing review",
+    "ja": "作文レビューを確認して保存中"
+  },
+  "备份作品、写作草稿、评审历史、书签、进度与预设，不包含 API Key。导入时保留同 ID 的现有内容，并恢复备份预设。": {
+    "en": "Back up stories, writing drafts, review history, bookmarks, progress and presets without your API Key. Existing content with matching IDs is kept; presets are restored.",
+    "ja": "作品、下書き、レビュー履歴、しおり、進捗、プリセットをバックアップします。API Key は含みません。同じ ID の既存データは保持し、プリセットを復元します。"
+  },
+  "训练路线": {
+    "en": "Practice track",
+    "ja": "練習コース"
+  },
+  "自由写作": {
+    "en": "Free writing",
+    "ja": "自由作文"
+  },
+  "话题与场景": {
+    "en": "Topic and situation",
+    "ja": "話題と場面"
+  },
+  "本次写作任务": {
+    "en": "Your writing task",
+    "ja": "今回の作文課題"
+  },
+  "换一道题": {
+    "en": "Try another topic",
+    "ja": "別の課題にする"
+  },
+  "题目材料 · 已完整提供": {
+    "en": "Source material · supplied in full",
+    "ja": "課題資料 · 全文掲載"
+  },
+  "本题建议 {min}–{max} {unit} · 参考 {minutes} 分钟": {
+    "en": "Practice target: {min}–{max} {unit} · about {minutes} minutes",
+    "ja": "練習の目安：{min}〜{max} {unit} · 約{minutes}分"
+  },
+  "任务要求与思考提示": {
+    "en": "Requirements and planning prompts",
+    "ja": "条件と考えるヒント"
+  },
+  "需要完成": {
+    "en": "What to cover",
+    "ja": "書く内容"
+  },
+  "练习重点": {
+    "en": "Skills to practise",
+    "ja": "練習する力"
+  },
+  "动笔前想一想": {
+    "en": "Before you write",
+    "ja": "書く前に考えよう"
+  },
+  "按此题另起一篇，保留当前草稿": {
+    "en": "Start a new draft for this task; keep this draft",
+    "ja": "今の下書きを残して、この課題で新規作成"
+  },
+  "原创训练题，参考题型与学段能力设计；非官方真题或教材摘录，学段不等同语言等级。": {
+    "en": "Original practice inspired by task formats and school-stage skills, not official questions or textbook excerpts. School stages are not language proficiency levels.",
+    "ja": "出題形式や学段の力を参考にしたオリジナル練習です。公式問題や教科書の抜粋ではなく、学段は語学レベルを示しません。"
+  },
+  "从训练路线选择一个话题，或继续自由写作。选题和换题均可离线使用，不调用 AI。": {
+    "en": "Choose a topic from a practice track, or write freely. Topic selection works offline without AI calls.",
+    "ja": "練習コースから課題を選ぶか、自由に書けます。課題の選択・変更はオフラインで利用でき、AIを呼び出しません。"
+  },
+  "旧版自定义目标 · 已保留": {
+    "en": "Previous custom goal · preserved",
+    "ja": "以前の自由記入目標 · 保存済み"
+  },
+  "题目回应": {
+    "en": "Response to the task",
+    "ja": "課題への応答"
+  },
+  "已回应的要求": {
+    "en": "Requirements addressed",
+    "ja": "対応できている条件"
+  },
+  "尚需补足": {
+    "en": "What still needs development",
+    "ja": "補いたい点"
+  },
+  "优先修改": {
+    "en": "Revise first",
+    "ja": "優先して直すこと"
+  },
+  "查看评审时的题目": {
+    "en": "View the task submitted for review",
+    "ja": "レビュー提出時の課題を見る"
+  },
+  "写作题目无效。": {
+    "en": "Invalid writing task.",
+    "ja": "作文課題が無効です。"
+  },
+  "写作题目与当前语言不匹配。": {
+    "en": "The writing task does not match the selected language.",
+    "ja": "課題が選択中の言語と一致しません。"
+  },
+  "题目回应评审不完整，请重试。": {
+    "en": "The task-response feedback is incomplete. Please retry.",
+    "ja": "課題への応答のレビューが不完全です。再試行してください。"
+  },
+  "写作与保存可离线使用。点击评审后，当前原文、所选题目和保留的练习目标会发送给 Gemini，可能产生 API 费用。30–12000 字符；评审解释使用提交时的界面语言。": {
+    "en": "Writing and saving work offline. Submitting sends your text, selected task and preserved goal to Gemini and may incur API charges. 30–12000 characters. Feedback uses the interface language at submission.",
+    "ja": "執筆と保存はオフラインで利用できます。レビューの提出時に原文、選んだ課題、保存済みの目標がGeminiへ送信され、API料金が発生する場合があります。30〜12000文字。説明には提出時の画面言語を使用します。"
+  },
+  "开始写作": {
+    "en": "Start writing",
+    "ja": "書き始める"
+  },
+  "科学主线 · 独立参考笔记": {
+    "en": "Science track · independent reference notes",
+    "ja": "科学の主線・独立した参考メモ"
+  },
+  "容易混淆": {
+    "en": "Common misconception",
+    "ja": "混同しやすい点"
+  },
+  "核心词汇": {
+    "en": "Key terms",
+    "ja": "重要な用語"
+  },
+  "建议先学": {
+    "en": "Suggested earlier study",
+    "ja": "先に学ぶとよい内容"
+  },
+  "可从本单元开始": {
+    "en": "You can start with this unit",
+    "ja": "この単元から始められます"
+  },
+  "下一单元": {
+    "en": "Next unit",
+    "ja": "次の単元"
+  },
+  "可回顾本领域或跨学科探索": {
+    "en": "Review this domain or explore across subjects",
+    "ja": "この領域を振り返るか、分野を越えて探究できます"
+  },
+  "查看本领域学习路径": {
+    "en": "View the learning path in this domain",
+    "ja": "この領域の学習順を見る"
+  },
+  "当前单元": {
+    "en": "Current unit",
+    "ja": "現在の単元"
+  },
+  "课程依据与参考来源": {
+    "en": "Curriculum basis and references",
+    "ja": "参考にした課程と資料"
+  },
+  "参考课程的相关概念，不是某本教材的逐页改写，也不代表完整课程覆盖。": {
+    "en": "Selected concepts from the referenced curricula, not a page-by-page textbook adaptation or complete curriculum coverage.",
+    "ja": "参考課程の関連概念を選んだもので、特定の教科書の逐ページの改作や、課程全体の網羅ではありません。"
+  },
+  "此处为固定参考笔记；AI 故事和评审并未经过逐句事实核验。请区分真实科学、角色猜想与幻想设定。": {
+    "en": "These are fixed reference notes. AI stories and reviews are not fact-checked sentence by sentence. Distinguish established science, character hypotheses and fictional premises.",
+    "ja": "ここは固定の参考メモです。AIの物語やレビューを一文ずつ事実確認したものではありません。現実の科学、人物の推測、架空の設定を区別してください。"
+  },
+  "阅读主线": {
+    "en": "Reading track",
+    "ja": "読書の主線"
+  },
+  "自由故事": {
+    "en": "Free-form story",
+    "ja": "自由な物語"
+  },
+  "科学知识 × 幻想冒险": {
+    "en": "Science × imaginative adventure",
+    "ja": "科学の知識 × 幻想の冒険"
+  },
+  "知识进阶": {
+    "en": "Concept progression",
+    "ja": "知識の段階"
+  },
+  "自然科学领域": {
+    "en": "Science domain",
+    "ja": "自然科学の領域"
+  },
+  "科学故事单元": {
+    "en": "Science story unit",
+    "ja": "科学物語の単元"
+  },
+  "科学难度与语言难度独立选择；可以用简单语言探索较深的概念。保留上方选择的小说题材。": {
+    "en": "Choose science depth and language difficulty independently. Explore deeper ideas in simple language while keeping your chosen fiction genre.",
+    "ja": "科学の深さと言語の難しさは別々に選べます。選んだ物語のジャンルを保ち、簡単な言葉で深い概念を探れます。"
+  },
+  "查看科学线索、误区与学习路径": {
+    "en": "View science clues, misconceptions and learning path",
+    "ja": "科学の手がかり・誤解・学習順を見る"
+  },
+  "我的预设": {
+    "en": "My presets",
+    "ja": "自分のプリセット"
+  },
+  "科学冒险预设 · 英文 / 日文": {
+    "en": "Science adventure presets · English / Japanese",
+    "ja": "科学の冒険プリセット・英語／日本語"
+  },
+  "科学笔记": {
+    "en": "Science notes",
+    "ja": "科学メモ"
+  },
+  "科学笔记与读写联动": {
+    "en": "Science notes and reading–writing practice",
+    "ja": "科学メモと読む・書く練習"
+  },
+  "用同一知识主线开始独立写作，练习将科学证据放进故事或报告。不会自动生成答案。": {
+    "en": "Write independently on the same science track. Practise using evidence in a story or report; no answer is generated for you.",
+    "ja": "同じ科学の主線で自分の文章を書き、証拠を物語や報告に生かす練習をします。答えは自動生成されません。"
+  },
+  "写一篇探险手记": {
+    "en": "Write an expedition journal",
+    "ja": "探検の手記を書く"
+  },
+  "写一份证据报告": {
+    "en": "Write an evidence report",
+    "ja": "証拠に基づく報告を書く"
+  },
+  "科学参考笔记与知识路径": {
+    "en": "Science reference notes and learning path",
+    "ja": "科学の参考メモと学習順"
+  },
+  "科学理解与虚构边界": {
+    "en": "Science understanding and fictional boundaries",
+    "ja": "科学の理解と創作の境界"
+  },
+  "使用准确的概念": {
+    "en": "Concepts used accurately",
+    "ja": "正確に使えている概念"
+  },
+  "需要再核对": {
+    "en": "Points to reconsider",
+    "ja": "再確認したい点"
+  },
+  "科学主线数据无效。": {
+    "en": "Invalid science-track data.",
+    "ja": "科学の主線のデータが無効です。"
+  },
+  "找不到这条科学主线。": {
+    "en": "Science track not found.",
+    "ja": "科学の主線が見つかりません。"
+  },
+  "找不到这份科学课程依据。": {
+    "en": "Science curriculum reference not found.",
+    "ja": "参考にした科学課程が見つかりません。"
+  },
+  "科学内容评审不完整，请重试。": {
+    "en": "Science feedback is incomplete. Please retry.",
+    "ja": "科学内容のレビューが不完全です。再試行してください。"
+  },
+  "为下一知识单元创作故事": {
+    "en": "Create a story for the next science unit",
+    "ja": "次の知識単元で物語を作る"
+  },
+  "已切换预设，你的故事想法已保留。": {
+    "en": "Preset changed. Your story ideas were kept.",
+    "ja": "プリセットを変更しました。物語のアイデアは保持されています。"
+  },
+  "选一个方向，补充想法，先读试读再决定。": {
+    "en": "Choose a direction, add your ideas, then preview before deciding.",
+    "ja": "方向を選び、アイデアを加え、試し読みで確かめましょう。"
+  },
+  "选方向": {
+    "en": "Choose",
+    "ja": "方向を選ぶ"
+  },
+  "加想法": {
+    "en": "Add ideas",
+    "ja": "アイデアを加える"
+  },
+  "看试读": {
+    "en": "Preview",
+    "ja": "試し読み"
+  },
+  "1 · 选择阅读方向": {
+    "en": "1 · Choose your reading direction",
+    "ja": "1 · 読みたい方向を選ぶ"
+  },
+  "不确定怎么选？直接使用默认设置，或从预设开始。": {
+    "en": "Unsure? Keep the defaults or start with a preset.",
+    "ja": "迷ったら初期設定のまま、またはプリセットから始めましょう。"
+  },
+  "自选知识主线与进阶": {
+    "en": "Customize knowledge path and stage",
+    "ja": "知識の分野と段階を選ぶ"
+  },
+  "2 · 加入你的故事想法": {
+    "en": "2 · Add your story ideas",
+    "ja": "2 · 物語のアイデアを加える"
+  },
+  "可留空。人物、场景与情节以你的想法为主；切换预设不会清空这里。": {
+    "en": "Optional. Your ideas guide the characters, setting and plot. Changing presets keeps this text.",
+    "ja": "空欄でも構いません。人物・舞台・筋書きはあなたの希望を優先し、プリセットを変えても入力は残ります。"
+  },
+  "设定冲突时如何处理？": {
+    "en": "How are conflicting settings handled?",
+    "ja": "設定が矛盾した場合は？"
+  },
+  "语言、难度、题材和篇幅以上方选项为准。科学预设保留知识主线和真实科学；魔法可以存在，但要与现实规律区分。矛盾想法会在试读中说明如何调整。": {
+    "en": "The selected language, level, genre and length take priority. Science presets retain the knowledge focus and real science; magic stays distinct from reality. The preview explains adjustments to conflicting ideas.",
+    "ja": "言語・難易度・ジャンル・分量は選択欄に従います。科学プリセットは学習の主題と実際の科学を守り、魔法は現実の法則と区別します。矛盾する希望の調整内容は試し読みで説明します。"
+  },
+  "篇幅与更多选项 · 可保持默认": {
+    "en": "Length and more · defaults are ready",
+    "ja": "分量とその他の設定 · 初期設定で始められます"
+  },
+  "拿不准语言等级？比较同一场景的两种难度。": {
+    "en": "Unsure of your level? Compare two versions of one scene.",
+    "ja": "レベルに迷ったら、同じ場面を二つの難易度で比べられます。"
+  },
+  "3 · 先看试读，再加入书架": {
+    "en": "3 · Preview, then add to your shelf",
+    "ja": "3 · 試し読みしてから本棚へ"
+  },
+  "提交后可关掉窗口继续阅读，进度和结果会留在消息盒子里。": {
+    "en": "After submitting, close this window and keep reading. Progress and results stay in the inbox.",
+    "ja": "送信後はこの画面を閉じて読書を続けられます。進捗と結果はメッセージボックスに残ります。"
+  },
+  "设定核对": {
+    "en": "Settings check",
+    "ja": "設定の確認"
+  },
+  "选项决定语言与篇幅，你的想法决定人物与情节；科学主线保留真实规律。": {
+    "en": "Options set language and length; your ideas guide characters and plot. Science paths retain real scientific principles.",
+    "ja": "選択欄が言語や分量を、あなたの希望が人物や筋書きを決めます。科学の主題では実際の法則を守ります。"
+  },
+  "AI 未报告设定冲突；创建前仍请核对简介与试读。": {
+    "en": "The AI reported no setting conflicts. Check the synopsis and preview before creating.",
+    "ja": "AI は設定の矛盾を報告していません。作成前にあらすじと試し読みをご確認ください。"
+  },
+  "本次结果未提供冲突说明，请核对试读是否符合你的想法。": {
+    "en": "This result has no conflict notes. Check whether the preview matches your ideas.",
+    "ja": "この結果には矛盾の説明がありません。試し読みが希望に合うかご確認ください。"
+  },
+  "选题与读材料": {
+    "en": "Choose a task and read materials",
+    "ja": "課題を選び資料を読む"
+  },
+  "独立写作 · 自动保存": {
+    "en": "Write independently · autosaved",
+    "ja": "自分で書く · 自動保存"
+  },
+  "提交评审，再修改": {
+    "en": "Get feedback, then revise",
+    "ja": "講評を受けて推敲する"
+  },
+  "图表数据 · 与题目材料一致": {
+    "en": "Chart data · matches task materials",
+    "ja": "図表のデータ · 課題資料と一致"
+  },
+  "查看原始文字材料": {
+    "en": "View original text materials",
+    "ja": "元のテキスト資料を見る"
+  },
+  "循环回到第一步": {
+    "en": "Cycle returns to the first step",
+    "ja": "最初の段階に戻る"
+  },
+  "从这里开始 · 阅读与写作指南": {
+    "en": "Start here · reading and writing guide",
+    "ja": "ここから始める · 読書と作文ガイド"
+  },
+  "先体验阅读": {
+    "en": "Try reading first",
+    "ja": "まず読書を体験"
+  },
+  "打开三章离线示例，试试字体、主题和翻页，无需 API Key。": {
+    "en": "Try fonts, themes and page turns with a three-chapter offline sample. No API key needed.",
+    "ja": "全3章のオフラインサンプルで、書体・テーマ・ページ送りを体験。API キーは不要です。"
+  },
+  "创作专属读物": {
+    "en": "Create your own reading",
+    "ja": "自分向けの物語を作る"
+  },
+  "选方向 → 看试读 → 加入书架 → 生成章节。首次生成前在设置中填写 Key。": {
+    "en": "Choose → preview → add to shelf → generate chapters. Add your key in Settings before generating.",
+    "ja": "方向を選ぶ → 試し読み → 本棚に追加 → 章を生成。初回生成前に設定でキーを入力してください。"
+  },
+  "练习自己的表达": {
+    "en": "Practice expressing yourself",
+    "ja": "自分の言葉で表現する"
+  },
+  "选题读材料，独立写作，再提交 AI 评审。草稿自动保存在本机。": {
+    "en": "Choose a task, read the materials, write independently, then request AI feedback. Drafts save automatically on this device.",
+    "ja": "課題を選んで資料を読み、自分で書いてから AI 講評へ。下書きは端末に自動保存されます。"
+  },
+  "体验离线阅读": {
+    "en": "Try offline reading",
+    "ja": "オフライン読書を試す"
+  },
+  "开始创作流程": {
+    "en": "Start creating",
+    "ja": "物語の作成を始める"
+  },
+  "进入写作练习": {
+    "en": "Open writing practice",
+    "ja": "作文練習を開く"
+  },
+  "{level} · {genre} · 每章 {length} · 共 {count} 章": {
+    "en": "{level} · {genre} · {length} per chapter · {count} chapters",
+    "ja": "{level} · {genre} · 1章 {length} · 全{count}章"
+  },
+  "第一次生成？先填写 Gemini Key，你的创作设定会保留。": {
+    "en": "First time generating? Add your Gemini key first. Your story settings will be kept.",
+    "ja": "初めての生成ですか？まず Gemini キーを設定してください。物語の設定は保持されます。"
+  },
+  "配置 Gemini": {
+    "en": "Set up Gemini",
+    "ja": "Gemini を設定"
+  },
+  "删除这篇草稿？": {
+    "en": "Delete this draft?",
+    "ja": "この下書きを削除しますか？"
+  },
+  "删除草稿": {
+    "en": "Delete draft",
+    "ja": "下書きを削除"
+  },
+  "写作回收站": {
+    "en": "Writing trash",
+    "ja": "作文のごみ箱"
+  },
+  "写作回收站是空的。": {
+    "en": "The writing trash is empty.",
+    "ja": "作文のごみ箱は空です。"
+  },
+  "草稿及评审历史将移入写作回收站，可随时恢复。": {
+    "en": "The draft and its review history will move to the writing trash. You can restore them at any time.",
+    "ja": "下書きと講評履歴を作文のごみ箱に移動します。いつでも元に戻せます。"
+  },
+  "草稿已移入回收站。": {
+    "en": "Draft moved to trash.",
+    "ja": "下書きをごみ箱に移動しました。"
+  },
+  "草稿已恢复。": {
+    "en": "Draft restored.",
+    "ja": "下書きを復元しました。"
+  },
+  "草稿已删除，请先从写作回收站恢复。": {
+    "en": "This draft was deleted. Restore it from the writing trash first.",
+    "ja": "この下書きは削除されています。まず作文のごみ箱から復元してください。"
+  },
+  "这篇草稿正在评审，请先在消息盒子取消相关任务。": {
+    "en": "This draft is being reviewed. Cancel its task in the inbox first.",
+    "ja": "この下書きは講評中です。先にメッセージボックスで該当するタスクをキャンセルしてください。"
+  },
+  "这里保留已删除的草稿和评审历史，点击左侧的恢复草稿即可继续写作。": {
+    "en": "Deleted drafts and their review history stay here. Choose Restore draft on the left to continue writing.",
+    "ja": "削除した下書きと講評履歴を保管しています。左側の「下書きを復元」を押すと作文を続けられます。"
+  },
+  "永久删除这篇草稿？": {
+    "en": "Permanently delete this draft?",
+    "ja": "この下書きを完全に削除しますか？"
+  },
+  "永久删除": {
+    "en": "Delete permanently",
+    "ja": "完全に削除"
+  },
+  "将永久删除正文、题目、评审历史及相关任务记录，无法在应用内恢复。需要保留的稿件请使用归档。": {
+    "en": "This permanently deletes the text, assignment, review history and related task records. It cannot be undone in the app. Archive drafts you want to keep.",
+    "ja": "本文・課題・講評履歴・関連タスクの記録を完全に削除します。アプリ内では復元できません。残したい原稿はアーカイブしてください。"
+  },
+  "这篇草稿已不存在。": {
+    "en": "This draft no longer exists.",
+    "ja": "この下書きは存在しません。"
+  },
+  "草稿已永久删除。": {
+    "en": "Draft permanently deleted.",
+    "ja": "下書きを完全に削除しました。"
+  },
+  "旧版回收站": {
+    "en": "Legacy trash",
+    "ja": "旧バージョンのごみ箱"
+  },
+  "这里是旧版保留的稿件，可逐篇永久删除。新版删除操作不再移入回收站。": {
+    "en": "These drafts were kept by an older version. You can permanently delete each one. New deletions no longer go to trash.",
+    "ja": "旧バージョンで保管された原稿です。1件ずつ完全に削除できます。新しい削除操作ではごみ箱に移動しません。"
+  },
+  "系统设置": {
+    "en": "System settings",
+    "ja": "システム設定"
+  },
+  "界面主题": {
+    "en": "Interface theme",
+    "ja": "画面テーマ"
+  },
+  "应用于整个书房，点击即生效并自动保存。": {
+    "en": "Applies to the whole app. Changes take effect immediately and save automatically.",
+    "ja": "書斎全体に適用されます。選ぶとすぐに反映され、自動保存されます。"
+  },
+  "Cube (inward) · 内凹立方体": {
+    "en": "Cube (inward)",
+    "ja": "Cube（内側）"
+  },
+  "Cube (outward) · 外凸立方体": {
+    "en": "Cube (outward)",
+    "ja": "Cube（外側）"
+  },
+  "Paper · 右下角卷页": {
+    "en": "Paper · lower-corner curl",
+    "ja": "Paper · 右下からめくる"
+  },
+  "Flip · 卡片翻转": {
+    "en": "Flip · card turn",
+    "ja": "Flip · カード反転"
+  },
+  "Bounce · 弹跳回弹": {
+    "en": "Bounce",
+    "ja": "Bounce · バウンド"
+  },
+  "Fade · 淡入淡出": {
+    "en": "Fade",
+    "ja": "Fade · フェード"
+  },
+  "Carousel · 旋转木马": {
+    "en": "Carousel",
+    "ja": "Carousel · カルーセル"
+  },
+  "Slide · 水平滑动": {
+    "en": "Slide",
+    "ja": "Slide · スライド"
+  }
+}

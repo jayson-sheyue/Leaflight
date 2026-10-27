@@ -1,0 +1,28 @@
+{
+  "themes": [
+    {"id":"paper","name":"纸页","bg":"#f6f5f0","surface":"#fffefa","ink":"#293b33","muted":"#4c5950","border":"#e0e4d9","accent":"#284e3d","soft":"#e9eee5"},
+    {"id":"sage","name":"绿意","bg":"#e6ecdf","surface":"#edf1e6","ink":"#334438","muted":"#45553e","border":"#ccd7c2","accent":"#284e3d","soft":"#dae4d2"},
+    {"id":"night","name":"夜读","bg":"#1d2523","surface":"#242e2a","ink":"#d8dfd5","muted":"#b4bfae","border":"#3d4a40","accent":"#a5c7ab","soft":"#303d34"},
+    {"id":"sepia","name":"暖砂","bg":"#f2e7d5","surface":"#faf1e3","ink":"#534333","muted":"#604c37","border":"#dfceb6","accent":"#6b3e1a","soft":"#eaddc7"},
+    {"id":"mist","name":"雾蓝","bg":"#e8eff3","surface":"#f3f7fa","ink":"#304958","muted":"#405666","border":"#ccdae3","accent":"#254f68","soft":"#dce7ef"},
+    {"id":"rose","name":"蔷薇","bg":"#f5e9e9","surface":"#fcf4f2","ink":"#573d45","muted":"#604450","border":"#e5cfd3","accent":"#74364b","soft":"#eddbdf"},
+    {"id":"lavender","name":"暮紫","bg":"#eeebf5","surface":"#f8f5fc","ink":"#463d5b","muted":"#534863","border":"#dad3e7","accent":"#573e71","soft":"#e4ddee"},
+    {"id":"ocean","name":"深海","bg":"#172834","surface":"#203542","ink":"#d5e5ed","muted":"#afc7d3","border":"#385260","accent":"#8cc6d5","soft":"#2a414e"},
+    {"id":"charcoal","name":"墨黑","bg":"#212121","surface":"#2a2a2a","ink":"#e4e1da","muted":"#c0bcb3","border":"#45433f","accent":"#d5bd8b","soft":"#37352f"},
+    {"id":"slate","name":"月灰","bg":"#e9e9e9","surface":"#f5f5f5","ink":"#373b40","muted":"#46515c","border":"#d0d3d6","accent":"#35485e","soft":"#dde1e6"}
+  ],
+  "fonts": [
+    {"id":"serif","name":"Georgia · 衬线","family":"Georgia, 'Hiragino Mincho ProN', 'Songti SC', serif"},
+    {"id":"sans","name":"Arial · 无衬线","family":"Arial, 'Hiragino Kaku Gothic ProN', 'PingFang SC', sans-serif"},
+    {"id":"mono","name":"Courier · 等宽","family":"'Courier New', 'Hiragino Kaku Gothic ProN', monospace"},
+    {"id":"times","name":"Times New Roman","family":"'Times New Roman', 'Hiragino Mincho ProN', 'Songti SC', serif"},
+    {"id":"palatino","name":"Palatino","family":"Palatino, 'Palatino Linotype', 'Hiragino Mincho ProN', serif"},
+    {"id":"baskerville","name":"Baskerville","family":"Baskerville, Georgia, 'Hiragino Mincho ProN', serif"},
+    {"id":"iowan","name":"Iowan Old Style","family":"'Iowan Old Style', Georgia, 'Hiragino Mincho ProN', serif"},
+    {"id":"avenir","name":"Avenir Next","family":"'Avenir Next', Arial, 'Hiragino Kaku Gothic ProN', sans-serif"},
+    {"id":"hiragino-mincho","name":"游明朝 / ヒラギノ明朝","family":"'Hiragino Mincho ProN', 'Yu Mincho', 'Songti SC', serif"},
+    {"id":"hiragino-sans","name":"游ゴシック / ヒラギノ角ゴ","family":"'Hiragino Kaku Gothic ProN', 'Yu Gothic', 'PingFang SC', sans-serif"},
+    {"id":"songti","name":"宋体 · Songti SC","family":"'Songti SC', 'Hiragino Mincho ProN', Georgia, serif"},
+    {"id":"system","name":"系统字体","family":"-apple-system, BlinkMacSystemFont, 'Hiragino Sans', 'PingFang SC', sans-serif"}
+  ]
+}
