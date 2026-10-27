@@ -57,6 +57,7 @@ async function handle(command,p={}){switch(command){
  case 'comparison':return normalizeComparison(store.setting('lastComparison',null));
  case 'progress':return store.progress(p.id,p.progress);
  case 'bookmark':return store.bookmark(p.id,p.progress);
+ case 'remove-bookmarks':return store.removeBookmarks(p.id,p.ids);
  case 'reanchor':return store.reanchor(p.id,p.marks);
  case 'export':{const b=store.get(p.id);if(!['txt','epub'].includes(p.format))throw Error('无效的导出格式。');const result=await dialog.showSaveDialog(win,{title:dialogText('export'),buttonLabel:dialogText('save'),defaultPath:`${b.title.replace(/[<>:"/\\|?*\x00-\x1f]/g,'').slice(0,80)||'story'}.${p.format}`,filters:[{name:p.format.toUpperCase(),extensions:[p.format]}]});if(result.canceled)return false;const bytes=p.format==='epub'?epub(b):`${b.title}\nAI generated with Leaflight\n\n${b.synopsis}\n\n${b.chapters.map(c=>`${c.title}\n\n${c.text}`).join('\n\n\n')}`;fs.writeFileSync(result.filePath,bytes);return true;}
  case 'backup':{const r=await dialog.showSaveDialog(win,{title:dialogText('backup'),buttonLabel:dialogText('save'),defaultPath:'Leaflight-backup.json',filters:[{name:'Leaflight backup',extensions:['json']}]});if(r.canceled)return false;fs.writeFileSync(r.filePath,JSON.stringify(store.backup(),null,2));return true;}

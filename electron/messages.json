@@ -1,4 +1,14 @@
 {
+  "放大阅读区": {"en":"Expand reader","ja":"読書パネルを拡大"},
+  "放大写作区": {"en":"Expand editor","ja":"執筆パネルを拡大"},
+  "放大评审区": {"en":"Expand review","ja":"レビューを拡大"},
+  "恢复布局": {"en":"Restore layout","ja":"レイアウトを戻す"},
+  "放大当前面板，其他面板自动收起": {"en":"Expand this panel and collapse the others","ja":"このパネルを拡大し、他のパネルを折りたたむ"},
+  "按 Esc 恢复布局": {"en":"Press Esc to restore the layout","ja":"Esc でレイアウトを戻す"},
+  "写作编辑区": {"en":"Writing editor","ja":"執筆エディター"},
+  "AI 评审": {"en":"AI review","ja":"AI レビュー"},
+  "展开": {"en":"Expand","ja":"開く"},
+  "收起": {"en":"Collapse","ja":"閉じる"},
   "我的书房": {
     "en": "MY READING ROOM",
     "ja": "マイ書斎"

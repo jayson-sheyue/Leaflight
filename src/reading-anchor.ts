@@ -23,8 +23,8 @@ export function restoreAnchor(scroller:HTMLElement,anchor:Range,mode:string){
 export type TextAnchor={paragraph:number;index:number};
 function paragraphOf(node:Node){const el=node.nodeType===Node.ELEMENT_NODE?node as Element:node.parentElement;return el?.closest('.prose p') as HTMLElement|null;}
 /** Paragraph index in the chapter body. Ruby readings are not part of the offset. */
-export function captureTextAnchor(scroller:HTMLElement):TextAnchor|null{
- const range=captureAnchor(scroller);if(!range)return null;
+export function captureTextAnchor(scroller:HTMLElement,range:Range|null=captureAnchor(scroller)):TextAnchor|null{
+ if(!range)return null;
  const paragraphs=[...scroller.querySelectorAll<HTMLElement>('.prose p')];
  const host=paragraphOf(range.startContainer);const paragraph=host?paragraphs.indexOf(host):-1;
  if(paragraph<0)return {paragraph:0,index:0};
