@@ -1,0 +1,45 @@
+{
+  "poolId": "pool-en-a2-postcard",
+  "sharedBy": "jayson-sheyue",
+  "note": "适合英语初级（CEFR A2）读者的温暖日常短篇：一张迟到十二年的明信片寄到了老钟表店，句式简短清晰。",
+  "sharedAt": "2026-10-30T08:10:00.000Z",
+  "title": "The Clockmaker’s Postcard",
+  "synopsis": "When a postcard from twelve years ago arrives at a quiet repair shop, a young apprentice sets out across the city to return a forgotten pocket watch.",
+  "bible": "Noah is a careful twenty-four-year-old watch apprentice. Mrs. Linden is the former owner of the watch. Setting: an autumn city with trams and bookshops. Third-person past tense, warm slice of life.",
+  "outline": [
+    "A late postcard arrives at the clock shop and points to a blue drawer.",
+    "Noah visits the old station café and learns where Mrs. Linden moved.",
+    "Noah returns the pocket watch at the riverside greenhouse."
+  ],
+  "sample": "Every morning at eight, Noah opened the green shutters of the clock shop. On Thursday, the postman left a postcard on the counter. The picture showed a red tram in the rain, and the stamp was twelve years old.",
+  "sampleReadings": [],
+  "memory": "Noah returned the silver pocket watch to Mrs. Linden at the greenhouse, and it began ticking again.",
+  "preset": {
+    "language": "en",
+    "level": "A2",
+    "genre": "slice of life",
+    "words": 500,
+    "totalChapters": 3,
+    "preferences": "Short sentences, practical everyday vocabulary, warm adult characters."
+  },
+  "chapters": [
+    {
+      "title": "1 · The Blue Drawer",
+      "summary": "Noah receives a twelve-year-old postcard and finds a silver pocket watch in a hidden drawer.",
+      "memory": "Noah found watch number 47 and an address near the old station café.",
+      "text": "Every morning at eight, Noah opened the green shutters of the clock shop. The street outside was still quiet. A tram bell rang at the corner, and the smell of fresh bread came from the next door.\n\nOn Thursday, the postman put a small postcard on the wooden counter. “This one took a long time,” he said with a smile. “We found it behind an old sorting cabinet at the central office.”\n\nNoah turned the card over. The picture showed a red tram in the rain. The stamp in the corner was twelve years old. Someone had written in neat blue ink: Please keep watch number 47 until Saturday. I will come after the noon train. — Clara Linden.\n\nNoah worked with Mr. Hale, who had retired the previous month. Before leaving, Mr. Hale had told him, “Every drawer in this room has a story. Take your time with them.”\n\nNoah walked to the back wall. Beneath the workbench stood a row of small blue drawers. He pulled open the one marked 40 to 50. Inside lay a silver pocket watch wrapped in soft grey cloth. Attached to the chain was a paper ticket with the number 47 and an address: 14 Station Lane.\n\nHe wound the crown gently. After a quiet pause, the watch began to tick. Its sound was steady and clear, as if twelve years had been only a short afternoon nap.\n\nNoah looked at the clock on the wall. Today was his half-day off. He put the silver watch into a small leather box, slipped the postcard into his coat pocket, and locked the shop door behind him."
+    },
+    {
+      "title": "2 · Tea by the Tracks",
+      "summary": "At 14 Station Lane, a café owner helps Noah trace Clara Linden to the riverside greenhouse.",
+      "memory": "Clara Linden now works at the municipal greenhouse by the river.",
+      "text": "Station Lane was only three stops away on the tram. The autumn wind blew yellow leaves along the pavement as Noah stepped down.\n\nNumber 14 was no longer an apartment building. Its ground floor had become a bright corner café with large windows and wooden tables. Inside, a woman in a brown apron was polishing glasses behind the counter.\n\n“Good afternoon,” Noah said, holding up the old postcard. “I am looking for Clara Linden. She lived at this address twelve years ago.”\n\nThe woman wiped her hands and looked closely at the card. “Mrs. Linden! Of course I remember her. She lived upstairs before she moved to the quieter side of the river. She used to bring us fresh mint from her balcony.”\n\n“Do you know where I can find her now?” Noah asked. “She left a watch at our shop a long time ago.”\n\n“She volunteers at the riverside greenhouse every Thursday afternoon,” the café owner said. “Take the footpath past the stone bridge. You will see the glass roof among the willow trees.”\n\nBefore Noah left, she handed him a small paper bag with two warm cinnamon rolls. “Give one to Clara for me,” she said. “Tell her the station clock is still two minutes fast, just as she always complained.”\n\nNoah thanked her and walked toward the river. The afternoon sun came through the clouds, turning the water a pale gold."
+    },
+    {
+      "title": "3 · Time Kept Safe",
+      "summary": "Noah meets Clara at the greenhouse and returns her late husband’s railway watch.",
+      "memory": "Complete: Watch 47 is back with Clara Linden.",
+      "text": "The greenhouse stood beside the river like a quiet ship made of glass. Inside, the air was warm and smelled of damp earth and lemon leaves.\n\nAn older woman with silver hair was tying a climbing vine to a wooden frame. When Noah approached, she turned and smiled.\n\n“Mrs. Linden?” he asked.\n\n“Yes, young man. Are you looking for the fern collection?”\n\nNoah held out the postcard first, then the small leather box. “I come from Hale’s Clock Shop. Your postcard arrived this morning, twelve years late.”\n\nClara’s hand rose to her mouth. She took the postcard and read her own handwriting in silence. Then she opened the leather box and lifted the silver watch by its chain.\n\n“That Saturday,” she said softly, “my sister fell ill in another city. I got on the noon train without stopping at the shop. When I returned months later, I had lost the paper ticket, and I was too shy to ask without it.”\n\nShe pressed the watch against her palm. “It belonged to my husband. He was a stationmaster for thirty years.”\n\nNoah handed her the paper bag from the café. “The owner at 14 Station Lane sent this. She says the station clock is still two minutes fast.”\n\nClara laughed, her eyes bright. She opened the watch cover and listened to its steady tick. “And this one is right on time,” she said. “Thank you for bringing it home.”"
+    }
+  ]
+}

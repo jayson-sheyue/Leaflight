@@ -39,3 +39,55 @@ test('translation catalogs cover every literal UI key and match interpolation pl
  function visit(n){if(ts.isCallExpression(n)&&n.expression.getText(source)==='t'&&ts.isStringLiteral(n.arguments[0])&&!messages[n.arguments[0].text])missing.push(n.arguments[0].text);ts.forEachChild(n,visit);}visit(source);for(const file of ['writing.ts','science.ts','materials.ts']){const extra=ts.createSourceFile(file,fs.readFileSync(path.join(__dirname,'../src',file),'utf8'),ts.ScriptTarget.Latest,true);function visitExtra(n){if(ts.isCallExpression(n)&&n.expression.getText(extra)==='t'&&ts.isStringLiteral(n.arguments[0])&&!messages[n.arguments[0].text])missing.push(n.arguments[0].text);ts.forEachChild(n,visitExtra);}visitExtra(extra);}assert.deepEqual(missing,[]);
  for(const [key,value] of Object.entries(messages)){const params=x=>(x.match(/\{\w+\}/g)||[]).sort();for(const locale of ['en','ja']){assert(value[locale]?.trim(),key);assert.deepEqual(params(key),params(value[locale]),`${locale}: ${key}`);}}
 });
+test('community story pool sanitizes personal data, deduplicates library imports, and syncs/publishes via GitHub',async t=>{
+ const {sanitizeForPool,poolStoryToBook,extractStoryFromIssue,listPoolStories,fetchRemotePool,publishToGitHub,formatIssueBody}=require('../electron/pool.cjs');
+ const s=tempStore(t);
+ const initial=listPoolStories({cached:[]});
+ assert(initial.length>=4);
+ assert(initial.some(x=>x.preset.language==='en'));
+ assert(initial.some(x=>x.preset.language==='ja'&&x.chapters[0].readings?.length>0));
+
+ let b=s.create(preset,demo.plan);
+ assert.throws(()=>sanitizeForPool(b,{sharedBy:'Jayson'}),/至少 1 个完整章节/);
+ for(const c of demo.chapters)b=s.append(b.id,c);
+ s.progress(b.id,{chapter:2,fraction:.75});
+ s.bookmark(b.id,{chapter:1,fraction:.5});
+ const pkg=sanitizeForPool(s.get(b.id),{sharedBy:'Jayson',note:'Great B1 story'});
+ const shared=pkg.story;
+ assert.equal(shared.sharedBy,'Jayson');
+ assert.equal(shared.chapters.length,3);
+ assert(!('progress' in shared)&&!('bookmarks' in shared)&&!('feedback' in shared));
+
+ const issueBody=formatIssueBody(shared);
+ const parsedFromIssue=extractStoryFromIssue({body:issueBody,user:{login:'octocat'},created_at:'2026-04-20T00:00:00Z'});
+ assert.equal(parsedFromIssue.poolId,shared.poolId);
+ assert.equal(parsedFromIssue.title,shared.title);
+
+ const added1=s.addPoolBook(poolStoryToBook(shared));
+ const added2=s.addPoolBook(poolStoryToBook(shared));
+ assert.equal(added1.id,added2.id);
+ assert.equal(added1.source,'pool');
+ assert.equal(added1.poolId,shared.poolId);
+ assert.equal(added1.sharedBy,'Jayson');
+ const other=tempStore(t);
+ other.restore(s.backup());
+ assert.equal(other.get(added1.id).poolId,shared.poolId);
+
+ const synced=await fetchRemotePool({cached:[],fetchImpl:async url=>{
+  if(String(url).includes('index.json'))return {ok:true,json:async()=>({version:1,stories:[shared]})};
+  if(String(url).includes('/issues'))return {ok:true,json:async()=>([{body:issueBody,user:{login:'octocat'}}])};
+  return {ok:false,status:404};
+ }});
+ assert(synced.stories.some(x=>x.poolId===shared.poolId));
+ assert(synced.syncedAt);
+
+ let postedUrl='',postedHeaders={},postedBody={};
+ const published=await publishToGitHub(s.get(b.id),{sharedBy:'Jayson',note:'Recommend',token:'ghp_test_token',fetchImpl:async(url,opts)=>{
+  postedUrl=String(url);postedHeaders=opts.headers;postedBody=JSON.parse(opts.body);
+  return {ok:true,json:async()=>({html_url:'https://github.com/jayson-sheyue/Leaflight/issues/99',number:99})};
+ }});
+ assert(postedUrl.endsWith('/repos/jayson-sheyue/Leaflight/issues'));
+ assert.equal(postedHeaders.Authorization,'Bearer ghp_test_token');
+ assert.deepEqual(postedBody.labels,['story-pool']);
+ assert.equal(published.number,99);
+});

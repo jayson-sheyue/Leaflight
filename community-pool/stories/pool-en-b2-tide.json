@@ -1,0 +1,45 @@
+{
+  "poolId": "pool-en-b2-tide",
+  "sharedBy": "jayson-sheyue",
+  "note": "适合英语中高级（CEFR B2）读者的悬疑轻科幻：声学研究员在退潮时的海湾接收到一段规律的脉冲信号。",
+  "sharedAt": "2026-10-30T08:20:00.000Z",
+  "title": "Signal at Low Tide",
+  "synopsis": "At a coastal acoustics station, an ocean researcher records a repeating underwater pulse that only appears during the lowest autumn tide.",
+  "bible": "Dr. Elena Vance is an ocean acoustics researcher. Marcus is the harbour engineer. Setting: Greyhaven Marine Station. Fair-play mystery grounded in real acoustic science.",
+  "outline": [
+    "Elena detects a precise three-note pulse from the outer bay during low tide.",
+    "Elena and Marcus triangulate the sound to an abandoned tidal turbine.",
+    "They recover an old oceanographic buoy still transmitting forty years of tide data."
+  ],
+  "sample": "At 04:12, when the tide dropped below the basalt reef, the hydrophone array registered a sequence of three clear pulses. Unlike whale song or harbour engines, the interval between each note was exact to a tenth of a second.",
+  "sampleReadings": [],
+  "memory": "Elena and Marcus recovered the forgotten drift buoy trapped beneath the old turbine pier and preserved its forty-year acoustic log.",
+  "preset": {
+    "language": "en",
+    "level": "B2",
+    "genre": "mystery",
+    "words": 500,
+    "totalChapters": 3,
+    "preferences": "A fair-play coastal mystery with realistic acoustic details and adult researchers."
+  },
+  "chapters": [
+    {
+      "title": "1 · Three Notes in the Dark",
+      "summary": "Elena records a structured acoustic pulse that appears only when the tide drops below the reef.",
+      "memory": "The signal comes from 3200Hz at low water near the northern breakwater.",
+      "text": "At 04:12, when the autumn tide dropped below the basalt reef, the hydrophone array registered a sequence of three clear pulses. Unlike whale song or the low rumble of cargo vessels offshore, the interval between each note was exact to a tenth of a second.\n\nElena set her mug down and adjusted the spectrogram on her monitor. Three narrow horizontal lines glowed green against the dark background: 3.2 kilohertz, repeated every forty-five seconds.\n\nFor three nights she had suspected an instrument fault. Yet when she switched to the backup sensor mounted on the northern breakwater, the same pattern emerged the moment the water level fell below datum.\n\nWhy only at low tide? In shallow coastal water, sound travels through a shifting channel bounded by the sea surface and the rocky floor. When the water was deep, waves crashing over the outer reef scattered high-frequency signals. Only when the exposed basalt blocked the open ocean swell did the inner bay become quiet enough—and shallow enough—for the weak signal to reach her receiver.\n\nShe printed the waveform and walked down to the pier as dawn greyed the horizon. Marcus, the harbour engineer, was coiling a heavy mooring line beside his launch.\n\n“You are up early, Doctor,” he called out.\n\nElena showed him the chart. “Something is pinging from the old channel north of the reef, Marcus. And it only wakes up when the water drops.”"
+    },
+    {
+      "title": "2 · Triangulation",
+      "summary": "Using two portable hydrophones, Elena and Marcus trace the sound to the submerged foundations of the 1984 tidal pier.",
+      "memory": "The signal originates inside the hollow caisson of the 1984 turbine test pier.",
+      "text": "By late afternoon the next low water was approaching. Marcus steered the work boat slowly past the kelp beds while Elena lowered a portable directional hydrophone over the port side.\n\n“Hold her steady here,” she said, watching the arrival-time delay between the boat sensor and the fixed station on shore. Because sound moves through cold seawater at roughly fifteen hundred metres per second, even a fraction of a second in delay was enough to draw a clean hyperbola across her harbor chart.\n\n“Two hundred metres northeast,” she said, pointing toward a line of weathered concrete pilings that rose from the mist. “Right beside the old turbine foundation.”\n\nMarcus frowned. “The experimental tidal station? They decommissioned that in the nineties. There is no power cable out there anymore.”\n\nThey tied the boat to an iron ladder bolted into the concrete caisson. As the tide reached its lowest mark, a narrow archway appeared at the base of the hollow structure. Inside the chamber, sheltered from decades of winter storms, something metallic was bumping gently against the stone wall.\n\nThrough her headphones, the three-note chime rang out with startling clarity."
+    },
+    {
+      "title": "3 · The Long Watch",
+      "summary": "They retrieve a 1998 autonomous drift buoy whose salt-water backup cell was triggered by the low tide.",
+      "memory": "Complete: The buoy and its memory core are recovered for the marine archive.",
+      "text": "Marcus shone his lantern into the recess. Wedged between two timber beams floated an anodized aluminum cylinder painted faded yellow, its serial plate encrusted with barnacles.\n\n“It is an autonomous coastal profiler from the 1998 shelf survey,” Elena said, recognizing the flared acoustic transducer at its base. “We thought the last of that batch had drifted out into the Atlantic.”\n\nWhen they hoisted the cylinder onto the deck, the puzzle of the low-tide timing became clear. The buoy’s main battery had died years ago, but its emergency recovery beacon ran on a magnesium-seawater reserve cell mounted near the upper collar. As long as the buoy was pinned high inside the chamber at high tide, the air pocket kept the upper contacts dry. Only when the tide dropped did the buoy settle onto a lower ledge, dipping the reserve collar into the brine and completing the circuit.\n\nBack in the laboratory that evening, Elena connected a serial adapter to the buoy’s sealed memory module. Line by line, years of temperature and current readings scrolled across her screen—an unbroken record of the bay’s changing seasons, kept safe inside the stone pier until someone finally listened."
+    }
+  ]
+}

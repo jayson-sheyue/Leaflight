@@ -1,0 +1,84 @@
+name: Community Story Pool Indexer
+
+on:
+  issues:
+    types: [opened, edited, labeled]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  index-story:
+    if: contains(github.event.issue.title, '[Story Pool]') || contains(github.event.issue.body, '```leaflight-story')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Validate and index shared story
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_USER: ${{ github.event.issue.user.login }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          REPO: ${{ github.repository }}
+        run: |
+          node -e '
+            const fs = require("node:fs");
+            const path = require("node:path");
+            const { extractStoryFromIssue } = require("./electron/pool.cjs");
+
+            const story = extractStoryFromIssue({
+              body: process.env.ISSUE_BODY || "",
+              user: { login: process.env.ISSUE_USER || "Community Reader" }
+            });
+            if (!story) {
+              console.log("No valid leaflight-story block found in issue body; skipping.");
+              process.exit(0);
+            }
+
+            const storiesDir = path.join("community-pool", "stories");
+            fs.mkdirSync(storiesDir, { recursive: true });
+            const storyPath = path.join(storiesDir, `${story.poolId}.json`);
+            fs.writeFileSync(storyPath, JSON.stringify(story, null, 2) + "\n");
+
+            const indexPath = path.join("community-pool", "index.json");
+            const index = fs.existsSync(indexPath)
+              ? JSON.parse(fs.readFileSync(indexPath, "utf8"))
+              : { version: 1, updatedAt: new Date().toISOString(), stories: [] };
+            const stories = Array.isArray(index.stories) ? index.stories : [];
+            const existingIdx = stories.findIndex(s => s.poolId === story.poolId);
+            if (existingIdx >= 0) stories[existingIdx] = story;
+            else stories.unshift(story);
+
+            fs.writeFileSync(indexPath, JSON.stringify({
+              version: 1,
+              updatedAt: new Date().toISOString(),
+              stories
+            }, null, 2) + "\n");
+            console.log("Indexed story:", story.poolId, story.title);
+          '
+
+      - name: Ensure story-pool label on issue
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          REPO: ${{ github.repository }}
+        run: |
+          gh issue edit "$ISSUE_NUMBER" --repo "$REPO" --add-label "story-pool" || true
+
+      - name: Commit and push updated community pool
+        run: |
+          if [[ -n "$(git status --porcelain community-pool/)" ]]; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add community-pool/
+            git commit -m "chore(pool): index shared story from issue #${{ github.event.issue.number }}"
+            git push
+          fi

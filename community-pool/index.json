@@ -1,0 +1,95 @@
+{
+  "version": 1,
+  "updatedAt": "2026-10-30T08:30:00.000Z",
+  "stories": [
+    {
+      "poolId": "pool-en-b1-lantern",
+      "title": "The Lantern Keeper",
+      "synopsis": "When a silent lighthouse begins sending messages to an empty sea, a young mapmaker discovers that her quiet town has forgotten something important.",
+      "language": "en",
+      "level": "B1",
+      "genre": "fantasy",
+      "chaptersCount": 3,
+      "totalChapters": 3,
+      "wordsPerChapter": 500,
+      "sharedBy": "jayson-sheyue",
+      "note": "内置经典轻奇幻示范作品：海边小镇的灯塔在沉寂七年后重新亮起，制图师 Mara 循着地图上的名字找回小镇遗忘的约定。",
+      "sharedAt": "2026-10-30T08:00:00.000Z",
+      "sample": "The lighthouse had been dark for seven years. On Tuesday evening, it began to shine again. Mara noticed it from the window of her little map shop. The light moved across the water, slowly and carefully, as if someone were searching for a lost key.",
+      "sampleReadings": [],
+      "path": "community-pool/stories/pool-en-b1-lantern.json"
+    },
+    {
+      "poolId": "pool-en-a2-postcard",
+      "title": "The Clockmaker’s Postcard",
+      "synopsis": "When a postcard from twelve years ago arrives at a quiet repair shop, a young apprentice sets out across the city to return a forgotten pocket watch.",
+      "language": "en",
+      "level": "A2",
+      "genre": "slice of life",
+      "chaptersCount": 3,
+      "totalChapters": 3,
+      "wordsPerChapter": 500,
+      "sharedBy": "jayson-sheyue",
+      "note": "适合英语初级（CEFR A2）读者的温暖日常短篇：一张迟到十二年的明信片寄到了老钟表店，句式简短清晰。",
+      "sharedAt": "2026-10-30T08:10:00.000Z",
+      "sample": "Every morning at eight, Noah opened the green shutters of the clock shop. On Thursday, the postman left a postcard on the counter. The picture showed a red tram in the rain, and the stamp was twelve years old.",
+      "sampleReadings": [],
+      "path": "community-pool/stories/pool-en-a2-postcard.json"
+    },
+    {
+      "poolId": "pool-en-b2-tide",
+      "title": "Signal at Low Tide",
+      "synopsis": "At a coastal acoustics station, an ocean researcher records a repeating underwater pulse that only appears during the lowest autumn tide.",
+      "language": "en",
+      "level": "B2",
+      "genre": "mystery",
+      "chaptersCount": 3,
+      "totalChapters": 3,
+      "wordsPerChapter": 500,
+      "sharedBy": "jayson-sheyue",
+      "note": "适合英语中高级（CEFR B2）读者的悬疑轻科幻：声学研究员在退潮时的海湾接收到一段规律的脉冲信号。",
+      "sharedAt": "2026-10-30T08:20:00.000Z",
+      "sample": "At 04:12, when the tide dropped below the basalt reef, the hydrophone array registered a sequence of three clear pulses. Unlike whale song or harbour engines, the interval between each note was exact to a tenth of a second.",
+      "sampleReadings": [],
+      "path": "community-pool/stories/pool-en-b2-tide.json"
+    },
+    {
+      "poolId": "pool-ja-n4-library",
+      "title": "海辺の小さな図書館",
+      "synopsis": "海の近くの小さな図書館で働く美咲が、返却された古い植物図鑑の中から一通の手紙を見つけ、持ち主を探す物語。",
+      "language": "ja",
+      "level": "N4",
+      "genre": "slice of life",
+      "chaptersCount": 3,
+      "totalChapters": 3,
+      "wordsPerChapter": 800,
+      "sharedBy": "jayson-sheyue",
+      "note": "适合日语 N4 学习者的海边温情物语，自带重点汉字假名注音（Ruby），讲述海边小图书馆里一封旧信的故事。",
+      "sharedAt": "2026-10-30T08:30:00.000Z",
+      "sample": "海辺の町に、小さな図書館がありました。美咲は毎朝、窓を開けて静かな海を見ました。ある日、返された古い本の中から、白い手紙が一通出てきました。",
+      "sampleReadings": [
+        {
+          "surface": "海辺",
+          "reading": "うみべ"
+        },
+        {
+          "surface": "図書館",
+          "reading": "としょかん"
+        },
+        {
+          "surface": "美咲",
+          "reading": "みさき"
+        },
+        {
+          "surface": "毎朝",
+          "reading": "まいあさ"
+        },
+        {
+          "surface": "手紙",
+          "reading": "てがみ"
+        }
+      ],
+      "path": "community-pool/stories/pool-ja-n4-library.json"
+    }
+  ]
+}

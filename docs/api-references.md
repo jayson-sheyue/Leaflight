@@ -25,6 +25,20 @@ x-goog-api-key: 用户配置的 API Key
 - [Gemini structured outputs](https://ai.google.dev/gemini-api/docs/structured-output)
 - [Electron safeStorage](https://www.electronjs.org/docs/latest/api/safe-storage)
 
+## 共享书池（GitHub 公共书池同步与分享）
+
+共享书池提供免 Gemini API Key 的双语分级小说借阅与社区分享能力：
+
+- **本地种子与缓存**：客户端内置 4 部精选英日分级故事（`electron/pool-seed.json`），首次打开无需联网即可阅读并加入本地书架。
+- **从 GitHub 同步最新**：点击「从 GitHub 同步最新」时，应用向本仓库发起只读请求：
+  - `GET https://raw.githubusercontent.com/jayson-sheyue/Leaflight/main/community-pool/index.json`（及对应的 `community-pool/stories/{poolId}.json`）
+  - `GET https://api.github.com/repos/jayson-sheyue/Leaflight/issues?state=open&per_page=30`（提取带有 `story-pool` 标签或 `leaflight-story` 代码块的社区投稿）
+  所有拉取的数据均经过本地 `validatePoolStory` 字段与长度校验后缓存在本地 SQLite 设置中。
+- **分享脱敏与上传方式**：
+  - 点击「分享到书池」时，`sanitizeForPool` 会剥离阅读进度（`progress`）、书签（`bookmarks`）、难度反馈（`feedback`）与任务记录（`generationJobId`），仅保留故事标题、简介、大纲、分级设定与章节正文/假名注音。
+  - **免 Token · 浏览器一键投稿**：将格式化后的 Issue Markdown 与 `leaflight-story` JSON 复制到系统剪贴板，并在默认浏览器打开 GitHub 新建 Issue 页面，由用户手动提交。
+  - **客户端直传（可选 GitHub Token）**：若用户或开发者填写了具备 Issues 写入权限的 GitHub Personal Access Token，应用使用 Electron `safeStorage` 加密保存在本机（全库备份不包含该 Token），并通过 `POST https://api.github.com/repos/jayson-sheyue/Leaflight/issues` 直接发布。
+
 ## 安装与更新边界
 
 当前提供 Apple Silicon macOS DMG，采用手动下载安装；没有应用内检查更新、更新清单或 OTA 安装功能。包未做 Apple 开发者签名与公证，SHA-256 文件只能核对下载完整性。安全自动更新与干净系统安装仍是未完成的分发条件，不能将本次发布理解为 OTA 已验证。

@@ -2382,5 +2382,213 @@
   "生成与评审需要联网，可能产生 API 费用；阅读和保存可离线使用。连续生成需手动开启，失败后不会自动重试。": {
     "en": "Generation and reviews require internet and may incur API charges. Read and save offline. Chapter batches start only when requested and do not retry automatically.",
     "ja": "生成とレビューには通信と API 料金が必要になる場合があります。読書と保存はオフラインで利用できます。連続生成は手動で開始し、失敗しても自動再試行しません。"
+  },
+  "共享作品数据无效。": {
+    "en": "Invalid shared story data.",
+    "ja": "共有作品のデータが無効です。"
+  },
+  "作品标题无效。": {
+    "en": "Invalid story title.",
+    "ja": "作品のタイトルが無効です。"
+  },
+  "请至少生成 1 个完整章节后再分享到公共书池。": {
+    "en": "Generate at least 1 complete chapter before sharing to the story pool.",
+    "ja": "共有プールに投稿する前に、少なくとも 1 章を生成してください。"
+  },
+  "共享作品章节数量无效。": {
+    "en": "Invalid number of chapters in shared story.",
+    "ja": "共有作品の章数が無効です。"
+  },
+  "共享作品章节内容无效。": {
+    "en": "Invalid chapter content in shared story.",
+    "ja": "共有作品の章内容が無効です。"
+  },
+  "暂时无法连接 GitHub 公共书池，已保留内置与本地缓存作品。": {
+    "en": "Cannot reach the GitHub story pool right now. Bundled and cached stories remain available.",
+    "ja": "現在 GitHub 共有プールに接続できません。同梱作品とローカルキャッシュを表示しています。"
+  },
+  "请先填写 GitHub Personal Access Token，或使用「免 Token 浏览器投稿」。": {
+    "en": "Enter a GitHub Personal Access Token first, or use “No-token browser submit”.",
+    "ja": "GitHub Personal Access Token を入力するか、「トークン不要・ブラウザ投稿」をご利用ください。"
+  },
+  "GitHub Token 无效或已过期，请检查权限后重试。": {
+    "en": "GitHub token is invalid or expired. Check its permissions and try again.",
+    "ja": "GitHub トークンが無効または期限切れです。権限を確認して再試行してください。"
+  },
+  "GitHub Token 缺少 public_repo 或 Issues 写入权限，请检查后重试。": {
+    "en": "GitHub token lacks public_repo or Issues write permission. Please check and retry.",
+    "ja": "GitHub トークンに public_repo または Issues 書き込み権限がありません。確認して再試行してください。"
+  },
+  "投稿内容触发 GitHub 校验限制，请导出分享文件或使用浏览器提交。": {
+    "en": "Submission exceeded GitHub validation limits. Export a share file or submit via browser.",
+    "ja": "投稿内容が GitHub の制限を超えました。共有ファイルを書き出すか、ブラウザから投稿してください。"
+  },
+  "GitHub 投稿失败（{status}），请稍后重试。": {
+    "en": "GitHub submission failed ({status}). Please try again later.",
+    "ja": "GitHub への投稿に失敗しました（{status}）。しばらくしてから再試行してください。"
+  },
+  "无法连接 GitHub，请检查网络或使用「导出分享文件」。": {
+    "en": "Cannot reach GitHub. Check your network connection or use “Export share file”.",
+    "ja": "GitHub に接続できません。通信環境を確認するか「共有ファイルを書き出す」をご利用ください。"
+  },
+  "分享文件超过 10 MB。": {
+    "en": "The shared story file exceeds 10 MB.",
+    "ja": "共有ファイルが 10 MB を超えています。"
+  },
+  "不是有效的 Leaflight 分享文件。": {
+    "en": "Not a valid Leaflight shared story file.",
+    "ja": "有効な Leaflight 共有ファイルではありません。"
+  },
+  "共享书池": {
+    "en": "Story pool",
+    "ja": "共有プール"
+  },
+  "浏览共享书池": {
+    "en": "Browse story pool",
+    "ja": "共有プールを見る"
+  },
+  "无需 API Key，直接借阅开发者与读者分享的双语分级故事，或导入分享文件。": {
+    "en": "Read graded English & Japanese stories shared by the developer and community without an API key, or import a share file.",
+    "ja": "API キー不要。開発者や読者が共有した英語・日本語のレベル別小説を本棚に追加したり、共有ファイルを読み込めます。"
+  },
+  "从 GitHub 同步最新": {
+    "en": "Sync latest from GitHub",
+    "ja": "GitHub から最新を取得"
+  },
+  "同步中…": {
+    "en": "Syncing…",
+    "ja": "同期中…"
+  },
+  "导入分享文件 (.json)": {
+    "en": "Import share file (.json)",
+    "ja": "共有ファイルを読込 (.json)"
+  },
+  "全部语言": {
+    "en": "All languages",
+    "ja": "すべての言語"
+  },
+  "全部等级": {
+    "en": "All levels",
+    "ja": "すべてのレベル"
+  },
+  "加入书架阅读": {
+    "en": "Add to library",
+    "ja": "本棚に追加して読む"
+  },
+  "已在书架 · 打开": {
+    "en": "In library · Open",
+    "ja": "追加済み · 開く"
+  },
+  "由 {author} 分享": {
+    "en": "Shared by {author}",
+    "ja": "{author} さんが共有"
+  },
+  "社区精选": {
+    "en": "Community pick",
+    "ja": "コミュニティ厳選"
+  },
+  "开篇试读": {
+    "en": "Opening excerpt",
+    "ja": "冒頭の試し読み"
+  },
+  "还没有符合筛选条件的共享作品。": {
+    "en": "No shared stories match the current filter.",
+    "ja": "条件に一致する共有作品はありません。"
+  },
+  "已同步 GitHub 公共书池，共 {count} 部作品可读。": {
+    "en": "Synced with the GitHub story pool: {count} stories available.",
+    "ja": "GitHub 共有プールと同期しました（全 {count} 作品）。"
+  },
+  "上次同步：{time}": {
+    "en": "Last synced: {time}",
+    "ja": "最終同期：{time}"
+  },
+  "内置精选与社区缓存": {
+    "en": "Bundled picks & community cache",
+    "ja": "同梱セレクト＆コミュニティキャッシュ"
+  },
+  "已从共享书池加入书架，可离线阅读。": {
+    "en": "Added from the story pool. Ready to read offline.",
+    "ja": "共有プールから本棚に追加しました。オフラインで読めます。"
+  },
+  "分享": {
+    "en": "Share",
+    "ja": "共有"
+  },
+  "分享到书池": {
+    "en": "Share to pool",
+    "ja": "プールに共有"
+  },
+  "分享作品到公共书池": {
+    "en": "Share story to community pool",
+    "ja": "共有プールに作品を投稿"
+  },
+  "把你觉得不错的小说分享给没有 API Key 的读者。系统会自动剔除阅读进度、书签、难度反馈与本地任务记录，仅上传故事正文与分级设定。": {
+    "en": "Share a story you enjoyed with readers who do not have an API key. Reading progress, bookmarks, feedback, and local task history are automatically stripped.",
+    "ja": "API キーを持たない読者のために作品を共有します。読書進捗・しおり・フィードバック等の個人データは自動的に除外されます。"
+  },
+  "署名昵称（可选）": {
+    "en": "Credit nickname (optional)",
+    "ja": "表示ニックネーム（任意）"
+  },
+  "例如：Jayson / 匿名读者": {
+    "en": "e.g. Jayson / Anonymous reader",
+    "ja": "例：Jayson / 匿名の読者"
+  },
+  "显示在共享书池卡片上，留空则显示为 Community Reader。": {
+    "en": "Displayed on the story pool card. Defaults to Community Reader if left blank.",
+    "ja": "共有プールのカードに表示されます。空欄の場合は Community Reader と表示されます。"
+  },
+  "免 Token · 浏览器一键投稿（推荐）": {
+    "en": "No token · 1-click browser submit (Recommended)",
+    "ja": "トークン不要 · ブラウザで簡単投稿（推奨）"
+  },
+  "自动将完整作品 JSON 复制到剪贴板并打开 GitHub Issue 页面，在正文粘贴后点击提交即可进入公共书池。": {
+    "en": "Copies the complete story JSON to your clipboard and opens a pre-filled GitHub Issue. Paste and submit to publish to the community pool.",
+    "ja": "作品の完全な JSON をクリップボードにコピーし、GitHub Issue 作成画面を開きます。貼り付けて送信するだけで共有プールに公開されます。"
+  },
+  "导出分享文件 (.json)": {
+    "en": "Export share file (.json)",
+    "ja": "共有ファイルを書き出す (.json)"
+  },
+  "已复制完整作品数据并打开 GitHub 投稿页面，请在正文粘贴（Cmd/Ctrl+V）后提交。": {
+    "en": "Story data copied and GitHub page opened. Paste (Cmd/Ctrl+V) in the issue body and submit.",
+    "ja": "作品データをコピーし、GitHub 投稿画面を開きました。本文に貼り付けて（Cmd/Ctrl+V）送信してください。"
+  },
+  "已发布到 GitHub 公共书池！其他读者点击同步即可拉取。": {
+    "en": "Published to the GitHub story pool! Other readers can now sync and read it.",
+    "ja": "GitHub 共有プールに公開しました！他の読者が同期すると読めるようになります。"
+  },
+  "分享文件已导出，可发送给朋友或上传至社区。": {
+    "en": "Share file exported. Send it to friends or upload it to the community.",
+    "ja": "共有ファイルを書き出しました。友人への共有やコミュニティへの投稿に使えます。"
+  },
+  "客户端直传（开发者 / 高级选项）": {
+    "en": "Direct client upload (Developer / Advanced)",
+    "ja": "クライアントから直接送信（開発者・上級者向け）"
+  },
+  "填写拥有 public_repo 或 Issues 写入权限的 GitHub Token，即可不打开浏览器，直接从客户端一键发布到公共书池。": {
+    "en": "Provide a GitHub token with public_repo or Issues write access to publish directly from the app without opening the browser.",
+    "ja": "public_repo または Issues 書き込み権限を持つ GitHub トークンを設定すると、ブラウザを開かずにアプリから直接公開できます。"
+  },
+  "GitHub Personal Access Token（可选）": {
+    "en": "GitHub Personal Access Token (optional)",
+    "ja": "GitHub Personal Access Token（任意）"
+  },
+  "粘贴 ghp_ 或 github_pat_ 开头的 Token": {
+    "en": "Paste a token starting with ghp_ or github_pat_",
+    "ja": "ghp_ または github_pat_ で始まるトークンを貼り付け"
+  },
+  "移除已保存的 GitHub Token": {
+    "en": "Remove saved GitHub token",
+    "ja": "保存した GitHub トークンを削除"
+  },
+  "客户端直传至 GitHub 书池": {
+    "en": "Upload directly to GitHub pool",
+    "ja": "GitHub プールへ直接送信"
+  },
+  "COMMUNITY STORY": {
+    "en": "COMMUNITY STORY",
+    "ja": "コミュニティ共有"
   }
 }
