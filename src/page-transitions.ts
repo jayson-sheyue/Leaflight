@@ -12,6 +12,9 @@ export class ReaderTransition{
   const pane=source.closest('.reader-pane') as HTMLElement;
   face.dataset.mode=pane.dataset.mode;face.dataset.ruby=pane.dataset.ruby;
   const copy=source.cloneNode(true) as HTMLElement;
+  // Android hides the live scroller during the transition. Its cloned inline
+  // style must not hide the incoming sheet as well.
+  copy.style.visibility='visible';
   copy.removeAttribute('id');copy.querySelectorAll('[id]').forEach(el=>el.removeAttribute('id'));
   // Freeze the visible column with layout offsets, not a second composited
   // scroll position. The entire opaque sheet, including its ink, then moves.

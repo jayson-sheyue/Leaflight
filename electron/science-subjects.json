@@ -1,0 +1,122 @@
+{
+  "light-shadows": {
+    "zh": "光、反射与影子",
+    "en": "Light, reflection and shadows",
+    "ja": "光・反射・影"
+  },
+  "circuit-paths": {
+    "zh": "电路与导电路径",
+    "en": "Electric circuits and conducting paths",
+    "ja": "電気回路と電流の経路"
+  },
+  "forces-motion": {
+    "zh": "力与运动",
+    "en": "Forces and motion",
+    "ja": "力と運動"
+  },
+  "energy-heat": {
+    "zh": "能量转移与热",
+    "en": "Energy transfer and heat",
+    "ja": "エネルギー移動と熱"
+  },
+  "waves-signals": {
+    "zh": "波与信号",
+    "en": "Waves and signals",
+    "ja": "波と信号"
+  },
+  "electric-power": {
+    "zh": "电压、电流与电功率",
+    "en": "Voltage, current and electric power",
+    "ja": "電圧・電流・電力"
+  },
+  "materials-mixtures": {
+    "zh": "混合物与分离",
+    "en": "Mixtures and separation",
+    "ja": "混合物と分離"
+  },
+  "states-water": {
+    "zh": "水的状态变化",
+    "en": "Changes of state in water",
+    "ja": "水の状態変化"
+  },
+  "particles-diffusion": {
+    "zh": "粒子模型与扩散",
+    "en": "Particle model and diffusion",
+    "ja": "粒子モデルと拡散"
+  },
+  "reactions-mass": {
+    "zh": "化学反应与质量守恒",
+    "en": "Chemical reactions and conservation of mass",
+    "ja": "化学反応と質量保存"
+  },
+  "atoms-bonding": {
+    "zh": "原子结构与化学键",
+    "en": "Atomic structure and chemical bonds",
+    "ja": "原子の構造と化学結合"
+  },
+  "rates-catalysts": {
+    "zh": "反应速率与催化",
+    "en": "Reaction rates and catalysts",
+    "ja": "反応速度と触媒"
+  },
+  "plants-growth": {
+    "zh": "植物生长与光合作用",
+    "en": "Plant growth and photosynthesis",
+    "ja": "植物の成長と光合成"
+  },
+  "habitats-foodwebs": {
+    "zh": "栖息地与食物网",
+    "en": "Habitats and food webs",
+    "ja": "生息環境と食物網"
+  },
+  "cells-systems": {
+    "zh": "细胞与生物体系统",
+    "en": "Cells and organism systems",
+    "ja": "細胞と生物の体の仕組み"
+  },
+  "respiration-energy": {
+    "zh": "呼吸作用与能量",
+    "en": "Respiration and energy",
+    "ja": "呼吸とエネルギー"
+  },
+  "inheritance-dna": {
+    "zh": "遗传与 DNA",
+    "en": "Inheritance and DNA",
+    "ja": "遺伝と DNA"
+  },
+  "evolution-selection": {
+    "zh": "进化与自然选择",
+    "en": "Evolution and natural selection",
+    "ja": "進化と自然選択"
+  },
+  "rocks-soils": {
+    "zh": "岩石与土壤",
+    "en": "Rocks and soils",
+    "ja": "岩石と土壌"
+  },
+  "sun-moon-seasons": {
+    "zh": "太阳、月亮与季节",
+    "en": "The Sun, Moon and seasons",
+    "ja": "太陽・月・季節"
+  },
+  "water-weather": {
+    "zh": "水循环与天气",
+    "en": "The water cycle and weather",
+    "ja": "水の循環と天気"
+  },
+  "plates-earthquakes": {
+    "zh": "板块运动与地震",
+    "en": "Plate tectonics and earthquakes",
+    "ja": "プレート運動と地震"
+  },
+  "carbon-climate": {
+    "zh": "碳循环与气候",
+    "en": "The carbon cycle and climate",
+    "ja": "炭素循環と気候"
+  },
+  "stars-universe": {
+    "zh": "恒星与宇宙",
+    "en": "Stars and the universe",
+    "ja": "恒星と宇宙"
+  }
+}

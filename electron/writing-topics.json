@@ -1325,6 +1325,1774 @@
       },
       "minutes": 60,
       "materials": "この練習のための架空の記事要約：ある大学のブログは、読書会の参加者が、参加していない学生よりも課題を期限内に提出していたと紹介し、読書会への参加が時間管理能力を高めたと結論づけた。参加は自由で、過去の提出状況は比較していない。"
+    },
+    {
+      "id": "en-primary-extra-garden",
+      "version": 1,
+      "language": "en",
+      "category": "en-primary",
+      "title": {
+        "zh": "花园观察",
+        "en": "Garden observation",
+        "ja": "庭の観察"
+      },
+      "prompt": "Describe a plant or small creature you observed. Show how it changes over time, and include two details you noticed with your senses.",
+      "requirements": [
+        "Address the scenario and purpose with specific details.",
+        "Organize ideas into a clear sequence or argument.",
+        "Revise wording for your intended reader."
+      ],
+      "focus": [
+        "Clear purpose",
+        "Specific details",
+        "Coherent organization"
+      ],
+      "planning": [
+        "Who is the reader?",
+        "Which details or reasons matter most?",
+        "How will the ending connect to your purpose?"
+      ],
+      "length": {
+        "min": 50,
+        "max": 90,
+        "unit": "words"
+      },
+      "minutes": 10,
+      "materials": ""
+    },
+    {
+      "id": "en-primary-extra-lost",
+      "version": 1,
+      "language": "en",
+      "category": "en-primary",
+      "title": {
+        "zh": "失物招领",
+        "en": "A lost object",
+        "ja": "落とし物"
+      },
+      "prompt": "Tell a story about finding a lost object. Introduce its owner, show what you did, and give the story a clear ending.",
+      "requirements": [
+        "Address the scenario and purpose with specific details.",
+        "Organize ideas into a clear sequence or argument.",
+        "Revise wording for your intended reader."
+      ],
+      "focus": [
+        "Clear purpose",
+        "Specific details",
+        "Coherent organization"
+      ],
+      "planning": [
+        "Who is the reader?",
+        "Which details or reasons matter most?",
+        "How will the ending connect to your purpose?"
+      ],
+      "length": {
+        "min": 50,
+        "max": 90,
+        "unit": "words"
+      },
+      "minutes": 10,
+      "materials": ""
+    },
+    {
+      "id": "en-primary-extra-weather",
+      "version": 1,
+      "language": "en",
+      "category": "en-primary",
+      "title": {
+        "zh": "下雨的一天",
+        "en": "A rainy day",
+        "ja": "雨の日"
+      },
+      "prompt": "Describe a rainy day from the point of view of someone walking home. Include sounds, sights, and how the weather changes their plans.",
+      "requirements": [
+        "Address the scenario and purpose with specific details.",
+        "Organize ideas into a clear sequence or argument.",
+        "Revise wording for your intended reader."
+      ],
+      "focus": [
+        "Clear purpose",
+        "Specific details",
+        "Coherent organization"
+      ],
+      "planning": [
+        "Who is the reader?",
+        "Which details or reasons matter most?",
+        "How will the ending connect to your purpose?"
+      ],
+      "length": {
+        "min": 50,
+        "max": 90,
+        "unit": "words"
+      },
+      "minutes": 10,
+      "materials": ""
+    },
+    {
+      "id": "en-primary-extra-invent",
+      "version": 1,
+      "language": "en",
+      "category": "en-primary",
+      "title": {
+        "zh": "我的小发明",
+        "en": "A small invention",
+        "ja": "小さな発明"
+      },
+      "prompt": "Imagine an invention that solves a small daily problem. Explain how it works and tell a brief story about someone using it.",
+      "requirements": [
+        "Address the scenario and purpose with specific details.",
+        "Organize ideas into a clear sequence or argument.",
+        "Revise wording for your intended reader."
+      ],
+      "focus": [
+        "Clear purpose",
+        "Specific details",
+        "Coherent organization"
+      ],
+      "planning": [
+        "Who is the reader?",
+        "Which details or reasons matter most?",
+        "How will the ending connect to your purpose?"
+      ],
+      "length": {
+        "min": 50,
+        "max": 90,
+        "unit": "words"
+      },
+      "minutes": 10,
+      "materials": ""
+    },
+    {
+      "id": "en-middle-extra-habitat",
+      "version": 1,
+      "language": "en",
+      "category": "en-middle",
+      "title": {
+        "zh": "校园生境",
+        "en": "A school habitat",
+        "ja": "学校の生息環境"
+      },
+      "prompt": "Explain how a school garden could support local wildlife. Describe two relationships between living things and propose one practical improvement.",
+      "requirements": [
+        "Address the scenario and purpose with specific details.",
+        "Organize ideas into a clear sequence or argument.",
+        "Revise wording for your intended reader."
+      ],
+      "focus": [
+        "Clear purpose",
+        "Specific details",
+        "Coherent organization"
+      ],
+      "planning": [
+        "Who is the reader?",
+        "Which details or reasons matter most?",
+        "How will the ending connect to your purpose?"
+      ],
+      "length": {
+        "min": 150,
+        "max": 220,
+        "unit": "words"
+      },
+      "minutes": 25,
+      "materials": ""
+    },
+    {
+      "id": "en-middle-extra-rumor",
+      "version": 1,
+      "language": "en",
+      "category": "en-middle",
+      "title": {
+        "zh": "信息与传闻",
+        "en": "Information and rumor",
+        "ja": "情報とうわさ"
+      },
+      "prompt": "A surprising claim spreads through a school. Explain how students could check the evidence and communicate uncertainty without spreading the rumor further.",
+      "requirements": [
+        "Address the scenario and purpose with specific details.",
+        "Organize ideas into a clear sequence or argument.",
+        "Revise wording for your intended reader."
+      ],
+      "focus": [
+        "Clear purpose",
+        "Specific details",
+        "Coherent organization"
+      ],
+      "planning": [
+        "Who is the reader?",
+        "Which details or reasons matter most?",
+        "How will the ending connect to your purpose?"
+      ],
+      "length": {
+        "min": 150,
+        "max": 220,
+        "unit": "words"
+      },
+      "minutes": 25,
+      "materials": ""
+    },
+    {
+      "id": "en-middle-extra-journey",
+      "version": 1,
+      "language": "en",
+      "category": "en-middle",
+      "title": {
+        "zh": "一次旅程的转折",
+        "en": "A journey changes",
+        "ja": "旅の転機"
+      },
+      "prompt": "Write a narrative in which a routine trip changes because of an unexpected event. Use a clear sequence and show the character’s choice and its consequences.",
+      "requirements": [
+        "Address the scenario and purpose with specific details.",
+        "Organize ideas into a clear sequence or argument.",
+        "Revise wording for your intended reader."
+      ],
+      "focus": [
+        "Clear purpose",
+        "Specific details",
+        "Coherent organization"
+      ],
+      "planning": [
+        "Who is the reader?",
+        "Which details or reasons matter most?",
+        "How will the ending connect to your purpose?"
+      ],
+      "length": {
+        "min": 150,
+        "max": 220,
+        "unit": "words"
+      },
+      "minutes": 25,
+      "materials": ""
+    },
+    {
+      "id": "en-middle-extra-library",
+      "version": 1,
+      "language": "en",
+      "category": "en-middle",
+      "title": {
+        "zh": "公共空间提案",
+        "en": "A shared-space proposal",
+        "ja": "共有空間の提案"
+      },
+      "prompt": "Write a proposal to improve a shared community space. Identify a need, suggest two changes, and explain who might benefit and what trade-offs remain.",
+      "requirements": [
+        "Address the scenario and purpose with specific details.",
+        "Organize ideas into a clear sequence or argument.",
+        "Revise wording for your intended reader."
+      ],
+      "focus": [
+        "Clear purpose",
+        "Specific details",
+        "Coherent organization"
+      ],
+      "planning": [
+        "Who is the reader?",
+        "Which details or reasons matter most?",
+        "How will the ending connect to your purpose?"
+      ],
+      "length": {
+        "min": 150,
+        "max": 220,
+        "unit": "words"
+      },
+      "minutes": 25,
+      "materials": ""
+    },
+    {
+      "id": "en-high-extra-energy",
+      "version": 1,
+      "language": "en",
+      "category": "en-high",
+      "title": {
+        "zh": "能源选择",
+        "en": "An energy choice",
+        "ja": "エネルギーの選択"
+      },
+      "prompt": "A town is considering different ways to meet its electricity needs. Compare two approaches, discussing reliability, environmental effects, and uncertainties before recommending a plan.",
+      "requirements": [
+        "Address the scenario and purpose with specific details.",
+        "Organize ideas into a clear sequence or argument.",
+        "Revise wording for your intended reader."
+      ],
+      "focus": [
+        "Clear purpose",
+        "Specific details",
+        "Coherent organization"
+      ],
+      "planning": [
+        "Who is the reader?",
+        "Which details or reasons matter most?",
+        "How will the ending connect to your purpose?"
+      ],
+      "length": {
+        "min": 300,
+        "max": 450,
+        "unit": "words"
+      },
+      "minutes": 40,
+      "materials": ""
+    },
+    {
+      "id": "en-high-extra-memory",
+      "version": 1,
+      "language": "en",
+      "category": "en-high",
+      "title": {
+        "zh": "记忆与叙述视角",
+        "en": "Memory and point of view",
+        "ja": "記憶と視点"
+      },
+      "prompt": "Write a scene twice from different characters’ perspectives, then explain how each perspective changes the reader’s understanding of the same event.",
+      "requirements": [
+        "Address the scenario and purpose with specific details.",
+        "Organize ideas into a clear sequence or argument.",
+        "Revise wording for your intended reader."
+      ],
+      "focus": [
+        "Clear purpose",
+        "Specific details",
+        "Coherent organization"
+      ],
+      "planning": [
+        "Who is the reader?",
+        "Which details or reasons matter most?",
+        "How will the ending connect to your purpose?"
+      ],
+      "length": {
+        "min": 300,
+        "max": 450,
+        "unit": "words"
+      },
+      "minutes": 40,
+      "materials": ""
+    },
+    {
+      "id": "en-high-extra-media",
+      "version": 1,
+      "language": "en",
+      "category": "en-high",
+      "title": {
+        "zh": "媒体与证据",
+        "en": "Media and evidence",
+        "ja": "メディアと根拠"
+      },
+      "prompt": "Discuss how presentation choices can influence the way an audience interprets a statistic. Use a concrete example and distinguish evidence from interpretation.",
+      "requirements": [
+        "Address the scenario and purpose with specific details.",
+        "Organize ideas into a clear sequence or argument.",
+        "Revise wording for your intended reader."
+      ],
+      "focus": [
+        "Clear purpose",
+        "Specific details",
+        "Coherent organization"
+      ],
+      "planning": [
+        "Who is the reader?",
+        "Which details or reasons matter most?",
+        "How will the ending connect to your purpose?"
+      ],
+      "length": {
+        "min": 300,
+        "max": 450,
+        "unit": "words"
+      },
+      "minutes": 40,
+      "materials": ""
+    },
+    {
+      "id": "en-high-extra-food",
+      "version": 1,
+      "language": "en",
+      "category": "en-high",
+      "title": {
+        "zh": "食物系统",
+        "en": "A local food system",
+        "ja": "地域の食料システム"
+      },
+      "prompt": "Analyze one challenge in a local food system. Explain causes, evaluate two possible responses and consider an objection to your recommendation.",
+      "requirements": [
+        "Address the scenario and purpose with specific details.",
+        "Organize ideas into a clear sequence or argument.",
+        "Revise wording for your intended reader."
+      ],
+      "focus": [
+        "Clear purpose",
+        "Specific details",
+        "Coherent organization"
+      ],
+      "planning": [
+        "Who is the reader?",
+        "Which details or reasons matter most?",
+        "How will the ending connect to your purpose?"
+      ],
+      "length": {
+        "min": 300,
+        "max": 450,
+        "unit": "words"
+      },
+      "minutes": 40,
+      "materials": ""
+    },
+    {
+      "id": "en-university-extra-research",
+      "version": 1,
+      "language": "en",
+      "category": "en-university",
+      "title": {
+        "zh": "研究问题与限制",
+        "en": "Research questions and limits",
+        "ja": "研究課題と限界"
+      },
+      "prompt": "Propose a research question about learning in public spaces. Explain a feasible method, the evidence it could gather, ethical safeguards and two limitations.",
+      "requirements": [
+        "Address the scenario and purpose with specific details.",
+        "Organize ideas into a clear sequence or argument.",
+        "Revise wording for your intended reader."
+      ],
+      "focus": [
+        "Clear purpose",
+        "Specific details",
+        "Coherent organization"
+      ],
+      "planning": [
+        "Who is the reader?",
+        "Which details or reasons matter most?",
+        "How will the ending connect to your purpose?"
+      ],
+      "length": {
+        "min": 600,
+        "max": 850,
+        "unit": "words"
+      },
+      "minutes": 60,
+      "materials": ""
+    },
+    {
+      "id": "en-university-extra-policy",
+      "version": 1,
+      "language": "en",
+      "category": "en-university",
+      "title": {
+        "zh": "政策方案评估",
+        "en": "Evaluating a policy",
+        "ja": "政策の評価"
+      },
+      "prompt": "Evaluate a proposed policy to reduce urban heat. Compare alternatives using explicit criteria, consider distributional effects, and discuss what further evidence is needed.",
+      "requirements": [
+        "Address the scenario and purpose with specific details.",
+        "Organize ideas into a clear sequence or argument.",
+        "Revise wording for your intended reader."
+      ],
+      "focus": [
+        "Clear purpose",
+        "Specific details",
+        "Coherent organization"
+      ],
+      "planning": [
+        "Who is the reader?",
+        "Which details or reasons matter most?",
+        "How will the ending connect to your purpose?"
+      ],
+      "length": {
+        "min": 600,
+        "max": 850,
+        "unit": "words"
+      },
+      "minutes": 60,
+      "materials": ""
+    },
+    {
+      "id": "en-university-extra-analogy",
+      "version": 1,
+      "language": "en",
+      "category": "en-university",
+      "title": {
+        "zh": "科学类比的边界",
+        "en": "Limits of an analogy",
+        "ja": "科学的比喩の限界"
+      },
+      "prompt": "Choose a scientific analogy used in everyday speech. Explain what it illuminates, where it breaks down, and how a revised explanation could avoid misunderstanding.",
+      "requirements": [
+        "Address the scenario and purpose with specific details.",
+        "Organize ideas into a clear sequence or argument.",
+        "Revise wording for your intended reader."
+      ],
+      "focus": [
+        "Clear purpose",
+        "Specific details",
+        "Coherent organization"
+      ],
+      "planning": [
+        "Who is the reader?",
+        "Which details or reasons matter most?",
+        "How will the ending connect to your purpose?"
+      ],
+      "length": {
+        "min": 600,
+        "max": 850,
+        "unit": "words"
+      },
+      "minutes": 60,
+      "materials": ""
+    },
+    {
+      "id": "en-university-extra-design",
+      "version": 1,
+      "language": "en",
+      "category": "en-university",
+      "title": {
+        "zh": "技术设计备忘录",
+        "en": "A design memo",
+        "ja": "技術設計メモ"
+      },
+      "prompt": "Write a memo assessing a technology intended to improve access to education. Consider benefits, risks, affected groups and a realistic plan for evaluation.",
+      "requirements": [
+        "Address the scenario and purpose with specific details.",
+        "Organize ideas into a clear sequence or argument.",
+        "Revise wording for your intended reader."
+      ],
+      "focus": [
+        "Clear purpose",
+        "Specific details",
+        "Coherent organization"
+      ],
+      "planning": [
+        "Who is the reader?",
+        "Which details or reasons matter most?",
+        "How will the ending connect to your purpose?"
+      ],
+      "length": {
+        "min": 600,
+        "max": 850,
+        "unit": "words"
+      },
+      "minutes": 60,
+      "materials": ""
+    },
+    {
+      "id": "ja-primary-extra-garden",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-primary",
+      "title": {
+        "zh": "花园观察",
+        "en": "Garden observation",
+        "ja": "庭の観察"
+      },
+      "prompt": "身近な植物や小さな生き物を観察し、気づいたことを二つ以上書きましょう。時間がたつとどう変わるかも説明してください。",
+      "requirements": [
+        "場面と目的に合う具体的な内容を書く。",
+        "出来事や考えを分かりやすく組み立てる。",
+        "読み手を意識して表現を見直す。"
+      ],
+      "focus": [
+        "目的の明確さ",
+        "具体的な内容",
+        "文章の構成"
+      ],
+      "planning": [
+        "だれに向けて書きますか。",
+        "大切な具体例や理由は何ですか。",
+        "最後を目的にどう結びつけますか。"
+      ],
+      "length": {
+        "min": 100,
+        "max": 200,
+        "unit": "characters"
+      },
+      "minutes": 15,
+      "materials": ""
+    },
+    {
+      "id": "ja-primary-extra-lost",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-primary",
+      "title": {
+        "zh": "失物招领",
+        "en": "A lost object",
+        "ja": "落とし物"
+      },
+      "prompt": "落とし物を見つけたときの物語を書きましょう。だれの物か、どう行動したか、最後に何が起きたかを伝えてください。",
+      "requirements": [
+        "場面と目的に合う具体的な内容を書く。",
+        "出来事や考えを分かりやすく組み立てる。",
+        "読み手を意識して表現を見直す。"
+      ],
+      "focus": [
+        "目的の明確さ",
+        "具体的な内容",
+        "文章の構成"
+      ],
+      "planning": [
+        "だれに向けて書きますか。",
+        "大切な具体例や理由は何ですか。",
+        "最後を目的にどう結びつけますか。"
+      ],
+      "length": {
+        "min": 100,
+        "max": 200,
+        "unit": "characters"
+      },
+      "minutes": 15,
+      "materials": ""
+    },
+    {
+      "id": "ja-primary-extra-weather",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-primary",
+      "title": {
+        "zh": "下雨的一天",
+        "en": "A rainy day",
+        "ja": "雨の日"
+      },
+      "prompt": "雨の日に家へ帰る人の気持ちになって、見えるものや聞こえる音、その日の予定の変化を書きましょう。",
+      "requirements": [
+        "場面と目的に合う具体的な内容を書く。",
+        "出来事や考えを分かりやすく組み立てる。",
+        "読み手を意識して表現を見直す。"
+      ],
+      "focus": [
+        "目的の明確さ",
+        "具体的な内容",
+        "文章の構成"
+      ],
+      "planning": [
+        "だれに向けて書きますか。",
+        "大切な具体例や理由は何ですか。",
+        "最後を目的にどう結びつけますか。"
+      ],
+      "length": {
+        "min": 100,
+        "max": 200,
+        "unit": "characters"
+      },
+      "minutes": 15,
+      "materials": ""
+    },
+    {
+      "id": "ja-primary-extra-invent",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-primary",
+      "title": {
+        "zh": "我的小发明",
+        "en": "A small invention",
+        "ja": "小さな発明"
+      },
+      "prompt": "毎日の小さな困りごとを解決する発明を考え、仕組みと、それを使う人の短い物語を書きましょう。",
+      "requirements": [
+        "場面と目的に合う具体的な内容を書く。",
+        "出来事や考えを分かりやすく組み立てる。",
+        "読み手を意識して表現を見直す。"
+      ],
+      "focus": [
+        "目的の明確さ",
+        "具体的な内容",
+        "文章の構成"
+      ],
+      "planning": [
+        "だれに向けて書きますか。",
+        "大切な具体例や理由は何ですか。",
+        "最後を目的にどう結びつけますか。"
+      ],
+      "length": {
+        "min": 100,
+        "max": 200,
+        "unit": "characters"
+      },
+      "minutes": 15,
+      "materials": ""
+    },
+    {
+      "id": "ja-middle-extra-habitat",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-middle",
+      "title": {
+        "zh": "校园生境",
+        "en": "A school habitat",
+        "ja": "学校の生息環境"
+      },
+      "prompt": "学校の庭が生き物のすみかになるには何が必要か説明し、生き物どうしの関係を二つ示したうえで改善案を提案してください。",
+      "requirements": [
+        "場面と目的に合う具体的な内容を書く。",
+        "出来事や考えを分かりやすく組み立てる。",
+        "読み手を意識して表現を見直す。"
+      ],
+      "focus": [
+        "目的の明確さ",
+        "具体的な内容",
+        "文章の構成"
+      ],
+      "planning": [
+        "だれに向けて書きますか。",
+        "大切な具体例や理由は何ですか。",
+        "最後を目的にどう結びつけますか。"
+      ],
+      "length": {
+        "min": 400,
+        "max": 600,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": ""
+    },
+    {
+      "id": "ja-middle-extra-rumor",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-middle",
+      "title": {
+        "zh": "信息与传闻",
+        "en": "Information and rumor",
+        "ja": "情報とうわさ"
+      },
+      "prompt": "学校で広がった情報をどう確かめるか説明してください。根拠の確認方法と、不確かな情報を伝える際の注意を具体的に示しましょう。",
+      "requirements": [
+        "場面と目的に合う具体的な内容を書く。",
+        "出来事や考えを分かりやすく組み立てる。",
+        "読み手を意識して表現を見直す。"
+      ],
+      "focus": [
+        "目的の明確さ",
+        "具体的な内容",
+        "文章の構成"
+      ],
+      "planning": [
+        "だれに向けて書きますか。",
+        "大切な具体例や理由は何ですか。",
+        "最後を目的にどう結びつけますか。"
+      ],
+      "length": {
+        "min": 400,
+        "max": 600,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": ""
+    },
+    {
+      "id": "ja-middle-extra-journey",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-middle",
+      "title": {
+        "zh": "一次旅程的转折",
+        "en": "A journey changes",
+        "ja": "旅の転機"
+      },
+      "prompt": "いつもの移動中に予想外の出来事が起きる物語を書いてください。出来事の順序、登場人物の選択、その結果が分かるようにしましょう。",
+      "requirements": [
+        "場面と目的に合う具体的な内容を書く。",
+        "出来事や考えを分かりやすく組み立てる。",
+        "読み手を意識して表現を見直す。"
+      ],
+      "focus": [
+        "目的の明確さ",
+        "具体的な内容",
+        "文章の構成"
+      ],
+      "planning": [
+        "だれに向けて書きますか。",
+        "大切な具体例や理由は何ですか。",
+        "最後を目的にどう結びつけますか。"
+      ],
+      "length": {
+        "min": 400,
+        "max": 600,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": ""
+    },
+    {
+      "id": "ja-middle-extra-library",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-middle",
+      "title": {
+        "zh": "公共空间提案",
+        "en": "A shared-space proposal",
+        "ja": "共有空間の提案"
+      },
+      "prompt": "地域の共有スペースを改善する提案文を書いてください。課題、二つの改善案、利用者への効果と残る課題を示しましょう。",
+      "requirements": [
+        "場面と目的に合う具体的な内容を書く。",
+        "出来事や考えを分かりやすく組み立てる。",
+        "読み手を意識して表現を見直す。"
+      ],
+      "focus": [
+        "目的の明確さ",
+        "具体的な内容",
+        "文章の構成"
+      ],
+      "planning": [
+        "だれに向けて書きますか。",
+        "大切な具体例や理由は何ですか。",
+        "最後を目的にどう結びつけますか。"
+      ],
+      "length": {
+        "min": 400,
+        "max": 600,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": ""
+    },
+    {
+      "id": "ja-high-extra-energy",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-high",
+      "title": {
+        "zh": "能源选择",
+        "en": "An energy choice",
+        "ja": "エネルギーの選択"
+      },
+      "prompt": "地域の電力を確保する二つの方法を比較し、安定性、環境への影響、不確実な点を検討したうえで提案をまとめてください。",
+      "requirements": [
+        "場面と目的に合う具体的な内容を書く。",
+        "出来事や考えを分かりやすく組み立てる。",
+        "読み手を意識して表現を見直す。"
+      ],
+      "focus": [
+        "目的の明確さ",
+        "具体的な内容",
+        "文章の構成"
+      ],
+      "planning": [
+        "だれに向けて書きますか。",
+        "大切な具体例や理由は何ですか。",
+        "最後を目的にどう結びつけますか。"
+      ],
+      "length": {
+        "min": 800,
+        "max": 1100,
+        "unit": "characters"
+      },
+      "minutes": 45,
+      "materials": ""
+    },
+    {
+      "id": "ja-high-extra-memory",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-high",
+      "title": {
+        "zh": "记忆与叙述视角",
+        "en": "Memory and point of view",
+        "ja": "記憶と視点"
+      },
+      "prompt": "同じ出来事を二人の登場人物の視点から描き分けてください。その違いが読者の理解に与える影響も説明しましょう。",
+      "requirements": [
+        "場面と目的に合う具体的な内容を書く。",
+        "出来事や考えを分かりやすく組み立てる。",
+        "読み手を意識して表現を見直す。"
+      ],
+      "focus": [
+        "目的の明確さ",
+        "具体的な内容",
+        "文章の構成"
+      ],
+      "planning": [
+        "だれに向けて書きますか。",
+        "大切な具体例や理由は何ですか。",
+        "最後を目的にどう結びつけますか。"
+      ],
+      "length": {
+        "min": 800,
+        "max": 1100,
+        "unit": "characters"
+      },
+      "minutes": 45,
+      "materials": ""
+    },
+    {
+      "id": "ja-high-extra-media",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-high",
+      "title": {
+        "zh": "媒体与证据",
+        "en": "Media and evidence",
+        "ja": "メディアと根拠"
+      },
+      "prompt": "統計の見せ方が受け手の解釈に与える影響について、具体例を挙げて論じてください。事実と解釈を区別しましょう。",
+      "requirements": [
+        "場面と目的に合う具体的な内容を書く。",
+        "出来事や考えを分かりやすく組み立てる。",
+        "読み手を意識して表現を見直す。"
+      ],
+      "focus": [
+        "目的の明確さ",
+        "具体的な内容",
+        "文章の構成"
+      ],
+      "planning": [
+        "だれに向けて書きますか。",
+        "大切な具体例や理由は何ですか。",
+        "最後を目的にどう結びつけますか。"
+      ],
+      "length": {
+        "min": 800,
+        "max": 1100,
+        "unit": "characters"
+      },
+      "minutes": 45,
+      "materials": ""
+    },
+    {
+      "id": "ja-high-extra-food",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-high",
+      "title": {
+        "zh": "食物系统",
+        "en": "A local food system",
+        "ja": "地域の食料システム"
+      },
+      "prompt": "地域の食料に関する課題を一つ選び、原因と二つの対応策を分析してください。提案への反論にも答えましょう。",
+      "requirements": [
+        "場面と目的に合う具体的な内容を書く。",
+        "出来事や考えを分かりやすく組み立てる。",
+        "読み手を意識して表現を見直す。"
+      ],
+      "focus": [
+        "目的の明確さ",
+        "具体的な内容",
+        "文章の構成"
+      ],
+      "planning": [
+        "だれに向けて書きますか。",
+        "大切な具体例や理由は何ですか。",
+        "最後を目的にどう結びつけますか。"
+      ],
+      "length": {
+        "min": 800,
+        "max": 1100,
+        "unit": "characters"
+      },
+      "minutes": 45,
+      "materials": ""
+    },
+    {
+      "id": "ja-university-extra-research",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-university",
+      "title": {
+        "zh": "研究问题与限制",
+        "en": "Research questions and limits",
+        "ja": "研究課題と限界"
+      },
+      "prompt": "公共空間での学習について研究課題を設定し、実行可能な方法、得られる根拠、倫理上の配慮、研究の限界を述べてください。",
+      "requirements": [
+        "場面と目的に合う具体的な内容を書く。",
+        "出来事や考えを分かりやすく組み立てる。",
+        "読み手を意識して表現を見直す。"
+      ],
+      "focus": [
+        "目的の明確さ",
+        "具体的な内容",
+        "文章の構成"
+      ],
+      "planning": [
+        "だれに向けて書きますか。",
+        "大切な具体例や理由は何ですか。",
+        "最後を目的にどう結びつけますか。"
+      ],
+      "length": {
+        "min": 1200,
+        "max": 1800,
+        "unit": "characters"
+      },
+      "minutes": 60,
+      "materials": ""
+    },
+    {
+      "id": "ja-university-extra-policy",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-university",
+      "title": {
+        "zh": "政策方案评估",
+        "en": "Evaluating a policy",
+        "ja": "政策の評価"
+      },
+      "prompt": "都市の暑さを緩和する政策を評価してください。明確な基準で選択肢を比較し、影響の偏りと追加で必要な根拠を検討しましょう。",
+      "requirements": [
+        "場面と目的に合う具体的な内容を書く。",
+        "出来事や考えを分かりやすく組み立てる。",
+        "読み手を意識して表現を見直す。"
+      ],
+      "focus": [
+        "目的の明確さ",
+        "具体的な内容",
+        "文章の構成"
+      ],
+      "planning": [
+        "だれに向けて書きますか。",
+        "大切な具体例や理由は何ですか。",
+        "最後を目的にどう結びつけますか。"
+      ],
+      "length": {
+        "min": 1200,
+        "max": 1800,
+        "unit": "characters"
+      },
+      "minutes": 60,
+      "materials": ""
+    },
+    {
+      "id": "ja-university-extra-analogy",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-university",
+      "title": {
+        "zh": "科学类比的边界",
+        "en": "Limits of an analogy",
+        "ja": "科学的比喩の限界"
+      },
+      "prompt": "日常で使われる科学の比喩を一つ選び、役立つ点と誤解を招く限界を分析し、より適切な説明を提案してください。",
+      "requirements": [
+        "場面と目的に合う具体的な内容を書く。",
+        "出来事や考えを分かりやすく組み立てる。",
+        "読み手を意識して表現を見直す。"
+      ],
+      "focus": [
+        "目的の明確さ",
+        "具体的な内容",
+        "文章の構成"
+      ],
+      "planning": [
+        "だれに向けて書きますか。",
+        "大切な具体例や理由は何ですか。",
+        "最後を目的にどう結びつけますか。"
+      ],
+      "length": {
+        "min": 1200,
+        "max": 1800,
+        "unit": "characters"
+      },
+      "minutes": 60,
+      "materials": ""
+    },
+    {
+      "id": "ja-university-extra-design",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-university",
+      "title": {
+        "zh": "技术设计备忘录",
+        "en": "A design memo",
+        "ja": "技術設計メモ"
+      },
+      "prompt": "教育へのアクセス改善を目的とする技術について検討メモを書いてください。利点、リスク、影響を受ける人、評価方法を示しましょう。",
+      "requirements": [
+        "場面と目的に合う具体的な内容を書く。",
+        "出来事や考えを分かりやすく組み立てる。",
+        "読み手を意識して表現を見直す。"
+      ],
+      "focus": [
+        "目的の明確さ",
+        "具体的な内容",
+        "文章の構成"
+      ],
+      "planning": [
+        "だれに向けて書きますか。",
+        "大切な具体例や理由は何ですか。",
+        "最後を目的にどう結びつけますか。"
+      ],
+      "length": {
+        "min": 1200,
+        "max": 1800,
+        "unit": "characters"
+      },
+      "minutes": 60,
+      "materials": ""
+    },
+    {
+      "id": "en-ielts-extra-transport",
+      "version": 1,
+      "language": "en",
+      "category": "en-ielts",
+      "title": {
+        "zh": "城市出行",
+        "en": "Urban transport",
+        "ja": "都市の交通"
+      },
+      "prompt": "Some cities plan to reduce private car use by investing in public transport. Discuss possible benefits and drawbacks, and give your own view. Write at least 250 words.",
+      "requirements": [
+        "State a clear position and maintain it.",
+        "Develop at least two reasons with examples.",
+        "Consider a cost or limitation rather than claiming the policy solves every problem."
+      ],
+      "focus": [
+        "Task response",
+        "Supported argument",
+        "Concessions and coherent paragraphs"
+      ],
+      "planning": [
+        "Who benefits most?",
+        "Who would pay for the service?",
+        "Would your view change in a small town?"
+      ],
+      "length": {
+        "min": 250,
+        "max": 320,
+        "unit": "words"
+      },
+      "minutes": 40,
+      "materials": ""
+    },
+    {
+      "id": "en-ielts-extra-learning",
+      "version": 1,
+      "language": "en",
+      "category": "en-ielts",
+      "title": {
+        "zh": "学习方式",
+        "en": "Ways of learning",
+        "ja": "学び方"
+      },
+      "prompt": "Some people prefer learning independently, while others value learning with a group. Discuss both views and give your own opinion. Write at least 250 words.",
+      "requirements": [
+        "State a clear position and maintain it.",
+        "Develop at least two reasons with examples.",
+        "Consider a cost or limitation rather than claiming the policy solves every problem."
+      ],
+      "focus": [
+        "Task response",
+        "Supported argument",
+        "Concessions and coherent paragraphs"
+      ],
+      "planning": [
+        "Who benefits most?",
+        "Who would pay for the service?",
+        "Would your view change in a small town?"
+      ],
+      "length": {
+        "min": 250,
+        "max": 320,
+        "unit": "words"
+      },
+      "minutes": 40,
+      "materials": ""
+    },
+    {
+      "id": "en-ielts-extra-parks",
+      "version": 1,
+      "language": "en",
+      "category": "en-ielts",
+      "title": {
+        "zh": "公共绿地",
+        "en": "Public green spaces",
+        "ja": "公共の緑地"
+      },
+      "prompt": "Cities face pressure to use public land for housing. To what extent should green spaces be protected? Give reasons and examples. Write at least 250 words.",
+      "requirements": [
+        "State a clear position and maintain it.",
+        "Develop at least two reasons with examples.",
+        "Consider a cost or limitation rather than claiming the policy solves every problem."
+      ],
+      "focus": [
+        "Task response",
+        "Supported argument",
+        "Concessions and coherent paragraphs"
+      ],
+      "planning": [
+        "Who benefits most?",
+        "Who would pay for the service?",
+        "Would your view change in a small town?"
+      ],
+      "length": {
+        "min": 250,
+        "max": 320,
+        "unit": "words"
+      },
+      "minutes": 40,
+      "materials": ""
+    },
+    {
+      "id": "en-ielts-extra-technology",
+      "version": 1,
+      "language": "en",
+      "category": "en-ielts",
+      "title": {
+        "zh": "科技与工作",
+        "en": "Technology and work",
+        "ja": "技術と仕事"
+      },
+      "prompt": "New technologies change the skills people need at work. What challenges can this create, and what can individuals and institutions do? Write at least 250 words.",
+      "requirements": [
+        "State a clear position and maintain it.",
+        "Develop at least two reasons with examples.",
+        "Consider a cost or limitation rather than claiming the policy solves every problem."
+      ],
+      "focus": [
+        "Task response",
+        "Supported argument",
+        "Concessions and coherent paragraphs"
+      ],
+      "planning": [
+        "Who benefits most?",
+        "Who would pay for the service?",
+        "Would your view change in a small town?"
+      ],
+      "length": {
+        "min": 250,
+        "max": 320,
+        "unit": "words"
+      },
+      "minutes": 40,
+      "materials": ""
+    },
+    {
+      "id": "en-ielts-extra-food",
+      "version": 1,
+      "language": "en",
+      "category": "en-ielts",
+      "title": {
+        "zh": "食物浪费",
+        "en": "Food waste",
+        "ja": "食品ロス"
+      },
+      "prompt": "A large amount of food is wasted in households and businesses. What are the main causes, and which measures could reduce the problem? Write at least 250 words.",
+      "requirements": [
+        "State a clear position and maintain it.",
+        "Develop at least two reasons with examples.",
+        "Consider a cost or limitation rather than claiming the policy solves every problem."
+      ],
+      "focus": [
+        "Task response",
+        "Supported argument",
+        "Concessions and coherent paragraphs"
+      ],
+      "planning": [
+        "Who benefits most?",
+        "Who would pay for the service?",
+        "Would your view change in a small town?"
+      ],
+      "length": {
+        "min": 250,
+        "max": 320,
+        "unit": "words"
+      },
+      "minutes": 40,
+      "materials": ""
+    },
+    {
+      "id": "en-ielts-extra-culture",
+      "version": 1,
+      "language": "en",
+      "category": "en-ielts",
+      "title": {
+        "zh": "文化与旅游",
+        "en": "Culture and tourism",
+        "ja": "文化と観光"
+      },
+      "prompt": "Tourism can support local culture but may also change it. Discuss both effects and explain how communities might manage them. Write at least 250 words.",
+      "requirements": [
+        "State a clear position and maintain it.",
+        "Develop at least two reasons with examples.",
+        "Consider a cost or limitation rather than claiming the policy solves every problem."
+      ],
+      "focus": [
+        "Task response",
+        "Supported argument",
+        "Concessions and coherent paragraphs"
+      ],
+      "planning": [
+        "Who benefits most?",
+        "Who would pay for the service?",
+        "Would your view change in a small town?"
+      ],
+      "length": {
+        "min": 250,
+        "max": 320,
+        "unit": "words"
+      },
+      "minutes": 40,
+      "materials": ""
+    },
+    {
+      "id": "en-ielts-extra-science",
+      "version": 1,
+      "language": "en",
+      "category": "en-ielts",
+      "title": {
+        "zh": "公共科学教育",
+        "en": "Public science education",
+        "ja": "公共の科学教育"
+      },
+      "prompt": "Some argue that public funds should prioritize practical science, while others support fundamental research. Discuss both views and state your position. Write at least 250 words.",
+      "requirements": [
+        "State a clear position and maintain it.",
+        "Develop at least two reasons with examples.",
+        "Consider a cost or limitation rather than claiming the policy solves every problem."
+      ],
+      "focus": [
+        "Task response",
+        "Supported argument",
+        "Concessions and coherent paragraphs"
+      ],
+      "planning": [
+        "Who benefits most?",
+        "Who would pay for the service?",
+        "Would your view change in a small town?"
+      ],
+      "length": {
+        "min": 250,
+        "max": 320,
+        "unit": "words"
+      },
+      "minutes": 40,
+      "materials": ""
+    },
+    {
+      "id": "en-ielts-extra-water",
+      "version": 1,
+      "language": "en",
+      "category": "en-ielts",
+      "title": {
+        "zh": "水资源",
+        "en": "Water resources",
+        "ja": "水資源"
+      },
+      "prompt": "In some regions, demand for water is increasing. What problems might arise, and what measures could communities take? Write at least 250 words.",
+      "requirements": [
+        "State a clear position and maintain it.",
+        "Develop at least two reasons with examples.",
+        "Consider a cost or limitation rather than claiming the policy solves every problem."
+      ],
+      "focus": [
+        "Task response",
+        "Supported argument",
+        "Concessions and coherent paragraphs"
+      ],
+      "planning": [
+        "Who benefits most?",
+        "Who would pay for the service?",
+        "Would your view change in a small town?"
+      ],
+      "length": {
+        "min": 250,
+        "max": 320,
+        "unit": "words"
+      },
+      "minutes": 40,
+      "materials": ""
+    },
+    {
+      "id": "en-ielts-extra-table-commute",
+      "version": 1,
+      "language": "en",
+      "category": "en-ielts",
+      "title": {
+        "zh": "通勤方式变化",
+        "en": "Commuting modes",
+        "ja": "通勤手段の変化"
+      },
+      "prompt": "The table gives data about commuting choices in a fictional town. Summarise the main features and make relevant comparisons. Write at least 150 words.",
+      "requirements": [
+        "Include an overview of the main changes.",
+        "Compare categories and support comparisons with figures.",
+        "Report only what the supplied data shows; do not invent causes."
+      ],
+      "focus": [
+        "Overview before detail",
+        "Accurate comparisons and quantities",
+        "Neutral reporting style"
+      ],
+      "planning": [
+        "Which activity changed most?",
+        "Which category remained most popular?",
+        "How can you group similar trends?"
+      ],
+      "length": {
+        "min": 150,
+        "max": 200,
+        "unit": "words"
+      },
+      "minutes": 20,
+      "materials": "Original simulated data — workers by main commuting mode (number of workers):\nMode | 2015 | 2025\nBus | 120 | 200\nBicycle | 60 | 110\nCar | 260 | 210"
+    },
+    {
+      "id": "en-ielts-extra-table-energy",
+      "version": 1,
+      "language": "en",
+      "category": "en-ielts",
+      "title": {
+        "zh": "建筑用电",
+        "en": "Electricity use",
+        "ja": "建物の電力使用"
+      },
+      "prompt": "The table gives data about electricity use in three fictional buildings. Summarise the main features and make relevant comparisons. Write at least 150 words.",
+      "requirements": [
+        "Include an overview of the main changes.",
+        "Compare categories and support comparisons with figures.",
+        "Report only what the supplied data shows; do not invent causes."
+      ],
+      "focus": [
+        "Overview before detail",
+        "Accurate comparisons and quantities",
+        "Neutral reporting style"
+      ],
+      "planning": [
+        "Which activity changed most?",
+        "Which category remained most popular?",
+        "How can you group similar trends?"
+      ],
+      "length": {
+        "min": 150,
+        "max": 200,
+        "unit": "words"
+      },
+      "minutes": 20,
+      "materials": "Original simulated data — annual electricity use (MWh):\nBuilding | 2020 | 2024\nLibrary | 80 | 65\nSports centre | 120 | 110\nMuseum | 60 | 75"
+    },
+    {
+      "id": "en-ielts-extra-table-water",
+      "version": 1,
+      "language": "en",
+      "category": "en-ielts",
+      "title": {
+        "zh": "校园用水",
+        "en": "Campus water use",
+        "ja": "キャンパスの水使用"
+      },
+      "prompt": "The table gives data about water use in a fictional campus. Summarise the main features and make relevant comparisons. Write at least 150 words.",
+      "requirements": [
+        "Include an overview of the main changes.",
+        "Compare categories and support comparisons with figures.",
+        "Report only what the supplied data shows; do not invent causes."
+      ],
+      "focus": [
+        "Overview before detail",
+        "Accurate comparisons and quantities",
+        "Neutral reporting style"
+      ],
+      "planning": [
+        "Which activity changed most?",
+        "Which category remained most popular?",
+        "How can you group similar trends?"
+      ],
+      "length": {
+        "min": 150,
+        "max": 200,
+        "unit": "words"
+      },
+      "minutes": 20,
+      "materials": "Original simulated data — monthly water use (thousand litres):\nUse | January | July\nGardens | 20 | 65\nBuildings | 90 | 75\nCafeteria | 30 | 40"
+    },
+    {
+      "id": "en-ielts-extra-table-visits",
+      "version": 1,
+      "language": "en",
+      "category": "en-ielts",
+      "title": {
+        "zh": "博物馆参观量",
+        "en": "Museum visits",
+        "ja": "博物館の来館者"
+      },
+      "prompt": "The table gives data about visitor numbers at three fictional museums. Summarise the main features and make relevant comparisons. Write at least 150 words.",
+      "requirements": [
+        "Include an overview of the main changes.",
+        "Compare categories and support comparisons with figures.",
+        "Report only what the supplied data shows; do not invent causes."
+      ],
+      "focus": [
+        "Overview before detail",
+        "Accurate comparisons and quantities",
+        "Neutral reporting style"
+      ],
+      "planning": [
+        "Which activity changed most?",
+        "Which category remained most popular?",
+        "How can you group similar trends?"
+      ],
+      "length": {
+        "min": 150,
+        "max": 200,
+        "unit": "words"
+      },
+      "minutes": 20,
+      "materials": "Original simulated data — annual visits (thousands):\nMuseum | 2018 | 2023\nScience | 90 | 130\nArt | 110 | 120\nHistory | 80 | 70"
+    },
+    {
+      "id": "ja-eju-extra-transport",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-eju",
+      "title": {
+        "zh": "交通与环境",
+        "en": "Transport and environment",
+        "ja": "交通と環境"
+      },
+      "prompt": "都市の交通を便利にすることと、環境への負担を減らすことを両立するには、どのような方法があるでしょうか。立場を明確にし、具体例を挙げて論じてください。",
+      "requirements": [
+        "自分の考えを最初に示す。",
+        "理由と具体例を区別して述べる。",
+        "もう一方の方法の利点も踏まえて結論をまとめる。"
+      ],
+      "focus": [
+        "主張と根拠",
+        "対比と条件",
+        "一貫した文体"
+      ],
+      "planning": [
+        "何を学ぶ場面を想定するか。",
+        "具体例は主張をどう支えるか。",
+        "条件によって結論は変わるか。"
+      ],
+      "length": {
+        "min": 400,
+        "max": 500,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": ""
+    },
+    {
+      "id": "ja-eju-extra-technology",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-eju",
+      "title": {
+        "zh": "技术与工作",
+        "en": "Technology and work",
+        "ja": "技術と仕事"
+      },
+      "prompt": "新しい技術が仕事に導入されると、働く人にどのような利点と課題が生じますか。両面を考え、自分の意見を理由とともに述べてください。",
+      "requirements": [
+        "自分の考えを最初に示す。",
+        "理由と具体例を区別して述べる。",
+        "もう一方の方法の利点も踏まえて結論をまとめる。"
+      ],
+      "focus": [
+        "主張と根拠",
+        "対比と条件",
+        "一貫した文体"
+      ],
+      "planning": [
+        "何を学ぶ場面を想定するか。",
+        "具体例は主張をどう支えるか。",
+        "条件によって結論は変わるか。"
+      ],
+      "length": {
+        "min": 400,
+        "max": 500,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": ""
+    },
+    {
+      "id": "ja-eju-extra-education",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-eju",
+      "title": {
+        "zh": "线上与面对面学习",
+        "en": "Online and in-person learning",
+        "ja": "オンラインと対面の学習"
+      },
+      "prompt": "オンライン授業と対面授業には、それぞれどのような利点がありますか。具体的な学習場面を考え、あなたの意見を論じてください。",
+      "requirements": [
+        "自分の考えを最初に示す。",
+        "理由と具体例を区別して述べる。",
+        "もう一方の方法の利点も踏まえて結論をまとめる。"
+      ],
+      "focus": [
+        "主張と根拠",
+        "対比と条件",
+        "一貫した文体"
+      ],
+      "planning": [
+        "何を学ぶ場面を想定するか。",
+        "具体例は主張をどう支えるか。",
+        "条件によって結論は変わるか。"
+      ],
+      "length": {
+        "min": 400,
+        "max": 500,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": ""
+    },
+    {
+      "id": "ja-eju-extra-food",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-eju",
+      "title": {
+        "zh": "食物浪费",
+        "en": "Food waste",
+        "ja": "食品ロス"
+      },
+      "prompt": "食品ロスを減らすために、個人と社会はそれぞれ何ができるでしょうか。実現上の課題にも触れながら、自分の考えを述べてください。",
+      "requirements": [
+        "自分の考えを最初に示す。",
+        "理由と具体例を区別して述べる。",
+        "もう一方の方法の利点も踏まえて結論をまとめる。"
+      ],
+      "focus": [
+        "主張と根拠",
+        "対比と条件",
+        "一貫した文体"
+      ],
+      "planning": [
+        "何を学ぶ場面を想定するか。",
+        "具体例は主張をどう支えるか。",
+        "条件によって結論は変わるか。"
+      ],
+      "length": {
+        "min": 400,
+        "max": 500,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": ""
+    },
+    {
+      "id": "ja-eju-extra-community",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-eju",
+      "title": {
+        "zh": "代际交流",
+        "en": "Intergenerational exchange",
+        "ja": "世代間の交流"
+      },
+      "prompt": "地域で異なる世代が交流する機会を増やすことには、どのような意味がありますか。具体例とともに利点と課題を論じてください。",
+      "requirements": [
+        "自分の考えを最初に示す。",
+        "理由と具体例を区別して述べる。",
+        "もう一方の方法の利点も踏まえて結論をまとめる。"
+      ],
+      "focus": [
+        "主張と根拠",
+        "対比と条件",
+        "一貫した文体"
+      ],
+      "planning": [
+        "何を学ぶ場面を想定するか。",
+        "具体例は主張をどう支えるか。",
+        "条件によって結論は変わるか。"
+      ],
+      "length": {
+        "min": 400,
+        "max": 500,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": ""
+    },
+    {
+      "id": "ja-eju-extra-culture",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-eju",
+      "title": {
+        "zh": "旅游与文化",
+        "en": "Tourism and culture",
+        "ja": "観光と文化"
+      },
+      "prompt": "観光の発展が地域の文化にもたらす良い影響と問題点を挙げ、地域の人々ができる対応についてあなたの意見を述べてください。",
+      "requirements": [
+        "自分の考えを最初に示す。",
+        "理由と具体例を区別して述べる。",
+        "もう一方の方法の利点も踏まえて結論をまとめる。"
+      ],
+      "focus": [
+        "主張と根拠",
+        "対比と条件",
+        "一貫した文体"
+      ],
+      "planning": [
+        "何を学ぶ場面を想定するか。",
+        "具体例は主張をどう支えるか。",
+        "条件によって結論は変わるか。"
+      ],
+      "length": {
+        "min": 400,
+        "max": 500,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": ""
+    },
+    {
+      "id": "ja-eju-extra-water",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-eju",
+      "title": {
+        "zh": "水资源",
+        "en": "Water resources",
+        "ja": "水資源"
+      },
+      "prompt": "水の使用量が増える地域では、どのような課題が生じますか。複数の対策を比べ、自分が重要だと考える対策とその理由を述べてください。",
+      "requirements": [
+        "自分の考えを最初に示す。",
+        "理由と具体例を区別して述べる。",
+        "もう一方の方法の利点も踏まえて結論をまとめる。"
+      ],
+      "focus": [
+        "主張と根拠",
+        "対比と条件",
+        "一貫した文体"
+      ],
+      "planning": [
+        "何を学ぶ場面を想定するか。",
+        "具体例は主張をどう支えるか。",
+        "条件によって結論は変わるか。"
+      ],
+      "length": {
+        "min": 400,
+        "max": 500,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": ""
+    },
+    {
+      "id": "ja-eju-extra-evidence",
+      "version": 1,
+      "language": "ja",
+      "category": "ja-eju",
+      "title": {
+        "zh": "公共信息与判断",
+        "en": "Public information and judgment",
+        "ja": "公共情報と判断"
+      },
+      "prompt": "社会問題について意見を作る際、情報の信頼性を確認することはなぜ大切ですか。具体的な場面を挙げ、自分の考えを述べてください。",
+      "requirements": [
+        "自分の考えを最初に示す。",
+        "理由と具体例を区別して述べる。",
+        "もう一方の方法の利点も踏まえて結論をまとめる。"
+      ],
+      "focus": [
+        "主張と根拠",
+        "対比と条件",
+        "一貫した文体"
+      ],
+      "planning": [
+        "何を学ぶ場面を想定するか。",
+        "具体例は主張をどう支えるか。",
+        "条件によって結論は変わるか。"
+      ],
+      "length": {
+        "min": 400,
+        "max": 500,
+        "unit": "characters"
+      },
+      "minutes": 30,
+      "materials": ""
     }
   ]
 }

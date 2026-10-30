@@ -6,8 +6,8 @@
 
 *A Local-First English (CEFR A2–C1) & Japanese (JLPT N5–N1) AI Fiction Studio, Tactile Graded Reader, Science × Fantasy Learning Companion, and 4D Writing Coach for macOS.*
 
-[![Release](https://img.shields.io/badge/Release-v0.11.6-2d5a46?style=for-the-badge)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.6)
-[![Platform](https://img.shields.io/badge/macOS-Apple%20Silicon%20(arm64)-1d1d1f?style=for-the-badge&logo=apple)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.6)
+[![Release](https://img.shields.io/badge/Release-v0.11.9-2d5a46?style=for-the-badge)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.9)
+[![Platform](https://img.shields.io/badge/macOS-Apple%20Silicon%20(arm64)-1d1d1f?style=for-the-badge&logo=apple)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.9)
 [![Storage](https://img.shields.io/badge/Local--First-SQLite%20%2B%20Keychain-0f4c5c?style=for-the-badge)](#5-本地优先隐私安全与非阻塞后台消息盒子)
 [![Languages](https://img.shields.io/badge/Bilingual-English%20CEFR%20A2--C1%20%7C%20Japanese%20JLPT%20N5--N1-8c4a27?style=for-the-badge)](#1-英日双语分级故事工坊-cefr-a2c1--jlpt-n5n1)
 
@@ -36,7 +36,7 @@
 | :--- | :--- |
 | **📖 想读引人入胜、难度刚好的外语小说** | 支持 **英语（CEFR A2 / B1 / B2 / C1）** 与 **日语（JLPT N5 / N4 / N3 / N2 / N1）** 难度目标。自选悬疑、科幻、奇幻、冒险、日常、爱情 6 类题材，设置 1–100 章，通过人物设定、章节摘要与连续性记录辅助连载。 |
 | **🔬 想在读小说中自然理解科学原理** | 内置 **24 个跨学段科学单元** 与 **48 个「科学 × 奇幻」故事预设**。把科学原理融入故事，并提供带来源链接的本地章节 **「科学手记」**；不等同于完整教材或事实正确性保证。 |
-| **✍️ 想练就扎实的外语与科学写作能力** | 内置 **132 道英日原创写作练习**，涵盖学校学段、IELTS/EJU 题型训练及 **96 道科学写作任务**。提供 **语法 / 词汇 / 逻辑 / 通顺** 四维定性评审，题目回应与科学概念另列反馈，不提供官方考试评分。 |
+| **✍️ 想练就扎实的外语与科学写作能力** | 内置 **184 道英日原创写作练习**，涵盖学校学段、IELTS/EJU 题型训练及 **96 道科学写作任务**。提供 **语法 / 词汇 / 逻辑 / 通顺** 四维定性评审，题目回应与科学概念另列反馈，不提供官方考试评分。 |
 | **🎨 追求安静、护眼、有质感的阅读体验** | 提供 **10 套全局材质主题**、**8 种翻页动效**、**12 套字体栈** 与 **中/日/英三语界面**；支持放大阅读、编辑或评审主面板并收起辅助面板。字体显示取决于本机可用字体。 |
 | **🔒 重视本地隐私与流畅响应** | 故事、书签、阅读进度、写作草稿与评审历史保存在本地 `SQLite`；API Key 经 Electron `safeStorage` 加密后保存。生成与评审会向 Google Gemini 发送相关文本，后台执行时可继续阅读。 |
 
@@ -126,15 +126,15 @@ Leaflight 独创了 **Science × Fantasy（科学 × 奇幻/科幻/悬疑）** �
 
 ---
 
-### 4. 独立写作台与四维 AI 写作教练（132 道内置题库）
+### 4. 独立写作台与四维 AI 写作教练（184 道内置题库）
 
 无需先读完小说，随时可进入左侧导航的 **「我的写作」** 开启针对性训练；也可以在读完任意故事章节后一键进入 **「读后感 / 故事续写 / 科学观察手记」**。
 
-- **132 道原创练习题**（参考题型与课程主题，不是官方考题或教材摘录）：
+- **184 道原创练习题**（参考题型与课程主题，不是官方考题或教材摘录）：
   - **雅思题型训练（IELTS Academic Task 1 & Task 2）**：Task 1 内置**真实可视化柱状图、数据表与流程图组件**，完整还原图表作文审题场景；
   - **日本留学试验（EJU 日本語記述問題）**：贴合日本大学入试学术议论文要求；
   - **小学 → 初中 → 高中 → 大学进阶训练**：覆盖记叙、书信、议论与学术思辨；
-  - **96 道科学写作专项任务**：包含观察、机制分析、证据报告与科技伦理等任务，配有情境、要求、规划提示与科学参考。
+  - **96 道科学写作专项任务**：围绕物理、化学、生物、地球与宇宙的 24 个知识单元，各提供概念解释和证据推理练习；题目提供参考知识、常见误区与思考提示，不要求虚构情节。历史草稿保留其原题。
 - **四维 AI 批改与原文精确摘录验证**：
   - 从 **语法与拼写、词汇与用词、逻辑与衔接、通顺与表达** 四个维度提供定性反馈；有题目时另评任务回应，科学题另附概念反馈；
   - 逐句建议的原文摘录通过本地子串校验，不匹配的评审会报错；AI 判断和修改建议仍可能有误；
@@ -171,10 +171,18 @@ Leaflight 独创了 **Science × Fantasy（科学 × 奇幻/科幻/悬疑）** �
 
 ## 📦 下载安装与快速上手
 
+### 当前版本
+
+Mac v0.11.9 将科学写作预设调整为客观学科知识的概念解释和证据分析；保留 TXT/EPUB 导入、扩充的英日题库与表达润色建议。详见 [v0.11.9 发布说明](docs/releases/v0.11.9.md)。
+
+### Android Pad 阅读预览
+
+独立的 **Leaflight Reader 0.2.1-preview.1** 安卓项目支持导入 Mac JSON 离线阅读，提供主题、字体、翻页、书签与进度。可导入 UTF-8 TXT、未加密 EPUB 或 JSON 备份；也可配置自己的 Gemini Key 生成英日独立短篇并离线阅读，生成状态在消息盒子中查看。两端进度暂不自动同步；安卓版暂不包含连载续写、写作与评审。Mac 与 Android 的构建和数据独立。[安装、构建与限制说明](android-reader/README.md)。 [下载 APK](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.2.1-preview.1)。
+
 ### 方式一：直接安装 macOS 桌面端（推荐）
 
-1. 前往本仓库的 [**v0.11.6 Release**](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.6)，下载安装包：
-   - 🍎 **`Leaflight-0.11.6-arm64.dmg`**（Apple Silicon Mac；不提供 Intel / Windows / Linux 安装包）
+1. 前往本仓库的 [**v0.11.9 Release**](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.9)，下载安装包：
+   - 🍎 **`Leaflight-0.11.9-arm64.dmg`**（Apple Silicon Mac；不提供 Intel / Windows / Linux 安装包）
 2. 双击打开 `.dmg`，将 **Leaflight.app** 拖入 `Applications（应用程序）` 文件夹。
 3. 首次打开即可直接阅读内置示范故事；如需使用 AI 生成新章节或 AI 写作批改：
    - 点击左下角 **「系统设置 / 模型与设置」**；
@@ -182,7 +190,7 @@ Leaflight 独创了 **Science × Fantasy（科学 × 奇幻/科幻/悬疑）** �
 
 > **分发限制**：此包未做 Apple 开发者签名和公证，macOS 可能阻止打开；发布附件中的 SHA-256 仅用于检查下载完整性，不代替开发者签名。尚未完成干净系统安装与安全 OTA 验收。
 
-**手动更新**：先在系统设置导出全库备份，等待后台任务完成并退出应用，再下载新版 DMG，将应用替换到原安装位置。不要删除 `~/Library/Application Support/novel-reading/` 用户数据目录。当前没有应用内检查更新或自动安装功能；详细变更与验证范围见 [v0.11.6 发布说明](docs/releases/v0.11.6.md)。
+**手动更新**：先在系统设置导出全库备份，等待后台任务完成并退出应用，再下载新版 DMG，将应用替换到原安装位置。不要删除 `~/Library/Application Support/novel-reading/` 用户数据目录。当前没有应用内检查更新或自动安装功能；详细变更与验证范围见 [v0.11.9 发布说明](docs/releases/v0.11.9.md)。
 
 **配置与费用**：生成和 AI 评审需要联网及用户自己的 Gemini API Key，费用和额度取决于 Google 账户及所选模型。已归档作品与草稿可离线使用。接口与数据发送范围见 [API 集成说明](docs/api-references.md)。
 
@@ -236,7 +244,7 @@ Leaflight/
 │   ├── jobs.cjs                # 非阻塞后台任务队列（消息盒子）调度引擎
 │   ├── science.cjs             # 24 个科学单元、48 个科学×奇幻预设与本地参考资料加载器
 │   ├── writing.cjs             # 四维 AI 写作批改与原文精确摘录 (originalQuote) 校验
-│   ├── writing-topics.cjs      # 132 道英日分级写作题库与 96 道科学写作专项任务引擎
+│   ├── writing-topics.cjs      # 184 道英日分级写作题库与 96 道科学写作专项任务引擎
 │   ├── difficulty.cjs          # 英日分级约束（CEFR A2–C1 / JLPT N5–N1）与启发式复杂度检测
 │   └── export.cjs              # 标准 EPUB 3 与 TXT 电子书打包导出器
 ├── src/
@@ -261,7 +269,8 @@ Leaflight/
 
 ## 📋 版本演进摘要（Changelog）
 
-- **`v0.11.6`（当前版本）**：阅读、编辑和 AI 评审支持放大，辅助面板自动收起；恢复布局、翻页和重新打开作品时保留阅读文字位置。消息盒子以覆盖层展开，Esc 优先关闭弹窗或消息盒子。包含 v0.11.5 本地修复：评审原文／修订稿整行与键盘展开，旧书签及同页重复书签可取消，书签列表支持直接删除。[完整发布说明](docs/releases/v0.11.6.md)。
+- **`v0.11.9`（当前版本）**：独立表达润色、184 道英日写作练习、客观科学写作、自备题目与 TXT/EPUB 导入；Android 预览版独立发布。[完整发布说明](docs/releases/v0.11.9.md)。
+- **`v0.11.6`**：阅读、编辑和 AI 评审支持放大，辅助面板自动收起；恢复布局、翻页和重新打开作品时保留阅读文字位置。消息盒子以覆盖层展开，Esc 优先关闭弹窗或消息盒子。包含 v0.11.5 本地修复：评审原文／修订稿整行与键盘展开，旧书签及同页重复书签可取消，书签列表支持直接删除。[完整发布说明](docs/releases/v0.11.6.md)。
 - **`v0.11.5`（仅本地开发构建）**：评审展开与书签取消修复，随 v0.11.6 一并发布。
 - **`v0.11.4`（首个 GitHub Release）**：包含科学 × 奇幻阅读预设、本地科学手记、科学写作任务及概念反馈。
 - **`v0.11.3`**：新增 **非阻塞后台任务队列（消息盒子）**、IELTS 图表题真实可视化渲染、同剧情跨级难度对比预览与读后难度体感校准。
@@ -274,3 +283,9 @@ Leaflight/
 ## 📄 开源协议 (License)
 
 本项目基于 [MIT License](LICENSE) 开源。欢迎 Star ⭐、Fork 或提交 Issue 与 Pull Request！
+
+### 单篇文件与完整备份
+
+在 Mac 书架选择「导入 TXT / EPUB」，或在 Android 书架选择「导入 TXT / EPUB / 备份」。支持 UTF-8 TXT 与未加密的常见 EPUB（20 MB 文件、解压内容 8 MB 限制）；TXT 会按正文导入，EPUB 会读取文字章节和日语注音，原排版、图片、字体和部分复杂结构不保证保留。导入产生新副本，不会覆盖原书；难度不作判定。单篇 TXT/EPUB 不含书签、进度、草稿、AI 评审与生成设定，完整迁移仍请使用 JSON 备份。
+
+题库的 184 道题均为原创训练材料，不是剑桥真题或教材原文；可在写作台的「自备题目或写作目标」中输入已有题目，自由写作时用于 AI 评审参考。IELTS 官方另提供[公开样题](https://ielts.org/take-a-test/preparation-resources/sample-test-questions/academic-test)。

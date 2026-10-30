@@ -1,6 +1,7 @@
 node_modules/
 dist/
 release/
+release-next/
 *.log
 .env*
 .DS_Store

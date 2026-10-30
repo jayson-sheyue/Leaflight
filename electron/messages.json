@@ -1,14 +1,44 @@
 {
-  "放大阅读区": {"en":"Expand reader","ja":"読書パネルを拡大"},
-  "放大写作区": {"en":"Expand editor","ja":"執筆パネルを拡大"},
-  "放大评审区": {"en":"Expand review","ja":"レビューを拡大"},
-  "恢复布局": {"en":"Restore layout","ja":"レイアウトを戻す"},
-  "放大当前面板，其他面板自动收起": {"en":"Expand this panel and collapse the others","ja":"このパネルを拡大し、他のパネルを折りたたむ"},
-  "按 Esc 恢复布局": {"en":"Press Esc to restore the layout","ja":"Esc でレイアウトを戻す"},
-  "写作编辑区": {"en":"Writing editor","ja":"執筆エディター"},
-  "AI 评审": {"en":"AI review","ja":"AI レビュー"},
-  "展开": {"en":"Expand","ja":"開く"},
-  "收起": {"en":"Collapse","ja":"閉じる"},
+  "放大阅读区": {
+    "en": "Expand reader",
+    "ja": "読書パネルを拡大"
+  },
+  "放大写作区": {
+    "en": "Expand editor",
+    "ja": "執筆パネルを拡大"
+  },
+  "放大评审区": {
+    "en": "Expand review",
+    "ja": "レビューを拡大"
+  },
+  "恢复布局": {
+    "en": "Restore layout",
+    "ja": "レイアウトを戻す"
+  },
+  "放大当前面板，其他面板自动收起": {
+    "en": "Expand this panel and collapse the others",
+    "ja": "このパネルを拡大し、他のパネルを折りたたむ"
+  },
+  "按 Esc 恢复布局": {
+    "en": "Press Esc to restore the layout",
+    "ja": "Esc でレイアウトを戻す"
+  },
+  "写作编辑区": {
+    "en": "Writing editor",
+    "ja": "執筆エディター"
+  },
+  "AI 评审": {
+    "en": "AI review",
+    "ja": "AI レビュー"
+  },
+  "展开": {
+    "en": "Expand",
+    "ja": "開く"
+  },
+  "收起": {
+    "en": "Collapse",
+    "ja": "閉じる"
+  },
   "我的书房": {
     "en": "MY READING ROOM",
     "ja": "マイ書斎"
@@ -2168,5 +2198,69 @@
   "Slide · 水平滑动": {
     "en": "Slide",
     "ja": "Slide · スライド"
+  },
+  "表达润色建议": {
+    "en": "Expression polish",
+    "ja": "表現のブラッシュアップ"
+  },
+  "润色建议": {
+    "en": "Suggested wording",
+    "ja": "表現の提案"
+  },
+  "以下是可选表达方式，保留原意与个人风格，并非必须修改的错误。": {
+    "en": "Optional alternatives that preserve your meaning and voice; these are not errors.",
+    "ja": "意味と文体を保つ任意の表現案です。必ず直すべき誤りではありません。"
+  },
+  "这份历史评审未包含表达润色；重新提交评审可获得新建议。": {
+    "en": "This earlier review did not include expression polish. Submit a new review to receive suggestions.",
+    "ja": "この過去のレビューに表現の提案は含まれていません。新しくレビューを送信してください。"
+  },
+  "本次没有额外的表达润色建议。": {
+    "en": "No additional expression suggestions this time.",
+    "ja": "今回は追加の表現案はありません。"
+  },
+  "导入 TXT / EPUB": {
+    "en": "Import TXT / EPUB",
+    "ja": "TXT / EPUB を読み込む"
+  },
+  "作品已导入书架": {
+    "en": "Story imported to your library",
+    "ja": "作品を本棚に読み込みました"
+  },
+  "导入失败：请选择未加密的 UTF-8 TXT 或 EPUB 文件。": {
+    "en": "Import failed. Choose an unencrypted UTF-8 TXT or EPUB file.",
+    "ja": "読み込みに失敗しました。暗号化されていない UTF-8 の TXT または EPUB を選択してください。"
+  },
+  "自备题目或写作目标（可选）": {
+    "en": "Your own prompt or writing goal (optional)",
+    "ja": "自分の設問・執筆目標（任意）"
+  },
+  "可粘贴你已有的题目文字；自由写作时会作为评审参考。": {
+    "en": "Paste a prompt you already have. For free writing, it informs the review.",
+    "ja": "お手元の設問を貼り付けられます。自由作文ではレビューの参考にします。"
+  },
+  "难度未评定": {
+    "en": "Level not assessed",
+    "ja": "難易度は未判定"
+  },
+  "已导入作品": {
+    "en": "Imported story",
+    "ja": "読み込んだ作品"
+  },
+  "围绕同一学科知识开展说明或证据分析，不会自动生成答案。": {
+    "en": "Explain the same scientific concepts or analyze evidence; no answer is generated automatically.",
+    "ja": "同じ科学知識について説明または根拠の分析に取り組みます。解答は自動生成されません。"
+  },
+  "写一篇概念解释": {
+    "en": "Explain the concepts",
+    "ja": "概念を説明する"
+  },
+  "写一份证据分析": {
+    "en": "Analyze evidence",
+    "ja": "根拠を分析する"
+  },
+  "此处为固定参考笔记；AI 评审尚未经逐句事实核验，请核对科学概念与推论。": {
+    "en": "These are fixed reference notes; AI feedback is not fact-checked sentence by sentence. Check concepts and inferences.",
+    "ja": "固定の参考メモです。AI の評価は一文ずつ事実確認されていないため、概念と推論を確認してください。"
   }
 }

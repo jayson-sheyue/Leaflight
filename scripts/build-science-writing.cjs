@@ -1,31 +1,30 @@
-// Rebuild the offline writing tasks from the single curated science-unit source.
-// No network, model calls or learner data are involved.
+// Build factual writing exercises from the curated science reference units.
 const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
-const {units,domains}=require('../electron/science-units.json');
+const {units,domains}=require('../electron/science-units.json');const subjects=require('../electron/science-subjects.json');
 const categories=[],topics=[];
 for(const language of ['en','ja']){
- for(const domain of domains)categories.push({id:`${language}-science-${domain.id}`,language,title:{zh:'科学冒险 · '+domain.title.zh,en:'Science adventures · '+domain.title.en,ja:'科学の冒険・'+domain.title.ja}});
- for(const u of units)for(const mode of ['story','evidence']){
-  const narrative=mode==='story',index=['primary','middle','high'].indexOf(u.stage),minimum=(language==='en'?[100,180,300]:[250,450,750])[index];
-  const suffix={zh:narrative?'探险手记':'证据报告',en:narrative?'Expedition journal':'Evidence report',ja:narrative?'探検の手記':'証拠の報告'};
+ for(const domain of domains)categories.push({id:`${language}-science-${domain.id}`,language,title:{zh:'科学知识 · '+domain.title.zh,en:'Science concepts · '+domain.title.en,ja:'科学知識・'+domain.title.ja}});
+ for(const u of units)for(const mode of ['concept','analysis']){
+  const concept=mode==='concept',index=['primary','middle','high'].indexOf(u.stage),minimum=(language==='en'?[100,180,300]:[250,450,750])[index],subject=subjects[u.id];assert(subject,`Missing factual subject for ${u.id}`);
+  const suffix={zh:concept?'概念解释':'证据与推理',en:concept?'Concept explanation':'Evidence and reasoning',ja:concept?'概念の説明':'根拠と推論'};
   const prefix={zh:['基础 / ','机制 / ','模型 / '][index],en:['Foundations / ','Mechanisms / ','Models / '][index],ja:['基礎 / ','仕組み / ','モデル / '][index]};
-  const title=Object.fromEntries(['zh','en','ja'].map(locale=>[locale,prefix[locale]+u.title[locale]+' · '+suffix[locale]]));
+  const title=Object.fromEntries(['zh','en','ja'].map(locale=>[locale,prefix[locale]+subject[locale]+' · '+suffix[locale]]));
   let prompt,requirements,focus,planning,materials;
   if(language==='en'){
-   prompt=u.hook.en+(narrative?' Write an original scene or field journal in which an investigator uses observation and the supplied science to make a decision. Invent characters and a problem, not new scientific laws.':' Write a reasoned report that separates what is observed, what is inferred and what remains unknown. You may propose an invented observation, but label it as fictional rather than a real measurement.');
-   requirements=['Apply at least two reference ideas accurately to the situation.','Explain why a clue supports or fails to support a claim.','Label any magic, speculative technology or invented data as fictional.',narrative?'Use a clear narrative turning point and ending.':'Discuss an alternative explanation and what further evidence would help.'];
-   focus=['Scientific cause and effect','Fact, inference and fiction',narrative?'Character-driven discovery':'Claims with evidence and limits'];
-   planning=['What can the investigator actually observe?','Which reference idea rules out an attractive but mistaken explanation?','Where does the analogy or fictional premise stop matching real science?'];
-   materials='Curated reference notes (not a claim that the fictional case is real):\n'+u.facts.en.map((fact,i)=>`${i+1}. ${fact}`).join('\n')+'\nCommon misconception to avoid: '+u.misconception.en+'\nNo real-world hazardous experiment is required; use a fictional case or supplied conceptual evidence.';
+   prompt=concept?`Explain ${subject.en.toLowerCase()} to a reader learning the subject. Use the reference notes to describe the relevant concepts and how they relate, then address the common misconception.`:`Analyze a question about ${subject.en.toLowerCase()} using the reference notes. Distinguish observations or established ideas from inference; explain what evidence would help evaluate a claim and where the conclusion is limited.`;
+   requirements=concept?['Explain at least two relevant reference ideas accurately.','Describe a relationship or mechanism in your own words.','Address the listed misconception without treating it as fact.','Use a clear, factual explanation suited to the reader.']:['State a question or claim about the subject.','Explain how at least two reference ideas bear on the claim.','Distinguish known facts from inference and identify a limitation.','Describe evidence that could help assess an alternative explanation.'];
+   focus=concept?['Accurate scientific concepts','Mechanisms and relationships','Clear explanatory language']:['Claims and evidence','Reasoning and uncertainty','Scientific accuracy'];
+   planning=concept?['Which terms does the reader need explained?','How do the relevant processes or concepts connect?','Why is the common misconception inaccurate?']:['What is the claim, and what is already known?','What evidence would distinguish possible explanations?','What cannot be concluded from the supplied notes alone?'];
+   materials='Scientific reference notes:\n'+u.facts.en.map((fact,i)=>`${i+1}. ${fact}`).join('\n')+'\nCommon misconception to examine: '+u.misconception.en+'\nThese are conceptual reference notes, not measurements or a complete textbook. Do not invent sources or present imagined data as real. No experiment is required.';
   }else{
-   prompt=u.hook.ja+(narrative?' 観察と下の科学の考え方を使って判断する場面や手記を書いてください。人物や事件は創作しても、現実の科学法則は勝手に変えないでください。':' 観察、推論、まだ分からないことを分けた報告を書いてください。観測を創作する場合は、実際の測定結果ではなく架空の資料だと明示してください。');
-   requirements=['参考となる考え方を二つ以上、場面に正確に当てはめる。','手がかりが主張を支えるかどうか、理由を説明する。','魔法、未確立の技術、創作データは架空だと区別する。',narrative?'判断が変わる場面と結びを描く。':'別の説明と、さらに必要な証拠を検討する。'];
-   focus=['科学的な因果関係','事実・推論・創作の区別',narrative?'人物を通した発見':'根拠と限界のある主張'];
-   planning=['調査する人物に実際に観察できることは何か。','魅力的でも誤った説明を、どの知識で退けられるか。','たとえや架空の設定はどこから現実と違うか。'];
-   materials='参考となる科学のメモ（架空の事件が現実であるという意味ではありません）：\n'+u.facts.ja.map((fact,i)=>`${i+1}. ${fact}`).join('\n')+'\n避けたい誤解：'+u.misconception.ja+'\n危険を伴う現実の実験は不要です。架空の場面や提示した概念を使ってください。';
+   prompt=concept?`${subject.ja}について、この分野を学ぶ読者に向けて説明してください。参考メモを使って関連する概念とその関係を述べ、よくある誤解にも触れましょう。`:`${subject.ja}に関する問いを、参考メモに基づいて分析してください。観察・確立された知識と推論を区別し、主張を検討するために必要な根拠と結論の限界を説明しましょう。`;
+   requirements=concept?['参考メモの関連する考え方を二つ以上正確に説明する。','概念どうしの関係や仕組みを自分の言葉で述べる。','示された誤解を事実として扱わずに説明する。','読み手に分かるよう客観的に文章を組み立てる。']:['主題に関する問いや主張を示す。','参考メモの考え方を二つ以上使って主張を検討する。','既知の事実と推論を分け、結論の限界を示す。','別の説明を検討するために必要な根拠を述べる。'];
+   focus=concept?['科学概念の正確さ','仕組みと関係','分かりやすい説明']:['主張と根拠','推論と不確実性','科学的な正確さ'];
+   planning=concept?['読み手に説明が必要な用語は何か。','関連する概念や過程はどう結びつくか。','よくある誤解はなぜ正しくないか。']:['主張は何か、すでに分かっていることは何か。','異なる説明を区別するにはどのような根拠が必要か。','提示されたメモだけでは何を結論できないか。'];
+   materials='科学の参考メモ：\n'+u.facts.ja.map((fact,i)=>`${i+1}. ${fact}`).join('\n')+'\n検討したい誤解：'+u.misconception.ja+'\nこれは概念を整理する参考メモであり、測定データや完全な教科書ではありません。出典や架空のデータを事実として作り上げないでください。実験は不要です。';
   }
-  topics.push({id:`${language}-science-${u.id}-${mode}`,version:1,language,category:`${language}-science-${u.domain}`,title,prompt,requirements,focus,planning,length:{min:minimum,max:minimum+(language==='en'?[80,120,200]:[150,250,450])[index],unit:language==='en'?'words':'characters'},minutes:[20,30,45][index],materials,scienceUnitId:u.id});
+  topics.push({id:`${language}-science-${u.id}-${mode}`,version:2,language,category:`${language}-science-${u.domain}`,title,prompt,requirements,focus,planning,length:{min:minimum,max:minimum+(language==='en'?[80,120,200]:[150,250,450])[index],unit:language==='en'?'words':'characters'},minutes:[20,30,45][index],materials,scienceUnitId:u.id});
  }
 }
 assert.equal(topics.length,units.length*4);assert.equal(new Set(topics.map(t=>t.id)).size,topics.length);
-fs.writeFileSync(path.join(__dirname,'../electron/science-writing.json'),JSON.stringify({version:1,categories,topics},null,2)+'\n');
+fs.writeFileSync(path.join(__dirname,'../electron/science-writing.json'),JSON.stringify({version:2,categories,topics},null,2)+'\n');
