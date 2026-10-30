@@ -49,6 +49,9 @@ public final class MainActivity extends Activity {
     private final ExecutorService network = Executors.newSingleThreadExecutor();
     private final ConcurrentHashMap<String, HttpsURLConnection> requests = new ConcurrentHashMap<>();
     private volatile boolean destroyed;
+    private final ConcurrentHashMap<String, String> generationSessions = new ConcurrentHashMap<>();
+    private final java.util.Set<String> pendingRequests = ConcurrentHashMap.newKeySet();
+    private final java.util.Set<String> cancelledRequests = ConcurrentHashMap.newKeySet();
 
     @Override public void onCreate(Bundle state) {
         super.onCreate(state);
@@ -164,15 +167,31 @@ public final class MainActivity extends Activity {
                 return new String(cipher.doFinal(Base64.decode(p.getString("key", ""), Base64.NO_WRAP)), StandardCharsets.UTF_8);
             } catch (Exception ignored) { return null; }
         }
-        @JavascriptInterface public void generate(String id, String model, String body) {
+        @JavascriptInterface public boolean beginGeneration(String id) {
+            if (id == null || !id.matches("[a-zA-Z0-9-]{1,80}") || destroyed) return false;
+            String secret = readKey(); if (secret == null) return false;
+            generationSessions.put(id, secret); return true;
+        }
+        @JavascriptInterface public void endGeneration(String id) { if (id != null) generationSessions.remove(id); }
+        @JavascriptInterface public void cancelGeneration(String id) {
+            if (id == null || !id.matches("[a-zA-Z0-9-]{1,80}")) return;
+            if (!pendingRequests.contains(id)) return;
+            cancelledRequests.add(id);
+            HttpsURLConnection connection = requests.get(id);
+            if (connection != null) connection.disconnect();
+        }
+        @JavascriptInterface public void generate(String id, String model, String body, String session) {
             if (id == null || !id.matches("[a-zA-Z0-9-]{1,80}") || model == null || !model.matches("[a-zA-Z0-9._-]{1,100}") || body == null || body.length() > 500000) { generationResult(id, "invalid", ""); return; }
-            final String secret = readKey();
+            final String secret = session == null ? null : generationSessions.get(session);
             if (secret == null) { generationResult(id, "no-key", ""); return; }
+            pendingRequests.add(id);
             network.execute(() -> {
                 HttpsURLConnection connection = null;
                 try {
+                    if (destroyed || cancelledRequests.contains(id) || !generationSessions.containsKey(session)) return;
                     connection = (HttpsURLConnection) new URL("https://generativelanguage.googleapis.com/v1beta/models/" + model + ":generateContent").openConnection();
                     requests.put(id, connection);
+                    if (destroyed || cancelledRequests.contains(id) || !generationSessions.containsKey(session)) return;
                     connection.setInstanceFollowRedirects(false); connection.setConnectTimeout(20000); connection.setReadTimeout(120000);
                     connection.setRequestMethod("POST"); connection.setDoOutput(true); connection.setUseCaches(false);
                     connection.setRequestProperty("Content-Type", "application/json"); connection.setRequestProperty("x-goog-api-key", secret);
@@ -186,7 +205,7 @@ public final class MainActivity extends Activity {
                     }
                     generationResult(id, "ok", bytes.toString("UTF-8"));
                 } catch (Exception ignored) { generationResult(id, "network", ""); }
-                finally { requests.remove(id); if (connection != null) connection.disconnect(); }
+                finally { requests.remove(id); pendingRequests.remove(id); cancelledRequests.remove(id); if (connection != null) connection.disconnect(); }
             });
         }
         @JavascriptInterface public void exportBackup(String json) {
@@ -230,6 +249,7 @@ public final class MainActivity extends Activity {
     }
     @Override protected void onDestroy() {
         destroyed = true;
+        generationSessions.clear();
         for (HttpsURLConnection connection : requests.values()) connection.disconnect();
         network.shutdownNow();
         if (fileCallback != null) { fileCallback.onReceiveValue(null); fileCallback = null; }

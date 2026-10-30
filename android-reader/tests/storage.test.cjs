@@ -25,3 +25,13 @@ test('reader backup restores only bounded known settings; legacy duplicate bookm
  const reader=parseImport(JSON.stringify({format:'leaflight-reader',version:1,books:imported.books,settings:{...defaults,theme:'ocean',language:'ja'}}));assert.equal(reader.settings.theme,'ocean');
  assert.deepEqual(validateSettings({size:1000,line:-1,theme:'unknown',font:'unknown',width:0,mode:'remote',effect:'invalid',apiKey:'secret'}),defaults);
 });
+test('continuation metadata survives Mac and reader backups with secret fields stripped; reimport can add metadata without losing later local chapters',t=>{
+ const {s,b}=fixture(t),incoming=parseImport(JSON.stringify(s.backup())).books[0];assert.equal(incoming.series.outline.length,3);assert.equal(incoming.chapters[0].summary,b.chapters[0].summary);
+ const legacy=structuredClone(incoming);delete legacy.series;legacy.progress.fraction=.9;legacy.bookmarks=[{id:'pad-bookmark',chapter:0,fraction:.9}];const enriched=mergeBooks([legacy],[incoming]);assert.equal(enriched.updated,1);assert.equal(enriched.books[0].series.totalChapters,3);assert.equal(enriched.books[0].progress.fraction,.9);assert.equal(enriched.books[0].bookmarks[0].id,'pad-bookmark');
+ const more=structuredClone(legacy);more.chapters.push({...more.chapters[0],id:'later-local-chapter'});assert.equal(mergeBooks([more],[incoming]).books[0].chapters.length,2);
+ incoming.series.apiKey='secret-only-for-test';incoming.series.sampleReadings=[{surface:'町',reading:'まち',apiKey:'secret-only-for-test'}];const roundtrip=parseImport(JSON.stringify({format:'leaflight-reader',version:1,books:[incoming]}));assert.equal(roundtrip.books[0].series.totalChapters,3);assert(!JSON.stringify(roundtrip).includes('secret-only-for-test'));
+});
+test('legacy readable prose remains importable if its old Mac outline no longer fits its chapters; invalid explicit series are rejected',t=>{
+ const {s}=fixture(t),backup=s.backup();backup.books[0].chapters.push({...backup.books[0].chapters[0],id:'2'},{...backup.books[0].chapters[0],id:'3'},{...backup.books[0].chapters[0],id:'4'});const read=parseImport(JSON.stringify(backup));assert.equal(read.books[0].chapters.length,4);assert.equal(read.books[0].series,undefined);
+ const invalid=structuredClone(read);invalid.books[0].series={version:1,totalChapters:2};assert.throws(()=>parseImport(JSON.stringify({format:'leaflight-reader',version:1,books:invalid.books})));
+});
