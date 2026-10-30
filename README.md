@@ -6,8 +6,8 @@
 
 *A Local-First English (CEFR A2–C1) & Japanese (JLPT N5–N1) AI Fiction Studio, Tactile Graded Reader, Science × Fantasy Learning Companion, and 4D Writing Coach for macOS.*
 
-[![Release](https://img.shields.io/badge/Release-v0.11.9-2d5a46?style=for-the-badge)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.9)
-[![Platform](https://img.shields.io/badge/macOS-Apple%20Silicon%20(arm64)-1d1d1f?style=for-the-badge&logo=apple)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.9)
+[![Release](https://img.shields.io/badge/Release-v0.11.10-2d5a46?style=for-the-badge)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.10)
+[![Platform](https://img.shields.io/badge/macOS-Apple%20Silicon%20(arm64)-1d1d1f?style=for-the-badge&logo=apple)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.10)
 [![Storage](https://img.shields.io/badge/Local--First-SQLite%20%2B%20Keychain-0f4c5c?style=for-the-badge)](#5-本地优先隐私安全与非阻塞后台消息盒子)
 [![Languages](https://img.shields.io/badge/Bilingual-English%20CEFR%20A2--C1%20%7C%20Japanese%20JLPT%20N5--N1-8c4a27?style=for-the-badge)](#1-英日双语分级故事工坊-cefr-a2c1--jlpt-n5n1)
 
@@ -47,7 +47,7 @@
 ### 1. 英日双语分级故事工坊（CEFR A2–C1 & JLPT N5–N1）
 
 - **三步式向导创作**：仅需选择「语言与等级」→「题材或科学融合预设」→「篇幅与主角设定」，即可开启专属连载。
-- **同情节难度对照**：入口为左侧「创作新故事」→ 展开「篇幅与更多选项 · 可保持默认」→「同情节难度对照」。输入同一场景并选择两个等级（如 `A2 vs C1`、`N5 vs N1`），使用自己的 Gemini Key 发起一次联网生成，可能产生 API 费用；最近一次结果保存在本机，可离线查看。模型返回的情节一致性和难度差异仍需人工核对。
+- **同情节难度对照（选级试读）**：用于创作前的一次短场景阅读体验，帮助你凭阅读感受手动选择目标难度；可按需重新试读。它不生成整部小说的两个难度版本，不认证用户语言等级，也不自动修改创作设置。入口为左侧「创作新故事」→ 展开「篇幅与更多选项 · 可保持默认」→「同情节难度对照」。每次体验用自己的 Gemini Key 发起一次联网请求，可能产生 API 费用；最近一次结果可离线回看。
 - **难度约束与复核**：生成提示包含分级词汇和句法目标，本地启发式分析复核句长、用词和日语汉字等指标，并显示偏差提示；不自动重复调用模型修正，也不代表官方等级认证。
 - **读后体感校准**：每章读完可一键反馈「偏难 / 刚好 / 偏轻松」，下一章自动微调句式复杂度。
 
@@ -173,7 +173,7 @@ Leaflight 独创了 **Science × Fantasy（科学 × 奇幻/科幻/悬疑）** �
 
 ### 当前版本
 
-Mac v0.11.9 将科学写作预设调整为客观学科知识的概念解释和证据分析；保留 TXT/EPUB 导入、扩充的英日题库与表达润色建议。详见 [v0.11.9 发布说明](docs/releases/v0.11.9.md)。
+Mac v0.11.10 明确「同情节难度对照」为选级前的短场景试读；保留客观科学写作、TXT/EPUB 导入和表达润色建议。详见 [v0.11.10 发布说明](docs/releases/v0.11.10.md)。
 
 ### Android Pad 阅读预览
 
@@ -181,8 +181,8 @@ Mac v0.11.9 将科学写作预设调整为客观学科知识的概念解释和�
 
 ### 方式一：直接安装 macOS 桌面端（推荐）
 
-1. 前往本仓库的 [**v0.11.9 Release**](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.9)，下载安装包：
-   - 🍎 **`Leaflight-0.11.9-arm64.dmg`**（Apple Silicon Mac；不提供 Intel / Windows / Linux 安装包）
+1. 前往本仓库的 [**v0.11.10 Release**](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.10)，下载安装包：
+   - 🍎 **`Leaflight-0.11.10-arm64.dmg`**（Apple Silicon Mac；不提供 Intel / Windows / Linux 安装包）
 2. 双击打开 `.dmg`，将 **Leaflight.app** 拖入 `Applications（应用程序）` 文件夹。
 3. 首次打开即可直接阅读内置示范故事；如需使用 AI 生成新章节或 AI 写作批改：
    - 点击左下角 **「系统设置 / 模型与设置」**；
@@ -190,7 +190,7 @@ Mac v0.11.9 将科学写作预设调整为客观学科知识的概念解释和�
 
 > **分发限制**：此包未做 Apple 开发者签名和公证，macOS 可能阻止打开；发布附件中的 SHA-256 仅用于检查下载完整性，不代替开发者签名。尚未完成干净系统安装与安全 OTA 验收。
 
-**手动更新**：先在系统设置导出全库备份，等待后台任务完成并退出应用，再下载新版 DMG，将应用替换到原安装位置。不要删除 `~/Library/Application Support/novel-reading/` 用户数据目录。当前没有应用内检查更新或自动安装功能；详细变更与验证范围见 [v0.11.9 发布说明](docs/releases/v0.11.9.md)。
+**手动更新**：先在系统设置导出全库备份，等待后台任务完成并退出应用，再下载新版 DMG，将应用替换到原安装位置。不要删除 `~/Library/Application Support/novel-reading/` 用户数据目录。当前没有应用内检查更新或自动安装功能；详细变更与验证范围见 [v0.11.10 发布说明](docs/releases/v0.11.10.md)。
 
 **配置与费用**：生成和 AI 评审需要联网及用户自己的 Gemini API Key，费用和额度取决于 Google 账户及所选模型。已归档作品与草稿可离线使用。接口与数据发送范围见 [API 集成说明](docs/api-references.md)。
 
@@ -269,7 +269,8 @@ Leaflight/
 
 ## 📋 版本演进摘要（Changelog）
 
-- **`v0.11.9`（当前版本）**：独立表达润色、184 道英日写作练习、客观科学写作、自备题目与 TXT/EPUB 导入；Android 预览版独立发布。[完整发布说明](docs/releases/v0.11.9.md)。
+- **`v0.11.10`（当前版本）**：明确难度对照的选级试读用途，界面、说明与演示截图标注保持一致。[完整发布说明](docs/releases/v0.11.10.md)。
+- **`v0.11.9`**：独立表达润色、184 道英日写作练习、客观科学写作、自备题目与 TXT/EPUB 导入；Android 预览版独立发布。[完整发布说明](docs/releases/v0.11.9.md)。
 - **`v0.11.6`**：阅读、编辑和 AI 评审支持放大，辅助面板自动收起；恢复布局、翻页和重新打开作品时保留阅读文字位置。消息盒子以覆盖层展开，Esc 优先关闭弹窗或消息盒子。包含 v0.11.5 本地修复：评审原文／修订稿整行与键盘展开，旧书签及同页重复书签可取消，书签列表支持直接删除。[完整发布说明](docs/releases/v0.11.6.md)。
 - **`v0.11.5`（仅本地开发构建）**：评审展开与书签取消修复，随 v0.11.6 一并发布。
 - **`v0.11.4`（首个 GitHub Release）**：包含科学 × 奇幻阅读预设、本地科学手记、科学写作任务及概念反馈。

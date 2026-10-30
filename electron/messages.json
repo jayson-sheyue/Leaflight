@@ -2262,5 +2262,33 @@
   "此处为固定参考笔记；AI 评审尚未经逐句事实核验，请核对科学概念与推论。": {
     "en": "These are fixed reference notes; AI feedback is not fact-checked sentence by sentence. Check concepts and inferences.",
     "ja": "固定の参考メモです。AI の評価は一文ずつ事実確認されていないため、概念と推論を確認してください。"
+  },
+  "选级前的小样试读：用同一段短场景体验两个目标等级，再凭阅读感受手动选择小说难度。": {
+    "en": "A short reading trial before choosing a level: read the same brief scene at two target levels, then choose your story level based on how it feels.",
+    "ja": "レベルを選ぶ前の短い試し読みです。同じ短い場面を二つの目標レベルで読み、読みやすさを確かめて小説の難易度を選びます。"
+  },
+  "这是辅助选级的一次短体验，可按需重测；不生成整部小说的两个难度版本，也不会自动测定你的语言等级或修改创作设置。": {
+    "en": "This is a brief trial to help you choose a level; repeat it if needed. It does not create two versions of a whole novel, certify your language level, or change story settings automatically.",
+    "ja": "レベル選びのための短い体験で、必要に応じて再度試せます。小説全体を二つの難易度で生成する機能ではなく、語学力の判定や創作設定の自動変更も行いません。"
+  },
+  "试读等级 A": {
+    "en": "Trial level A",
+    "ja": "試読レベル A"
+  },
+  "试读等级 B": {
+    "en": "Trial level B",
+    "ja": "試読レベル B"
+  },
+  "生成选级试读": {
+    "en": "Generate reading trial",
+    "ja": "試読を生成"
+  },
+  "每次试读会联网调用一次 Gemini，可能产生 API 费用。最近一次结果保存在本机，可离线回看；小说难度请返回创作设置手动选择。": {
+    "en": "Each trial makes one online Gemini request and may incur API charges. The latest result is saved for offline viewing. Return to story settings to choose your level manually.",
+    "ja": "試読ごとに Gemini へ 1 回リクエストし、API 料金が発生する場合があります。直近の結果は端末に保存されます。創作設定に戻って難易度を手動で選んでください。"
+  },
+  "选级前先试读一个短场景，按阅读感受选择小说难度。": {
+    "en": "Try a brief scene before choosing your story level.",
+    "ja": "短い場面を試し読みし、読みやすさに合わせて難易度を選びます。"
   }
 }
