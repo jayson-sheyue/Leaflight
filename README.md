@@ -6,8 +6,8 @@
 
 *A Local-First English (CEFR A2–C1) & Japanese (JLPT N5–N1) AI Fiction Studio, Tactile Graded Reader, Science × Fantasy Learning Companion, and 4D Writing Coach for macOS.*
 
-[![Release](https://img.shields.io/badge/Release-v0.11.10-2d5a46?style=for-the-badge)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.10)
-[![Platform](https://img.shields.io/badge/macOS-Apple%20Silicon%20(arm64)-1d1d1f?style=for-the-badge&logo=apple)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.10)
+[![Release](https://img.shields.io/badge/Release-v0.11.11-2d5a46?style=for-the-badge)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.11)
+[![Platform](https://img.shields.io/badge/macOS-Apple%20Silicon%20(arm64)-1d1d1f?style=for-the-badge&logo=apple)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.11)
 [![Storage](https://img.shields.io/badge/Local--First-SQLite%20%2B%20Keychain-0f4c5c?style=for-the-badge)](#5-本地优先隐私安全与非阻塞后台消息盒子)
 [![Languages](https://img.shields.io/badge/Bilingual-English%20CEFR%20A2--C1%20%7C%20Japanese%20JLPT%20N5--N1-8c4a27?style=for-the-badge)](#1-英日双语分级故事工坊-cefr-a2c1--jlpt-n5n1)
 
@@ -158,13 +158,15 @@ Leaflight 独创了 **Science × Fantasy（科学 × 奇幻/科幻/悬疑）** �
 
 ### 5. 本地优先、隐私安全与非阻塞后台消息盒子
 
-- **非阻塞后台任务队列（消息盒子）**：新建故事、续写下一章或提交长文批改时，任务自动进入后台运行。你可以随时回到书架继续阅读其他作品，完成后顶部胶囊与左侧「消息盒子」会实时通知并支持一键跳转。
+- **非阻塞后台任务队列（消息盒子）**：新建故事、续写章节或提交长文批改时，任务进入后台运行。你可以继续阅读其他作品，在「消息盒子」查看进度和结果。
+- **连续生成多章（Mac）**：打开作品，在章节目录下点击「连续生成多章」，选择章数后开始；可选剩余全部章节。章节按顺序生成，每章保存后即可阅读，下一章会使用最新的故事摘要和连续性记忆。每章发起一次 API 调用；这能减少重复操作，单章生成速度仍取决于模型。失败或停止时保留已完成章节，在消息盒子点击「继续未完成章节」仅补齐原定范围内的剩余章节；退出应用后不会自动恢复付费生成。停止后不再发起后续请求，已发出的请求仍可能计费。
+- **修改要求，重新试读**：在初次试读页点击此按钮，会返回并保留最初填写的创作要求。修改后重新生成的是一份新的试读和大纲；这里不编辑或微调上次 AI 生成的大纲。设定说明和费用细节按需展开，常用操作优先呈现。
 - **离线示例**：无需 API Key 即可打开内置的三章英文故事 *The Lantern Keeper*，体验排版、翻页和书签，也可离线浏览写作题库；它是固定示例，不是按自定义提示生成的作品。
 - **支持导出与备份**：支持将任意完结或连载中的故事导出为标准 **EPUB 3 电子书**（兼容 Apple Books / Kindle / Kobo）或 **TXT 纯文本**，并支持全库 JSON 一键备份与恢复。
 
 <div align="center">
   <img src="docs/assets/background-inbox.png" alt="非阻塞后台消息盒子" width="85%" />
-  <p align="center"><sub>▲ <b>非阻塞后台任务队列（消息盒子）</b>：AI 生成章节与批改在后台静默完成，阅读与写作零等待</sub></p>
+  <p align="center"><sub>▲ <b>非阻塞后台任务队列（消息盒子）</b>：AI 生成章节与批改在后台静默完成，等待生成时仍可阅读和写作</sub></p>
 </div>
 
 ---
@@ -173,7 +175,7 @@ Leaflight 独创了 **Science × Fantasy（科学 × 奇幻/科幻/悬疑）** �
 
 ### 当前版本
 
-Mac v0.11.10 明确「同情节难度对照」为选级前的短场景试读；保留客观科学写作、TXT/EPUB 导入和表达润色建议。详见 [v0.11.10 发布说明](docs/releases/v0.11.10.md)。
+Mac v0.11.11 新增连续生成多章，边读边备好后续章节；试读页明确支持修改最初的创作要求后重新生成试读与大纲。详见 [v0.11.11 发布说明](docs/releases/v0.11.11.md)。
 
 ### Android Pad 阅读预览
 
@@ -181,8 +183,8 @@ Mac v0.11.10 明确「同情节难度对照」为选级前的短场景试读；�
 
 ### 方式一：直接安装 macOS 桌面端（推荐）
 
-1. 前往本仓库的 [**v0.11.10 Release**](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.10)，下载安装包：
-   - 🍎 **`Leaflight-0.11.10-arm64.dmg`**（Apple Silicon Mac；不提供 Intel / Windows / Linux 安装包）
+1. 前往本仓库的 [**v0.11.11 Release**](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.11)，下载安装包：
+   - 🍎 **`Leaflight-0.11.11-arm64.dmg`**（Apple Silicon Mac；不提供 Intel / Windows / Linux 安装包）
 2. 双击打开 `.dmg`，将 **Leaflight.app** 拖入 `Applications（应用程序）` 文件夹。
 3. 首次打开即可直接阅读内置示范故事；如需使用 AI 生成新章节或 AI 写作批改：
    - 点击左下角 **「系统设置 / 模型与设置」**；
@@ -190,7 +192,7 @@ Mac v0.11.10 明确「同情节难度对照」为选级前的短场景试读；�
 
 > **分发限制**：此包未做 Apple 开发者签名和公证，macOS 可能阻止打开；发布附件中的 SHA-256 仅用于检查下载完整性，不代替开发者签名。尚未完成干净系统安装与安全 OTA 验收。
 
-**手动更新**：先在系统设置导出全库备份，等待后台任务完成并退出应用，再下载新版 DMG，将应用替换到原安装位置。不要删除 `~/Library/Application Support/novel-reading/` 用户数据目录。当前没有应用内检查更新或自动安装功能；详细变更与验证范围见 [v0.11.10 发布说明](docs/releases/v0.11.10.md)。
+**手动更新**：先在系统设置导出全库备份，等待后台任务完成并退出应用，再下载新版 DMG，将应用替换到原安装位置。不要删除 `~/Library/Application Support/novel-reading/` 用户数据目录。当前没有应用内检查更新或自动安装功能；详细变更与验证范围见 [v0.11.11 发布说明](docs/releases/v0.11.11.md)。
 
 **配置与费用**：生成和 AI 评审需要联网及用户自己的 Gemini API Key，费用和额度取决于 Google 账户及所选模型。已归档作品与草稿可离线使用。接口与数据发送范围见 [API 集成说明](docs/api-references.md)。
 
@@ -269,7 +271,8 @@ Leaflight/
 
 ## 📋 版本演进摘要（Changelog）
 
-- **`v0.11.10`（当前版本）**：明确难度对照的选级试读用途，界面、说明与演示截图标注保持一致。[完整发布说明](docs/releases/v0.11.10.md)。
+- **`v0.11.11`（当前版本）**：新增逐章保存的连续生成，支持停止与手动续接；澄清修改原始要求后重新试读的流程，收起低频说明。[完整发布说明](docs/releases/v0.11.11.md)。
+- **`v0.11.10`**：明确难度对照的选级试读用途，界面、说明与演示截图标注保持一致。[完整发布说明](docs/releases/v0.11.10.md)。
 - **`v0.11.9`**：独立表达润色、184 道英日写作练习、客观科学写作、自备题目与 TXT/EPUB 导入；Android 预览版独立发布。[完整发布说明](docs/releases/v0.11.9.md)。
 - **`v0.11.6`**：阅读、编辑和 AI 评审支持放大，辅助面板自动收起；恢复布局、翻页和重新打开作品时保留阅读文字位置。消息盒子以覆盖层展开，Esc 优先关闭弹窗或消息盒子。包含 v0.11.5 本地修复：评审原文／修订稿整行与键盘展开，旧书签及同页重复书签可取消，书签列表支持直接删除。[完整发布说明](docs/releases/v0.11.6.md)。
 - **`v0.11.5`（仅本地开发构建）**：评审展开与书签取消修复，随 v0.11.6 一并发布。

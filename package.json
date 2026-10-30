@@ -1,6 +1,6 @@
 {
   "name": "novel-reading",
-  "version": "0.11.10",
+  "version": "0.11.11",
   "private": true,
   "description": "A local-first English and Japanese fiction studio and reader",
   "main": "electron/main.cjs",
@@ -11,7 +11,7 @@
     "test": "node --test tests/*.test.cjs",
     "package:mac": "npm run build && electron-builder --mac dir",
     "package:dmg": "npm run package:mac -- --config.electronDist=node_modules/electron/dist && node scripts/create-dmg.cjs",
-    "test:desktop": "npm run build && node tests/electron.smoke.cjs && node tests/difficulty.desktop.cjs && node tests/reader-updates.desktop.cjs && node tests/page-continuity.desktop.cjs && node tests/async-reader.desktop.cjs && node tests/review-bookmarks.desktop.cjs && node tests/panel-focus.desktop.cjs && node tests/writing.desktop.cjs && node tests/writing-topics.desktop.cjs && node tests/science.desktop.cjs && node tests/guided-ui.desktop.cjs && node tests/writing-delete.desktop.cjs && node tests/visual-material.desktop.cjs && node tests/theme-settings.desktop.cjs && node tests/contrast.desktop.cjs"
+    "test:desktop": "npm run build && node tests/electron.smoke.cjs && node tests/difficulty.desktop.cjs && node tests/reader-updates.desktop.cjs && node tests/page-continuity.desktop.cjs && node tests/async-reader.desktop.cjs && node tests/chapter-batch.desktop.cjs && node tests/review-bookmarks.desktop.cjs && node tests/panel-focus.desktop.cjs && node tests/writing.desktop.cjs && node tests/writing-topics.desktop.cjs && node tests/science.desktop.cjs && node tests/guided-ui.desktop.cjs && node tests/writing-delete.desktop.cjs && node tests/visual-material.desktop.cjs && node tests/theme-settings.desktop.cjs && node tests/contrast.desktop.cjs"
   },
   "dependencies": {
     "fflate": "^0.8.2"

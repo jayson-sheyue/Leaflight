@@ -2290,5 +2290,97 @@
   "选级前先试读一个短场景，按阅读感受选择小说难度。": {
     "en": "Try a brief scene before choosing your story level.",
     "ja": "短い場面を試し読みし、読みやすさに合わせて難易度を選びます。"
+  },
+  "连续生成多章": {
+    "en": "Generate multiple chapters",
+    "ja": "複数章を続けて生成"
+  },
+  "连续生成章节": {
+    "en": "Generate chapters",
+    "ja": "章を続けて生成"
+  },
+  "连续生成": {
+    "en": "Chapter batch",
+    "ja": "連続生成"
+  },
+  "停止生成": {
+    "en": "Stop generation",
+    "ja": "生成を停止"
+  },
+  "已保存 {done}/{total} 章": {
+    "en": "{done}/{total} chapters saved",
+    "ja": "{done}/{total} 章を保存済み"
+  },
+  "阅读已生成章节": {
+    "en": "Read saved chapters",
+    "ja": "保存済みの章を読む"
+  },
+  "继续未完成章节": {
+    "en": "Continue remaining chapters",
+    "ja": "残りの章を続ける"
+  },
+  "一次备好接下来要读的章节。": {
+    "en": "Prepare your next chapters in one go.",
+    "ja": "次に読む章をまとめて用意しましょう。"
+  },
+  "本次生成章数": {
+    "en": "Chapters to generate",
+    "ja": "今回生成する章数"
+  },
+  "全部剩余章节": {
+    "en": "All remaining chapters",
+    "ja": "残りの章すべて"
+  },
+  "第 {from}–{to} 章 · {count} 次 API 调用": {
+    "en": "Chapters {from}–{to} · {count} API requests",
+    "ja": "第 {from}–{to} 章・API 呼び出し {count} 回"
+  },
+  "章节会依次生成并保存，你可以继续阅读。失败或停止时，已完成的章节会保留。": {
+    "en": "Chapters are generated and saved in order while you keep reading. Finished chapters remain if generation stops or fails.",
+    "ja": "読書を続けながら、章を順に生成・保存します。失敗・停止しても完成した章は残ります。"
+  },
+  "费用与停止": {
+    "en": "Costs and stopping",
+    "ja": "料金と停止について"
+  },
+  "每章调用一次当前模型，费用由你的 API 账户承担。停止后不再生成后续章节，已发出的请求仍可能计费。": {
+    "en": "Each chapter uses one request to your current model, billed to your API account. Stopping prevents later chapters; requests already sent may still be charged.",
+    "ja": "1 章につき現在のモデルを 1 回呼び出し、API アカウントに課金されます。停止後は後続の章を生成しませんが、送信済みのリクエストには料金が発生する場合があります。"
+  },
+  "开始生成": {
+    "en": "Start generating",
+    "ja": "生成を開始"
+  },
+  "请选择尚未生成的章节数量。": {
+    "en": "Choose a number of chapters that have not been generated.",
+    "ja": "未生成の章数を選んでください。"
+  },
+  "正在生成第 {number} 章": {
+    "en": "Generating chapter {number}",
+    "ja": "第 {number} 章を生成中"
+  },
+  "已保存第 {number} 章": {
+    "en": "Chapter {number} saved",
+    "ja": "第 {number} 章を保存しました"
+  },
+  "章节已在别处更新，请重新打开作品后继续。": {
+    "en": "Chapters changed elsewhere. Reopen the story before continuing.",
+    "ja": "章が別の場所で更新されました。作品を開き直して続けてください。"
+  },
+  "看看设定说明": {
+    "en": "About this direction",
+    "ja": "設定の補足を見る"
+  },
+  "修改要求，重新试读": {
+    "en": "Revise request & try again",
+    "ja": "要望を変更して再試読"
+  },
+  "想换个方向？返回修改最初的创作要求，再生成新的试读与大纲。": {
+    "en": "Want a different direction? Revise your original request, then generate a new preview and outline.",
+    "ja": "別の方向にしたいときは、最初の要望を変更して試読とあらすじを作り直せます。"
+  },
+  "生成与评审需要联网，可能产生 API 费用；阅读和保存可离线使用。连续生成需手动开启，失败后不会自动重试。": {
+    "en": "Generation and reviews require internet and may incur API charges. Read and save offline. Chapter batches start only when requested and do not retry automatically.",
+    "ja": "生成とレビューには通信と API 料金が必要になる場合があります。読書と保存はオフラインで利用できます。連続生成は手動で開始し、失敗しても自動再試行しません。"
   }
 }
