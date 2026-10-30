@@ -11,7 +11,7 @@ POST https://generativelanguage.googleapis.com/v1beta/models/{model}:generateCon
 x-goog-api-key: 用户配置的 API Key
 ```
 
-在「系统设置」填写模型 ID 和 Key 后点击「保存设置」。模型 ID 可手动修改，必须支持 `generateContent` 与 JSON 结构化输出；应用使用 `responseMimeType: application/json` 和 `responseSchema`。默认配置值不保证该模型在每个账户中可用。
+在「系统设置」填写模型 ID 和 Key 后点击「保存设置」（API Key 可前往 Google 官方平台 [Google AI Studio (`https://aistudio.google.com/apikey`)](https://aistudio.google.com/apikey) 登录 Google 账号后点击 `Create API key` 获取）。模型 ID 可手动修改，必须支持 `generateContent` 与 JSON 结构化输出；应用使用 `responseMimeType: application/json` 和 `responseSchema`。默认配置值不保证该模型在每个账户中可用。
 
 生成故事会发送用户设定及相关故事设定、摘要、连续性记忆和近期正文。写作评审会发送提交时的草稿、题目、材料及反馈语言。Key 不放入 URL、导出文件或源码；通过 Electron `safeStorage` 加密后保存在本机数据库，macOS 加密密钥由系统 Keychain 保护。作品数据库本身不是全库加密。
 

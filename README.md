@@ -186,15 +186,34 @@ Mac v0.11.11 新增连续生成多章，边读边备好后续章节；试读页�
 1. 前往本仓库的 [**v0.11.11 Release**](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.11)，下载安装包：
    - 🍎 **`Leaflight-0.11.11-arm64.dmg`**（Apple Silicon Mac；不提供 Intel / Windows / Linux 安装包）
 2. 双击打开 `.dmg`，将 **Leaflight.app** 拖入 `Applications（应用程序）` 文件夹。
-3. 首次打开即可直接阅读内置示范故事；如需使用 AI 生成新章节或 AI 写作批改：
-   - 点击左下角 **「系统设置 / 模型与设置」**；
-   - 填写支持 `generateContent` 与 JSON 结构化输出的 **Gemini 模型 ID** 和 API Key，点击「保存设置」。已保存的 Key 以圆点显示；当前仅集成 Google 官方接口。
+3. 首次打开即可直接阅读内置示范故事、导入本地 `TXT / EPUB` 电子书，或浏览 184 道写作题库；如需使用 **AI 生成新故事/章节** 或 **AI 写作批改**，请按下方指南填入你自己的 Gemini API Key。
 
 > **分发限制**：此包未做 Apple 开发者签名和公证，macOS 可能阻止打开；发布附件中的 SHA-256 仅用于检查下载完整性，不代替开发者签名。尚未完成干净系统安装与安全 OTA 验收。
 
 **手动更新**：先在系统设置导出全库备份，等待后台任务完成并退出应用，再下载新版 DMG，将应用替换到原安装位置。不要删除 `~/Library/Application Support/novel-reading/` 用户数据目录。当前没有应用内检查更新或自动安装功能；详细变更与验证范围见 [v0.11.11 发布说明](docs/releases/v0.11.11.md)。
 
-**配置与费用**：生成和 AI 评审需要联网及用户自己的 Gemini API Key，费用和额度取决于 Google 账户及所选模型。已归档作品与草稿可离线使用。接口与数据发送范围见 [API 集成说明](docs/api-references.md)。
+---
+
+### 🔑 如何获取与配置 Gemini API Key（1 分钟新手指南）
+
+Leaflight 不内置第三方付费中转，而是由你配置自己的 Google 官方密钥直连调用：
+
+- **无需 API Key 即可使用的功能**：阅读内置英文示范故事 *The Lantern Keeper*、导入本地 `TXT / EPUB / JSON` 书籍享受 10 套纸感主题与 7 种翻页动效、离线浏览 184 道分级写作题库并保存草稿。
+- **需要 API Key 的功能**：在「AI 创作室 / 科学工坊」定制生成英日外语故事与连载章节，以及在「写作工坊」提交作文获取 AI 批改与高分范文。
+
+#### 获取与填入步骤
+
+1. **前往 Google 官方平台申请密钥**：
+   浏览器打开 [**Google AI Studio — Get API key (`https://aistudio.google.com/apikey`)**](https://aistudio.google.com/apikey)，使用你的 Google 账号登录。
+2. **创建并复制 API Key**：
+   点击页面右上角的 **`Create API key`**（创建 API 密钥），生成一串以 `AIza...` 开头的密钥字符串，点击复制。
+3. **在 Leaflight 中保存配置**：
+   - **macOS 桌面端**：点击左下角 **「系统设置 / 模型与设置」** → 在 **Gemini API Key** 栏粘贴刚才复制的 `AIza...` 密钥；**Gemini 模型 ID** 保持默认的 `gemini-2.5-flash` 即可（也可按需修改为 `gemini-2.5-pro` 等支持 `generateContent` 与 JSON 结构化输出的官方模型）→ 点击 **「保存设置」**（已保存的 Key 会以圆点显示）。
+   - **Android 阅读预览版**：点击 **「生成故事 → Gemini 设置」** → 粘贴 API Key 并保存。
+
+> **配置、隐私与费用说明**：
+> - **免费额度与计费**：Google AI Studio 通常为 `gemini-2.5-flash` 等模型提供免费调用额度（Free Tier），具体免费额度、速率限制及是否产生费用取决于你的 Google 账户状态、所在地区政策及所选模型。
+> - **本地加密存储**：你的 API Key 通过 macOS 系统 Keychain（Electron `safeStorage`）或 Android Keystore 加密保存在本机，仅在请求时直连 Google 官方接口，不会上传至任何第三方服务器，也不会包含在导出的 JSON 备份中。接口与数据发送范围详见 [API 集成说明](docs/api-references.md)。
 
 ---
 
