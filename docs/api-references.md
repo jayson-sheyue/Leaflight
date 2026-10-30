@@ -1,6 +1,6 @@
 # API 与本地数据
 
-当前版本：Mac Leaflight v0.11.11；Android Reader 0.3.0-preview.1。
+当前版本：Mac Leaflight v0.11.12；Android Reader 0.3.0-preview.2。
 
 ## Gemini
 

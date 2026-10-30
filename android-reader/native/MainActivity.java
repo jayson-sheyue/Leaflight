@@ -36,6 +36,9 @@ import javax.crypto.spec.GCMParameterSpec;
 import android.security.keystore.KeyGenParameterSpec;
 import android.security.keystore.KeyProperties;
 import android.util.Base64;
+import android.content.ClipData;
+import android.content.ClipboardManager;
+import org.json.JSONArray;
 import org.json.JSONObject;
 
 /** Local reader shell. Gemini requests use a fixed HTTPS endpoint in native code. */
@@ -209,6 +212,13 @@ public final class MainActivity extends Activity {
             });
         }
         @JavascriptInterface public void exportBackup(String json) {
+            exportDocument("Leaflight-Reader-backup.json", json);
+        }
+        @JavascriptInterface public void exportStory(String filename, String json) {
+            String safeName = (filename != null && filename.matches("[a-zA-Z0-9._-]{3,120}\\.json")) ? filename : "story.leaflight-story.json";
+            exportDocument(safeName, json);
+        }
+        private void exportDocument(String title, String json) {
             if (json == null || json.length() > 30 * 1024 * 1024) { report("failed"); return; }
             runOnUiThread(() -> {
                 if (exportBytes != null || isFinishing()) { report("failed"); return; }
@@ -216,11 +226,98 @@ public final class MainActivity extends Activity {
                 Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
                 intent.addCategory(Intent.CATEGORY_OPENABLE);
                 intent.setType("application/json");
-                intent.putExtra(Intent.EXTRA_TITLE, "Leaflight-Reader-backup.json");
+                intent.putExtra(Intent.EXTRA_TITLE, title);
                 try { startActivityForResult(intent, SAVE_FILE); }
                 catch (Exception e) { exportBytes = null; report("failed"); }
             });
         }
+        @JavascriptInterface public boolean copyAndOpenUrl(String text, String url) {
+            runOnUiThread(() -> {
+                try {
+                    if (text != null && !text.isEmpty()) {
+                        ClipboardManager cm = (ClipboardManager) getSystemService(CLIPBOARD_SERVICE);
+                        if (cm != null) cm.setPrimaryClip(ClipData.newPlainText("Leaflight Story Pool", text));
+                    }
+                    if (url != null && url.startsWith("https://github.com/")) {
+                        Intent browser = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                        browser.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                        startActivity(browser);
+                    }
+                } catch (Exception ignored) { }
+            });
+            return true;
+        }
+        @JavascriptInterface public void fetchPool(String repo) {
+            final String safeRepo = (repo != null && repo.matches("[a-zA-Z0-9._-]+/[a-zA-Z0-9._-]+")) ? repo : "jayson-sheyue/Leaflight";
+            network.execute(() -> {
+                if (destroyed) return;
+                boolean online = false;
+                JSONArray stories = new JSONArray();
+                JSONArray issues = new JSONArray();
+                try {
+                    String indexText = readHttps("https://raw.githubusercontent.com/" + safeRepo + "/main/community-pool/index.json");
+                    if (indexText != null) {
+                        online = true;
+                        JSONArray entries = indexText.trim().startsWith("[") ? new JSONArray(indexText) : new JSONObject(indexText).optJSONArray("stories");
+                        if (entries != null) {
+                            int limit = Math.min(entries.length(), 40);
+                            for (int i = 0; i < limit; i++) {
+                                JSONObject entry = entries.optJSONObject(i);
+                                if (entry == null) continue;
+                                if (entry.has("chapters")) { stories.put(entry); continue; }
+                                String path = entry.optString("path", "");
+                                if (path.matches("community-pool/stories/[a-zA-Z0-9._-]+\\.json")) {
+                                    String storyText = readHttps("https://raw.githubusercontent.com/" + safeRepo + "/main/" + path);
+                                    if (storyText != null) stories.put(new JSONObject(storyText));
+                                }
+                            }
+                        }
+                    }
+                } catch (Exception ignored) { }
+                try {
+                    String issuesText = readHttps("https://api.github.com/repos/" + safeRepo + "/issues?state=open&per_page=30");
+                    if (issuesText != null) {
+                        online = true;
+                        JSONArray arr = new JSONArray(issuesText);
+                        for (int i = 0; i < arr.length(); i++) {
+                            JSONObject iss = arr.optJSONObject(i);
+                            if (iss != null && !iss.has("pull_request")) issues.put(iss);
+                        }
+                    }
+                } catch (Exception ignored) { }
+                try {
+                    JSONObject payload = new JSONObject().put("stories", stories).put("issues", issues);
+                    poolResult(online ? "ok" : "offline", payload.toString());
+                } catch (Exception ignored) { poolResult("offline", "{}"); }
+            });
+        }
+        private String readHttps(String urlStr) {
+            HttpsURLConnection conn = null;
+            try {
+                conn = (HttpsURLConnection) new URL(urlStr).openConnection();
+                conn.setInstanceFollowRedirects(true);
+                conn.setConnectTimeout(10000);
+                conn.setReadTimeout(15000);
+                conn.setRequestMethod("GET");
+                conn.setUseCaches(false);
+                conn.setRequestProperty("Accept", "application/vnd.github+json, application/json");
+                conn.setRequestProperty("User-Agent", "Leaflight-Reader-Android");
+                if (conn.getResponseCode() != 200) return null;
+                ByteArrayOutputStream bytes = new ByteArrayOutputStream();
+                try (InputStream in = conn.getInputStream()) {
+                    byte[] buf = new byte[8192]; int count;
+                    while ((count = in.read(buf)) != -1) {
+                        if (bytes.size() + count > 2 * 1024 * 1024) return null;
+                        bytes.write(buf, 0, count);
+                    }
+                }
+                return bytes.toString("UTF-8");
+            } catch (Exception e) { return null; }
+            finally { if (conn != null) conn.disconnect(); }
+        }
+    }
+    private void poolResult(String status, String payload) {
+        runOnUiThread(() -> { if (!destroyed && !isFinishing()) web.evaluateJavascript("window.readerPoolResult && window.readerPoolResult(" + JSONObject.quote(status) + "," + JSONObject.quote(payload) + ")", null); });
     }
     private void generationResult(String id, String status, String response) {
         runOnUiThread(() -> { if (!destroyed && !isFinishing()) web.evaluateJavascript("window.readerGenerationResult && window.readerGenerationResult(" + JSONObject.quote(id) + "," + JSONObject.quote(status) + "," + JSONObject.quote(response) + ")", null); });

@@ -1,10 +1,10 @@
 # Leaflight Reader · Android 平板阅读预览
 
-当前版本 **0.3.0-preview.1**。安卓端与 Mac v0.11.11 对应阅读与本次连载创作功能，仍为独立客户端，使用独立的应用标识、用户数据、构建目录和签名。安卓版和 Mac 的数据及构建相互独立。
+当前版本 **0.3.0-preview.2**。安卓端与 Mac v0.11.12 对应阅读、连载创作与共享书池功能，仍为独立客户端，使用独立的应用标识、用户数据、构建目录和签名。安卓版和 Mac 的数据及构建相互独立。
 
 ## 在 Pad 上阅读
 
-1. 从 [Android 预览 Release](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.1) 下载并安装 `Leaflight-Reader-0.3.0-preview.1-debug.apk`。这是开发签名的预览包，尚未上架应用商店。
+1. 从 [Android 预览 Release](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.2) 下载并安装 `Leaflight-Reader-0.3.0-preview.2-debug.apk`。这是开发签名的预览包，尚未上架应用商店。
 2. 在 Mac 版的「系统设置 → 导出备份」导出 JSON，通过 USB 或你自己的文件传输方式复制到 Pad。
 3. 在安卓版点击「导入 TXT / EPUB / 备份」，用系统文件选择器选中 JSON。只导入小说、章节、书签和阅读位置；不导入写作草稿、评审或 API Key。
 4. 打开作品阅读。已导入内容完全离线可用，阅读无需联网。应用仅为 Gemini 生成申请联网权限，不申请账户或全盘存储权限。
@@ -25,8 +25,9 @@
 
 ## 平台功能与发布对应
 
-| 本次用户任务 | Mac 0.11.11 | Android 0.3.0-preview.1 |
+| 本次用户任务 | Mac 0.11.12 | Android 0.3.0-preview.2 |
 | --- | --- | --- |
+| 共享书池免 Key 借阅、GitHub 同步与脱敏分享 | 支持 | 支持 |
 | 试读、大纲、修改原始要求后重新试读 | 支持 | 支持 |
 | 单章／连续多章、逐章保存与消息盒子 | 支持 | 支持 |
 | 停止、失败后手动补齐剩余章节 | 支持 | 支持 |
@@ -83,7 +84,7 @@ npm test
 
 浏览器测试使用隔离数据，覆盖真实 Mac 备份导入、恶意 HTML 转义、损坏备份不覆盖、再次导入、横竖屏／字体重排、翻页与书签、重启恢复、日语注音、主题和备份导出。浏览器验证不能代替实际 APK、系统文件选择器或实体 Pad 测试。上述为自动化验证，具体 APK 的测试范围请以本次交付说明为准。
 
-当前 APK 已在 Android 16 ARM64 专用平板模拟器验证从 0.2.1 覆盖升级、密钥库、系统文件导入／导出、滑动阅读、书签、横竖屏与同签名重装。生成请求使用模拟 Gemini 响应验证，未调用真实付费 API；具体范围见 [发布说明](../docs/releases/android-v0.3.0-preview.1.md)。实体 Pad 与 Android 10 最低版本尚未实机验证。
+当前 APK 已在 Android 16 ARM64 专用平板模拟器验证从 0.2.1 覆盖升级、密钥库、系统文件导入／导出、滑动阅读、书签、横竖屏与同签名重装。生成请求使用模拟 Gemini 响应验证，未调用真实付费 API；具体范围见 [发布说明](../docs/releases/android-v0.3.0-preview.2.md)。实体 Pad 与 Android 10 最低版本尚未实机验证。
 
 原生测试默认对当前 APK 执行安装与同签名重装；需要指定旧版升级来源时设置 `READER_UPGRADE_FROM=/path/to/previous-same-signed.apk`。重复原生验收需安装官方 Playwright Android 驱动（`node_modules/.bin/playwright install android`），准备名为 `LeaflightTablet` 的专用模拟器并启动 adb，再运行 `node android-reader/tests/reader.android.cjs`，随后运行 `node android-reader/tests/series.android.cjs` 验证连载流程。该测试会清空此专用模拟器中阅读器的测试数据，脚本拒绝在实体设备或其他名称的模拟器执行。
 

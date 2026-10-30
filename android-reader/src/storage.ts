@@ -2,15 +2,19 @@ export type Position={chapter:number;fraction:number;paragraph?:number;index?:nu
 export type Bookmark=Position&{id:string};
 export type Chapter={id:string;title:string;text:string;summary?:string;generationId?:string;readings?:{surface:string;reading:string}[]};
 export type Series={version:1;genre:string;idea:string;length:string;totalChapters:number;words?:number;bible:string;outline:string[];sample:string;sampleReadings?:{surface:string;reading:string}[];memory:string;context?:string};
-export type Book={id:string;title:string;synopsis:string;preset:{language:'en'|'ja';level:string};chapters:Chapter[];series?:Series;progress:Position;bookmarks:Bookmark[];updatedAt:string;[key:string]:unknown};
+export type Book={id:string;title:string;synopsis:string;preset:{language:'en'|'ja';level:string;genre?:string;words?:number;totalChapters?:number;preferences?:string};chapters:Chapter[];series?:Series;progress:Position;bookmarks:Bookmark[];updatedAt:string;source?:string;poolId?:string;sharedBy?:string;[key:string]:unknown};
+export type PoolStory={poolId:string;sharedBy:string;sharedAt:string;note:string;sourceUrl?:string;preset:{language:'en'|'ja';level:string;genre:string;words:number;totalChapters:number;preferences:string};title:string;synopsis:string;bible:string;outline:string[];sample:string;sampleReadings:{surface:string;reading:string}[];chapters:{title:string;text:string;summary:string;readings:{surface:string;reading:string}[]}[]};
 export type Settings={theme:string;font:string;size:number;line:number;width:number;mode:'pages'|'scroll';effect:string;language:'zh'|'en'|'ja';readings:boolean};
 export const defaults:Settings={theme:'paper',font:'serif',size:22,line:1.85,width:820,mode:'pages',effect:'slide',language:'zh',readings:true};
 export const effects=['none','slide','fade','paper','flip','cube-in','cube-out','bounce','carousel'];
 export const fonts=['serif','sans','mono','system'];
 export const themes=['paper','sage','night','sepia','mist','rose','lavender','ocean','charcoal','slate'];
+const DEFAULT_POOL_REPO='jayson-sheyue/Leaflight';
 function fail():never{throw Error('invalid-import');}
 const record=(v:unknown):v is Record<string,any>=>!!v&&typeof v==='object'&&!Array.isArray(v);
 const str=(v:unknown,max:number):v is string=>typeof v==='string'&&v.length<=max;
+function hashId(input:string){let h1=0x811c9dc5,h2=0x01000193;for(let i=0;i<input.length;i++){const c=input.charCodeAt(i);h1=Math.imul(h1^c,0x01000193)>>>0;h2=Math.imul(h2^(c+i),0x85ebca6b)>>>0;}return h1.toString(16).padStart(8,'0')+h2.toString(16).padStart(8,'0').slice(0,4);}
+function cleanReadings(raw:unknown){return Array.isArray(raw)?raw.filter((r:any)=>record(r)&&str(r.surface,200)&&!!r.surface&&str(r.reading,300)).slice(0,3000).map((r:any)=>({surface:r.surface,reading:r.reading})):[];}
 export function position(v:unknown,chapters:number):v is Position{
  if(!record(v)||!Number.isInteger(v.chapter)||v.chapter<0||v.chapter>=Math.max(1,chapters)||!Number.isFinite(v.fraction)||v.fraction<0||v.fraction>1)return false;
  return (v.paragraph===undefined&&v.index===undefined)||(Number.isInteger(v.paragraph)&&v.paragraph>=0&&v.paragraph<100000&&Number.isInteger(v.index)&&v.index>=0&&v.index<200000);
@@ -29,7 +33,7 @@ export function validateBook(value:unknown):Book{
  const series=cleanSeries(value,chapters.length);
  const marks:Bookmark[]=[];const seen=new Set<string>();
  for(const mark of value.bookmarks){const key=mark.chapter+':'+(Number.isInteger(mark.paragraph)?mark.paragraph+':'+mark.index:Math.round(mark.fraction*100));if(!seen.has(key)){seen.add(key);marks.push({id:mark.id,...cleanPosition(mark)});}}
- return {id:value.id,title:value.title,synopsis:value.synopsis,...(value.source==='import'?{source:'import'}:{}),preset:{language:value.preset.language||'en',level:value.preset.level},chapters,...(series?{series}:{}),progress:cleanPosition(value.progress),bookmarks:marks,updatedAt:str(value.updatedAt,100)?value.updatedAt:new Date().toISOString()};
+ return {id:value.id,title:value.title,synopsis:value.synopsis,...(value.source==='import'||value.source==='pool'?{source:value.source}:{}),...(str(value.poolId,120)&&value.poolId?{poolId:value.poolId}:{}),...(str(value.sharedBy,80)&&value.sharedBy?{sharedBy:value.sharedBy}:{}),preset:{language:value.preset.language||'en',level:value.preset.level},chapters,...(series?{series}:{}),progress:cleanPosition(value.progress),bookmarks:marks,updatedAt:str(value.updatedAt,100)?value.updatedAt:new Date().toISOString()};
 }
 function cleanSeries(book:Record<string,any>,count:number):Series|undefined{
  let v=book.series;
@@ -40,11 +44,60 @@ function cleanSeries(book:Record<string,any>,count:number):Series|undefined{
  }
  if(v===undefined)return;
  if(!record(v)||v.version!==1||!str(v.genre,100)||!v.genre||!str(v.idea,4000)||!['short','medium','long'].includes(v.length)||!Number.isInteger(v.totalChapters)||v.totalChapters<2||v.totalChapters>100||count>v.totalChapters||!str(v.bible,50000)||!Array.isArray(v.outline)||v.outline.length!==v.totalChapters||!v.outline.every((x:unknown)=>str(x,4000)&&!!x)||!str(v.sample,20000)||!str(v.memory,50000)||v.words!==undefined&&(!Number.isInteger(v.words)||v.words<100||v.words>10000)||v.context!==undefined&&!str(v.context,20000))fail();
- return {version:1,genre:v.genre,idea:v.idea,length:v.length,totalChapters:v.totalChapters,...(v.words?{words:v.words}:{}),bible:v.bible,outline:[...v.outline],sample:normalizeText(v.sample),memory:normalizeText(v.memory),...(v.context?{context:v.context}:{}),...(Array.isArray(v.sampleReadings)?{sampleReadings:v.sampleReadings.filter((r:any)=>record(r)&&str(r.surface,200)&&!!r.surface&&str(r.reading,300)).slice(0,3000).map((r:any)=>({surface:r.surface,reading:r.reading}))}:{})};
+ return {version:1,genre:v.genre,idea:v.idea,length:v.length,totalChapters:v.totalChapters,...(v.words?{words:v.words}:{}),bible:v.bible,outline:[...v.outline],sample:normalizeText(v.sample),memory:normalizeText(v.memory),...(v.context?{context:v.context}:{}),...(Array.isArray(v.sampleReadings)?{sampleReadings:cleanReadings(v.sampleReadings)}:{})};
+}
+export function validatePoolStory(raw:unknown):PoolStory{
+ const input=record(raw)&&record(raw.story)?raw.story:raw;
+ if(!record(input)||!str(input.title,300)||!input.title.trim()||!Array.isArray(input.chapters)||!input.chapters.length||input.chapters.length>100)fail();
+ const chapters=input.chapters.map((c:unknown)=>{
+  if(!record(c)||!str(c.title,300)||!c.title.trim()||!str(c.text,150000)||normalizeText(c.text).trim().length<80)fail();
+  const title=normalizeText(c.title.trim()),text=normalizeText(c.text.trim()),summary=str(c.summary,2000)&&c.summary.trim()?normalizeText(c.summary.trim()):title;
+  return {title,text,summary,readings:cleanReadings(c.readings)};
+ });
+ const rp=record(input.preset)?input.preset:{},language:'en'|'ja'=rp.language==='ja'?'ja':'en',level=str(rp.level,30)&&rp.level.trim()?rp.level.trim():(language==='ja'?'N4':'B1');
+ const genre=['fantasy','mystery','science fiction','adventure','slice of life','romance'].includes(rp.genre)?rp.genre:'slice of life';
+ const words=Number.isInteger(rp.words)?Math.min(language==='ja'?6000:3000,Math.max(300,rp.words)):(language==='ja'?900:600);
+ const outlineRaw=Array.isArray(input.outline)&&input.outline.every((x:unknown)=>str(x,500)&&!!x.trim())?input.outline.map((x:string)=>normalizeText(x.trim())):chapters.map(c=>c.title);
+ const totalChapters=Math.min(100,Math.max(chapters.length,outlineRaw.length,Number.isInteger(rp.totalChapters)?rp.totalChapters:chapters.length));
+ const outline=[...outlineRaw];while(outline.length<totalChapters){const ch=chapters[outline.length];outline.push(ch?ch.title:`Chapter ${outline.length+1}`);}
+ const preferences=str(rp.preferences,3000)?rp.preferences:'';
+ const synopsis=str(input.synopsis,4000)&&input.synopsis.trim()?normalizeText(input.synopsis.trim()):chapters[0].summary;
+ const bible=str(input.bible,6000)?normalizeText(input.bible.trim()):'';
+ const sample=str(input.sample,20000)&&input.sample.trim()?normalizeText(input.sample.trim()):chapters[0].text.split(/\n\s*\n/).slice(0,2).join('\n\n');
+ const sampleReadings=cleanReadings(input.sampleReadings??chapters[0].readings);
+ const sharedBy=str(input.sharedBy,60)&&input.sharedBy.trim()?input.sharedBy.trim():'Leaflight Reader';
+ const sharedAt=typeof input.sharedAt==='string'&&!Number.isNaN(Date.parse(input.sharedAt))?new Date(input.sharedAt).toISOString():'2026-04-20T00:00:00.000Z';
+ const note=str(input.note,280)?input.note.trim():'';
+ const sourceUrl=str(input.sourceUrl,500)&&/^https:\/\/github\.com\//i.test(input.sourceUrl)?input.sourceUrl:undefined;
+ const poolId=typeof input.poolId==='string'&&/^[a-z0-9][a-z0-9._-]{2,80}$/i.test(input.poolId.trim())?input.poolId.trim().toLowerCase():`pool-${language}-${level.toLowerCase()}-${hashId(`${language}:${level}:${input.title.trim().toLowerCase()}:${chapters[0].title.toLowerCase()}`)}`;
+ return {poolId,sharedBy,sharedAt,note,...(sourceUrl?{sourceUrl}:{}),preset:{language,level,genre,words,totalChapters,preferences},title:normalizeText(input.title.trim()),synopsis,bible,outline:outline.slice(0,totalChapters),sample,sampleReadings,chapters};
+}
+export function poolStoryToBook(raw:unknown):Book{
+ const s=validatePoolStory(raw);
+ const chapters:Chapter[]=s.chapters.map((c,i)=>({id:`${s.poolId}-ch-${i+1}`,title:c.title,text:c.text,summary:c.summary,...(c.readings.length?{readings:c.readings}:{})}));
+ const series:Series|undefined=s.preset.totalChapters>=2?{version:1,genre:s.preset.genre,idea:s.preset.preferences||s.synopsis,length:'medium',words:s.preset.words,totalChapters:s.preset.totalChapters,bible:s.bible||s.synopsis,outline:s.outline,sample:s.sample,sampleReadings:s.sampleReadings,memory:chapters.at(-1)?.summary||s.synopsis}:undefined;
+ return validateBook({id:s.poolId,source:'pool',poolId:s.poolId,sharedBy:s.sharedBy,title:s.title,synopsis:s.synopsis,preset:{language:s.preset.language,level:s.preset.level},chapters,...(series?{series}:{}),progress:{chapter:0,fraction:0},bookmarks:[],updatedAt:s.sharedAt});
+}
+export function sanitizeForPool(book:Book,meta:{sharedBy?:string;note?:string;repo?:string}={}){
+ if(!record(book)||!Array.isArray(book.chapters)||!book.chapters.length)throw Error('empty-book');
+ const s=validatePoolStory({poolId:book.poolId,sharedBy:meta.sharedBy,sharedAt:new Date().toISOString(),note:meta.note,preset:{language:book.preset?.language||'en',level:book.preset?.level||'B1',genre:book.series?.genre||book.preset?.genre||'slice of life',words:book.series?.words||book.preset?.words||600,totalChapters:book.series?.totalChapters||book.chapters.length,preferences:book.series?.idea||''},title:book.title,synopsis:book.synopsis||book.chapters[0]?.summary||book.title,bible:book.series?.bible||'',outline:book.series?.outline||book.chapters.map(c=>c.title),sample:book.series?.sample||book.chapters[0].text.split(/\n\s*\n/).slice(0,2).join('\n\n'),sampleReadings:book.series?.sampleReadings||book.chapters[0].readings||[],chapters:book.chapters.map(c=>({title:c.title,text:c.text,summary:c.summary||c.title,readings:c.readings||[]}))});
+ const langLabel=s.preset.language.toUpperCase(),issueTitle=`[Story Pool] (${langLabel} ${s.preset.level}) ${s.title}`;
+ const exportPayload={format:'leaflight-pool-story' as const,version:1 as const,story:s};
+ const issueBody=[`### ${s.title}`,'',`- **Language / Level**: ${langLabel} · ${s.preset.level}`,`- **Genre**: ${s.preset.genre}`,`- **Chapters**: ${s.chapters.length} / ${s.preset.totalChapters}`,`- **Shared by**: ${s.sharedBy}`,...(s.note?[`- **Reader Note**: ${s.note}`]:[]),'',`> ${s.synopsis}`,'','```leaflight-story',JSON.stringify(exportPayload,null,2),'```'].join('\n');
+ const repo=meta.repo?.trim()||DEFAULT_POOL_REPO,fullUrl=`https://github.com/${repo}/issues/new?labels=story-pool&title=${encodeURIComponent(issueTitle)}&body=${encodeURIComponent(issueBody)}`;
+ const fallbackBody=[`### ${s.title}`,'',`> 已自动将完整作品内容复制到剪贴板，请在下方长按粘贴后点击 Submit new issue 即可！`,'','<!-- 请在此处粘贴剪贴板中的内容 -->'].join('\n');
+ return {story:s,exportPayload,issueTitle,issueBody,newIssueUrl:fullUrl.length<=7200?fullUrl:`https://github.com/${repo}/issues/new?labels=story-pool&title=${encodeURIComponent(issueTitle)}&body=${encodeURIComponent(fallbackBody)}`,urlTruncated:fullUrl.length>7200};
+}
+export function extractStoryFromIssue(issue:unknown):PoolStory|null{
+ if(!record(issue)||typeof issue.body!=='string')return null;
+ const fence=issue.body.match(/```(?:leaflight-story|json)\s*([\s\S]*?)```/i),candidate=fence?fence[1].trim():issue.body.trim();
+ if(!candidate.startsWith('{'))return null;
+ try{const parsed=JSON.parse(candidate),raw=record(parsed)&&record(parsed.story)?parsed.story:parsed;if(!record(raw))return null;return validatePoolStory({...raw,sharedBy:raw.sharedBy||issue.user?.login||'GitHub Reader',sharedAt:raw.sharedAt||issue.created_at||new Date().toISOString(),sourceUrl:issue.html_url||raw.sourceUrl});}catch{return null;}
 }
 export function parseImport(text:string){
  if(new TextEncoder().encode(text).length>30*1024*1024)throw Error('too-large');
  let data:any;try{data=JSON.parse(text);}catch{fail();}
+ if(record(data)&&data.format==='leaflight-pool-story'&&data.version===1)return {books:[poolStoryToBook(data.story??data)],source:'leaflight-pool-story',settings:null};
  if(!record(data)||!['leaflight','leaflight-reader'].includes(data.format)||data.version!==1||!Array.isArray(data.books)||data.books.length>500)fail();
  const books=data.books.map(validateBook);if(new Set(books.map((b:Book)=>b.id)).size!==books.length)fail();
  return {books:books as Book[],source:data.format,settings:data.format==='leaflight-reader'?validateSettings(data.settings):null};

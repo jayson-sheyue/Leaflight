@@ -1,7 +1,7 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),Module=require('node:module'),os=require('node:os'),ts=require('typescript');
 const source=path.resolve(__dirname,'../src/storage.ts'),compiled=ts.transpileModule(fs.readFileSync(source,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText;
 const m=new Module(source,module);m._compile(compiled,source);
-const {parseImport,mergeBooks,validateSettings,defaults}=m.exports,{Store}=require('../../electron/store.cjs'),demo=require('../../electron/demo.cjs');
+const {parseImport,mergeBooks,validateSettings,defaults,validatePoolStory,poolStoryToBook,sanitizeForPool,extractStoryFromIssue}=m.exports,{Store}=require('../../electron/store.cjs'),demo=require('../../electron/demo.cjs'),seed=require('../../electron/pool-seed.json');
 function fixture(t){const dir=fs.mkdtempSync(path.join(os.tmpdir(),'leaflight-android-unit-')),s=new Store(path.join(dir,'library.sqlite'));t.after(()=>{s.close();fs.rmSync(dir,{recursive:true,force:true});});let b=s.create({language:'en',level:'B1',genre:'fantasy',words:1000,totalChapters:3,preferences:''},demo.plan);b=s.append(b.id,demo.chapters[0]);s.progress(b.id,{chapter:0,fraction:.4,paragraph:3,index:8});s.bookmark(b.id,{chapter:0,fraction:.4});return {s,b:s.get(b.id)};}
 test('imports real Mac backup, keeps prose/ruby/legacy anchors, strips writings and unknown credential fields',t=>{
  const {s,b}=fixture(t);s.writing.create({title:'Private writing',language:'en',text:'A draft that is not a novel.',goal:''});
@@ -34,4 +34,16 @@ test('continuation metadata survives Mac and reader backups with secret fields s
 test('legacy readable prose remains importable if its old Mac outline no longer fits its chapters; invalid explicit series are rejected',t=>{
  const {s}=fixture(t),backup=s.backup();backup.books[0].chapters.push({...backup.books[0].chapters[0],id:'2'},{...backup.books[0].chapters[0],id:'3'},{...backup.books[0].chapters[0],id:'4'});const read=parseImport(JSON.stringify(backup));assert.equal(read.books[0].chapters.length,4);assert.equal(read.books[0].series,undefined);
  const invalid=structuredClone(read);invalid.books[0].series={version:1,totalChapters:2};assert.throws(()=>parseImport(JSON.stringify({format:'leaflight-reader',version:1,books:invalid.books})));
+});
+test('community story pool seed stories convert to books, strip secrets on share, and import via parseImport',t=>{
+ assert.equal(seed.length,4);
+ for(const item of seed){const valid=validatePoolStory(item),book=poolStoryToBook(valid);assert.equal(book.id,valid.poolId);assert.equal(book.source,'pool');assert(book.chapters.length>=2);}
+ const {s}=fixture(t),local=parseImport(JSON.stringify(s.backup())).books[0];
+ local.apiKey='secret-test-key';local.progress={chapter:0,fraction:.7,paragraph:2,index:4};local.bookmarks=[{id:'bm-1',chapter:0,fraction:.7}];
+ const prepared=sanitizeForPool(local,{sharedBy:'Pad Reader',note:'Great B1 read!'});
+ assert(!JSON.stringify(prepared).includes('secret-test-key'));assert(!JSON.stringify(prepared).includes('bm-1'));assert(prepared.newIssueUrl.startsWith('https://github.com/jayson-sheyue/Leaflight/issues/new'));
+ const imported=parseImport(JSON.stringify(prepared.exportPayload));
+ assert.equal(imported.source,'leaflight-pool-story');assert.equal(imported.books.length,1);assert.equal(imported.books[0].sharedBy,'Pad Reader');
+ const fromIssue=extractStoryFromIssue({body:prepared.issueBody,user:{login:'gh-user'},html_url:'https://github.com/jayson-sheyue/Leaflight/issues/1'});
+ assert.equal(fromIssue.title,local.title);assert.equal(fromIssue.sourceUrl,'https://github.com/jayson-sheyue/Leaflight/issues/1');
 });
