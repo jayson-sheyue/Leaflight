@@ -1,3 +1,4 @@
+const {testCredentialArgs}=require('./mac-keychain.cjs');
 const {_electron}=require('playwright');
 const assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),os=require('node:os');
 const {Store}=require('../electron/store.cjs'),demo=require('../electron/demo.cjs');
@@ -14,7 +15,7 @@ const {Store}=require('../electron/store.cjs'),demo=require('../electron/demo.cj
  store.writing.record('fixture-review',draft,{summary:'Clear descriptions.',strengths:['A clear setting.'],dimensions:['grammar','vocabulary','logic','fluency'].map(id=>({id,assessment:'The passage is readable.',issues:[]})),correctedText:corrected,practice:['Describe a sound.']},'zh','mock');store.close();
  try{
   const env={...process.env,NODE_ENV:'test',LEAFLIGHT_TEST_DATA:dir};delete env.ELECTRON_RUN_AS_NODE;
-  app=await _electron.launch({...(process.env.LEAFLIGHT_PACKAGED?{executablePath:process.env.LEAFLIGHT_PACKAGED,args:[]}:{args:[path.resolve('.')]}),env});
+  app=await _electron.launch({...(process.env.LEAFLIGHT_PACKAGED?{executablePath:process.env.LEAFLIGHT_PACKAGED,args:testCredentialArgs}:{args:[path.resolve('.'),...testCredentialArgs]}),env});
   const page=await app.firstWindow();page.on('pageerror',e=>errors.push(e.message));await page.emulateMedia({reducedMotion:'reduce'});
   await app.evaluate(()=>{global.fetch=async()=>{throw Error('No live requests allowed');};});
   await page.locator('[data-action=writing]').click();await page.locator('.review-report').waitFor();

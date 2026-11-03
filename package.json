@@ -1,6 +1,6 @@
 {
   "name": "novel-reading",
-  "version": "0.11.12",
+  "version": "0.11.13",
   "private": true,
   "description": "A local-first English and Japanese fiction studio and reader",
   "main": "electron/main.cjs",
@@ -35,7 +35,14 @@
       "output": "release"
     },
     "mac": {
-      "category": "public.app-category.books"
-    }
+      "category": "public.app-category.books",
+      "identity": "-",
+      "hardenedRuntime": true,
+      "entitlements": "build/entitlements.mac.plist",
+      "entitlementsInherit": "build/entitlements.mac.plist",
+      "strictVerify": true
+    },
+    "afterSign": "scripts/after-sign.cjs",
+    "forceCodeSigning": true
   }
 }
