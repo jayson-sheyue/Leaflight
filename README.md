@@ -16,7 +16,7 @@
 <img src="docs/assets/leaflight-overview.gif" alt="Leaflight 全流程核心功能动图演示" width="100%" />
 
 <p align="center">
-  <sub>▲ <b>Leaflight 核心功能一镜预览</b>：暖纸与深海玻璃主题书架 → 三步式新建故事 → 科学 × 奇幻阅读预设 → 英/日仿真阅读器与假名注音 → 本地「科学手记」 → 独立写作台（图表渲染 + 四维 AI 批改） → 非阻塞后台消息盒子。图片展示基础流程；最新面板放大操作见下方说明。</sub>
+  <sub>▲ <b>Leaflight 核心功能一镜预览</b>：暖纸与深海玻璃主题书架 → 共享书池（免 Key 借阅与分享） → 三步式新建故事 → 科学 × 奇幻阅读预设 → 英/日仿真阅读器与假名注音 → 本地「科学手记」 → 独立写作台（图表渲染 + 四维 AI 批改） → 非阻塞后台消息盒子。</sub>
 </p>
 
 </div>
@@ -167,6 +167,19 @@ Leaflight 独创了 **Science × Fantasy（科学 × 奇幻/科幻/悬疑）** �
 - **修改要求，重新试读**：在初次试读页点击此按钮，会返回并保留最初填写的创作要求。修改后重新生成的是一份新的试读和大纲；这里不编辑或微调上次 AI 生成的大纲。设定说明和费用细节按需展开，常用操作优先呈现。
 - **离线示例**：无需 API Key 即可打开内置的三章英文故事 *The Lantern Keeper*，体验排版、翻页和书签，也可离线浏览写作题库；它是固定示例，不是按自定义提示生成的作品。
 - **支持导出与备份**：支持将任意完结或连载中的故事导出为标准 **EPUB 3 电子书**（兼容 Apple Books / Kindle / Kobo）或 **TXT 纯文本**，并支持全库 JSON 一键备份与恢复。
+
+<table>
+  <tr>
+    <td width="50%">
+      <img src="docs/assets/community-pool.png" alt="共享书池免Key借阅与GitHub同步" />
+      <p align="center"><sub><b>共享书池（免 Key 借阅）</b>：按语言/等级筛选，展开开篇试读（含日语振假名）并一键加入书架</sub></p>
+    </td>
+    <td width="50%">
+      <img src="docs/assets/story-share.png" alt="分享作品到公共书池" />
+      <p align="center"><sub><b>一键脱敏分享</b>：自动剥离个人进度与书签，支持免 Token 浏览器投稿、Token 直传或导出 JSON</sub></p>
+    </td>
+  </tr>
+</table>
 
 <div align="center">
   <img src="docs/assets/background-inbox.png" alt="非阻塞后台消息盒子" width="85%" />
