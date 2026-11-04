@@ -195,6 +195,8 @@ Leaflight 独创了 **Science × Fantasy（科学 × 奇幻/科幻/悬疑）** �
 
 Mac v0.11.14 与 Android Reader 0.3.0-preview.3 同步支持长篇 ZIP 附件投稿、自动收录反馈、目录同步及按需下载全文。Mac 保留完整 ad-hoc 资源签名，但尚未获得 Apple 公证；当前从 Release 手动更新。详见 [Mac 发布说明](docs/releases/v0.11.14.md) 与 [共享书池指南](docs/community-pool.md)。
 
+已用 24 章、约 20 万字符的合成作品完成真实 GitHub ZIP 投稿、自动收录反馈及 Android 最终 APK 全文借阅验收；测试条目已清理。[公开验收记录](https://github.com/jayson-sheyue/Leaflight/issues/2)。
+
 ### Android Pad 阅读预览
 
 独立的 **Leaflight Reader 0.3.0-preview.3** 安卓项目支持导入 Mac JSON 离线阅读，提供主题、字体、翻页、书签与进度，并同步支持「共享书池」免 Key 借阅、目录同步、按需下载与 ZIP / 单书 JSON 分享。可导入 UTF-8 TXT、未加密 EPUB、单书分享 JSON 或全库备份；也可配置自己的 Gemini Key，生成英日独立短篇或先试读后创建章节连载；支持下一章、连续多章、逐章保存、停止及手动补齐剩余章节，状态在消息盒子中查看。试读的「修改要求，重新试读」会修改原始创作要求并生成新试读与大纲。两端进度暂不自动同步；安卓版暂不包含写作、评审与选级对照等既有模块。Mac 与 Android 的构建和数据独立。[安装、构建与限制说明](android-reader/README.md)。 [下载 APK](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.3)。

@@ -97,6 +97,8 @@ npm test
 
 原生测试默认对当前 APK 执行安装与同签名重装；需要指定旧版升级来源时设置 `READER_UPGRADE_FROM=/path/to/previous-same-signed.apk`。重复原生验收需安装官方 Playwright Android 驱动（`node_modules/.bin/playwright install android`），准备名为 `LeaflightTablet` 的专用模拟器并启动 adb，再运行 `node android-reader/tests/reader.android.cjs`，随后运行 `node android-reader/tests/series.android.cjs` 验证连载流程。该测试会清空此专用模拟器中阅读器的测试数据，脚本拒绝在实体设备或其他名称的模拟器执行。
 
+`node android-reader/tests/pool-live.android.cjs` 在上述专用模拟器中验证真实公开 GitHub 目录和原生全文下载，并与本地同版本归档逐章核对。先同步仓库目录，默认选择非内置作品；可用 `LEAFLIGHT_TEST_POOL_ID=<公开作品标识>` 指定。它仅移除模拟器中该作品和目录缓存，借阅后重启核对保存，不投稿、不调用模型。24 章长篇的实际投稿／借阅结果见 [发布说明](../docs/releases/android-v0.3.0-preview.3.md)。
+
 ## 官方技术依据
 
 - [Android：加载应用内 Web 内容](https://developer.android.com/develop/ui/views/layout/webapps/load-local-content)——资源随 APK 打包，固定可信 HTTPS 来源；原生壳提供本地资源并阻止其他导航。

@@ -9,4 +9,6 @@ APK：`Leaflight-Reader-0.3.0-preview.3-debug.apk`，versionCode 6。仍为本�
 
 [操作、格式和上限](../community-pool.md) · [Android 构建及限制](../../android-reader/README.md)。实际验收范围与产物校验值见 Release 附件；浏览器排版测试不代替实机验证。
 
-已执行 10 项 Android 单元检查、TypeScript / Vite / 原生构建、浏览器长篇流程与窄屏排版，以及 Android 16 ARM64 专用模拟器的旧版升级、SAF ZIP 保存／取消、完整 24 章解压互通及消息持久化。使用隔离测试数据，没有付费模型调用；实体 Pad 与 Android 10 最低版本未实机验收。GitHub 线上附件验收状态见 Release 附件。
+已执行 10 项 Android 单元检查、TypeScript / Vite / 原生构建、浏览器长篇流程与窄屏排版，以及 Android 16 ARM64 专用模拟器的旧版升级、SAF ZIP 保存／取消、完整 24 章解压互通及消息持久化。使用隔离测试数据，没有付费模型调用；实体 Pad 与 Android 10 最低版本未实机验收。
+
+2026-11-04 线上补充：通过 GitHub 页面上传超过 Issue 正文上限的 24 章合成测试 ZIP，[投稿 #2](https://github.com/jayson-sheyue/Leaflight/issues/2) 已自动收录并返回成功反馈。最终 APK 从公开目录借阅，原生 HTTPS 下载并校验，重启后 24 章正文与上传作品逐章一致。已关闭测试投稿并移除测试书，保留验证记录。公开 APK 回下载的 SHA-256 与签名证书一致。Release 新增 `verification-live-20261104.json` 和截图，原始记录、APK 与 tag 保持不变。
