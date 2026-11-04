@@ -1,7 +1,32 @@
 {
   "version": 2,
-  "updatedAt": "2026-11-04T09:07:23.965Z",
+  "updatedAt": "2026-11-04T09:11:55.848Z",
   "stories": [
+    {
+      "poolId": "pool-en-b1-f5b4772b21af",
+      "path": "community-pool/stories/pool-en-b1-f5b4772b21af.json",
+      "title": "The Magic Rebellion of Oak High",
+      "synopsis": "Oak High School is a nightmare. Students wake up at five in the morning and study until ten at night. The greedy school leaders treat students like prisoners. They ban bathroom breaks, force students to stand in the freezing rain, and demand bribes. Kai is just another tired student. But one day, he discovers he has magical powers. He can freeze time, move objects with his mind, and control the weather. Kai decides to use his new gifts to fight the cruel leaders and bring freedom to his classmates.",
+      "sharedBy": "SJ",
+      "sharedAt": "2026-11-04T09:11:14.443Z",
+      "note": "",
+      "preset": {
+        "language": "en",
+        "level": "B1",
+        "genre": "fantasy",
+        "words": 1000,
+        "totalChapters": 8
+      },
+      "sample": "Oak High School was a prison. It was not a normal school. The students woke up at five in the morning. They studied until ten at night. There was no time to rest.\n\nKai sat at his desk. His head hurt. It was the short break between classes. He wanted to stand up and stretch his legs.\n\n\"Sit down, Kai!\" a loud voice barked.\n\nIt was Mr. Vance, the school director. He stood at the door with a cruel smile.\n\n\"No one moves during the break,\" Mr. Vance said. \"You must stay in your seats. Do not waste your energy. You need it for the exams.\"\n\nKai sighed. He looked out the window. The sky was dark gray. Soon, they had to run on the sports field. The school forced them to run close together. They had to step at the exact same time. They even had to shout words from their textbooks while running. It was torture.\n\nSuddenly, Kai felt a strange heat in his chest. His pencil rolled off the desk. Before it hit the floor, it stopped. It floated in the air.\n\nKai blinked. He looked around. No one else saw the floating pencil. He moved his finger. The pencil followed his movement.\n\nA warm feeling of power spread through his body. He was tired of Mr. Vance. He was tired of the endless rules. Maybe things at Oak High were finally going to change.",
+      "sampleReadings": [],
+      "chapterCount": 8,
+      "content": {
+        "path": "community-pool/stories/pool-en-b1-f5b4772b21af.json",
+        "sha256": "208c05439c9b0599fb45f1fcd61f0d42390c0375ab2f00c823efde0280dd9c3e",
+        "bytes": 72501
+      },
+      "sourceUrl": "https://github.com/jayson-sheyue/Leaflight/issues/5"
+    },
     {
       "poolId": "pool-en-b1-4ac5198f5fbe",
       "path": "community-pool/stories/pool-en-b1-4ac5198f5fbe.json",
