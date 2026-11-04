@@ -1,7 +1,32 @@
 {
   "version": 2,
-  "updatedAt": "2026-11-04T08:55:50.638Z",
+  "updatedAt": "2026-11-04T09:07:23.965Z",
   "stories": [
+    {
+      "poolId": "pool-en-b1-4ac5198f5fbe",
+      "path": "community-pool/stories/pool-en-b1-4ac5198f5fbe.json",
+      "title": "The Living Lair",
+      "synopsis": "Peter, a brave warrior wielding twin ancient spears, infiltrates a massive biological dungeon to rescue Princess Elara. Elara uses her knowledge of science to compare the monster's lair to a cellular city. Together, they must fight through automated biological defenses, realize the limits of their city model, and escape to live happily ever after.",
+      "sharedBy": "Leaflight Reader",
+      "sharedAt": "2026-11-04T09:06:24.993Z",
+      "note": "",
+      "preset": {
+        "language": "en",
+        "level": "B1",
+        "genre": "adventure",
+        "words": 2000,
+        "totalChapters": 6
+      },
+      "sample": "Peter gripped his twin long spears. The walls around him were not made of stone. They pulsed with a wet, dark pink light. He had finally reached the outer wall of the living dungeon.\n\nThe kingdom called it the Bio-Lair. Somewhere inside this massive, breathing cave, Princess Elara was trapped.\n\nTwo large creatures stepped out of the shadows. They had no eyes, only thick armor and sharp claws. They were the boundary guards of this strange place.\n\nPeter did not panic. He spun his right spear, catching the first guard's attention. As the creature lunged forward, Peter quickly stepped aside. He drove his left spear into a soft spot beneath its thick armor. The monster let out a strange hiss and dissolved into a thick, green liquid.\n\n\"One down,\" Peter whispered to himself.\n\nHe knew the journey would only get harder. The lair was designed to keep intruders out and keep the princess inside. But Peter had a careful plan. He moved quietly through the soft, strange tunnels. He needed to find the center of this place. He had to find Elara.",
+      "sampleReadings": [],
+      "chapterCount": 6,
+      "content": {
+        "path": "community-pool/stories/pool-en-b1-4ac5198f5fbe.json",
+        "sha256": "b2670be9e3c9911686655fc139800f396748832298d79fd9335fdc5bb9cde3c8",
+        "bytes": 96527
+      },
+      "sourceUrl": "https://github.com/jayson-sheyue/Leaflight/issues/4"
+    },
     {
       "poolId": "pool-en-b2-a476995313e7",
       "path": "community-pool/stories/pool-en-b2-a476995313e7.json",
