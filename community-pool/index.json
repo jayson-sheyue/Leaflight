@@ -1,7 +1,32 @@
 {
   "version": 2,
-  "updatedAt": "2026-11-04T08:03:29.229Z",
+  "updatedAt": "2026-11-04T08:47:14.782Z",
   "stories": [
+    {
+      "poolId": "pool-en-b1-acceptance-20261104",
+      "path": "community-pool/stories/pool-en-b1-acceptance-20261104.json",
+      "title": "ZIP sharing acceptance fixture (24 chapters)",
+      "synopsis": "When a silent lighthouse begins sending messages to an empty sea, a young mapmaker discovers that her quiet town has forgotten something important.",
+      "sharedBy": "Leaflight verification (synthetic)",
+      "sharedAt": "2026-11-04T08:16:03.396Z",
+      "note": "Synthetic pipeline test. Not a reading recommendation. Will be removed from the catalog after verification.",
+      "preset": {
+        "language": "en",
+        "level": "B1",
+        "genre": "fantasy",
+        "words": 500,
+        "totalChapters": 24
+      },
+      "sample": "The lighthouse had been dark for seven years. On Tuesday evening, it began to shine again. Mara noticed it from the window of her little map shop. The light moved across the water, slowly and carefully, as if someone were searching for a lost key.",
+      "sampleReadings": [],
+      "chapterCount": 24,
+      "content": {
+        "path": "community-pool/stories/pool-en-b1-acceptance-20261104.json",
+        "sha256": "476d44d8d259f5f638cf68943fd3f0ef9e2edc581d7845d82d5d4c9d9d0ff1a9",
+        "bytes": 208109
+      },
+      "sourceUrl": "https://github.com/jayson-sheyue/Leaflight/issues/2"
+    },
     {
       "poolId": "pool-en-b2-a476995313e7",
       "path": "community-pool/stories/pool-en-b2-a476995313e7.json",
