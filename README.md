@@ -6,8 +6,8 @@
 
 *A Local-First English (CEFR A2–C1) & Japanese (JLPT N5–N1) AI Fiction Studio, Tactile Graded Reader, Science × Fantasy Learning Companion, and 4D Writing Coach for macOS.*
 
-[![Release](https://img.shields.io/badge/Release-v0.11.13-2d5a46?style=for-the-badge)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.13)
-[![Platform](https://img.shields.io/badge/macOS-Apple%20Silicon%20(arm64)-1d1d1f?style=for-the-badge&logo=apple)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.13)
+[![Release](https://img.shields.io/badge/Release-v0.11.14-2d5a46?style=for-the-badge)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.14)
+[![Platform](https://img.shields.io/badge/macOS-Apple%20Silicon%20(arm64)-1d1d1f?style=for-the-badge&logo=apple)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.14)
 [![Storage](https://img.shields.io/badge/Local--First-SQLite%20%2B%20Keychain-0f4c5c?style=for-the-badge)](#5-本地优先隐私安全与非阻塞后台消息盒子)
 [![Languages](https://img.shields.io/badge/Bilingual-English%20CEFR%20A2--C1%20%7C%20Japanese%20JLPT%20N5--N1-8c4a27?style=for-the-badge)](#1-英日双语分级故事工坊-cefr-a2c1--jlpt-n5n1)
 
@@ -160,8 +160,9 @@ Leaflight 独创了 **Science × Fantasy（科学 × 奇幻/科幻/悬疑）** �
 ### 5. 本地优先、共享书池（免 Key 读与分享）与非阻塞后台消息盒子
 
 - **共享书池（从公共书池拉取 / 上传到公共书池）**：
-  - **免 API Key 借阅与 GitHub 同步**：在左侧导航栏或书架顶部点击 **「共享书池」**，即可按语言（`English` / `日本語`）和等级（`A2–C1` / `N5–N1`）筛选作品、展开「开篇试读」，并一键加入书架离线阅读。应用内置 4 部完整双语分级小说（含日语 N4 振假名注音），点击 **「从 GitHub 同步最新」** 可直接拉取本仓库 `community-pool/index.json` 与带有 `story-pool` 标签的社区投稿 Issue，也支持导入 `.leaflight-story.json` 分享文件。
-  - **一键脱敏分享到公共书池**：在书架卡片或阅读器顶部点击 **「分享」/「分享到书池」**，系统会自动剥离个人阅读进度、书签、难度反馈与本地任务 ID，并提供三种分享方式：① **免 Token · 浏览器一键投稿（推荐）**：自动复制完整作品 Markdown + `leaflight-story` 代码块到剪贴板并打开 GitHub Issue 页面，粘贴提交后由 GitHub Actions 自动校验并归档入池；② **客户端直传至 GitHub 书池**：填入可选的 GitHub Personal Access Token（经 `safeStorage` 加密保存）直接从客户端发布；③ **导出分享文件 (`.json`)**。
+  - **免 API Key 借阅与按需下载**：点击「共享书池」按英／日语言和等级筛选，展开开篇试读。内置 4 部完整作品可离线使用；「从 GitHub 同步最新」仅拉取目录、简介和试读，点击「加入书架」才下载并校验该小说全文，之后离线阅读。
+  - **长篇分享包投稿**：在书架卡片或阅读器点击「分享 → 分享包投稿」，保存 ZIP，在自动打开的 GitHub 投稿页上传附件，等待上传完成再提交。无需 Gemini Key 或 GitHub Token；不再把整本小说粘贴进 Issue 正文。收录成功／失败由机器人回复在原投稿下，保存分享包不等于已投稿或已收录。
+  - **兼容与隐私**：剥离个人进度、书签、密钥与本地任务；旧单书 JSON 和正文投稿继续兼容，Mac 与 Android 均支持导入 ZIP。分享包 ZIP 上限 25 MiB、解压 JSON 上限 30 MiB、最多 100 章；正文中自行写入的私人信息需投稿前检查。Mac 的 Token 直传保留给短篇。[操作、上限及收录说明](docs/community-pool.md)。
 - **非阻塞后台任务队列（消息盒子）**：新建故事、续写章节或提交长文批改时，任务进入后台运行。你可以继续阅读其他作品，在「消息盒子」查看进度和结果。
 - **连续生成多章（Mac / Android）**：打开作品，在章节目录下点击「连续生成多章」，选择章数后开始；可选剩余全部章节。章节按顺序生成，每章保存后即可阅读，下一章会使用最新的故事摘要和连续性记忆。每章发起一次 API 调用；这能减少重复操作，单章生成速度仍取决于模型。失败或停止时保留已完成章节，在消息盒子点击「继续未完成章节」仅补齐原定范围内的剩余章节；退出应用后不会自动恢复付费生成。停止后不再发起后续请求，已发出的请求仍可能计费。
 - **修改要求，重新试读**：在初次试读页点击此按钮，会返回并保留最初填写的创作要求。修改后重新生成的是一份新的试读和大纲；这里不编辑或微调上次 AI 生成的大纲。设定说明和费用细节按需展开，常用操作优先呈现。
@@ -176,7 +177,7 @@ Leaflight 独创了 **Science × Fantasy（科学 × 奇幻/科幻/悬疑）** �
     </td>
     <td width="50%">
       <img src="docs/assets/story-share.png" alt="分享作品到公共书池" />
-      <p align="center"><sub><b>一键脱敏分享</b>：自动剥离个人进度与书签，支持免 Token 浏览器投稿、Token 直传或导出 JSON</sub></p>
+      <p align="center"><sub><b>一键脱敏分享</b>：演示数据：保存 ZIP 后上传投稿，短篇 Token 直传与 JSON 导出保留</sub></p>
     </td>
   </tr>
 </table>
@@ -192,22 +193,22 @@ Leaflight 独创了 **Science × Fantasy（科学 × 奇幻/科幻/悬疑）** �
 
 ### 当前版本
 
-Mac v0.11.13 修复旧安装包内 App 的无效资源签名，增加整包签名与发布校验。Mac 与 Android Reader 0.3.0-preview.2 均保留共享书池、连续生成多章与修改原始要求重新试读。本次仅涉及 macOS 分发，Android 无需重新打包。详见 [v0.11.13 发布说明](docs/releases/v0.11.13.md)。
+Mac v0.11.14 与 Android Reader 0.3.0-preview.3 同步支持长篇 ZIP 附件投稿、自动收录反馈、目录同步及按需下载全文。Mac 保留完整 ad-hoc 资源签名，但尚未获得 Apple 公证；当前从 Release 手动更新。详见 [Mac 发布说明](docs/releases/v0.11.14.md) 与 [共享书池指南](docs/community-pool.md)。
 
 ### Android Pad 阅读预览
 
-独立的 **Leaflight Reader 0.3.0-preview.2** 安卓项目支持导入 Mac JSON 离线阅读，提供主题、字体、翻页、书签与进度，并同步支持「共享书池」免 Key 借阅、GitHub 同步与单书 JSON 分享。可导入 UTF-8 TXT、未加密 EPUB、单书分享 JSON 或全库备份；也可配置自己的 Gemini Key，生成英日独立短篇或先试读后创建章节连载；支持下一章、连续多章、逐章保存、停止及手动补齐剩余章节，状态在消息盒子中查看。试读的「修改要求，重新试读」会修改原始创作要求并生成新试读与大纲。两端进度暂不自动同步；安卓版暂不包含写作、评审与选级对照等既有模块。Mac 与 Android 的构建和数据独立。[安装、构建与限制说明](android-reader/README.md)。 [下载 APK](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.2)。
+独立的 **Leaflight Reader 0.3.0-preview.3** 安卓项目支持导入 Mac JSON 离线阅读，提供主题、字体、翻页、书签与进度，并同步支持「共享书池」免 Key 借阅、目录同步、按需下载与 ZIP / 单书 JSON 分享。可导入 UTF-8 TXT、未加密 EPUB、单书分享 JSON 或全库备份；也可配置自己的 Gemini Key，生成英日独立短篇或先试读后创建章节连载；支持下一章、连续多章、逐章保存、停止及手动补齐剩余章节，状态在消息盒子中查看。试读的「修改要求，重新试读」会修改原始创作要求并生成新试读与大纲。两端进度暂不自动同步；安卓版暂不包含写作、评审与选级对照等既有模块。Mac 与 Android 的构建和数据独立。[安装、构建与限制说明](android-reader/README.md)。 [下载 APK](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.3)。
 
 ### 方式一：直接安装 macOS 桌面端（推荐）
 
-1. 前往本仓库的 [**v0.11.13 Release**](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.13)，下载安装包：
-   - 🍎 **`Leaflight-0.11.13-arm64.dmg`**（Apple Silicon Mac；不提供 Intel / Windows / Linux 安装包）
+1. 前往本仓库的 [**v0.11.14 Release**](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.14)，下载安装包：
+   - 🍎 **`Leaflight-0.11.14-arm64.dmg`**（Apple Silicon Mac；不提供 Intel / Windows / Linux 安装包）
 2. 双击打开 `.dmg`，将 **Leaflight.app** 拖入 `Applications（应用程序）` 文件夹。
 3. 首次打开即可在「共享书池」免费借阅英日分级小说、阅读内置示范故事、导入本地 `TXT / EPUB` 电子书，或浏览 184 道写作题库；如需使用 **AI 生成新故事/章节** 或 **AI 写作批改**，请按下方指南填入你自己的 Gemini API Key。
 
-> **安装限制**：v0.11.13 已完成有效的 ad-hoc 整包签名，修复旧版资源签名错误，但没有 Developer ID 和 Apple 公证，macOS 默认仍可能阻止打开。严格签名校验通过不等于 Gatekeeper 放行。确认下载来源后，请参照 [macOS 安装与报错说明](docs/macos-installation.md) 及 Apple 官方的单应用允许方式；当前不能承诺所有 Mac 默认双击打开。
+> **安装限制**：v0.11.14 已完成有效的 ad-hoc 整包签名，修复旧版资源签名错误，但没有 Developer ID 和 Apple 公证，macOS 默认仍可能阻止打开。严格签名校验通过不等于 Gatekeeper 放行。确认下载来源后，请参照 [macOS 安装与报错说明](docs/macos-installation.md) 及 Apple 官方的单应用允许方式；当前不能承诺所有 Mac 默认双击打开。
 
-**手动更新**：先在系统设置导出全库备份，等待后台任务完成并退出应用，再下载新版 DMG，将应用替换到原安装位置。不要删除 `~/Library/Application Support/novel-reading/` 用户数据目录。当前没有应用内检查更新或自动安装功能；详细变更与验证范围见 [v0.11.13 发布说明](docs/releases/v0.11.13.md)。
+**手动更新**：先在系统设置导出全库备份，等待后台任务完成并退出应用，再下载新版 DMG，将应用替换到原安装位置。不要删除 `~/Library/Application Support/novel-reading/` 用户数据目录。当前没有应用内检查更新或自动安装功能；详细变更与验证范围见 [v0.11.14 发布说明](docs/releases/v0.11.14.md)。
 
 ---
 
@@ -310,7 +311,8 @@ Leaflight/
 
 ## 📋 版本演进摘要（Changelog）
 
-- **`v0.11.13`（当前版本）**：修复 macOS App 的无效资源签名，增加签名与 DMG 校验，明确尚未公证的安装限制。[完整发布说明](docs/releases/v0.11.13.md)。
+- **`v0.11.14`（当前版本）**：Mac / Android 同步长篇 ZIP 投稿、自动收录反馈、目录与正文分离、按需借阅；兼容旧投稿及 JSON。[说明](docs/releases/v0.11.14.md)。
+- **`v0.11.13`**：修复 macOS App 资源签名，仍未公证。[说明](docs/releases/v0.11.13.md)。
 - **`v0.11.12`**：Mac 与 Android 同步新增共享书池、免 Key 借阅与脱敏分享；此版 Mac 签名存在已知问题，请改用新版。[历史说明](docs/releases/v0.11.12.md)。
 - **`v0.11.11`**：新增逐章保存的连续生成，支持停止与手动续接；澄清修改原始要求后重新试读的流程，收起低频说明。[完整发布说明](docs/releases/v0.11.11.md)。
 - **`v0.11.10`**：明确难度对照的选级试读用途，界面、说明与演示截图标注保持一致。[完整发布说明](docs/releases/v0.11.10.md)。

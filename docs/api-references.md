@@ -1,6 +1,6 @@
 # API 与本地数据
 
-当前版本：Mac Leaflight v0.11.13；Android Reader 0.3.0-preview.2。
+当前版本：Mac Leaflight v0.11.14；Android Reader 0.3.0-preview.3。
 
 ## Gemini
 
@@ -44,3 +44,9 @@ x-goog-api-key: 用户配置的 API Key
 当前提供 Apple Silicon macOS DMG，采用手动下载安装；没有应用内检查更新、更新清单或 OTA 安装功能。Mac v0.11.13 使用通过严格校验的 ad-hoc 整包签名，未取得 Developer ID 和 Apple 公证；Gatekeeper 默认评估仍可能拒绝，SHA-256 文件只能核对下载完整性。安装与报错处理见 [macOS 说明](macos-installation.md)。安全自动更新与干净系统安装仍是未完成的分发条件，不能将本次发布理解为 OTA 已验证。
 
 升级前建议在系统设置导出备份，等待后台任务完成，退出后替换应用。用户数据目录为 `~/Library/Application Support/novel-reading/`，不在应用包内。备份不包含 API Key；迁移到其他电脑时需重新配置。
+
+## GitHub 共享书池（Mac / Android）
+
+目录 `community-pool/index.json` version 2 只含元数据、试读、相对路径、SHA-256 和字节数；正文在借阅时从固定仓库的 raw HTTPS 路径下载并验证。用户通过浏览器上传 ZIP 附件到公开 Issue，Actions 下载、解压校验、归档后通过 Issue Comments REST 接口回复结果。客户端不包含公共 PAT 或上传凭据；Mac 可选短篇直传继续使用 `X-GitHub-Api-Version: 2022-11-28`。旧版正文 JSON 投稿仍兼容。
+
+详情见 [共享书池格式与限制](community-pool.md)。官方依据：[附件支持与大小](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/attaching-files)、[Issue 评论接口](https://docs.github.com/en/rest/issues/comments)。2026-11-04 核对。

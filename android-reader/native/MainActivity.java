@@ -48,6 +48,8 @@ public final class MainActivity extends Activity {
     private WebView web;
     private ValueCallback<Uri[]> fileCallback;
     private byte[] exportBytes;
+    private String exportShareUrl;
+    private final ExecutorService poolNetwork = Executors.newFixedThreadPool(2);
     private final ExecutorService writer = Executors.newSingleThreadExecutor();
     private final ExecutorService network = Executors.newSingleThreadExecutor();
     private final ConcurrentHashMap<String, HttpsURLConnection> requests = new ConcurrentHashMap<>();
@@ -108,7 +110,7 @@ public final class MainActivity extends Activity {
                 Intent intent = new Intent(Intent.ACTION_OPEN_DOCUMENT);
                 intent.addCategory(Intent.CATEGORY_OPENABLE);
                 intent.setType("*/*");
-                intent.putExtra(Intent.EXTRA_MIME_TYPES, new String[]{"application/json", "application/octet-stream", "text/plain", "application/epub+zip"});
+                intent.putExtra(Intent.EXTRA_MIME_TYPES, new String[]{"application/json", "application/zip", "application/octet-stream", "text/plain", "application/epub+zip"});
                 try { startActivityForResult(intent, OPEN_FILE); }
                 catch (Exception e) { fileCallback.onReceiveValue(null); fileCallback = null; }
                 return true;
@@ -247,9 +249,38 @@ public final class MainActivity extends Activity {
             });
             return true;
         }
+        @JavascriptInterface public void prepareSharePackage(String filename, String json, String url) {
+            if (json == null || json.length() > 30 * 1024 * 1024 || filename == null || !filename.matches("[a-zA-Z0-9._-]{3,120}\\.zip") || url == null || !url.startsWith("https://github.com/jayson-sheyue/Leaflight/issues/new?")) { report("failed"); return; }
+            writer.execute(() -> {
+                try {
+                    byte[] source = json.getBytes(StandardCharsets.UTF_8);
+                    if (source.length > 30 * 1024 * 1024) throw new java.io.IOException();
+                    ByteArrayOutputStream buffer = new ByteArrayOutputStream();
+                    try (java.util.zip.ZipOutputStream zip = new java.util.zip.ZipOutputStream(buffer)) {
+                        zip.putNextEntry(new java.util.zip.ZipEntry("story.leaflight-story.json")); zip.write(source); zip.closeEntry();
+                    }
+                    byte[] bytes = buffer.toByteArray();
+                    if (bytes.length > 25 * 1024 * 1024) throw new java.io.IOException();
+                    runOnUiThread(() -> {
+                        if (exportBytes != null || isFinishing()) { report("failed"); return; }
+                        exportBytes = bytes; exportShareUrl = url;
+                        Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT); intent.addCategory(Intent.CATEGORY_OPENABLE);
+                        intent.setType("application/zip"); intent.putExtra(Intent.EXTRA_TITLE, filename);
+                        try { startActivityForResult(intent, SAVE_FILE); } catch (Exception e) { exportBytes = null; exportShareUrl = null; report("failed"); }
+                    });
+                } catch (Exception e) { report("failed"); }
+            });
+        }
+        @JavascriptInterface public void fetchPoolStory(String id, String poolId) {
+            if (id == null || !id.matches("[a-zA-Z0-9-]{1,100}") || poolId == null || !poolId.matches("[a-z0-9][a-z0-9._-]{2,80}")) return;
+            poolNetwork.execute(() -> {
+                String text = readHttps("https://raw.githubusercontent.com/jayson-sheyue/Leaflight/main/community-pool/stories/" + poolId + ".json", 30 * 1024 * 1024);
+                runOnUiThread(() -> { if (!destroyed && !isFinishing()) web.evaluateJavascript("window.readerPoolStoryResult && window.readerPoolStoryResult(" + JSONObject.quote(id) + "," + JSONObject.quote(text == null ? "failed" : "ok") + "," + JSONObject.quote(text == null ? "" : text) + ")", null); });
+            });
+        }
         @JavascriptInterface public void fetchPool(String repo) {
             final String safeRepo = (repo != null && repo.matches("[a-zA-Z0-9._-]+/[a-zA-Z0-9._-]+")) ? repo : "jayson-sheyue/Leaflight";
-            network.execute(() -> {
+            poolNetwork.execute(() -> {
                 if (destroyed) return;
                 boolean online = false;
                 JSONArray stories = new JSONArray();
@@ -260,21 +291,14 @@ public final class MainActivity extends Activity {
                         online = true;
                         JSONArray entries = indexText.trim().startsWith("[") ? new JSONArray(indexText) : new JSONObject(indexText).optJSONArray("stories");
                         if (entries != null) {
-                            int limit = Math.min(entries.length(), 40);
-                            for (int i = 0; i < limit; i++) {
+                            for (int i = 0; i < Math.min(entries.length(), 1000); i++) {
                                 JSONObject entry = entries.optJSONObject(i);
-                                if (entry == null) continue;
-                                if (entry.has("chapters")) { stories.put(entry); continue; }
-                                String path = entry.optString("path", "");
-                                if (path.matches("community-pool/stories/[a-zA-Z0-9._-]+\\.json")) {
-                                    String storyText = readHttps("https://raw.githubusercontent.com/" + safeRepo + "/main/" + path);
-                                    if (storyText != null) stories.put(new JSONObject(storyText));
-                                }
+                                if (entry != null) stories.put(entry);
                             }
                         }
                     }
                 } catch (Exception ignored) { }
-                try {
+                if (!online) try {
                     String issuesText = readHttps("https://api.github.com/repos/" + safeRepo + "/issues?state=open&per_page=30");
                     if (issuesText != null) {
                         online = true;
@@ -291,11 +315,12 @@ public final class MainActivity extends Activity {
                 } catch (Exception ignored) { poolResult("offline", "{}"); }
             });
         }
-        private String readHttps(String urlStr) {
+        private String readHttps(String urlStr) { return readHttps(urlStr, 8 * 1024 * 1024); }
+        private String readHttps(String urlStr, int limit) {
             HttpsURLConnection conn = null;
             try {
                 conn = (HttpsURLConnection) new URL(urlStr).openConnection();
-                conn.setInstanceFollowRedirects(true);
+                conn.setInstanceFollowRedirects(false);
                 conn.setConnectTimeout(10000);
                 conn.setReadTimeout(15000);
                 conn.setRequestMethod("GET");
@@ -307,7 +332,7 @@ public final class MainActivity extends Activity {
                 try (InputStream in = conn.getInputStream()) {
                     byte[] buf = new byte[8192]; int count;
                     while ((count = in.read(buf)) != -1) {
-                        if (bytes.size() + count > 2 * 1024 * 1024) return null;
+                        if (bytes.size() + count > limit) return null;
                         bytes.write(buf, 0, count);
                     }
                 }
@@ -330,12 +355,14 @@ public final class MainActivity extends Activity {
             callback.onReceiveValue(result == RESULT_OK && data != null && data.getData() != null ? new Uri[]{data.getData()} : null);
         } else if (request == SAVE_FILE) {
             byte[] bytes = exportBytes; exportBytes = null;
+            String shareUrl = exportShareUrl; exportShareUrl = null;
             if (result != RESULT_OK || data == null || data.getData() == null) { report("cancelled"); return; }
             Uri uri = data.getData();
             writer.execute(() -> {
                 try (OutputStream out = getContentResolver().openOutputStream(uri, "wt")) {
                     if (out == null || bytes == null) throw new java.io.IOException();
-                    out.write(bytes); out.flush(); report("saved");
+                    out.write(bytes); out.flush(); report(shareUrl == null ? "saved" : "share-saved");
+                    if (shareUrl != null) runOnUiThread(() -> { try { startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(shareUrl))); } catch (Exception ignored) { } });
                 } catch (Exception e) {
                     // Do not leave a truncated document that looks like a usable backup.
                     try { android.provider.DocumentsContract.deleteDocument(getContentResolver(), uri); } catch (Exception ignored) { }
@@ -346,6 +373,7 @@ public final class MainActivity extends Activity {
     }
     @Override protected void onDestroy() {
         destroyed = true;
+        poolNetwork.shutdownNow();
         generationSessions.clear();
         for (HttpsURLConnection connection : requests.values()) connection.disconnect();
         network.shutdownNow();

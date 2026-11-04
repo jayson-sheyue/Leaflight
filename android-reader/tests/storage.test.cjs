@@ -1,6 +1,6 @@
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path'),Module=require('node:module'),os=require('node:os'),ts=require('typescript');
-const source=path.resolve(__dirname,'../src/storage.ts'),compiled=ts.transpileModule(fs.readFileSync(source,'utf8'),{compilerOptions:{module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText;
-const m=new Module(source,module);m._compile(compiled,source);
+const source=path.resolve(__dirname,'../src/storage.ts'),compiled=ts.transpileModule(fs.readFileSync(source,'utf8'),{compilerOptions:{esModuleInterop:true,module:ts.ModuleKind.CommonJS,target:ts.ScriptTarget.ES2020}}).outputText;
+const m=new Module(source,module);m.filename=source;m.paths=Module._nodeModulePaths(path.dirname(source));m._compile(compiled,source);
 const {parseImport,mergeBooks,validateSettings,defaults,validatePoolStory,poolStoryToBook,sanitizeForPool,extractStoryFromIssue}=m.exports,{Store}=require('../../electron/store.cjs'),demo=require('../../electron/demo.cjs'),seed=require('../../electron/pool-seed.json');
 function fixture(t){const dir=fs.mkdtempSync(path.join(os.tmpdir(),'leaflight-android-unit-')),s=new Store(path.join(dir,'library.sqlite'));t.after(()=>{s.close();fs.rmSync(dir,{recursive:true,force:true});});let b=s.create({language:'en',level:'B1',genre:'fantasy',words:1000,totalChapters:3,preferences:''},demo.plan);b=s.append(b.id,demo.chapters[0]);s.progress(b.id,{chapter:0,fraction:.4,paragraph:3,index:8});s.bookmark(b.id,{chapter:0,fraction:.4});return {s,b:s.get(b.id)};}
 test('imports real Mac backup, keeps prose/ruby/legacy anchors, strips writings and unknown credential fields',t=>{
@@ -46,4 +46,10 @@ test('community story pool seed stories convert to books, strip secrets on share
  assert.equal(imported.source,'leaflight-pool-story');assert.equal(imported.books.length,1);assert.equal(imported.books[0].sharedBy,'Pad Reader');
  const fromIssue=extractStoryFromIssue({body:prepared.issueBody,user:{login:'gh-user'},html_url:'https://github.com/jayson-sheyue/Leaflight/issues/1'});
  assert.equal(fromIssue.title,local.title);assert.equal(fromIssue.sourceUrl,'https://github.com/jayson-sheyue/Leaflight/issues/1');
+});
+
+test('imports Mac ZIP sharing packages without losing final chapters or private reading state',async()=>{
+ const {parseShareZip}=m.exports,transfer=require('../../electron/pool-transfer.cjs');
+ const story=structuredClone(seed[0]);story.chapters=Array.from({length:20},(_,i)=>({...story.chapters[0],title:'Chapter '+(i+1)}));story.preset.totalChapters=20;story.outline=story.chapters.map(c=>c.title);
+ const bytes=await transfer.createShareZip({format:'leaflight-pool-story',version:1,story});const imported=parseShareZip(bytes);assert.equal(imported.chapters.length,20);assert.equal(imported.chapters[19].text,story.chapters[19].text);assert.deepEqual(imported.bookmarks,[]);assert.equal(imported.progress.fraction,0);
 });

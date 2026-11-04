@@ -1,3 +1,4 @@
+import transfer from '../../electron/pool-transfer.cjs';
 export type Position={chapter:number;fraction:number;paragraph?:number;index?:number};
 export type Bookmark=Position&{id:string};
 export type Chapter={id:string;title:string;text:string;summary?:string;generationId?:string;readings?:{surface:string;reading:string}[]};
@@ -138,3 +139,5 @@ export class Library{
  }
  async backup(){return JSON.stringify({format:'leaflight-reader',version:1,books:await this.list(),settings:await this.settings()},null,2);}
 }
+
+export function parseShareZip(bytes:Uint8Array){return poolStoryToBook(transfer.readShareZip(bytes).story);}

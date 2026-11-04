@@ -1,4 +1,4 @@
-const {app,BrowserWindow,ipcMain,safeStorage,dialog,Menu,shell,clipboard}=require('electron');
+const {app,BrowserWindow,ipcMain,safeStorage,dialog,Menu,shell}=require('electron');
 const path=require('node:path');const fs=require('node:fs');const {Store,validatePreset,validateReader}=require('./store.cjs');
 const {generate,planSchema,chapterSchema,planPrompt,chapterPrompt,comparisonSchema,comparisonPrompt}=require('./gemini.cjs');const {epub}=require('./export.cjs');
 const {analyze,adjustment,normalizeReadings,normalizeComparison}=require('./difficulty.cjs');
@@ -6,8 +6,26 @@ const {validateSnapshot,reviewSchema,reviewPrompt}=require('./writing.cjs');
 const {catalog:scienceCatalog}=require('./science.cjs');
 const {JobQueue}=require('./jobs.cjs');
 const {batchPayload,runChapterBatch}=require('./chapter-batch.cjs');
-const {listPoolStories,fetchRemotePool,poolStoryToBook,sanitizeForPool,validatePoolStory,publishToGitHub}=require('./pool.cjs');
+const {listPoolStories,fetchRemotePool,poolStoryToBook,sanitizeForPool,validatePoolStory,publishToGitHub,transfer}=require('./pool.cjs');
 let store,win,jobs,quitting=false;
+const poolDownloads=new Map();
+async function poolActivity(type,title,payload,run){
+ const now=new Date().toISOString(),id=require('node:crypto').randomUUID();
+ const stage=type==='pool-share'?'正在准备分享包':'正在下载并校验作品';
+ jobs.save({id,type,title,payload,status:'running',stage,revision:1,readRevision:0,createdAt:now,updatedAt:now,events:[{at:now,stage}]});jobs.publish();
+ try{const result=await run();jobs.update(id,{status:'completed',stage:type==='pool-share'?'分享包已保存；请在投稿页上传 ZIP，收录结果会回复在投稿下。':'作品已保存到书架，可离线阅读。',result,resultBookId:result.bookId||null});return result;}
+ catch(e){jobs.update(id,{status:'failed',stage:'操作未完成，可重试。',error:e.message});throw e;}
+}
+async function addPool(poolId){
+ const existing=store.list().find(b=>b.poolId===poolId);if(existing)return existing;
+ if(poolDownloads.has(poolId))return poolDownloads.get(poolId);
+ const found=listPoolStories({cached:store.setting('poolCache',[])}).find(x=>x.poolId===poolId);
+ if(!found)throw Error('共享书池中找不到这部作品。');
+ const work=poolActivity('pool-download',found.title,{poolId},async()=>{
+  let story;try{story=transfer.isCatalog(found)?validatePoolStory(await transfer.loadStory(found)):found;}catch{throw Error('作品下载或校验失败，请检查网络后重试。已有书籍不受影响。');}
+  const book=store.addPoolBook(poolStoryToBook(story));return {bookId:book.id};
+ }).then(r=>store.get(r.bookId)).finally(()=>poolDownloads.delete(poolId));poolDownloads.set(poolId,work);return work;
+}
 if(process.env.NODE_ENV==='test'&&process.env.LEAFLIGHT_TEST_DATA)app.setPath('userData',process.env.LEAFLIGHT_TEST_DATA);
 const dev=process.env.LEAFLIGHT_DEV_URL==='http://127.0.0.1:5173';
 function credentials(){const s=store.setting('api',{model:'gemini-2.5-flash'});let apiKey='',githubToken='';if(s.encryptedKey&&safeStorage.isEncryptionAvailable()){try{apiKey=safeStorage.decryptString(Buffer.from(s.encryptedKey,'base64'));}catch{throw Error('无法解密已保存的 API Key，请重新填写。');}}if(s.encryptedGithubToken&&safeStorage.isEncryptionAvailable()){try{githubToken=safeStorage.decryptString(Buffer.from(s.encryptedGithubToken,'base64'));}catch{githubToken='';}}return {...s,apiKey,githubToken};}
@@ -56,7 +74,7 @@ async function handle(command,p={}){switch(command){
  case 'job':return jobs.get(p.id);
  case 'jobs-read':return jobs.read(p.items||[]);
  case 'cancel':return jobs.cancel(p.id);
- case 'retry-job':{const job=jobs.get(p.id);if(!['failed','cancelled','interrupted'].includes(job.status))throw Error('此任务暂不能重试。');return submit(job.type,job.payload);}
+ case 'retry-job':{const job=jobs.get(p.id);if(job.type==='pool-download')return addPool(job.payload.poolId);if(job.type==='pool-share')return handle('pool-share-browser',job.payload);if(!['failed','cancelled','interrupted'].includes(job.status))throw Error('此任务暂不能重试。');return submit(job.type,job.payload);}
  case 'difficulty':{const b=store.get(p.id);if(p.chapterId==='sample')return {report:analyze(b.sample,b.preset,0,b.sampleReadings),feedback:null,adjustment:adjustment(b)};const c=b.chapters.find(c=>c.id===p.chapterId);if(!c)throw Error('找不到这部作品。');return {report:analyze(c.text,b.preset,c.calibrationUsed||0,c.readings),feedback:(b.feedback||[]).find(x=>x.chapterId===c.id)?.rating||null,adjustment:adjustment(b)};}
  case 'feedback':return store.feedback(p.id,p.chapterId,p.rating);
  case 'comparison':return normalizeComparison(store.setting('lastComparison',null));
@@ -68,12 +86,15 @@ async function handle(command,p={}){switch(command){
  case 'backup':{const r=await dialog.showSaveDialog(win,{title:dialogText('backup'),buttonLabel:dialogText('save'),defaultPath:'Leaflight-backup.json',filters:[{name:'Leaflight backup',extensions:['json']}]});if(r.canceled)return false;fs.writeFileSync(r.filePath,JSON.stringify(store.backup(),null,2));return true;}
  case 'restore':{const r=await dialog.showOpenDialog(win,{title:dialogText('restore'),buttonLabel:dialogText('open'),properties:['openFile'],filters:[{name:'Leaflight backup',extensions:['json']}]});if(r.canceled)return false;if(fs.statSync(r.filePaths[0]).size>50*1024*1024)throw Error('备份文件超过 50 MB。');const result=store.restore(JSON.parse(fs.readFileSync(r.filePaths[0],'utf8')));buildMenu();return result;}
  case 'pool-list':return {stories:listPoolStories({cached:store.setting('poolCache',[])}),syncedAt:store.setting('poolSyncedAt',null)};
- case 'pool-sync':{const res=await fetchRemotePool({cached:store.setting('poolCache',[]),fetchImpl:global.fetch});store.set('poolCache',res.stories);store.set('poolSyncedAt',res.syncedAt);return res;}
- case 'pool-add':{const stories=listPoolStories({cached:store.setting('poolCache',[])});const found=stories.find(x=>x.poolId===p.poolId)||(p.story?validatePoolStory(p.story):null);if(!found)throw Error('共享书池中找不到这部作品。');return store.addPoolBook(poolStoryToBook(found));}
+ case 'pool-sync':{const res=await fetchRemotePool({cached:store.setting('poolCache',[]),fetchImpl:global.fetch});store.set('poolCache',res.stories);if(res.online)store.set('poolSyncedAt',res.syncedAt);else res.syncedAt=store.setting('poolSyncedAt',null);return res;}
+ case 'pool-add':return addPool(p.poolId);
  case 'pool-share-issue':{const b=store.get(p.id);if(typeof p.sharedBy==='string'&&p.sharedBy.trim())store.set('poolNickname',p.sharedBy.trim().slice(0,60));const apiConf=store.setting('api',{model:'gemini-2.5-flash'});let token=credentials().githubToken;if(p.clearGithubToken){delete apiConf.encryptedGithubToken;store.set('api',apiConf);token='';}else if(typeof p.githubToken==='string'&&p.githubToken.trim()&&!/^[•●*]{4,}$/u.test(p.githubToken.trim())){token=p.githubToken.trim();if(safeStorage.isEncryptionAvailable()){apiConf.encryptedGithubToken=safeStorage.encryptString(token).toString('base64');store.set('api',apiConf);}}const res=await publishToGitHub(b,{sharedBy:p.sharedBy,note:p.note,token,fetchImpl:global.fetch});store.set('poolCache',listPoolStories({cached:[res.story,...store.setting('poolCache',[])]}));return {...res,settings:settings()};}
- case 'pool-share-browser':{const b=store.get(p.id);if(typeof p.sharedBy==='string'&&p.sharedBy.trim())store.set('poolNickname',p.sharedBy.trim().slice(0,60));const pkg=sanitizeForPool(b,{sharedBy:p.sharedBy,note:p.note});clipboard.writeText(pkg.issueBody);store.set('poolCache',listPoolStories({cached:[pkg.story,...store.setting('poolCache',[])]}));await shell.openExternal(pkg.newIssueUrl);return {url:pkg.newIssueUrl,urlTruncated:pkg.urlTruncated,story:pkg.story,settings:settings()};}
+ case 'pool-share-page':{const j=jobs.get(p.id);if(j.type==='pool-share'&&j.result?.url)await shell.openExternal(j.result.url);return true;}
+ case 'pool-share-browser':{const b=store.get(p.id);if(typeof p.sharedBy==='string')store.set('poolNickname',p.sharedBy.trim().slice(0,60));const pkg=sanitizeForPool(b,{sharedBy:p.sharedBy,note:p.note});
+ const r=await dialog.showSaveDialog(win,{title:uiText('保存分享包'),buttonLabel:dialogText('save'),defaultPath:pkg.story.poolId+'.leaflight-share.zip',filters:[{name:'Leaflight share package',extensions:['zip']}]});if(r.canceled)return false;
+ return poolActivity('pool-share',b.title,{id:b.id,sharedBy:p.sharedBy},async()=>{const bytes=await transfer.createShareZip(pkg.exportPayload),temp=r.filePath+'.leaflight-tmp';try{fs.writeFileSync(temp,bytes);fs.renameSync(temp,r.filePath);}finally{fs.rmSync(temp,{force:true});}const post=transfer.submission(pkg.story);shell.showItemInFolder(r.filePath);await shell.openExternal(post.url);return {url:post.url};});}
  case 'pool-export':{const b=store.get(p.id);if(typeof p.sharedBy==='string'&&p.sharedBy.trim())store.set('poolNickname',p.sharedBy.trim().slice(0,60));const pkg=sanitizeForPool(b,{sharedBy:p.sharedBy,note:p.note});const r=await dialog.showSaveDialog(win,{title:dialogText('export'),buttonLabel:dialogText('save'),defaultPath:`${b.title.replace(/[<>:"/\\|?*\x00-\x1f]/g,'').slice(0,80)||'story'}.leaflight-story.json`,filters:[{name:'Leaflight Shared Story',extensions:['json']}]});if(r.canceled)return false;fs.writeFileSync(r.filePath,JSON.stringify(pkg.exportPayload,null,2));store.set('poolCache',listPoolStories({cached:[pkg.story,...store.setting('poolCache',[])]}));return true;}
- case 'pool-import':{const r=await dialog.showOpenDialog(win,{title:dialogText('open'),buttonLabel:dialogText('open'),properties:['openFile'],filters:[{name:'Leaflight Shared Story',extensions:['json']}]});if(r.canceled)return false;if(fs.statSync(r.filePaths[0]).size>15*1024*1024)throw Error('分享文件超过 15 MB。');const story=validatePoolStory(JSON.parse(fs.readFileSync(r.filePaths[0],'utf8')));store.set('poolCache',listPoolStories({cached:[story,...store.setting('poolCache',[])]}));const book=store.addPoolBook(poolStoryToBook(story));return {book,story};}
+ case 'pool-import':{const r=await dialog.showOpenDialog(win,{title:dialogText('open'),buttonLabel:dialogText('open'),properties:['openFile'],filters:[{name:'Leaflight Shared Story',extensions:['json','zip']}]});if(r.canceled)return false;if(fs.statSync(r.filePaths[0]).size>transfer.MAX_STORY)throw Error('分享文件超过 30 MB。');const bytes=fs.readFileSync(r.filePaths[0]);const story=validatePoolStory(r.filePaths[0].toLowerCase().endsWith('.zip')?transfer.readShareZip(bytes):JSON.parse(bytes.toString('utf8')));store.set('poolCache',listPoolStories({cached:[story,...store.setting('poolCache',[])]}));const book=store.addPoolBook(poolStoryToBook(story));return {book,story,stories:listPoolStories({cached:store.setting('poolCache',[])})};}
  case 'demo':return demo();
  default:throw Error('不支持此操作。');
 }}
@@ -89,5 +110,5 @@ function buildMenu(){
  Menu.setApplicationMenu(Menu.buildFromTemplate([{label:'Leaflight',submenu:[item('about',0),{type:'separator'},item('hide',1),item('hideOthers',2),item('unhide',3),{type:'separator'},item('quit',4)]},{label:labels[5],submenu:[item('undo',6),item('redo',7),{type:'separator'},item('cut',8),item('copy',9),item('paste',10),item('selectAll',11)]},{label:labels[12],submenu:[item('resetZoom',13),item('zoomIn',14),item('zoomOut',15),item('togglefullscreen',16)]},{label:labels[17],submenu:[item('minimize',18),item('close',19)]}]));
 }
 
-function uiText(key){const locale=store.setting('uiLanguage','zh');return locale==='zh'?key:require('./messages.json')[key]?.[locale]||key;}
+function uiText(key){const locale=store.setting('uiLanguage','zh');return locale==='zh'?key:{...require('./messages.json'),...require('./pool-copy.json')}[key]?.[locale]||key;}
 function dialogText(key){const locale=store.setting('uiLanguage','zh');return {zh:{export:'导出作品',backup:'导出备份',restore:'导入备份',save:'保存',open:'打开'},en:{export:'Export story',backup:'Export backup',restore:'Import backup',save:'Save',open:'Open'},ja:{export:'作品を書き出す',backup:'バックアップを書き出す',restore:'バックアップを読み込む',save:'保存',open:'開く'}}[locale][key];}

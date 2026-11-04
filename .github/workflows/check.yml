@@ -1,0 +1,21 @@
+name: Client checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    env:
+      ELECTRON_SKIP_BINARY_DOWNLOAD: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm test
+      - run: node --test android-reader/tests/*.test.cjs
+      - run: npm run build
+      - run: ./node_modules/.bin/tsc --noEmit -p android-reader/tsconfig.json
+      - run: ./node_modules/.bin/vite build --config android-reader/vite.config.ts

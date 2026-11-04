@@ -3,6 +3,7 @@ const { validatePreset, validChapter } = require('./store.cjs');
 const { normalizeBook, normalizeGenerated, normalizeText } = require('./text.cjs');
 const { analyze, normalizeReadings } = require('./difficulty.cjs');
 const SEED_STORIES = require('./pool-seed.json');
+const transfer = require('./pool-transfer.cjs');
 
 const DEFAULT_REPO = 'jayson-sheyue/Leaflight';
 
@@ -248,8 +249,9 @@ function listPoolStories({ cached = [] } = {}) {
   if (Array.isArray(cached)) {
     for (const item of cached) {
       try {
-        const valid = validatePoolStory(item);
-        merged.set(valid.poolId, valid);
+        const valid = transfer.isCatalog(item) ? transfer.normalizeEntry(item) : validatePoolStory(item);
+        const seed = merged.get(valid.poolId);
+        if (!(transfer.isCatalog(valid) && seed?.chapters && seed.sharedAt === valid.sharedAt)) merged.set(valid.poolId, valid);
       } catch {
         // Ignore malformed cache entries
       }
@@ -277,28 +279,22 @@ async function fetchRemotePool({ repo = DEFAULT_REPO, cached = [], fetchImpl = g
 
   if (typeof fetchImpl === 'function') {
     try {
-      const indexData = await fetchJsonWithTimeout(
-        `https://raw.githubusercontent.com/${repo}/main/community-pool/index.json`,
-        { headers: { Accept: 'application/json' } },
-        fetchImpl
-      );
+      const bytes = await transfer.fetchBytes(`https://raw.githubusercontent.com/${repo}/main/community-pool/index.json`, {fetchImpl,limit:transfer.MAX_INDEX});
+      const indexData = JSON.parse(new TextDecoder().decode(bytes));
+      if(!Array.isArray(indexData?.stories))throw Error('invalid-catalog');
       online = true;
       const items = Array.isArray(indexData?.stories) ? indexData.stories : [];
-      for (const item of items.slice(0, 40)) {
+      for (const item of items.slice(0, 1000)) {
         if (item && Array.isArray(item.chapters) && item.chapters.length) {
           try {
             const valid = validatePoolStory(item);
             byId.set(valid.poolId, valid);
           } catch {}
-        } else if (item?.poolId && !byId.has(item.poolId) && /^[a-z0-9][a-z0-9._-]{2,80}$/i.test(item.poolId)) {
+        } else if (transfer.isCatalog(item)) {
           try {
-            const fullStory = await fetchJsonWithTimeout(
-              `https://raw.githubusercontent.com/${repo}/main/community-pool/stories/${item.poolId}.json`,
-              { headers: { Accept: 'application/json' } },
-              fetchImpl
-            );
-            const valid = validatePoolStory(fullStory);
-            byId.set(valid.poolId, valid);
+            const valid = transfer.normalizeEntry(item);
+            const local = byId.get(valid.poolId);
+            if (!(local?.chapters && local.sharedAt === valid.sharedAt)) byId.set(valid.poolId, valid);
           } catch {}
         }
       }
@@ -306,7 +302,7 @@ async function fetchRemotePool({ repo = DEFAULT_REPO, cached = [], fetchImpl = g
       // Continue to GitHub Issues fallback
     }
 
-    try {
+    if (!online) try {
       const issues = await fetchJsonWithTimeout(
         `https://api.github.com/repos/${repo}/issues?state=open&per_page=30`,
         {
@@ -338,7 +334,8 @@ async function fetchRemotePool({ repo = DEFAULT_REPO, cached = [], fetchImpl = g
   return {
     stories,
     online,
-    syncedAt: new Date().toISOString()
+    syncedAt: online ? new Date().toISOString() : null,
+    ...(!online ? {warning:'暂时无法连接 GitHub，已保留离线书池。'} : {})
   };
 }
 
@@ -348,6 +345,7 @@ async function publishToGitHub(book, { sharedBy, note, token, repo = DEFAULT_REP
     throw Error('请先填写 GitHub Token，或使用「免 Token 浏览器投稿」。');
   }
   const { story, issueTitle, issueBody } = sanitizeForPool(book, { sharedBy, note, repo });
+  if (issueBody.length > 60000) throw Error('这部作品较长，请使用「分享包投稿」，无需 GitHub Token。');
   const headers = {
     Accept: 'application/vnd.github+json',
     Authorization: `Bearer ${cleanToken}`,
@@ -396,5 +394,6 @@ module.exports = {
   extractStoryFromIssue,
   listPoolStories,
   fetchRemotePool,
-  publishToGitHub
+  publishToGitHub,
+  transfer
 };
