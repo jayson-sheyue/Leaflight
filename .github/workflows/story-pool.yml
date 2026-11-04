@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     env:
-      POOL_RESULT: ${{ runner.temp }}/story-pool-result.json
+      POOL_RESULT: /tmp/leaflight-story-pool-result.json
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
