@@ -2,14 +2,14 @@
   "poolId": "pool-en-b1-f5b4772b21af",
   "sharedBy": "SJ",
   "sharedAt": "2026-11-04T09:11:14.443Z",
-  "note": "",
+  "note": "中式魔怔高中反内卷超能力爽文（B1 四六级丝滑阅读版）",
   "preset": {
     "language": "en",
     "level": "B1",
     "genre": "fantasy",
     "words": 1000,
     "totalChapters": 8,
-    "preferences": "橡树一中是个傻逼高中\n学生在这里遭受非人的待遇：不允许走读、办走读证要贿赂学校领导，早上五点起床，晚上10点放学，中间排的全是课；下课了老师也不让出去走动，要求学生待在班里原地休息，早晚自习不让上厕所，跑操要人贴人整齐划一，操前还得大声背书，毫无人性毫无休息时间，校领导还对学生颐指气使，还老是开各种领导个人刷威风的会议，会中下雨/暴晒了还不让学生打伞，请假要层层审批被踢皮球来回跑等等，活似土皇帝。\n原本在受苦的万千学生之一的小凯突然觉醒多项超能力，在校领导们继续实行这套傻逼政策的时候狠狠教训官僚主义的傻逼校领导，并带领同学们过上了不内卷的好日子"
+    "preferences": "橡树一中是个魔怔高中\n学生在这里遭受非人的待遇：不允许走读、办走读证要贿赂学校领导，早上五点起床，晚上10点放学，中间排的全是课；下课了老师也不让出去走动，要求学生待在班里原地休息，早晚自习不让上厕所，跑操要人贴人整齐划一，操前还得大声背书，毫无人性毫无休息时间，校领导还对学生颐指气使，还老是开各种领导个人刷威风的会议，会中下雨/暴晒了还不让学生打伞，请假要层层审批被踢皮球来回跑等等，活似土皇帝。\n原本在受苦的万千学生之一的小凯突然觉醒多项超能力，在校领导们继续实行这套奇葩政策的时候狠狠教训官僚主义的奇葩校领导，并带领同学们过上了不内卷的好日子"
   },
   "title": "The Magic Rebellion of Oak High",
   "synopsis": "Oak High School is a nightmare. Students wake up at five in the morning and study until ten at night. The greedy school leaders treat students like prisoners. They ban bathroom breaks, force students to stand in the freezing rain, and demand bribes. Kai is just another tired student. But one day, he discovers he has magical powers. He can freeze time, move objects with his mind, and control the weather. Kai decides to use his new gifts to fight the cruel leaders and bring freedom to his classmates.",
@@ -75,6 +75,5 @@
       "summary": "Kai uses his magic to stop Director Vance from escaping and exposes Principal Stone's lies. Using telekinesis, Kai brings Stone's secret safe crashing down into the courtyard. The safe breaks open, revealing stolen bribe money and illegal records. The students call the police, who arrest the corrupt leaders. Mr. Bronson runs away in fear. The next day, Lin returns to a changed school. The students destroy the cruel rule boards and chains. A month later, Oak High is a happy place with a new principal. The 5 AM runs, locked doors, and toxic competition are gone. Students can go home and rest. Kai's magic becomes quiet without the extreme stress, and he finally enjoys a normal, peaceful life.",
       "readings": []
     }
-  ],
-  "sourceUrl": "https://github.com/jayson-sheyue/Leaflight/issues/5"
+  ]
 }

@@ -1,3 +1,4 @@
+import './web-bridge';
 import {readStoryFile} from './book-import';
 import './style.css';
 import './atmosphere.css';
