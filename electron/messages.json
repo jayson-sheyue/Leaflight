@@ -2610,5 +2610,13 @@
   "生成设置已失效，请重新提交任务。": {
     "en": "Generation settings have expired. Submit the task again.",
     "ja": "生成設定が失効しました。タスクを再送信してください。"
+  },
+  "网页预览不提供 AI 生成与评审，请使用 Mac 或 Android 客户端。": {
+    "en": "AI generation and reviews are available in the Mac and Android apps.",
+    "ja": "AI 生成とレビューには Mac または Android アプリをご利用ください。"
+  },
+  "清理本浏览器中旧版保存的 API Key": {
+    "en": "Remove the API key saved by an earlier web preview",
+    "ja": "以前のウェブプレビューで保存した API キーを削除"
   }
 }

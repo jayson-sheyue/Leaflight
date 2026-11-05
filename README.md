@@ -6,10 +6,16 @@
 
 *A Local-First English (CEFR A2–C1) & Japanese (JLPT N5–N1) AI Fiction Studio, Tactile Graded Reader, Science × Fantasy Learning Companion, and 4D Writing Coach for macOS.*
 
+[![Web Preview](https://img.shields.io/badge/Web%20Preview-GitHub%20Pages%20%E5%85%8D%E5%AE%89%E8%A3%85%E5%9C%A8%E7%BA%BF%E8%AF%95%E7%8E%A9-b5651d?style=for-the-badge&logo=googlechrome&logoColor=white)](https://jayson-sheyue.github.io/Leaflight/)
 [![Release](https://img.shields.io/badge/Release-v0.11.15-2d5a46?style=for-the-badge)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.15)
 [![Platform](https://img.shields.io/badge/macOS-Apple%20Silicon%20(arm64)-1d1d1f?style=for-the-badge&logo=apple)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.15)
-[![Storage](https://img.shields.io/badge/Local--First-SQLite%20%2B%20Keychain-0f4c5c?style=for-the-badge)](#5-本地优先隐私安全与非阻塞后台消息盒子)
+[![Android](https://img.shields.io/badge/Android-0.3.0--preview.4-3ddc84?style=for-the-badge&logo=android&logoColor=white)](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.4)
+[![Storage](https://img.shields.io/badge/Local--First-SQLite%20%2B%20Keychain-0f4c5c?style=for-the-badge)](#5-本地优先共享书池免-key-读与分享与非阻塞后台消息盒子)
 [![Languages](https://img.shields.io/badge/Bilingual-English%20CEFR%20A2--C1%20%7C%20Japanese%20JLPT%20N5--N1-8c4a27?style=for-the-badge)](#1-英日双语分级故事工坊-cefr-a2c1--jlpt-n5n1)
+
+<p align="center">
+  👉 <b><a href="https://jayson-sheyue.github.io/Leaflight/">🌐 点击直接打开 GitHub Pages 在线网页预览版（免下载 · 免 API Key · 默认书架预置 6 部英日分级小说即点即读）</a></b> 👈
+</p>
 
 <br />
 
@@ -191,6 +197,22 @@ Leaflight 独创了 **Science × Fantasy（科学 × 奇幻/科幻/悬疑）** �
 
 ## 📦 下载安装与快速上手
 
+### 🌐 在线网页预览版（GitHub Pages · 免下载 · 免 API Key · 手机/电脑即点即读）
+
+如果你想先免安装体验 Leaflight 的拟真电子书排版、10 套纸感与毛玻璃主题、8 种 3D 翻页动效以及共享书池佳作，可直接浏览器打开：
+
+👉 **[https://jayson-sheyue.github.io/Leaflight/](https://jayson-sheyue.github.io/Leaflight/)**
+
+- **默认书架开箱即读（预置 6 部英日分级小说）**：
+  1. **《The Magic Rebellion of Oak High》**（英语 `CEFR B1` · 奇幻 · **8 章完整连载**）
+  2. **《海辺の小さな図書館》**（日语 `JLPT N4` · 日常 · 3 章完结 · **内置 `<ruby>` 汉字振假名注音与语法要点**）
+  3. **《The Spear and the Cipher》**（英语 `CEFR B2` · 科幻 · 3 章连载）
+  4. **《The Lantern Keeper》**（英语 `CEFR B1` · 奇幻 · 3 章完结）
+  5. **《The Clockmaker's Postcard》**（英语 `CEFR A2` · 悬疑 · 2 章完结）
+  6. **《Signal at Low Tide》**（英语 `CEFR B2` · 科幻 · 2 章完结）
+- **网页预览版支持功能**：完整的书架与阅读器（字号、行距、分页/滚动、放大阅读区、书签、读后难度体感反馈、单章启发式难度分析）、10 套材质主题与 8 种翻页动效、中/日/英三语界面、从 GitHub 实时同步公共书池并加入书架、浏览 24 个科学单元/48 个科学×奇幻预设与 184 道写作题库（阅读进度与草稿保存在当前浏览器 `localStorage`）。
+- **与原生客户端的区别**：在线网页预览版为纯静态零后端部署（不含服务端 API 中转）；如需使用 **本地 SQLite + 系统 Keychain 加密存储**、**BYOK 自定义 Gemini API Key 后台连载生成**、**四维 AI 写作批改** 或 **本地 TXT/EPUB 导入导出**，请下载下方 macOS 桌面端或 Android 阅读器。
+
 ### 当前版本
 
 Mac v0.11.15 与 Android Reader 0.3.0-preview.4 同步支持 AI Studio／Vertex Express 密钥来源选择，并保留长篇 ZIP 投稿、自动收录、目录及按需下载。Mac 保留完整 ad-hoc 资源签名，但尚未获得 Apple 公证；当前从 Release 手动更新。详见 [Mac 发布说明](docs/releases/v0.11.15.md) 与 [共享书池指南](docs/community-pool.md)。
@@ -295,6 +317,7 @@ Leaflight/
 ├── community-pool/             # GitHub 公共书池索引 (index.json) 与自动归档的共享小说 JSON
 ├── src/
 │   ├── main.ts                 # 应用主视图状态机、阅读器、创作工坊与后台消息盒子交互
+│   ├── web-bridge.ts           # 纯静态 Web 预览适配层：浏览器 localStorage 持久化、默认预置共享书池书架与桌面端零侵入降级
 │   ├── writing.ts              # 独立写作台、IELTS 可视化图表渲染与四维批改报告视图
 │   ├── science.ts              # 科学×奇幻预设选择与章节「科学手记」抽屉组件
 │   ├── materials.ts            # 10 套全局材质与毛玻璃主题、12 套字体栈控制器
