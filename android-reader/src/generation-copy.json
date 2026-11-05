@@ -61,5 +61,10 @@
  "导出单书分享文件":["Export story file (.json)","作品ファイルを書き出す (.json)"],
  "已复制作品内容，正在打开 GitHub 提交页…":["Story copied to clipboard. Opening GitHub Issue page…","作品データをコピーしました。GitHub Issue ページを開いています…"],
  "单书分享文件已准备好。":["Story share file is ready.","共有用作品ファイルの準備ができました。"],
- "请先生成至少 1 章后再分享。":["Generate at least 1 chapter before sharing.","少なくとも1章生成してから共有してください。"]
+ "请先生成至少 1 章后再分享。":["Generate at least 1 chapter before sharing.","少なくとも1章生成してから共有してください。"],
+ "Gemini 服务来源":["Gemini service","Gemini サービス"],
+ "按创建密钥的平台选择，模型可用性与配额由该平台决定。":["Choose the service that issued your key. Model access and quotas depend on that service.","キーを作成したサービスを選択してください。利用可能なモデルと割り当てはサービスごとに異なります。"],
+ "请选择有效的 Gemini 服务来源。":["Choose a supported Gemini service.","対応する Gemini サービスを選択してください。"],
+ "API Key 格式无效，请重新粘贴完整密钥。":["Invalid API key format. Paste the complete key again.","API キーの形式が無効です。完全なキーを貼り付け直してください。"],
+ "生成设置已失效，请重新提交任务。":["Generation settings have expired. Submit the task again.","生成設定が失効しました。タスクを再送信してください。"]
 }

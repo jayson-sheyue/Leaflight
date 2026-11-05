@@ -54,7 +54,7 @@ public final class MainActivity extends Activity {
     private final ExecutorService network = Executors.newSingleThreadExecutor();
     private final ConcurrentHashMap<String, HttpsURLConnection> requests = new ConcurrentHashMap<>();
     private volatile boolean destroyed;
-    private final ConcurrentHashMap<String, String> generationSessions = new ConcurrentHashMap<>();
+    private final ConcurrentHashMap<String, GeminiGateway> generationSessions = new ConcurrentHashMap<>();
     private final java.util.Set<String> pendingRequests = ConcurrentHashMap.newKeySet();
     private final java.util.Set<String> cancelledRequests = ConcurrentHashMap.newKeySet();
 
@@ -150,17 +150,26 @@ public final class MainActivity extends Activity {
             return generator.generateKey();
         }
         @JavascriptInterface public synchronized boolean saveKey(String value) {
-            if (value == null || value.trim().isEmpty() || value.length() > 1024) return false;
+            return saveGeminiSettings(value, getGeminiProvider());
+        }
+        @JavascriptInterface public synchronized String getGeminiProvider() {
+            return GeminiGateway.provider(getSharedPreferences("gemini", MODE_PRIVATE).getString("provider", "gemini"));
+        }
+        @JavascriptInterface public synchronized boolean saveGeminiSettings(String value, String source) {
             try {
+                String provider = GeminiGateway.provider(source);
+                android.content.SharedPreferences.Editor edit = getSharedPreferences("gemini", MODE_PRIVATE).edit();
+                if (value == null || value.trim().isEmpty()) return edit.putString("provider", provider).commit();
+                GeminiGateway config = new GeminiGateway(value, provider);
                 Cipher cipher = Cipher.getInstance("AES/GCM/NoPadding"); cipher.init(Cipher.ENCRYPT_MODE, key(true));
                 String iv = Base64.encodeToString(cipher.getIV(), Base64.NO_WRAP);
-                String encrypted = Base64.encodeToString(cipher.doFinal(value.trim().getBytes(StandardCharsets.UTF_8)), Base64.NO_WRAP);
-                return getSharedPreferences("gemini", MODE_PRIVATE).edit().putString("iv", iv).putString("key", encrypted).commit();
+                String encrypted = Base64.encodeToString(cipher.doFinal(config.apiKey.getBytes(StandardCharsets.UTF_8)), Base64.NO_WRAP);
+                return edit.putString("provider", provider).putString("iv", iv).putString("key", encrypted).commit();
             } catch (Exception ignored) { return false; }
         }
         @JavascriptInterface public synchronized boolean hasKey() { return readKey() != null; }
         @JavascriptInterface public synchronized void removeKey() {
-            getSharedPreferences("gemini", MODE_PRIVATE).edit().clear().commit();
+            getSharedPreferences("gemini", MODE_PRIVATE).edit().remove("iv").remove("key").commit();
             try { KeyStore store = KeyStore.getInstance("AndroidKeyStore"); store.load(null); store.deleteEntry("leaflight-gemini"); } catch (Exception ignored) { }
         }
         private synchronized String readKey() {
@@ -172,10 +181,11 @@ public final class MainActivity extends Activity {
                 return new String(cipher.doFinal(Base64.decode(p.getString("key", ""), Base64.NO_WRAP)), StandardCharsets.UTF_8);
             } catch (Exception ignored) { return null; }
         }
-        @JavascriptInterface public boolean beginGeneration(String id) {
+        @JavascriptInterface public synchronized boolean beginGeneration(String id) {
             if (id == null || !id.matches("[a-zA-Z0-9-]{1,80}") || destroyed) return false;
             String secret = readKey(); if (secret == null) return false;
-            generationSessions.put(id, secret); return true;
+            try { generationSessions.put(id, new GeminiGateway(secret, getGeminiProvider())); return true; }
+            catch (IllegalArgumentException ignored) { return false; }
         }
         @JavascriptInterface public void endGeneration(String id) { if (id != null) generationSessions.remove(id); }
         @JavascriptInterface public void cancelGeneration(String id) {
@@ -187,19 +197,19 @@ public final class MainActivity extends Activity {
         }
         @JavascriptInterface public void generate(String id, String model, String body, String session) {
             if (id == null || !id.matches("[a-zA-Z0-9-]{1,80}") || model == null || !model.matches("[a-zA-Z0-9._-]{1,100}") || body == null || body.length() > 500000) { generationResult(id, "invalid", ""); return; }
-            final String secret = session == null ? null : generationSessions.get(session);
-            if (secret == null) { generationResult(id, "no-key", ""); return; }
+            final GeminiGateway config = session == null ? null : generationSessions.get(session);
+            if (config == null) { generationResult(id, "no-key", ""); return; }
             pendingRequests.add(id);
             network.execute(() -> {
                 HttpsURLConnection connection = null;
                 try {
                     if (destroyed || cancelledRequests.contains(id) || !generationSessions.containsKey(session)) return;
-                    connection = (HttpsURLConnection) new URL("https://generativelanguage.googleapis.com/v1beta/models/" + model + ":generateContent").openConnection();
+                    connection = (HttpsURLConnection) new URL(config.endpoint(model)).openConnection();
                     requests.put(id, connection);
                     if (destroyed || cancelledRequests.contains(id) || !generationSessions.containsKey(session)) return;
                     connection.setInstanceFollowRedirects(false); connection.setConnectTimeout(20000); connection.setReadTimeout(120000);
                     connection.setRequestMethod("POST"); connection.setDoOutput(true); connection.setUseCaches(false);
-                    connection.setRequestProperty("Content-Type", "application/json"); connection.setRequestProperty("x-goog-api-key", secret);
+                    connection.setRequestProperty("Content-Type", "application/json"); connection.setRequestProperty("x-goog-api-key", config.apiKey);
                     try (OutputStream out = connection.getOutputStream()) { out.write(body.getBytes(StandardCharsets.UTF_8)); }
                     int status = connection.getResponseCode();
                     if (status != 200) { generationResult(id, "http-" + status, ""); return; }

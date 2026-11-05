@@ -16,6 +16,10 @@ jobs:
       - run: npm ci --no-audit --no-fund
       - run: npm test
       - run: node --test android-reader/tests/*.test.cjs
+      - name: Check native Gemini gateway contract
+        run: |
+          javac --release 8 -d /tmp/leaflight-gateway-check android-reader/native/GeminiGateway.java android-reader/tests/GeminiGatewayTest.java
+          java -cp /tmp/leaflight-gateway-check local.leaflight.reader.GeminiGatewayTest
       - run: npm run build
       - run: ./node_modules/.bin/tsc --noEmit -p android-reader/tsconfig.json
       - run: ./node_modules/.bin/vite build --config android-reader/vite.config.ts

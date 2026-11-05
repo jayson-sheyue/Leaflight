@@ -16,7 +16,7 @@ const release=process.env.READER_KEYSTORE&&process.env.READER_KEY_ALIAS&&process
 fs.writeFileSync(path.join(build,'AndroidManifest.xml'),fs.readFileSync(path.join(dir,'native/AndroidManifest.xml'),'utf8').replace('@VERSION_CODE@',v.versionCode).replace('@VERSION_NAME@',v.version).replace('@DEBUGGABLE@',release?'false':'true'));
 run(path.join(tools,'aapt2'),['compile','--dir',path.join(dir,'native/res'),'-o',path.join(build,'resources.zip')]);
 run(path.join(tools,'aapt2'),['link','-I',android,'--manifest',path.join(build,'AndroidManifest.xml'),'-A',path.join(build,'assets'),'-o',path.join(build,'base.apk'),path.join(build,'resources.zip')]);
-run(path.join(java,'bin/javac'),['--release','8','-cp',android,'-d',path.join(build,'classes'),path.join(dir,'native/MainActivity.java')]);
+run(path.join(java,'bin/javac'),['--release','8','-cp',android,'-d',path.join(build,'classes'),path.join(dir,'native/MainActivity.java'),path.join(dir,'native/GeminiGateway.java')]);
 run(path.join(java,'bin/jar'),['cf',path.join(build,'classes.jar'),'-C',path.join(build,'classes'),'.']);
 run(path.join(tools,'d8'),['--lib',android,'--min-api',String(v.minSdk),'--output',path.join(build,'dex'),path.join(build,'classes.jar')]);
 run('/usr/bin/zip',['-q','-j',path.join(build,'base.apk'),path.join(build,'dex/classes.dex')]);

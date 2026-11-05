@@ -6,8 +6,8 @@
 
 *A Local-First English (CEFR A2–C1) & Japanese (JLPT N5–N1) AI Fiction Studio, Tactile Graded Reader, Science × Fantasy Learning Companion, and 4D Writing Coach for macOS.*
 
-[![Release](https://img.shields.io/badge/Release-v0.11.14-2d5a46?style=for-the-badge)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.14)
-[![Platform](https://img.shields.io/badge/macOS-Apple%20Silicon%20(arm64)-1d1d1f?style=for-the-badge&logo=apple)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.14)
+[![Release](https://img.shields.io/badge/Release-v0.11.15-2d5a46?style=for-the-badge)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.15)
+[![Platform](https://img.shields.io/badge/macOS-Apple%20Silicon%20(arm64)-1d1d1f?style=for-the-badge&logo=apple)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.15)
 [![Storage](https://img.shields.io/badge/Local--First-SQLite%20%2B%20Keychain-0f4c5c?style=for-the-badge)](#5-本地优先隐私安全与非阻塞后台消息盒子)
 [![Languages](https://img.shields.io/badge/Bilingual-English%20CEFR%20A2--C1%20%7C%20Japanese%20JLPT%20N5--N1-8c4a27?style=for-the-badge)](#1-英日双语分级故事工坊-cefr-a2c1--jlpt-n5n1)
 
@@ -193,24 +193,24 @@ Leaflight 独创了 **Science × Fantasy（科学 × 奇幻/科幻/悬疑）** �
 
 ### 当前版本
 
-Mac v0.11.14 与 Android Reader 0.3.0-preview.3 同步支持长篇 ZIP 附件投稿、自动收录反馈、目录同步及按需下载全文。Mac 保留完整 ad-hoc 资源签名，但尚未获得 Apple 公证；当前从 Release 手动更新。详见 [Mac 发布说明](docs/releases/v0.11.14.md) 与 [共享书池指南](docs/community-pool.md)。
+Mac v0.11.15 与 Android Reader 0.3.0-preview.4 同步支持 AI Studio／Vertex Express 密钥来源选择，并保留长篇 ZIP 投稿、自动收录、目录及按需下载。Mac 保留完整 ad-hoc 资源签名，但尚未获得 Apple 公证；当前从 Release 手动更新。详见 [Mac 发布说明](docs/releases/v0.11.15.md) 与 [共享书池指南](docs/community-pool.md)。
 
 已用 24 章、约 20 万字符的合成作品完成真实 GitHub ZIP 投稿、自动收录反馈及 Android 最终 APK 全文借阅验收；测试条目已清理。[公开验收记录](https://github.com/jayson-sheyue/Leaflight/issues/2)。
 
 ### Android Pad 阅读预览
 
-独立的 **Leaflight Reader 0.3.0-preview.3** 安卓项目支持导入 Mac JSON 离线阅读，提供主题、字体、翻页、书签与进度，并同步支持「共享书池」免 Key 借阅、目录同步、按需下载与 ZIP / 单书 JSON 分享。可导入 UTF-8 TXT、未加密 EPUB、单书分享 JSON 或全库备份；也可配置自己的 Gemini Key，生成英日独立短篇或先试读后创建章节连载；支持下一章、连续多章、逐章保存、停止及手动补齐剩余章节，状态在消息盒子中查看。试读的「修改要求，重新试读」会修改原始创作要求并生成新试读与大纲。两端进度暂不自动同步；安卓版暂不包含写作、评审与选级对照等既有模块。Mac 与 Android 的构建和数据独立。[安装、构建与限制说明](android-reader/README.md)。 [下载 APK](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.3)。
+独立的 **Leaflight Reader 0.3.0-preview.4** 安卓项目支持导入 Mac JSON 离线阅读，提供主题、字体、翻页、书签与进度，并同步支持「共享书池」免 Key 借阅、目录同步、按需下载与 ZIP / 单书 JSON 分享。可导入 UTF-8 TXT、未加密 EPUB、单书分享 JSON 或全库备份；也可配置自己的 Gemini Key，生成英日独立短篇或先试读后创建章节连载；支持下一章、连续多章、逐章保存、停止及手动补齐剩余章节，状态在消息盒子中查看。试读的「修改要求，重新试读」会修改原始创作要求并生成新试读与大纲。两端进度暂不自动同步；安卓版暂不包含写作、评审与选级对照等既有模块。Mac 与 Android 的构建和数据独立。[安装、构建与限制说明](android-reader/README.md)。 [下载 APK](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.4)。
 
 ### 方式一：直接安装 macOS 桌面端（推荐）
 
-1. 前往本仓库的 [**v0.11.14 Release**](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.14)，下载安装包：
-   - 🍎 **`Leaflight-0.11.14-arm64.dmg`**（Apple Silicon Mac；不提供 Intel / Windows / Linux 安装包）
+1. 前往本仓库的 [**v0.11.15 Release**](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.11.15)，下载安装包：
+   - 🍎 **`Leaflight-0.11.15-arm64.dmg`**（Apple Silicon Mac；不提供 Intel / Windows / Linux 安装包）
 2. 双击打开 `.dmg`，将 **Leaflight.app** 拖入 `Applications（应用程序）` 文件夹。
 3. 首次打开即可在「共享书池」免费借阅英日分级小说、阅读内置示范故事、导入本地 `TXT / EPUB` 电子书，或浏览 184 道写作题库；如需使用 **AI 生成新故事/章节** 或 **AI 写作批改**，请按下方指南填入你自己的 Gemini API Key。
 
-> **安装限制**：v0.11.14 已完成有效的 ad-hoc 整包签名，修复旧版资源签名错误，但没有 Developer ID 和 Apple 公证，macOS 默认仍可能阻止打开。严格签名校验通过不等于 Gatekeeper 放行。确认下载来源后，请参照 [macOS 安装与报错说明](docs/macos-installation.md) 及 Apple 官方的单应用允许方式；当前不能承诺所有 Mac 默认双击打开。
+> **安装限制**：v0.11.15 已完成有效的 ad-hoc 整包签名，修复旧版资源签名错误，但没有 Developer ID 和 Apple 公证，macOS 默认仍可能阻止打开。严格签名校验通过不等于 Gatekeeper 放行。确认下载来源后，请参照 [macOS 安装与报错说明](docs/macos-installation.md) 及 Apple 官方的单应用允许方式；当前不能承诺所有 Mac 默认双击打开。
 
-**手动更新**：先在系统设置导出全库备份，等待后台任务完成并退出应用，再下载新版 DMG，将应用替换到原安装位置。不要删除 `~/Library/Application Support/novel-reading/` 用户数据目录。当前没有应用内检查更新或自动安装功能；详细变更与验证范围见 [v0.11.14 发布说明](docs/releases/v0.11.14.md)。
+**手动更新**：先在系统设置导出全库备份，等待后台任务完成并退出应用，再下载新版 DMG，将应用替换到原安装位置。不要删除 `~/Library/Application Support/novel-reading/` 用户数据目录。当前没有应用内检查更新或自动安装功能；详细变更与验证范围见 [v0.11.15 发布说明](docs/releases/v0.11.15.md)。
 
 ---
 
@@ -226,10 +226,12 @@ Leaflight 不内置第三方付费中转，而是由你配置自己的 Google �
 1. **前往 Google 官方平台申请密钥**：
    浏览器打开 [**Google AI Studio — Get API key (`https://aistudio.google.com/apikey`)**](https://aistudio.google.com/apikey)，使用你的 Google 账号登录。
 2. **创建并复制 API Key**：
-   点击页面右上角的 **`Create API key`**（创建 API 密钥），生成一串以 `AIza...` 开头的密钥字符串，点击复制。
+   点击页面右上角的 **`Create API key`**（创建 API 密钥），生成 API Key（可能是旧式 `AIza…` 或新式授权密钥），点击复制。
 3. **在 Leaflight 中保存配置**：
-   - **macOS 桌面端**：点击左下角 **「系统设置 / 模型与设置」** → 在 **Gemini API Key** 栏粘贴刚才复制的 `AIza...` 密钥；**Gemini 模型 ID** 保持默认的 `gemini-2.5-flash` 即可（也可按需修改为 `gemini-2.5-pro` 等支持 `generateContent` 与 JSON 结构化输出的官方模型）→ 点击 **「保存设置」**（已保存的 Key 会以圆点显示）。
-   - **Android 阅读预览版**：点击 **「生成故事 → Gemini 设置」** → 粘贴 API Key 并保存。
+   - **macOS 桌面端**：点击左下角 **「系统设置 / 模型与设置」** → 将 **Gemini 服务来源** 选为 **Google AI Studio**，在 **Gemini API Key** 栏粘贴刚才复制的密钥；**Gemini 模型 ID** 保持默认的 `gemini-2.5-flash` 即可（也可按需修改为 `gemini-2.5-pro` 等支持 `generateContent` 与 JSON 结构化输出的官方模型）→ 点击 **「保存设置」**（已保存的 Key 会以圆点显示）。
+   - **Android 阅读预览版**：点击 **「生成故事 → Gemini 设置」** → 选择密钥创建来源、粘贴 API Key 并保存。
+
+> **Vertex Express**：若 Key 来自 Google Cloud 的 Vertex Express，在两端设置中选择 **Vertex AI Express**。不要仅凭 `AQ.` 前缀判断来源；旧设置默认继续使用 AI Studio。模型权限和额度独立，服务失败不会切换到另一平台重试。
 
 > **配置、隐私与费用说明**：
 > - **免费额度与计费**：Google AI Studio 通常为 `gemini-2.5-flash` 等模型提供免费调用额度（Free Tier），具体免费额度、速率限制及是否产生费用取决于你的 Google 账户状态、所在地区政策及所选模型。
@@ -313,7 +315,7 @@ Leaflight/
 
 ## 📋 版本演进摘要（Changelog）
 
-- **`v0.11.14`（当前版本）**：Mac / Android 同步长篇 ZIP 投稿、自动收录反馈、目录与正文分离、按需借阅；兼容旧投稿及 JSON。[说明](docs/releases/v0.11.14.md)。
+- **`v0.11.15`（当前版本）**：Mac / Android 同步 Gemini 密钥来源选择、Express 固定端点和任务配置快照；兼容两种 Key 格式。[说明](docs/releases/v0.11.15.md)。
 - **`v0.11.13`**：修复 macOS App 资源签名，仍未公证。[说明](docs/releases/v0.11.13.md)。
 - **`v0.11.12`**：Mac 与 Android 同步新增共享书池、免 Key 借阅与脱敏分享；此版 Mac 签名存在已知问题，请改用新版。[历史说明](docs/releases/v0.11.12.md)。
 - **`v0.11.11`**：新增逐章保存的连续生成，支持停止与手动续接；澄清修改原始要求后重新试读的流程，收起低频说明。[完整发布说明](docs/releases/v0.11.11.md)。

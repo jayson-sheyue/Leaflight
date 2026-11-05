@@ -2590,5 +2590,25 @@
   "COMMUNITY STORY": {
     "en": "COMMUNITY STORY",
     "ja": "コミュニティ共有"
+  },
+  "Gemini 服务来源": {
+    "en": "Gemini service",
+    "ja": "Gemini サービス"
+  },
+  "按创建密钥的平台选择，模型可用性与配额由该平台决定。": {
+    "en": "Choose the service that issued your key. Model access and quotas depend on that service.",
+    "ja": "キーを作成したサービスを選択してください。利用可能なモデルと割り当てはサービスごとに異なります。"
+  },
+  "请选择有效的 Gemini 服务来源。": {
+    "en": "Choose a supported Gemini service.",
+    "ja": "対応する Gemini サービスを選択してください。"
+  },
+  "API Key 格式无效，请重新粘贴完整密钥。": {
+    "en": "Invalid API key format. Paste the complete key again.",
+    "ja": "API キーの形式が無効です。完全なキーを貼り付け直してください。"
+  },
+  "生成设置已失效，请重新提交任务。": {
+    "en": "Generation settings have expired. Submit the task again.",
+    "ja": "生成設定が失効しました。タスクを再送信してください。"
   }
 }
