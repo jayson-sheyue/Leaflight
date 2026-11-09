@@ -23,3 +23,7 @@ jobs:
       - run: npm run build
       - run: ./node_modules/.bin/tsc --noEmit -p android-reader/tsconfig.json
       - run: ./node_modules/.bin/vite build --config android-reader/vite.config.ts
+      - name: Install browser for EPUB import regression
+        run: ./node_modules/.bin/playwright install --with-deps chromium
+      - name: Check long-book import and backup in the Android browser client
+        run: node android-reader/tests/long-import.browser.cjs

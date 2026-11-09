@@ -1,3 +1,4 @@
+import importLimits from '../../electron/import-limits.json';
 import transfer from '../../electron/pool-transfer.cjs';
 export type Position={chapter:number;fraction:number;paragraph?:number;index?:number};
 export type Bookmark=Position&{id:string};
@@ -23,7 +24,8 @@ export function position(v:unknown,chapters:number):v is Position{
 function cleanPosition(v:Position):Position{return {chapter:v.chapter,fraction:v.fraction,...(Number.isInteger(v.paragraph)&&Number.isInteger(v.index)?{paragraph:v.paragraph,index:v.index}:{})};}
 function normalizeText(v:string){return v.replace(/\\(?:\\)?r\\(?:\\)?n|\\(?:\\)?n/g,'\n');}
 export function validateBook(value:unknown):Book{
- if(!record(value)||!str(value.id,200)||!value.id||!str(value.title,1000)||!value.title||!str(value.synopsis,20000)||!record(value.preset)||!['en','ja',undefined].includes(value.preset.language)||!str(value.preset.level,30)||!Array.isArray(value.chapters)||value.chapters.length>100||!Array.isArray(value.bookmarks)||value.bookmarks.length>1000||!position(value.progress,value.chapters.length))fail();
+ if(!record(value)||!str(value.id,200)||!value.id||!str(value.title,1000)||!value.title||!str(value.synopsis,20000)||!record(value.preset)||!['en','ja',undefined].includes(value.preset.language)||!str(value.preset.level,30)||!Array.isArray(value.chapters)||value.chapters.length>(value.source==='import'?importLimits.maxChapters:100)||!Array.isArray(value.bookmarks)||value.bookmarks.length>1000||!position(value.progress,value.chapters.length))fail();
+ if(value.source==='import'&&(value.series!==undefined||value.chapters.reduce((n:number,c:any)=>n+(typeof c?.text==='string'?c.text.length:0),0)>importLimits.maxTextChars))fail();
  const ids=new Set<string>();
  const chapters=value.chapters.map((c:unknown)=>{
   if(!record(c)||!str(c.id,200)||!c.id||ids.has(c.id)||!str(c.title,1000)||!str(c.text,500000)||c.readings!==undefined&&(!Array.isArray(c.readings)||c.readings.length>3000||!c.readings.every((r:unknown)=>record(r)&&str(r.surface,200)&&!!r.surface&&str(r.reading,300))))fail();
@@ -96,7 +98,7 @@ export function extractStoryFromIssue(issue:unknown):PoolStory|null{
  try{const parsed=JSON.parse(candidate),raw=record(parsed)&&record(parsed.story)?parsed.story:parsed;if(!record(raw))return null;return validatePoolStory({...raw,sharedBy:raw.sharedBy||issue.user?.login||'GitHub Reader',sharedAt:raw.sharedAt||issue.created_at||new Date().toISOString(),sourceUrl:issue.html_url||raw.sourceUrl});}catch{return null;}
 }
 export function parseImport(text:string){
- if(new TextEncoder().encode(text).length>30*1024*1024)throw Error('too-large');
+ if(new TextEncoder().encode(text).length>importLimits.maxBackupBytes)throw Error('too-large');
  let data:any;try{data=JSON.parse(text);}catch{fail();}
  if(record(data)&&data.format==='leaflight-pool-story'&&data.version===1)return {books:[poolStoryToBook(data.story??data)],source:'leaflight-pool-story',settings:null};
  if(!record(data)||!['leaflight','leaflight-reader'].includes(data.format)||data.version!==1||!Array.isArray(data.books)||data.books.length>500)fail();

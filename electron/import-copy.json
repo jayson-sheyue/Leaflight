@@ -1,0 +1,62 @@
+{
+  "导入失败：文件超过 50 MiB，请拆分为较小的文件。": {
+    "en": "Import failed: the file exceeds 50 MiB. Split it into smaller volumes.",
+    "ja": "読み込み失敗：ファイルが50 MiBを超えています。分巻してください。"
+  },
+  "导入失败：EPUB 展开内容过大或文件条目过多，请拆分后重试。": {
+    "en": "Import failed: the EPUB exceeds the extraction or file-entry budget. Split it into volumes.",
+    "ja": "読み込み失敗：EPUBの展開サイズまたはファイル数が上限を超えています。分巻してください。"
+  },
+  "导入失败：正文超过 3200 万字符，请分卷导入。": {
+    "en": "Import failed: the text exceeds 32 million characters. Import separate volumes.",
+    "ja": "読み込み失敗：本文が約3200万文字を超えています。分巻して読み込んでください。"
+  },
+  "导入失败：超过 5000 个章节或分段，请分卷导入。": {
+    "en": "Import failed: more than 5,000 chapters or parts. Import separate volumes.",
+    "ja": "読み込み失敗：章・分割数が5000を超えています。分巻してください。"
+  },
+  "导入失败：此 EPUB 含加密资源，暂不支持。": {
+    "en": "Import failed: this EPUB contains encrypted resources, which are not supported.",
+    "ja": "読み込み失敗：暗号化されたリソースを含むEPUBには対応していません。"
+  },
+  "导入失败：此 EPUB 包含不支持的实体声明或 DTD。": {
+    "en": "Import failed: this EPUB contains unsupported entity declarations or a DTD.",
+    "ja": "読み込み失敗：未対応の実体宣言またはDTDを含んでいます。"
+  },
+  "导入失败：没有找到可阅读的正文。": {
+    "en": "Import failed: no readable text was found.",
+    "ja": "読み込み失敗：読める本文が見つかりませんでした。"
+  },
+  "导入失败：TXT 请使用 UTF-8 编码保存。": {
+    "en": "Import failed: save the TXT file using UTF-8 encoding.",
+    "ja": "読み込み失敗：TXTをUTF-8で保存してください。"
+  },
+  "导入失败：请选择 TXT 或 EPUB 文件。": {
+    "en": "Import failed: choose a TXT or EPUB file.",
+    "ja": "読み込み失敗：TXTまたはEPUBを選択してください。"
+  },
+  "导入超时，请拆分文件后重试。": {
+    "en": "Import timed out. Split the file into smaller volumes and retry.",
+    "ja": "読み込みがタイムアウトしました。分巻して再試行してください。"
+  },
+  "导入失败：EPUB 结构不完整或内容无法解析。": {
+    "en": "Import failed: the EPUB structure is incomplete or its content cannot be parsed.",
+    "ja": "読み込み失敗：EPUBの構造が不完全か、内容を解析できません。"
+  },
+  "导入未完成，请检查可用存储空间后重试。": {
+    "en": "Import did not finish. Check available storage and retry.",
+    "ja": "読み込みが完了しませんでした。空き容量を確認して再試行してください。"
+  },
+  "备份文件超过 128 MiB，请分批迁移作品。": {
+    "en": "The backup exceeds 128 MiB. Transfer books in smaller batches.",
+    "ja": "バックアップが128 MiBを超えています。作品を分けて移行してください。"
+  },
+  "网页预览存储空间不足，请使用 Mac 或 Android 客户端导入长篇。": {
+    "en": "Preview storage is full. Use the Mac or Android app to import long novels.",
+    "ja": "プレビューの保存容量が不足しています。長編はMacまたはAndroidアプリで読み込んでください。"
+  },
+  "导入中…": {
+    "en": "Importing…",
+    "ja": "読み込み中…"
+  }
+}

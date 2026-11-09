@@ -1,6 +1,6 @@
 # Leaflight Reader · Android 平板阅读预览
 
-当前版本 **0.3.0-preview.4**。安卓端与 Mac v0.11.15 对应阅读、连载创作与共享书池功能，仍为独立客户端，使用独立的应用标识、用户数据、构建目录和签名。安卓版和 Mac 的数据及构建相互独立。
+当前版本 **0.3.0-preview.5**。安卓端与 Mac v0.11.16 对应阅读、连载创作与共享书池功能，仍为独立客户端，使用独立的应用标识、用户数据、构建目录和签名。安卓版和 Mac 的数据及构建相互独立。
 
 ## Gemini 密钥来源
 
@@ -16,7 +16,7 @@
 
 ## 在 Pad 上阅读
 
-1. 从 [Android 预览 Release](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.4) 下载并安装 `Leaflight-Reader-0.3.0-preview.4-debug.apk`。这是开发签名的预览包，尚未上架应用商店。
+1. 从 [Android 预览 Release](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.5) 下载并安装 `Leaflight-Reader-0.3.0-preview.5-debug.apk`。这是开发签名的预览包，尚未上架应用商店。
 2. 在 Mac 版的「系统设置 → 导出备份」导出 JSON，通过 USB 或你自己的文件传输方式复制到 Pad。
 3. 在安卓版点击「导入 TXT / EPUB / 备份」，用系统文件选择器选中 JSON。只导入小说、章节、书签和阅读位置；不导入写作草稿、评审或 API Key。
 4. 打开作品阅读。已导入内容完全离线可用，阅读无需联网。应用仅为 Gemini 生成申请联网权限，不申请账户或全盘存储权限。
@@ -37,7 +37,7 @@
 
 ## 平台功能与发布对应
 
-| 本次用户任务 | Mac 0.11.15 | Android 0.3.0-preview.4 |
+| 本次用户任务 | Mac 0.11.16 | Android 0.3.0-preview.5 |
 | --- | --- | --- |
 | 共享书池免 Key 借阅、GitHub 同步与脱敏分享 | 支持 | 支持 |
 | 试读、大纲、修改原始要求后重新试读 | 支持 | 支持 |
@@ -58,7 +58,7 @@
 - 点击「生成故事 → Gemini 设置」填写自己的 API Key 和模型（API Key 可前往 [Google AI Studio (`https://aistudio.google.com/apikey`)](https://aistudio.google.com/apikey) 获取）；密钥使用 Android Keystore 加密存储，不包含在阅读备份中。联网生成可能产生 API 费用。生成时可以继续阅读，结果和失败显示在「生成消息」。系统结束进程时任务可能中断，不会自动重试；中断的请求仍可能产生费用。
 - 两端没有自动同步；Android 阅读备份用于安卓版恢复，不能作为 Mac 全库备份导入。
 - 支持 UTF-8 TXT 和未加密的常见 EPUB 文字章节导入；不保证保留排版、图片或复杂结构。单篇文件无法恢复原始书签、进度与生成设定；完整迁移应使用 JSON 备份。不支持 PDF 和加密 EPUB。
-- JSON 备份上限 30 MB；TXT/EPUB 上限 20 MB，EPUB 解压内容上限 8 MB。最多 500 本、每本最多 100 章。完整 Mac JSON 备份中的大纲、设定、摘要与连续性信息可供安卓版续写；早期安卓版导入时未保留这些信息，需重新导入一份完整 Mac 备份。TXT/EPUB 和旧独立短篇不具备连载大纲，只支持阅读。
+- JSON 备份上限 128 MiB；TXT/EPUB 单文件上限 50 MiB，EPUB 总展开量 128 MiB、文字资源 64 MiB，最多 20000 个文件条目。最多 500 本备份记录；本地导入作品每本最多 5000 章／分段、正文最多 3200 万字符，AI 连载与共享书池仍分别为 100 章。普通 HTML/XHTML 文档声明可读取，过长单章按段落或单词边界拆分。完整 Mac JSON 备份中的大纲、设定、摘要与连续性信息可供安卓版续写；早期安卓版导入时未保留这些信息，需重新导入一份完整 Mac 备份。TXT/EPUB 和旧独立短篇不具备连载大纲，只支持阅读。
 - 数据在本应用的私有 WebView IndexedDB 中，不依赖 Mac 在线。卸载应用会丢失本机数据，先导出备份；外部 JSON 本身未加密。
 - Android 10（API 29）及以上，需要较新的 Android System WebView。字体使用设备实际提供的字体，四种类别不等于额外捆绑四套字库。
 - 此包使用本机调试签名；后续更换签名可能需要先备份，再重新安装。没有应用内自动更新；尚未完成实体 Pad 和最低 Android 版本实机验收。
@@ -99,11 +99,11 @@ npm test
 
 浏览器测试使用隔离数据，覆盖真实 Mac 备份导入、恶意 HTML 转义、损坏备份不覆盖、再次导入、横竖屏／字体重排、翻页与书签、重启恢复、日语注音、主题和备份导出。浏览器验证不能代替实际 APK、系统文件选择器或实体 Pad 测试。上述为自动化验证，具体 APK 的测试范围请以本次交付说明为准。
 
-当前 APK 已在 Android 16 ARM64 专用平板模拟器验证从 0.2.1 覆盖升级、密钥库、系统文件导入／导出、滑动阅读、书签、横竖屏与同签名重装。生成请求使用模拟 Gemini 响应验证，未调用真实付费 API；具体范围见 [发布说明](../docs/releases/android-v0.3.0-preview.4.md)。实体 Pad 与 Android 10 最低版本尚未实机验证。
+历次 APK 已在 Android 16 ARM64 专用平板模拟器验证覆盖升级、密钥库、系统文件导入／导出、滑动阅读、书签、横竖屏与同签名重装。生成请求使用模拟 Gemini 响应验证，未调用真实付费 API；具体范围见 [发布说明](../docs/releases/android-v0.3.0-preview.5.md)。实体 Pad 与 Android 10 最低版本尚未实机验证。
 
 原生测试默认对当前 APK 执行安装与同签名重装；需要指定旧版升级来源时设置 `READER_UPGRADE_FROM=/path/to/previous-same-signed.apk`。重复原生验收需安装官方 Playwright Android 驱动（`node_modules/.bin/playwright install android`），准备名为 `LeaflightTablet` 的专用模拟器并启动 adb，再运行 `node android-reader/tests/reader.android.cjs`，随后运行 `node android-reader/tests/series.android.cjs` 验证连载流程。该测试会清空此专用模拟器中阅读器的测试数据，脚本拒绝在实体设备或其他名称的模拟器执行。
 
-`node android-reader/tests/pool-live.android.cjs` 在上述专用模拟器中验证真实公开 GitHub 目录和原生全文下载，并与本地同版本归档逐章核对。先同步仓库目录，默认选择非内置作品；可用 `LEAFLIGHT_TEST_POOL_ID=<公开作品标识>` 指定。它仅移除模拟器中该作品和目录缓存，借阅后重启核对保存，不投稿、不调用模型。24 章长篇的实际投稿／借阅结果见 [发布说明](../docs/releases/android-v0.3.0-preview.4.md)。
+`node android-reader/tests/pool-live.android.cjs` 在上述专用模拟器中验证真实公开 GitHub 目录和原生全文下载，并与本地同版本归档逐章核对。先同步仓库目录，默认选择非内置作品；可用 `LEAFLIGHT_TEST_POOL_ID=<公开作品标识>` 指定。它仅移除模拟器中该作品和目录缓存，借阅后重启核对保存，不投稿、不调用模型。24 章长篇的实际投稿／借阅结果见 [发布说明](../docs/releases/android-v0.3.0-preview.5.md)。
 
 ## 官方技术依据
 

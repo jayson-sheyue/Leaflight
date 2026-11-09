@@ -8,6 +8,7 @@ const {JobQueue}=require('./jobs.cjs');
 const {batchPayload,runChapterBatch}=require('./chapter-batch.cjs');
 const {listPoolStories,fetchRemotePool,poolStoryToBook,sanitizeForPool,validatePoolStory,publishToGitHub,transfer}=require('./pool.cjs');
 const gateway=require('./gemini-gateway.cjs');
+const importLimits=require('./import-limits.json');
 const jobCredentials=new Map();
 let store,win,jobs,quitting=false;
 const poolDownloads=new Map();
@@ -87,7 +88,7 @@ async function handle(command,p={}){switch(command){
  case 'reanchor':return store.reanchor(p.id,p.marks);
  case 'export':{const b=store.get(p.id);if(!['txt','epub'].includes(p.format))throw Error('无效的导出格式。');const result=await dialog.showSaveDialog(win,{title:dialogText('export'),buttonLabel:dialogText('save'),defaultPath:`${b.title.replace(/[<>:"/\\|?*\x00-\x1f]/g,'').slice(0,80)||'story'}.${p.format}`,filters:[{name:p.format.toUpperCase(),extensions:[p.format]}]});if(result.canceled)return false;const bytes=p.format==='epub'?epub(b):`${b.title}\n${b.source==='import'?'Imported to Leaflight':'AI generated with Leaflight'}\n\n${b.synopsis}\n\n${b.chapters.map(c=>`${c.title}\n\n${c.text}`).join('\n\n\n')}`;fs.writeFileSync(result.filePath,bytes);return true;}
  case 'backup':{const r=await dialog.showSaveDialog(win,{title:dialogText('backup'),buttonLabel:dialogText('save'),defaultPath:'Leaflight-backup.json',filters:[{name:'Leaflight backup',extensions:['json']}]});if(r.canceled)return false;fs.writeFileSync(r.filePath,JSON.stringify(store.backup(),null,2));return true;}
- case 'restore':{const r=await dialog.showOpenDialog(win,{title:dialogText('restore'),buttonLabel:dialogText('open'),properties:['openFile'],filters:[{name:'Leaflight backup',extensions:['json']}]});if(r.canceled)return false;if(fs.statSync(r.filePaths[0]).size>50*1024*1024)throw Error('备份文件超过 50 MB。');const result=store.restore(JSON.parse(fs.readFileSync(r.filePaths[0],'utf8')));buildMenu();return result;}
+ case 'restore':{const r=await dialog.showOpenDialog(win,{title:dialogText('restore'),buttonLabel:dialogText('open'),properties:['openFile'],filters:[{name:'Leaflight backup',extensions:['json']}]});if(r.canceled)return false;if(fs.statSync(r.filePaths[0]).size>importLimits.maxBackupBytes)throw Error('备份文件超过 128 MiB，请分批迁移作品。');const result=store.restore(JSON.parse(fs.readFileSync(r.filePaths[0],'utf8')));buildMenu();return result;}
  case 'pool-list':return {stories:listPoolStories({cached:store.setting('poolCache',[])}),syncedAt:store.setting('poolSyncedAt',null)};
  case 'pool-sync':{const res=await fetchRemotePool({cached:store.setting('poolCache',[]),fetchImpl:global.fetch});store.set('poolCache',res.stories);if(res.online)store.set('poolSyncedAt',res.syncedAt);else res.syncedAt=store.setting('poolSyncedAt',null);return res;}
  case 'pool-add':return addPool(p.poolId);

@@ -1,0 +1,11 @@
+{
+  "maxChapters": 5000,
+  "maxFileBytes": 52428800,
+  "maxArchiveBytes": 134217728,
+  "maxXmlBytes": 67108864,
+  "maxTextChars": 32000000,
+  "maxEntries": 20000,
+  "chapterChars": 149999,
+  "splitAt": 140000,
+  "maxBackupBytes": 134217728
+}

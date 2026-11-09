@@ -11,7 +11,7 @@ test('imports real Mac backup, keeps prose/ruby/legacy anchors, strips writings 
 });
 test('validates the entire import before accepting any book; rejects bad anchors and duplicate book IDs',t=>{
  const {s}=fixture(t),valid=s.backup();for(const invalid of [{...valid,books:[valid.books[0],{id:'broken'}]},{...valid,books:[valid.books[0],valid.books[0]]},{...valid,version:2},{...valid,books:[{...valid.books[0],progress:{chapter:0,fraction:1.5}}]}])assert.throws(()=>parseImport(JSON.stringify(invalid)));
- assert.throws(()=>parseImport('{"format":'));assert.throws(()=>parseImport(' '.repeat(30*1024*1024+1)),/too-large/);
+ assert.throws(()=>parseImport('{"format":'));assert.throws(()=>parseImport(' '.repeat(require('../../electron/import-limits.json').maxBackupBytes+1)),/too-large/);
 });
 test('reimport only appends compatible chapters and retains tablet progress/bookmarks; conflicts cannot replace prose',t=>{
  const {s,b}=fixture(t),local=parseImport(JSON.stringify(s.backup())).books[0];local.progress={chapter:0,fraction:.8,paragraph:5,index:3};local.bookmarks=[{id:'pad-only',chapter:0,fraction:.8}];
@@ -52,4 +52,11 @@ test('imports Mac ZIP sharing packages without losing final chapters or private 
  const {parseShareZip}=m.exports,transfer=require('../../electron/pool-transfer.cjs');
  const story=structuredClone(seed[0]);story.chapters=Array.from({length:20},(_,i)=>({...story.chapters[0],title:'Chapter '+(i+1)}));story.preset.totalChapters=20;story.outline=story.chapters.map(c=>c.title);
  const bytes=await transfer.createShareZip({format:'leaflight-pool-story',version:1,story});const imported=parseShareZip(bytes);assert.equal(imported.chapters.length,20);assert.equal(imported.chapters[19].text,story.chapters[19].text);assert.deepEqual(imported.bookmarks,[]);assert.equal(imported.progress.fraction,0);
+});
+
+test('Mac long-book backups and reader backups retain all 5000 chapters and tail reading state, without enabling long AI series',t=>{
+ const {s}=fixture(t);const long=s.importStory({title:'5000 chapter fixture',language:'en',chapters:Array.from({length:5000},(_,i)=>({title:`Chapter ${i+1}`,text:`Full text ${i+1}.`,readings:[]}))});s.progress(long.id,{chapter:4999,fraction:.7});s.bookmark(long.id,{chapter:4999,fraction:.7});
+ const book=parseImport(JSON.stringify(s.backup())).books.find(b=>b.id===long.id);assert.equal(book.chapters.length,5000);assert.equal(book.chapters[4999].text,'Full text 5000.');assert.equal(book.bookmarks[0].chapter,4999);assert.equal(book.progress.chapter,4999);assert.equal(book.series,undefined);
+ const again=parseImport(JSON.stringify({format:'leaflight-reader',version:1,books:[book],settings:defaults})).books[0];assert.deepEqual(again,book);
+ assert.throws(()=>parseImport(JSON.stringify({format:'leaflight',version:1,books:[{...book,source:undefined}]})));
 });

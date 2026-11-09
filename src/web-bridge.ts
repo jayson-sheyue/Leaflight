@@ -602,7 +602,7 @@ export function installWebBridge(): void {
           updatedAt: new Date().toISOString()
         };
         books.unshift(imported);
-        writeJson(STORAGE_KEYS.books, books);
+        try{localStorage.setItem(STORAGE_KEYS.books,JSON.stringify(books));}catch{throw Error('网页预览存储空间不足，请使用 Mac 或 Android 客户端导入长篇。');}
         return imported;
       }
       case 'difficulty': {
