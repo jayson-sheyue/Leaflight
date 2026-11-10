@@ -9,8 +9,8 @@
 *A Local-First English (CEFR A2–C1) & Japanese (JLPT N5–N1) AI Fiction Studio, Tactile Graded Reader, Science × Fantasy Learning Companion, and 4D Writing Coach for macOS.*
 
 [![Web Preview](https://img.shields.io/badge/Web%20Preview-GitHub%20Pages%20%E5%85%8D%E5%AE%89%E8%A3%85%E5%9C%A8%E7%BA%BF%E8%AF%95%E7%8E%A9-b5651d?style=for-the-badge&logo=googlechrome&logoColor=white)](https://jayson-sheyue.github.io/Leaflight/)
-[![Release](https://img.shields.io/badge/Release-v0.12.0-2d5a46?style=for-the-badge)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.0)
-[![Platform](https://img.shields.io/badge/macOS-Apple%20Silicon%20(arm64)-1d1d1f?style=for-the-badge&logo=apple)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.0)
+[![Release](https://img.shields.io/badge/Release-v0.12.1-2d5a46?style=for-the-badge)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.1)
+[![Platform](https://img.shields.io/badge/macOS-Apple%20Silicon%20(arm64)-1d1d1f?style=for-the-badge&logo=apple)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.1)
 [![Android](https://img.shields.io/badge/Android-0.3.0--preview.7-3ddc84?style=for-the-badge&logo=android&logoColor=white)](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.7)
 [![Storage](https://img.shields.io/badge/Local--First-SQLite%20%2B%20Keychain-0f4c5c?style=for-the-badge)](#5-本地优先共享书池免-key-读与分享与非阻塞后台消息盒子)
 [![Languages](https://img.shields.io/badge/Bilingual-English%20CEFR%20A2--C1%20%7C%20Japanese%20JLPT%20N5--N1-8c4a27?style=for-the-badge)](#1-英日双语分级故事工坊-cefr-a2c1--jlpt-n5n1)
@@ -217,7 +217,7 @@ Leaflight 独创了 **Science × Fantasy（科学 × 奇幻/科幻/悬疑）** �
 
 ### 当前版本
 
-Mac 安装包是 v0.12.0，包含全窗口阅读／写作，并保留 ad-hoc 签名，尚未获得 Apple 公证。同一 Release 还附有未签名的 Windows x64 安装包。这两个已发布的安装包仍会在放大后留下两个常驻按钮；网页预览和此后的源码不再常驻，横屏和竖屏都只在轻点页面后，于右上角短暂显示「消息」和「退出」。Android Reader 是 0.3.0-preview.7，阅读页可以进入全屏：隐藏页眉、底栏、状态栏和导航栏，正文上不常驻按钮。轻点页面后，右上角会短暂出现「消息」和「退出」。网页预览在横屏和竖屏也使用同样的短暂文字，不再放常驻按钮。不再提供 iOS 安装包。各端都支持 AI Studio／Vertex Express 密钥来源选择。更新都是手动替换。详见 [v0.12.0 说明](docs/releases/v0.12.0.md)、[Android 0.3.0-preview.7 说明](docs/releases/android-v0.3.0-preview.7.md) 与 [共享书池指南](docs/community-pool.md)。
+Mac 安装包是 v0.12.1，包含全窗口阅读／写作，并保留 ad-hoc 签名，尚未获得 Apple 公证。同一 Release 还附有未签名的 Windows x64 安装包。这两个安装包放大后都不常驻按钮；横屏和竖屏都只在轻点页面后，于右上角短暂显示「消息」和「退出」。网页预览同样如此。Android Reader 是 0.3.0-preview.7，阅读页可以进入全屏：隐藏页眉、底栏、状态栏和导航栏，正文上不常驻按钮。轻点页面后，右上角会短暂出现「消息」和「退出」。网页预览在横屏和竖屏也使用同样的短暂文字，不再放常驻按钮。不再提供 iOS 安装包。各端都支持 AI Studio／Vertex Express 密钥来源选择。更新都是手动替换。详见 [v0.12.1 说明](docs/releases/v0.12.1.md)、[Android 0.3.0-preview.7 说明](docs/releases/android-v0.3.0-preview.7.md) 与 [共享书池指南](docs/community-pool.md)。
 
 已用 24 章、约 20 万字符的合成作品完成真实 GitHub ZIP 投稿、自动收录反馈及 Android 最终 APK 全文借阅验收；测试条目已清理。[公开验收记录](https://github.com/jayson-sheyue/Leaflight/issues/2)。
 
@@ -227,18 +227,18 @@ Mac 安装包是 v0.12.0，包含全窗口阅读／写作，并保留 ad-hoc 签
 
 ### 方式一：直接安装 macOS 桌面端（推荐）
 
-1. 前往本仓库的 [**v0.12.0 Release**](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.0)，下载安装包：
-   - 🍎 **`Leaflight-0.12.0-arm64.dmg`**（Apple Silicon Mac，含全窗口阅读／写作。不提供 Intel / Linux 安装包。）
+1. 前往本仓库的 [**v0.12.1 Release**](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.1)，下载安装包：
+   - 🍎 **`Leaflight-0.12.1-arm64.dmg`**（Apple Silicon Mac，含全窗口阅读／写作。放大后不常驻按钮。不提供 Intel / Linux 安装包。）
 2. 双击打开 `.dmg`，将 **Leaflight.app** 拖入 `Applications（应用程序）` 文件夹。
 3. 首次打开即可在「共享书池」免费借阅英日分级小说、阅读内置示范故事、导入本地 `TXT / EPUB` 电子书，或浏览 184 道写作题库；如需使用 **AI 生成新故事/章节** 或 **AI 写作批改**，请按下方指南填入你自己的 Gemini API Key。
 
-> **安装限制**：v0.12.0 沿用 ad-hoc 整包签名，没有 Developer ID 和 Apple 公证，macOS 默认仍可能阻止打开。严格签名校验通过不等于 Gatekeeper 放行。确认下载来源后，请参照 [macOS 安装与报错说明](docs/macos-installation.md) 及 Apple 官方的单应用允许方式；当前不能承诺所有 Mac 默认双击打开。
+> **安装限制**：v0.12.1 沿用 ad-hoc 整包签名，没有 Developer ID 和 Apple 公证，macOS 默认仍可能阻止打开。严格签名校验通过不等于 Gatekeeper 放行。确认下载来源后，请参照 [macOS 安装与报错说明](docs/macos-installation.md) 及 Apple 官方的单应用允许方式；当前不能承诺所有 Mac 默认双击打开。
 
 **手动更新**：先在系统设置导出全库备份，等待后台任务完成并退出应用，再下载新版安装包，将应用替换到原安装位置。不要删除 `~/Library/Application Support/novel-reading/`（Windows 为 `%APPDATA%\novel-reading`）用户数据目录。当前没有应用内检查更新或自动安装功能。
 
 ### Windows 桌面端（x64）
 
-从 [v0.12.0 Release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.0) 下载 `Leaflight-0.12.0-win-x64-setup.exe`。这是 64 位、未签名的 NSIS 安装程序，可以选择安装目录，默认安装到当前用户。Windows 可能拦截未签名安装包；不要为此关闭系统保护。作品、写作草稿和进度保存在 `%APPDATA%\novel-reading`，与 Mac 一样可以导出不含 API Key 的全库备份。写作批改和全窗口与 Mac 相同。这个文件由 GitHub Actions 的 Windows 运行器构建，没有在 Windows 上启动过。[安装说明](docs/windows-installation.md)。
+从 [v0.12.1 Release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.1) 下载 `Leaflight-0.12.1-win-x64-setup.exe`。这是 64 位、未签名的 NSIS 安装程序，可以选择安装目录，默认安装到当前用户。Windows 可能拦截未签名安装包；不要为此关闭系统保护。作品、写作草稿和进度保存在 `%APPDATA%\novel-reading`，与 Mac 一样可以导出不含 API Key 的全库备份。写作批改和全窗口与 Mac 相同，放大后不常驻按钮。这个文件由 GitHub Actions 的 Windows 运行器构建，没有在 Windows 上启动过。[安装说明](docs/windows-installation.md)。
 
 ### iPhone / iPad
 
@@ -351,7 +351,8 @@ Leaflight/
 
 ## 📋 版本演进摘要（Changelog）
 
-- **`v0.12.0`（当前 Mac 版本）**：阅读、写作和评审可以铺满整个窗口，并隐藏侧栏、顶栏和系统菜单栏。放大后不常驻按钮，轻点页面才短暂显示「消息」和「退出」。Mac 安装包为 `Leaflight-0.12.0-arm64.dmg`，同时加入 Windows x64 安装脚本。iPhone / iPad 使用网页预览，不再提供 iOS 安装包。[说明](docs/releases/v0.12.0.md)。
+- **`v0.12.1`（当前 Mac / Windows 版本）**：已发布的 Mac DMG 和 Windows 安装包去掉放大后的常驻按钮。轻点页面后，右上角短暂显示「消息」和「退出」。安装包为 `Leaflight-0.12.1-arm64.dmg` 与 `Leaflight-0.12.1-win-x64-setup.exe`。[说明](docs/releases/v0.12.1.md)。
+- **`v0.12.0`**：阅读、写作和评审可以铺满整个窗口，并隐藏侧栏、顶栏和系统菜单栏。这一版已发布的安装包仍会留下两个常驻按钮，请改用 v0.12.1。iPhone / iPad 使用网页预览，不再提供 iOS 安装包。[说明](docs/releases/v0.12.0.md)。
 - **`v0.11.16`**：Mac / Android 本地长篇导入扩展至 5000 章，兼容普通 EPUB 文档声明，补齐重启、书签、备份与明确错误提示。[说明](docs/releases/v0.11.16.md)。
 - **`v0.11.15`**：同步 Gemini 密钥来源选择、Express 固定端点和任务配置快照。[说明](docs/releases/v0.11.15.md)。
 - **`v0.11.13`**：修复 macOS App 资源签名，仍未公证。[说明](docs/releases/v0.11.13.md)。

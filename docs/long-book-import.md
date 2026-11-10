@@ -1,6 +1,6 @@
 # Long-book import / 长篇导入 / 長編の読み込み
 
-Mac v0.12.0 and Android Reader 0.3.0-preview.7 share the same TXT/EPUB parser and local-reading limits. iPhone and iPad use the web preview, which reads in the browser and stores less than those apps. Local imports are separate from AI generation and the community pool. See [English](../README.md), [日本語](../README.ja.md), [中文](../README.zh-CN.md).
+Mac v0.12.1 and Android Reader 0.3.0-preview.7 share the same TXT/EPUB parser and local-reading limits. iPhone and iPad use the web preview, which reads in the browser and stores less than those apps. Local imports are separate from AI generation and the community pool. See [English](../README.md), [日本語](../README.ja.md), [中文](../README.zh-CN.md).
 
 ## Import and preserve a novel
 

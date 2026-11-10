@@ -12,10 +12,10 @@ code has no resources but signature indicates they must be present
 
 ## 当前安装方式与限制
 
-1. 从 [v0.12.0 Release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.0) 下载 `Leaflight-0.12.0-arm64.dmg`。这是 Apple Silicon Mac 包；最低系统声明为 macOS 12.0，最低版本尚未实机验证。v0.12.0 起，阅读、写作和评审可以进入全窗口。
-2. 如需核对下载完整性，运行 `shasum -a 256 Leaflight-0.12.0-arm64.dmg`，与 [v0.12.0 说明](releases/v0.12.0.md) 中的摘要比较。摘要一致只能证明下载一致，不能证明 Apple 已认可发布者。
+1. 从 [v0.12.1 Release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.1) 下载 `Leaflight-0.12.1-arm64.dmg`。这是 Apple Silicon Mac 包；最低系统声明为 macOS 12.0，最低版本尚未实机验证。放大阅读、写作或评审区后不常驻按钮；轻点页面，右上角短暂出现「消息」和「退出」。
+2. 如需核对下载完整性，运行 `shasum -a 256 Leaflight-0.12.1-arm64.dmg`，与 [v0.12.1 说明](releases/v0.12.1.md) 中的摘要比较。摘要一致只能证明下载一致，不能证明 Apple 已认可发布者。
 3. 退出旧版，将 DMG 中的 Leaflight 拖到 Applications 并选择替换。先导出作品备份；保留 `~/Library/Application Support/novel-reading/`，不要先卸载或删除数据目录。
-4. v0.12.0 使用完整 **ad-hoc 签名**，没有 Developer ID 和 Apple 公证。严格签名校验通过不等于默认 Gatekeeper 放行。本机构建的 App 经 `spctl --assess --type execute` 判定为 rejected。首次打开仍可能被系统阻止。
+4. v0.12.1 使用完整 **ad-hoc 签名**，没有 Developer ID 和 Apple 公证。严格签名校验通过不等于默认 Gatekeeper 放行。本机构建的 App 经 `spctl --assess --type execute` 判定为 rejected。首次打开仍可能被系统阻止。
 5. 只有确认来自本仓库的正式下载页、摘要一致且愿意信任此应用时，才按 [Apple 官方说明](https://support.apple.com/102445)，查看「系统设置 → 隐私与安全性」是否提供针对 Leaflight 的「仍要打开」入口。此入口并非在所有系统或管理策略下都可用。
 
 如果仍显示“已损坏”、签名检查失败，或系统不提供允许入口，请保留完整报错、macOS 版本和芯片类型反馈给维护者。当前不能承诺所有 Mac 均可默认双击打开；完整解决默认信任问题仍需 Developer ID 签名及 Apple 公证。不要求用户关闭全局安全策略、移除隔离标记或自行重签名。若系统提示恶意软件或会损坏电脑，不要按普通未认证提示处理。

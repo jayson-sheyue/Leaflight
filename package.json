@@ -1,6 +1,6 @@
 {
   "name": "novel-reading",
-  "version": "0.12.0",
+  "version": "0.12.1",
   "private": true,
   "description": "A local-first English and Japanese fiction studio and reader",
   "main": "electron/main.cjs",
@@ -36,6 +36,7 @@
       "output": "release"
     },
     "mac": {
+      "icon": "build/icon.icns",
       "category": "public.app-category.books",
       "identity": "-",
       "hardenedRuntime": true,
@@ -44,7 +45,15 @@
       "strictVerify": true
     },
     "win": {
-      "target": [{"target": "nsis", "arch": ["x64"]}],
+      "icon": "build/icon.ico",
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
       "artifactName": "Leaflight-${version}-win-${arch}-setup.exe",
       "forceCodeSigning": false,
       "signAndEditExecutable": false

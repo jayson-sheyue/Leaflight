@@ -4,7 +4,7 @@
 
 A local-first English and Japanese fiction reader, AI story studio, and writing practice tool.
 
-[Mac v0.12.0](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.0) · [Android 0.3.0-preview.7](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.7) · [Web reading preview](https://jayson-sheyue.github.io/Leaflight/)
+[Mac v0.12.1](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.1) · [Android 0.3.0-preview.7](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.7) · [Web reading preview](https://jayson-sheyue.github.io/Leaflight/)
 
 ## Read and learn
 
@@ -16,9 +16,9 @@ A local-first English and Japanese fiction reader, AI story studio, and writing 
 
 ## Install and start
 
-**Mac:** download `Leaflight-0.12.0-arm64.dmg` from the [v0.12.0 release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.0), open it, and drag Leaflight to Applications. Apple Silicon only; declared minimum macOS 12. The app is ad-hoc signed, without Apple Developer ID/notarization, so Gatekeeper may block a downloaded copy. Read the [installation instructions](docs/macos-installation.md). Full-window reading and writing is in this package, but that published build still shows two standing controls. The web preview and later source builds show Inbox and Exit only briefly. No Intel or Linux installer is provided.
+**Mac:** download `Leaflight-0.12.1-arm64.dmg` from the [v0.12.1 release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.1), open it, and drag Leaflight to Applications. Apple Silicon only; declared minimum macOS 12. The app is ad-hoc signed, without Apple Developer ID/notarization, so Gatekeeper may block a downloaded copy. Read the [installation instructions](docs/macos-installation.md). Full-window reading and writing hides the standing controls: tap the page and Inbox and Exit appear briefly at the top right. No Intel or Linux installer is provided.
 
-**Windows:** download `Leaflight-0.12.0-win-x64-setup.exe` from the [v0.12.0 release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.0). It is an unsigned 64-bit NSIS setup, so Windows may refuse to run it; do not turn off system protection to open it. You can choose a folder. Books stay in `%APPDATA%\novel-reading`. Writing practice and full-window mode match the Mac app. The file was built on GitHub Actions and was not launched on Windows. See [Windows installation](docs/windows-installation.md).
+**Windows:** download `Leaflight-0.12.1-win-x64-setup.exe` from the [v0.12.1 release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.1). It is an unsigned 64-bit NSIS setup, so Windows may refuse to run it; do not turn off system protection to open it. You can choose a folder. Books stay in `%APPDATA%\novel-reading`. Writing practice and full-window mode match the Mac app. The file is built on GitHub Actions and was not launched on Windows. See [Windows installation](docs/windows-installation.md).
 
 **Android:** download `Leaflight-Reader-0.3.0-preview.7-debug.apk` from the [Android preview release](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.7). Declared minimum Android 10 (API 29), target 36. This is a debug-signed preview. Update by installing over the existing app; uninstalling first removes its local data. Full-screen reading hides the page header, page controls, status bar, and navigation bar. The page stays clear; tap it to briefly show Inbox and Exit at the top right. Back leaves full screen first. See [Android setup and scope](android-reader/README.md). Android has reading, story generation, and the community pool; Mac/Windows writing review and difficulty calibration are not included.
 

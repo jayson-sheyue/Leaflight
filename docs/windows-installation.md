@@ -1,6 +1,6 @@
 # Windows installation
 
-Leaflight 0.12.0 for Windows is a 64-bit desktop app with the same reading, story generation, writing practice, and full-window mode as the Mac source. There is no 32-bit or ARM64 Windows package.
+Leaflight 0.12.1 for Windows is a 64-bit desktop app with the same reading, story generation, writing practice, and full-window mode as the Mac source. There is no 32-bit or ARM64 Windows package.
 
 ## Build
 
@@ -11,7 +11,7 @@ npm ci
 npm run package:win
 ```
 
-The published file is `Leaflight-0.12.0-win-x64-setup.exe` on the [v0.12.0 release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.0). SHA-256: `e299d71f3f9d1120e42fa0698c23e26515156394ebf48ffb912d48edc8e588a8`. It was built on GitHub Actions `windows-latest` from commit `67e79172eddda0af5fc717c3d153cd433c253b2d`. It is an NSIS installer, not a one-click package: you can choose the folder. It installs for the current user.
+The published file is `Leaflight-0.12.1-win-x64-setup.exe` on the [v0.12.1 release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.1). The SHA-256 is recorded in [v0.12.1](releases/v0.12.1.md) after the GitHub Actions build. It is an NSIS installer, not a one-click package: you can choose the folder. It installs for the current user.
 
 A local macOS build can fail while downloading Electron for Windows when Node does not trust the download certificate. That does not change the file attached to the release. Do not disable certificate checks to force a local build.
 
@@ -25,4 +25,4 @@ This package was not installed or launched on Windows. A successful build on a W
 
 ## Full window
 
-In the reader, editor, or review, choose the expand control. The sidebar, page header, and Windows menu bar hide, and the current area fills the screen. Inbox and Exit full window remain at the top left. Esc closes a dialog first, then the inbox, then leaves the full window. The text position is kept.
+In the reader, editor, or review, choose the expand control. The sidebar, page header, and Windows menu bar hide, and the current area fills the screen. The page stays clear. Tap it and Inbox and Exit appear briefly at the top right. Esc closes a dialog first, then the inbox, then leaves the full window. The text position is kept.
