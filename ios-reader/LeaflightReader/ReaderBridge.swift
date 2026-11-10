@@ -152,7 +152,8 @@ final class ReaderBridge: NSObject, URLSessionDataDelegate, UIDocumentPickerDele
         guard id.range(of: #"^[a-zA-Z0-9-]{1,100}$"#, options: .regularExpression) != nil,
               poolId.range(of: #"^[a-z0-9][a-z0-9._-]{2,80}$"#, options: .regularExpression) != nil else { return }
         get("https://raw.githubusercontent.com/jayson-sheyue/Leaflight/main/community-pool/stories/\(poolId).json", limit: 30 * 1024 * 1024) { [weak self] text in
-            self?.emit("window.readerPoolStoryResult && window.readerPoolStoryResult(\(js(id)),\(js(text == nil ? "failed" : "ok")),\(js(text ?? "")))")
+            let status = text == nil ? "failed" : "ok"
+            self?.emit("window.readerPoolStoryResult && window.readerPoolStoryResult(\(self?.js(id) ?? "\"\""),\(self?.js(status) ?? "\"\""),\(self?.js(text ?? "") ?? "\"\""))")
         }
     }
 

@@ -68,7 +68,8 @@ final class ReaderController: UIViewController, WKUIDelegate, WKNavigationDelega
         server.start { [weak self] port in
             guard let self, let port else { self?.showMissing(guide); return }
             self.origin = "http://127.0.0.1:\(port)"
-            self.web?.load(URL(string: self.origin + "/index.html")!)
+            guard let page = URL(string: self.origin + "/index.html") else { self.showMissing(guide); return }
+            self.web?.load(URLRequest(url: page))
         }
     }
 
@@ -184,7 +185,7 @@ final class LoopbackReader {
         let bytes = body ?? Data()
         let type = mime(file.pathExtension)
         let head = parts[0] == "HEAD"
-        var response = "HTTP/1.1 \(status)\r\nContent-Type: \(type)\r\nContent-Length: \(bytes.count)\r\nCache-Control: no-store\r\nX-Content-Type-Options: nosniff\r\nConnection: close\r\n\r\n"
+        let response = "HTTP/1.1 \(status)\r\nContent-Type: \(type)\r\nContent-Length: \(bytes.count)\r\nCache-Control: no-store\r\nX-Content-Type-Options: nosniff\r\nConnection: close\r\n\r\n"
         var payload = Data(response.utf8)
         if !head && body != nil { payload.append(bytes) }
         connection.send(content: payload, completion: .contentProcessed { _ in connection.cancel() })
