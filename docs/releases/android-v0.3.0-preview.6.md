@@ -10,4 +10,4 @@ Install over 0.3.0-preview.5 with the same debug signature. Uninstalling first d
 | --- | --- |
 | `Leaflight-Reader-0.3.0-preview.6-debug.apk` | `d0850f2eeaa551fcf5ed1968c9ab561eaf8b20f79a59b14b64dba81e6c9677cd` |
 
-The published iOS IPA is still 0.1.0-preview.1 and does not include this reading page.
+The unsigned iOS archive was later removed from the v0.12.0 release. iPhone and iPad use the web preview.

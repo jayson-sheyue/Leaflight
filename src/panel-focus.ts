@@ -10,7 +10,16 @@ export class PanelFocus{
  active:FocusPanel|null=null;
  private positions=new Map<HTMLElement,{top:number;left:number}>();
  private presented=false;
- constructor(private beforeResize:()=>()=>void){}
+ private shownUntil=0;
+ private chromeTimer=0;
+ constructor(private beforeResize:()=>()=>void){
+  document.addEventListener('click',event=>{
+   if(!this.active)return;
+   const el=event.target as HTMLElement|null;
+   if(!el||el.closest('#focus-chrome,button,a,input,textarea,select,label,summary,[contenteditable="true"],.inbox,.modal'))return;
+   if(document.querySelector('#focus-chrome')?.classList.contains('shown'))this.hideChrome();else this.showChrome();
+  });
+ }
  sync(valid:FocusPanel[]){
   if(this.active&&!valid.includes(this.active)){this.active=null;this.positions.clear();}
   if(this.active)document.body.dataset.focus=this.active;else delete document.body.dataset.focus;
@@ -25,6 +34,7 @@ export class PanelFocus{
   }
   for(const el of this.positions.keys())if(!el.isConnected)this.positions.delete(el);
   this.mountChrome();
+  this.applyChrome();
   this.present();
  }
  toggle(panel:FocusPanel){
@@ -44,23 +54,35 @@ export class PanelFocus{
   if(!bar){
    bar=document.createElement('div');
    bar.id='focus-chrome';
-   bar.innerHTML=`<button type="button" class="secondary" id="focus-inbox" data-action="inbox"></button><button type="button" class="secondary" id="focus-exit" data-action="focus-panel"></button>`;
+   bar.innerHTML=`<button type="button" id="focus-inbox" data-action="inbox"></button><button type="button" id="focus-exit" data-action="focus-panel"></button>`;
   }
   host.prepend(bar);
   const exit=bar.querySelector<HTMLButtonElement>('#focus-exit')!;
   exit.dataset.panel=this.active;
-  exit.textContent=t('退出全窗口');
+  exit.textContent=t('退出');
   exit.title=t('按 Esc 退出全窗口');
+  exit.setAttribute('aria-label',t('退出全窗口'));
   exit.setAttribute('aria-pressed','true');
   const inbox=bar.querySelector<HTMLButtonElement>('#focus-inbox')!;
   inbox.textContent=t('消息');
   inbox.title=t('消息盒子');
   inbox.setAttribute('aria-label',t('消息盒子'));
  }
+ private showChrome(){this.shownUntil=Date.now()+2800;this.applyChrome();}
+ private hideChrome(){this.shownUntil=0;window.clearTimeout(this.chromeTimer);document.querySelector('#focus-chrome')?.classList.remove('shown');}
+ private applyChrome(){
+  const bar=document.querySelector('#focus-chrome');
+  if(!bar)return;
+  const remaining=this.shownUntil-Date.now();
+  bar.classList.toggle('shown',remaining>0);
+  window.clearTimeout(this.chromeTimer);
+  if(remaining>0)this.chromeTimer=window.setTimeout(()=>this.hideChrome(),remaining);
+ }
  private present(){
   const next=!!this.active;
   if(this.presented===next)return;
   this.presented=next;
+  if(next)this.showChrome();else this.hideChrome();
   void window.leaflight?.call('window-focus',{active:next}).catch(()=>{});
  }
 }

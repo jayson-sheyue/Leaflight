@@ -17,7 +17,8 @@ const {JobQueue}=require('../electron/jobs.cjs');
   let page=await app.firstWindow();page.on('pageerror',e=>errors.push(e.message));await page.emulateMedia({reducedMotion:'reduce'});
   await app.evaluate(()=>{global.fetch=async()=>{throw Error('Focus tests must remain offline');};});
   async function paint(){await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));}
-  async function focus(panel){const exit=page.locator('#focus-exit');if(await exit.isVisible())await exit.click();else await page.locator(`.panel-focus-button[data-panel=${panel}]`).click();}
+  async function reveal(){if(await page.locator('#focus-exit').isVisible())return;await page.evaluate(()=>{const host=document.querySelector('body[data-focus] .reading-layout, body[data-focus] .writing-layout');host?.dispatchEvent(new MouseEvent('click',{bubbles:true}));});await page.locator('#focus-chrome.shown').waitFor();}
+  async function focus(panel){if((await page.locator('body').getAttribute('data-focus'))===panel){await reveal();await page.locator('#focus-exit').click();}else{await page.locator(`.panel-focus-button[data-panel=${panel}]`).click();await page.locator('#focus-chrome.shown').waitFor();}}
   async function noOverflow(){assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);}
   for(const width of [1360,960]){
    await app.browserWindow(page).then(w=>w.evaluate((win,width)=>win.setSize(width,900),width));
@@ -41,7 +42,7 @@ const {JobQueue}=require('../electron/jobs.cjs');
    const reviewWidth=await page.locator('.writing-feedback').evaluate(el=>el.getBoundingClientRect().width);
    assert.equal(await page.locator('.sidebar').isVisible(),false);
    assert.equal(await page.locator('#focus-exit').isVisible(),true);
-   await page.locator('#focus-inbox').click();await page.locator('.inbox').waitFor();
+   await reveal();await page.locator('#focus-inbox').click();await page.locator('.inbox').waitFor();
    assert.equal(await page.locator('.writing-feedback').evaluate(el=>el.getBoundingClientRect().width),reviewWidth,'inbox shrank the expanded review');
    await page.keyboard.press('Escape');assert.equal(await page.locator('body').getAttribute('data-focus'),'review');
    assert.equal(await page.locator('.inbox').isVisible(),false);
@@ -49,7 +50,7 @@ const {JobQueue}=require('../electron/jobs.cjs');
    await page.screenshot({path:`artifacts/panel-focus-review-${width}.png`});
    await page.locator('[data-action=writer-locate]').first().click();assert.equal(await page.locator('body').getAttribute('data-focus'),'editor');
    assert.equal(await page.locator('#writing-text').evaluate(el=>el.value.slice(el.selectionStart,el.selectionEnd)),'I watched');
-   await page.locator('#focus-inbox').click();await page.locator('[data-action=view-job][data-id=focus-review-job]').click();
+   await reveal();await page.locator('#focus-inbox').click();await page.locator('[data-action=view-job][data-id=focus-review-job]').click();
    assert.equal(await page.locator('body').getAttribute('data-focus'),'review');assert.equal(await page.locator('.writing-feedback').isVisible(),true);
    await page.keyboard.press('Escape');assert.equal(await page.locator('body').getAttribute('data-focus'),null);
    assert.equal(await page.locator('.writing-list').isVisible(),true);assert.equal(await page.locator('#writing-text').inputValue(),edited);
@@ -72,6 +73,7 @@ const {JobQueue}=require('../electron/jobs.cjs');
     if(enter)assert(await page.locator('#reader-scroll').evaluate((el,w)=>el.clientWidth>w+150,oldWidth));
     const reading=await page.evaluate(()=>{const el=document.querySelector('#reader-scroll'),r=window.__readingAnchor.getBoundingClientRect(),v=el.getBoundingClientRect();return {same:document.querySelector('#prose')===window.__prose,anchor:r.toJSON(),viewport:v.toJSON(),left:el.scrollLeft,width:el.clientWidth,margin:getComputedStyle(document.querySelector('.reader-pane')).getPropertyValue('--page-margin')};});
     assert(reading.same&&reading.anchor.left>=reading.viewport.left-1&&reading.anchor.right<=reading.viewport.right+1&&reading.anchor.bottom>reading.viewport.top&&reading.anchor.top<reading.viewport.bottom,JSON.stringify({width,enter,reading}));await noOverflow();
+    if(enter&&width===1360){const quiet=await page.locator('#focus-exit').evaluate(el=>{const s=getComputedStyle(el);return {radius:s.borderRadius,background:s.backgroundColor,shadow:s.boxShadow};});assert.equal(quiet.radius,'0px');assert.equal(quiet.background,'rgba(0, 0, 0, 0)');assert.equal(quiet.shadow,'none');await page.waitForFunction(()=>!document.querySelector('#focus-chrome')?.classList.contains('shown'),null,{timeout:4500});assert.equal(await page.locator('#focus-exit').isVisible(),false);await reveal();}
    }
    await page.locator('[data-action=bookmark]').click();await page.waitForFunction(()=>document.querySelector('[data-action=bookmark]')?.getAttribute('aria-pressed')==='false');
    await focus('reader');await paint();await page.locator('[data-action=next]').click();await paint();

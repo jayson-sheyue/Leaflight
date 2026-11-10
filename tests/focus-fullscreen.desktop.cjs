@@ -19,6 +19,7 @@ const {Store}=require('../electron/store.cjs'),demo=require('../electron/demo.cj
   assert.equal(entered.menuKept,true,'Edit menu must stay available for copy and paste');
   assert.equal(entered.full,true,JSON.stringify(entered));
   assert.equal(await page.locator('.sidebar').isVisible(),false);
+  if(!(await page.locator('#focus-exit').isVisible())){await page.evaluate(()=>document.querySelector('.reading-layout')?.dispatchEvent(new MouseEvent('click',{bubbles:true})));await page.locator('#focus-exit').waitFor();}
   await page.locator('#focus-exit').click();
   await page.locator('.sidebar').waitFor();
   const left=await app.evaluate(async({BrowserWindow})=>{const win=BrowserWindow.getAllWindows()[0];const start=Date.now();while(Date.now()-start<4000&&(win.__focusPresentation||win.isFullScreen()||win.isSimpleFullScreen()))await new Promise(resolve=>setTimeout(resolve,50));return {presented:!!win.__focusPresentation,full:win.isFullScreen()||win.isSimpleFullScreen(),menu:process.platform==='darwin'?true:win.isMenuBarVisible()};});

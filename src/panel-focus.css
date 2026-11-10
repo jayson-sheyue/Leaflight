@@ -10,11 +10,11 @@ body[data-focus] .sidebar { display:none; }
 body[data-focus] .workspace { margin-left:0; margin-right:0; width:100%; min-height:100vh; }
 body[data-focus] .topbar { height:0; min-height:0; padding:0; border:0; overflow:visible; pointer-events:none; }
 body[data-focus] .topbar > * { display:none; }
-body[data-focus] .reading-layout,body[data-focus] .writing-layout { height:100vh; padding-top:68px; }
+body[data-focus] .reading-layout,body[data-focus] .writing-layout { height:100vh; }
 body[data-focus] .panel-focus-button { display:none; }
-#focus-chrome { position:fixed; z-index:16; top:max(12px, env(safe-area-inset-top)); left:max(12px, env(safe-area-inset-left)); display:none; gap:8px; }
-body[data-focus] #focus-chrome { display:flex; }
-#focus-chrome button { min-height:44px; padding:8px 14px; border-radius:999px; box-shadow:0 8px 24px #0003; background:var(--surface); color:var(--ink); border:1px solid var(--border); }
+#focus-chrome { position:fixed; z-index:16; top:max(4px, env(safe-area-inset-top)); right:max(8px, env(safe-area-inset-right)); display:none; gap:2px; }
+body[data-focus] #focus-chrome.shown { display:flex; }
+#focus-chrome button { min-height:44px; padding:0 8px; border:0; border-radius:0; box-shadow:none; background:transparent; color:var(--ink); font-size:13px; }
 body[data-focus] .toc,body[data-focus] .writing-list { display:none; }
 body[data-focus=editor] .writing-feedback,body[data-focus=review] .writing-editor { display:none; }
 body[data-focus] .writing-workbench { display:flex; overflow:hidden; min-width:0; height:100%; }

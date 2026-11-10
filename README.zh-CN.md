@@ -78,7 +78,7 @@
 ### 2. 拟真翻页阅读器与 10 套全局材质主题
 
 - **8 种拟真翻页动效**：支持 `Paper Curl（仿真卷页）`、`Cube In（内立方翻转）`、`Cube Out（外立方翻转）`、`Carousel（旋转木马）`、`Flip（中轴对折）`、`Bounce（弹性回跃）`、`Slide（平滑推页）` 与 `Fade（呼吸淡入）`。
-- **自适应阅读与全窗口**：支持滚动与分页模式、字号、行距和正文宽度设置。点击「放大阅读区」「放大写作区」或「放大评审区」后，侧栏、页面顶栏和系统菜单栏全部让开，当前区域铺满窗口；左上角保留「消息」和「退出全窗口」。Esc 先关闭弹窗和消息盒子，再退出全窗口，并保留当前阅读文字位置。网页预览会尽量进入浏览器全屏；若浏览器拒绝，阅读区仍然铺满页面。
+- **自适应阅读与全窗口**：支持滚动与分页模式、字号、行距和正文宽度设置。点击「放大阅读区」「放大写作区」或「放大评审区」后，侧栏、页面顶栏和系统菜单栏全部让开，当前区域铺满窗口。横屏和竖屏都不常驻按钮；轻点页面后，右上角短暂出现「消息」和「退出」。Esc 先关闭弹窗和消息盒子，再退出全窗口，并保留当前阅读文字位置。网页预览会尽量进入浏览器全屏；若浏览器拒绝，阅读区仍然铺满页面。
 - **日语振假名注音（Furigana）**：针对 JLPT `N5–N3` 章节自动渲染标准 `<ruby>漢字<rt>かんじ</rt></ruby>` 假名注音，并在正文下方提炼核心语法句型。
 - **书签可添加也可取消**：书签按钮为开／关状态；目录中每条书签右侧「×」可直接删除，兼容旧记录和同页重复书签。
 
@@ -213,11 +213,11 @@ Leaflight 独创了 **Science × Fantasy（科学 × 奇幻/科幻/悬疑）** �
   5. **《The Clockmaker's Postcard》**（英语 `CEFR A2` · 悬疑 · 2 章完结）
   6. **《Signal at Low Tide》**（英语 `CEFR B2` · 科幻 · 2 章完结）
 - **网页预览版支持功能**：完整的书架与阅读器（字号、行距、分页/滚动、放大阅读区、书签、读后难度体感反馈、单章启发式难度分析）、10 套材质主题与 8 种翻页动效、中/日/英三语界面、从 GitHub 实时同步公共书池并加入书架、浏览 24 个科学单元/48 个科学×奇幻预设与 184 道写作题库（阅读进度与草稿保存在当前浏览器 `localStorage`）。
-- **与原生客户端的区别**：在线网页预览版为纯静态零后端部署（不含服务端 API 中转）；如需使用 **本地存储 + 系统凭据加密**、**BYOK 自定义 Gemini API Key 后台连载生成**、**四维 AI 写作批改** 或 **本地 TXT/EPUB 导入导出**，请使用 macOS / Windows 桌面端，或 Android / iOS 阅读器。写作批改只在桌面端。
+- **与原生客户端的区别**：在线网页预览版为纯静态零后端部署（不含服务端 API 中转）；如需使用 **本地存储 + 系统凭据加密**、**BYOK 自定义 Gemini API Key 后台连载生成**、**四维 AI 写作批改** 或 **本地 TXT/EPUB 导入导出**，请使用 macOS / Windows 桌面端或 Android 阅读器。写作批改只在桌面端。iPhone / iPad 请使用上方网页预览。
 
 ### 当前版本
 
-Mac 安装包是 v0.12.0，包含全窗口阅读／写作，并保留 ad-hoc 签名，尚未获得 Apple 公证。同一 Release 还附有未签名的 Windows x64 安装包，以及未签名、不能直接安装到设备的 iOS 阅读器 IPA。Android Reader 是 0.3.0-preview.7，阅读页可以进入全屏：隐藏页眉、底栏、状态栏和导航栏，正文上不常驻按钮。轻点页面后，右上角会短暂出现「消息」和「退出」。已发布的 iOS 阅读器仍是 0.1.0-preview.1，安装包里的页面还是更早的 Android 阅读页，不含这次全屏。各端都支持 AI Studio／Vertex Express 密钥来源选择。更新都是手动替换。详见 [v0.12.0 说明](docs/releases/v0.12.0.md)、[Android 0.3.0-preview.7 说明](docs/releases/android-v0.3.0-preview.7.md) 与 [共享书池指南](docs/community-pool.md)。
+Mac 安装包是 v0.12.0，包含全窗口阅读／写作，并保留 ad-hoc 签名，尚未获得 Apple 公证。同一 Release 还附有未签名的 Windows x64 安装包。这两个已发布的安装包仍会在放大后留下两个常驻按钮；网页预览和此后的源码不再常驻，横屏和竖屏都只在轻点页面后，于右上角短暂显示「消息」和「退出」。Android Reader 是 0.3.0-preview.7，阅读页可以进入全屏：隐藏页眉、底栏、状态栏和导航栏，正文上不常驻按钮。轻点页面后，右上角会短暂出现「消息」和「退出」。网页预览在横屏和竖屏也使用同样的短暂文字，不再放常驻按钮。不再提供 iOS 安装包。各端都支持 AI Studio／Vertex Express 密钥来源选择。更新都是手动替换。详见 [v0.12.0 说明](docs/releases/v0.12.0.md)、[Android 0.3.0-preview.7 说明](docs/releases/android-v0.3.0-preview.7.md) 与 [共享书池指南](docs/community-pool.md)。
 
 已用 24 章、约 20 万字符的合成作品完成真实 GitHub ZIP 投稿、自动收录反馈及 Android 最终 APK 全文借阅验收；测试条目已清理。[公开验收记录](https://github.com/jayson-sheyue/Leaflight/issues/2)。
 
@@ -240,9 +240,9 @@ Mac 安装包是 v0.12.0，包含全窗口阅读／写作，并保留 ad-hoc 签
 
 从 [v0.12.0 Release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.0) 下载 `Leaflight-0.12.0-win-x64-setup.exe`。这是 64 位、未签名的 NSIS 安装程序，可以选择安装目录，默认安装到当前用户。Windows 可能拦截未签名安装包；不要为此关闭系统保护。作品、写作草稿和进度保存在 `%APPDATA%\novel-reading`，与 Mac 一样可以导出不含 API Key 的全库备份。写作批改和全窗口与 Mac 相同。这个文件由 GitHub Actions 的 Windows 运行器构建，没有在 Windows 上启动过。[安装说明](docs/windows-installation.md)。
 
-### iOS 阅读器（预览）
+### iPhone / iPad
 
-从 [v0.12.0 Release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.0) 下载 `Leaflight-Reader-0.1.0-preview.1-ios-unsigned.ipa`。它面向 iPhone / iPad，最低 iOS 16。功能与 Android 阅读器相同：导入阅读、故事生成、共享书池。不包含 Mac / Windows 的写作批改和选级对照。数据与桌面端、Android 各自独立，密钥放在本机 Keychain，不写入备份。这个 IPA 未签名，不能直接装到 iPhone；要用你自己的 Apple Development 身份签名后才能安装。它没有在模拟器或真机上启动过。[构建与限制](ios-reader/README.md)。
+请直接打开 [网页预览](https://jayson-sheyue.github.io/Leaflight/)。不再提供 iOS 安装包。横屏和竖屏放大阅读区后，页面上不常驻按钮。轻点正文，右上角会短暂出现「消息」和「退出」。浏览器能响应 Esc 时，可用 Esc 退出全窗口。阅读数据保存在当前浏览器中，容量小于 Mac、Windows 和 Android 应用。
 
 ---
 
@@ -301,9 +301,6 @@ npm run package:dmg
 # 生成 Windows x64 NSIS 安装包
 npm run package:win
 
-# 生成 iOS 未签名 IPA（需要完整 Xcode，而不是只有 Command Line Tools）
-node ios-reader/build.cjs
-
 # 单元测试与 15 项 Electron 桌面测试（使用隔离数据与受控模型响应）
 npm test
 npm run test:desktop
@@ -354,7 +351,7 @@ Leaflight/
 
 ## 📋 版本演进摘要（Changelog）
 
-- **`v0.12.0`（当前 Mac 版本）**：阅读、写作和评审可以铺满整个窗口，并隐藏侧栏、顶栏和系统菜单栏。Mac 安装包为 `Leaflight-0.12.0-arm64.dmg`。同时加入 Windows x64 安装脚本，以及与 Android 阅读器同范围的 iOS 工程。[说明](docs/releases/v0.12.0.md)。
+- **`v0.12.0`（当前 Mac 版本）**：阅读、写作和评审可以铺满整个窗口，并隐藏侧栏、顶栏和系统菜单栏。放大后不常驻按钮，轻点页面才短暂显示「消息」和「退出」。Mac 安装包为 `Leaflight-0.12.0-arm64.dmg`，同时加入 Windows x64 安装脚本。iPhone / iPad 使用网页预览，不再提供 iOS 安装包。[说明](docs/releases/v0.12.0.md)。
 - **`v0.11.16`**：Mac / Android 本地长篇导入扩展至 5000 章，兼容普通 EPUB 文档声明，补齐重启、书签、备份与明确错误提示。[说明](docs/releases/v0.11.16.md)。
 - **`v0.11.15`**：同步 Gemini 密钥来源选择、Express 固定端点和任务配置快照。[说明](docs/releases/v0.11.15.md)。
 - **`v0.11.13`**：修复 macOS App 资源签名，仍未公证。[说明](docs/releases/v0.11.13.md)。

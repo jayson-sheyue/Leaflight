@@ -21,18 +21,3 @@ jobs:
           name: windows-installer
           path: release/*.exe
           if-no-files-found: error
-  ios:
-    runs-on: macos-15
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 22
-          cache: npm
-      - run: npm ci --no-audit --no-fund
-      - run: node ios-reader/build.cjs
-      - uses: actions/upload-artifact@v4
-        with:
-          name: ios-unsigned-ipa
-          path: ios-reader/build/*.ipa
-          if-no-files-found: error
