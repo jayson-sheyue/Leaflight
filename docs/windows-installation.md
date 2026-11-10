@@ -11,7 +11,7 @@ npm ci
 npm run package:win
 ```
 
-The published file is `Leaflight-0.12.1-win-x64-setup.exe` on the [v0.12.1 release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.1). The SHA-256 is recorded in [v0.12.1](releases/v0.12.1.md) after the GitHub Actions build. It is an NSIS installer, not a one-click package: you can choose the folder. It installs for the current user.
+The published file is `Leaflight-0.12.1-win-x64-setup.exe` on the [v0.12.1 release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.1). SHA-256: `d114fc254b6e2d59c78eca816b96772a655bcf939ead36434a13ec0d787df26c`. It was built on GitHub Actions `windows-latest` from commit `70c11c34304e1b0115791eb40a1cb9ab231b7516`. It is an NSIS installer, not a one-click package: you can choose the folder. It installs for the current user.
 
 A local macOS build can fail while downloading Electron for Windows when Node does not trust the download certificate. That does not change the file attached to the release. Do not disable certificate checks to force a local build.
 
