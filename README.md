@@ -4,7 +4,7 @@
 
 A local-first English and Japanese fiction reader, AI story studio, and writing practice tool.
 
-[Mac v0.12.0](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.0) · [Android 0.3.0-preview.5](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.5) · [Web reading preview](https://jayson-sheyue.github.io/Leaflight/)
+[Mac v0.12.0](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.0) · [Android 0.3.0-preview.6](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.6) · [Web reading preview](https://jayson-sheyue.github.io/Leaflight/)
 
 ## Read and learn
 
@@ -20,7 +20,7 @@ A local-first English and Japanese fiction reader, AI story studio, and writing 
 
 **Windows:** download `Leaflight-0.12.0-win-x64-setup.exe` from the [v0.12.0 release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.0). It is an unsigned 64-bit NSIS setup, so Windows may refuse to run it; do not turn off system protection to open it. You can choose a folder. Books stay in `%APPDATA%\novel-reading`. Writing practice and full-window mode match the Mac app. The file was built on GitHub Actions and was not launched on Windows. See [Windows installation](docs/windows-installation.md).
 
-**Android:** download `Leaflight-Reader-0.3.0-preview.5-debug.apk`. Declared minimum Android 10 (API 29), target 36. This is a debug-signed preview. Update by installing over the existing app; uninstalling first removes its local data. See [Android setup and scope](android-reader/README.md). Android has reading, story generation, and the community pool; Mac/Windows writing review and difficulty calibration are not included.
+**Android:** download `Leaflight-Reader-0.3.0-preview.6-debug.apk` from the [Android preview release](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.6). Declared minimum Android 10 (API 29), target 36. This is a debug-signed preview. Update by installing over the existing app; uninstalling first removes its local data. Full-screen reading hides the page header, page controls, status bar, and navigation bar; Inbox and Exit full screen stay at the top left, and Back leaves full screen first. See [Android setup and scope](android-reader/README.md). Android has reading, story generation, and the community pool; Mac/Windows writing review and difficulty calibration are not included.
 
 **iOS:** download `Leaflight-Reader-0.1.0-preview.1-ios-unsigned.ipa` from the [v0.12.0 release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.0). It has the same reading, generation, and community-pool scope as Android, for iPhone and iPad on iOS 16 or later, in a separate app and data store. The IPA is unsigned and cannot be installed until you sign it with your own Apple Development identity. It was not launched on a device. See [iOS reader](ios-reader/README.md).
 

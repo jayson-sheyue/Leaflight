@@ -1,7 +1,7 @@
 {
   "name": "Leaflight Reader",
-  "version": "0.3.0-preview.5",
-  "versionCode": 8,
+  "version": "0.3.0-preview.6",
+  "versionCode": 9,
   "applicationId": "local.leaflight.reader",
   "minSdk": 29,
   "targetSdk": 36

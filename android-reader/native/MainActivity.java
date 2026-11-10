@@ -46,6 +46,8 @@ public final class MainActivity extends Activity {
     private static final String ORIGIN = "https://appassets.androidplatform.net";
     private static final int OPEN_FILE = 301, SAVE_FILE = 302;
     private WebView web;
+    private FrameLayout frame;
+    private boolean immersive;
     private ValueCallback<Uri[]> fileCallback;
     private byte[] exportBytes;
     private String exportShareUrl;
@@ -60,14 +62,15 @@ public final class MainActivity extends Activity {
 
     @Override public void onCreate(Bundle state) {
         super.onCreate(state);
-        FrameLayout frame = new FrameLayout(this);
+        frame = new FrameLayout(this);
         frame.setBackgroundColor(Color.rgb(246, 245, 240));
         web = new WebView(this);
         frame.addView(web, new FrameLayout.LayoutParams(-1, -1));
         setContentView(frame);
         if (Build.VERSION.SDK_INT >= 30) {
             frame.setOnApplyWindowInsetsListener((view, insets) -> {
-                android.graphics.Insets bars = insets.getInsets(WindowInsets.Type.systemBars() | WindowInsets.Type.displayCutout());
+                int mask = immersive ? WindowInsets.Type.displayCutout() : WindowInsets.Type.systemBars() | WindowInsets.Type.displayCutout();
+                android.graphics.Insets bars = insets.getInsets(mask);
                 view.setPadding(bars.left, bars.top, bars.right, bars.bottom);
                 return insets;
             });
@@ -132,6 +135,28 @@ public final class MainActivity extends Activity {
         });
     }
     @Override public void onBackPressed() { back(); }
+    @Override protected void onResume() {
+        super.onResume();
+        if (immersive) applyImmersive(true);
+    }
+    private void applyImmersive(boolean active) {
+        immersive = active;
+        if (Build.VERSION.SDK_INT >= 30) {
+            android.view.WindowInsetsController controller = getWindow().getInsetsController();
+            if (controller != null) {
+                int types = WindowInsets.Type.statusBars() | WindowInsets.Type.navigationBars();
+                if (active) {
+                    controller.hide(types);
+                    controller.setSystemBarsBehavior(android.view.WindowInsetsController.BEHAVIOR_SHOW_TRANSIENT_BARS_BY_SWIPE);
+                } else controller.show(types);
+            }
+            if (frame != null) frame.requestApplyInsets();
+        } else {
+            int flags = View.SYSTEM_UI_FLAG_LAYOUT_STABLE;
+            if (active) flags |= View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY | View.SYSTEM_UI_FLAG_FULLSCREEN | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION;
+            getWindow().getDecorView().setSystemUiVisibility(flags);
+        }
+    }
     @Override protected void onPause() {
         web.evaluateJavascript("typeof readerFlush === 'function' && readerFlush()", null);
         super.onPause();
@@ -140,6 +165,7 @@ public final class MainActivity extends Activity {
         runOnUiThread(() -> { if (!isFinishing()) web.evaluateJavascript("window.readerExportResult && window.readerExportResult(" + JSONObject.quote(result) + ")", null); });
     }
     private final class ExportBridge {
+        @JavascriptInterface public void setImmersive(boolean active) { runOnUiThread(() -> applyImmersive(active)); }
         private SecretKey key(boolean create) throws Exception {
             KeyStore store = KeyStore.getInstance("AndroidKeyStore"); store.load(null);
             SecretKey existing = (SecretKey) store.getKey("leaflight-gemini", null);

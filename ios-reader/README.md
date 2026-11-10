@@ -1,6 +1,6 @@
 # Leaflight Reader for iOS
 
-Version **0.1.0-preview.1**. This is a separate iPhone and iPad app. It packages the Android reader's web bundle and adds a small native shell. Reading, story generation, and the community pool match Android Reader 0.3.0-preview.5. Writing review and difficulty calibration stay on Mac and Windows.
+Version **0.1.0-preview.1**. This is a separate iPhone and iPad app. It packages the Android reader's web bundle and adds a small native shell. The published IPA was built from the Android reader web bundle at 0.3.0-preview.5. Android 0.3.0-preview.6 full-screen reading is not in that IPA. Writing review and difficulty calibration stay on Mac and Windows.
 
 Minimum system: iOS 16.0. Bundle id: `local.leaflight.reader.ios`. The app does not share data with Mac, Windows, or Android. Progress is not synced. Keys are stored in the Keychain and are not written into backups.
 
