@@ -11,9 +11,9 @@ npm ci
 npm run package:win
 ```
 
-The file is `release/Leaflight-0.12.0-win-x64-setup.exe`. It is an NSIS installer, not a one-click package: you can choose the folder. It installs for the current user. The GitHub Actions workflow `.github/workflows/installers.yml` builds the same target on `windows-latest` when started manually.
+The published file is `Leaflight-0.12.0-win-x64-setup.exe` on the [v0.12.0 release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.0). SHA-256: `e299d71f3f9d1120e42fa0698c23e26515156394ebf48ffb912d48edc8e588a8`. It was built on GitHub Actions `windows-latest` from commit `67e79172eddda0af5fc717c3d153cd433c253b2d`. It is an NSIS installer, not a one-click package: you can choose the folder. It installs for the current user.
 
-Node on this Mac could not complete the download of the Windows Electron binary because a certificate in that download chain is not in Node's trust store. The installer was therefore not produced on this machine. Do not treat a missing file as a published Windows release.
+A local macOS build can fail while downloading Electron for Windows when Node does not trust the download certificate. That does not change the file attached to the release. Do not disable certificate checks to force a local build.
 
 ## Install and update
 
@@ -21,7 +21,7 @@ The setup file is unsigned. Windows may block it. Do not turn off SmartScreen, a
 
 Books, writing drafts, reviews, bookmarks, and progress are stored in `%APPDATA%\novel-reading`. API keys stay in the system credential store and are left out of backups. Before replacing the app, export a backup from Settings, wait until background jobs finish, and quit Leaflight. There is no in-app updater.
 
-This package was not installed or launched on Windows here. A successful build on a Windows runner does not by itself prove the first-run reading and writing flow on a clean PC.
+This package was not installed or launched on Windows. A successful build on a Windows runner does not by itself prove the first-run reading and writing flow on a clean PC.
 
 ## Full window
 

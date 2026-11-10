@@ -17,9 +17,9 @@ npm ci
 node ios-reader/build.cjs
 ```
 
-The script typechecks the Android reader, builds `ios-reader/build/web`, then runs `xcodebuild`. The IPA is `ios-reader/build/Leaflight-Reader-0.1.0-preview.1-ios-unsigned.ipa`. It is unsigned. iOS will not install an unsigned IPA on a device. Sign the Xcode project with your own Apple Development identity, then run it on your iPhone or iPad. This repository does not include a signing certificate, and this Mac has no iOS SDK, so no IPA was created here.
+The script typechecks the Android reader, builds `ios-reader/build/web`, then runs `xcodebuild`. The IPA is `ios-reader/build/Leaflight-Reader-0.1.0-preview.1-ios-unsigned.ipa`. It is unsigned. iOS will not install an unsigned IPA on a device. Sign the Xcode project with your own Apple Development identity, then run it on your iPhone or iPad. This repository does not include a signing certificate.
 
-GitHub Actions workflow `.github/workflows/installers.yml` can build that unsigned IPA on `macos-15` when started manually. An unsigned artifact from that workflow is still not a device installer.
+The [v0.12.0 release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.0) contains `Leaflight-Reader-0.1.0-preview.1-ios-unsigned.ipa`, built on GitHub Actions `macos-15` from commit `67e79172eddda0af5fc717c3d153cd433c253b2d`. SHA-256: `89eb1ed4bdd812a2baa9e8c1b4048f333681e6841441e8fd53587a3fc1e2fbb1`. The archive includes the reader web bundle. `codesign` reports that the app is not signed. It is not a device installer.
 
 ## Not verified
 

@@ -18,11 +18,11 @@
 
 **Mac:** [v0.12.0 Release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.0)の`Leaflight-0.12.0-arm64.dmg`をダウンロードし、アプリをApplicationsへ移動します。Apple Silicon向け、宣言上の最低OSはmacOS 12です。ad-hoc署名のみでDeveloper ID署名・Apple公証はなく、ダウンロード後にGatekeeperで起動を止められる場合があります。[インストール手順](docs/macos-installation.md)をご確認ください。全画面表示はこのパッケージに含まれます。Intel版とLinux版はありません。
 
-**Windows:** `npm run package:win`が64-bitの`release/Leaflight-0.12.0-win-x64-setup.exe`を作ります。未署名のため、Windowsが起動を止めることがあります。システム保護を無効にする案内はしません。ユーザー単位のNSISインストーラーで、フォルダを選べます。作品は`%APPDATA%\novel-reading`に保存されます。作文と全画面はMac版と同じです。この環境ではWindows上での起動確認はしていません。[Windowsの手順](docs/windows-installation.md)。
+**Windows:** [v0.12.0 Release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.0)の`Leaflight-0.12.0-win-x64-setup.exe`を使います。未署名の64-bit NSISインストーラーで、Windowsが起動を止めることがあります。システム保護を無効にしないでください。フォルダを選べます。作品は`%APPDATA%\novel-reading`に保存されます。作文と全画面はMac版と同じです。GitHub Actionsでビルドし、Windows上での起動確認はしていません。[Windowsの手順](docs/windows-installation.md)。
 
 **Android:** `Leaflight-Reader-0.3.0-preview.5-debug.apk`を使用します。最低Android 10（API 29）、target 36のデバッグ署名プレビューです。既存アプリに上書きインストールし、先にアンインストールしないでください。[Androidの説明](android-reader/README.md)を参照してください。読書・物語生成・共有書庫に対応し、Mac/Windowsの作文評価や難易度調整テストは含みません。
 
-**iOS:** Leaflight Reader 0.1.0-preview.1は、Androidと同じ読書・物語生成・共有書庫の範囲で、iPhone/iPadのiOS 16以降向けです。別アプリ・別データです。ビルドには完全なXcodeが必要で、`node ios-reader/build.cjs`を実行します。出力IPAは未署名で、Apple Development IDで署名するまで実機にはインストールできません。このMacにはiOS SDKがないため、IPAは作成していません。[iOSの説明](ios-reader/README.md)。
+**iOS:** [v0.12.0 Release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.0)の`Leaflight-Reader-0.1.0-preview.1-ios-unsigned.ipa`は、Androidと同じ読書・物語生成・共有書庫の範囲で、iPhone/iPadのiOS 16以降向けです。別アプリ・別データです。未署名のため、Apple Development IDで署名するまで実機にはインストールできません。実機やシミュレーターでは起動していません。[iOSの説明](ios-reader/README.md)。
 
 ローカル読書・保存済み作品・オフライン見本にはAPIキーが不要です。本棚の「TXT / EPUBを読み込む」（Androidはバックアップも選択可能）からファイルを選び、作品を開いて章・字体・しおりを操作します。読み込みでは新しい端末内コピーを作り、元ファイルは変更しません。
 

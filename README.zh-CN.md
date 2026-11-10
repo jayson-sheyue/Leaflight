@@ -217,7 +217,7 @@ Leaflight 独创了 **Science × Fantasy（科学 × 奇幻/科幻/悬疑）** �
 
 ### 当前版本
 
-Mac 安装包是 v0.12.0，包含全窗口阅读／写作，并保留 ad-hoc 签名，尚未获得 Apple 公证。Windows x64 安装包和 iOS 未签名 IPA 只有在对应文件附在 Release 之后才算发布。Android Reader 仍是 0.3.0-preview.5。iOS 阅读器是独立的 0.1.0-preview.1，范围与 Android 相同。各端都支持 AI Studio／Vertex Express 密钥来源选择。更新都是手动替换。详见 [v0.12.0 说明](docs/releases/v0.12.0.md) 与 [共享书池指南](docs/community-pool.md)。
+Mac 安装包是 v0.12.0，包含全窗口阅读／写作，并保留 ad-hoc 签名，尚未获得 Apple 公证。同一 Release 还附有未签名的 Windows x64 安装包，以及未签名、不能直接安装到设备的 iOS 阅读器 IPA。Android Reader 仍是 0.3.0-preview.5。iOS 阅读器是独立的 0.1.0-preview.1，范围与 Android 相同。各端都支持 AI Studio／Vertex Express 密钥来源选择。更新都是手动替换。详见 [v0.12.0 说明](docs/releases/v0.12.0.md) 与 [共享书池指南](docs/community-pool.md)。
 
 已用 24 章、约 20 万字符的合成作品完成真实 GitHub ZIP 投稿、自动收录反馈及 Android 最终 APK 全文借阅验收；测试条目已清理。[公开验收记录](https://github.com/jayson-sheyue/Leaflight/issues/2)。
 
@@ -238,11 +238,11 @@ Mac 安装包是 v0.12.0，包含全窗口阅读／写作，并保留 ad-hoc 签
 
 ### Windows 桌面端（x64）
 
-在 macOS 或 Windows 上执行 `npm run package:win`，得到 `release/Leaflight-0.12.0-win-x64-setup.exe`。这是 64 位、未签名的 NSIS 安装程序，可以选择安装目录，默认安装到当前用户。Windows 可能拦截未签名安装包；不要为此关闭系统保护。作品、写作草稿和进度保存在 `%APPDATA%\novel-reading`，与 Mac 一样可以导出不含 API Key 的全库备份。写作批改和全窗口与 Mac 源码 v0.12.0 相同。本机没有在 Windows 上启动过这个安装包。[安装说明](docs/windows-installation.md)。GitHub Actions 的 Installers 工作流可以在 Windows 运行器上构建同一安装包；只有文件实际附在 Release 上之后，才从 Release 下载。
+从 [v0.12.0 Release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.0) 下载 `Leaflight-0.12.0-win-x64-setup.exe`。这是 64 位、未签名的 NSIS 安装程序，可以选择安装目录，默认安装到当前用户。Windows 可能拦截未签名安装包；不要为此关闭系统保护。作品、写作草稿和进度保存在 `%APPDATA%\novel-reading`，与 Mac 一样可以导出不含 API Key 的全库备份。写作批改和全窗口与 Mac 相同。这个文件由 GitHub Actions 的 Windows 运行器构建，没有在 Windows 上启动过。[安装说明](docs/windows-installation.md)。
 
 ### iOS 阅读器（预览）
 
-Leaflight Reader **0.1.0-preview.1** 面向 iPhone / iPad，最低 iOS 16。功能与 Android 阅读器相同：导入阅读、故事生成、共享书池。不包含 Mac / Windows 的写作批改和选级对照。数据与桌面端、Android 各自独立，密钥放在本机 Keychain，不写入备份。需要完整 Xcode，在仓库根目录执行 `node ios-reader/build.cjs`。产出的 IPA 未签名，不能直接装到 iPhone；要用你自己的 Apple Development 身份签名后才能安装。这台 Mac 只有 Command Line Tools，没有 iOS SDK，所以这里没有生成 IPA。[构建与限制](ios-reader/README.md)。
+从 [v0.12.0 Release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.0) 下载 `Leaflight-Reader-0.1.0-preview.1-ios-unsigned.ipa`。它面向 iPhone / iPad，最低 iOS 16。功能与 Android 阅读器相同：导入阅读、故事生成、共享书池。不包含 Mac / Windows 的写作批改和选级对照。数据与桌面端、Android 各自独立，密钥放在本机 Keychain，不写入备份。这个 IPA 未签名，不能直接装到 iPhone；要用你自己的 Apple Development 身份签名后才能安装。它没有在模拟器或真机上启动过。[构建与限制](ios-reader/README.md)。
 
 ---
 
