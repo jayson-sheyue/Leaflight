@@ -11,7 +11,7 @@
 [![Web Preview](https://img.shields.io/badge/Web%20Preview-GitHub%20Pages%20%E5%85%8D%E5%AE%89%E8%A3%85%E5%9C%A8%E7%BA%BF%E8%AF%95%E7%8E%A9-b5651d?style=for-the-badge&logo=googlechrome&logoColor=white)](https://jayson-sheyue.github.io/Leaflight/)
 [![Release](https://img.shields.io/badge/Release-v0.12.0-2d5a46?style=for-the-badge)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.0)
 [![Platform](https://img.shields.io/badge/macOS-Apple%20Silicon%20(arm64)-1d1d1f?style=for-the-badge&logo=apple)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.0)
-[![Android](https://img.shields.io/badge/Android-0.3.0--preview.6-3ddc84?style=for-the-badge&logo=android&logoColor=white)](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.6)
+[![Android](https://img.shields.io/badge/Android-0.3.0--preview.7-3ddc84?style=for-the-badge&logo=android&logoColor=white)](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.7)
 [![Storage](https://img.shields.io/badge/Local--First-SQLite%20%2B%20Keychain-0f4c5c?style=for-the-badge)](#5-本地优先共享书池免-key-读与分享与非阻塞后台消息盒子)
 [![Languages](https://img.shields.io/badge/Bilingual-English%20CEFR%20A2--C1%20%7C%20Japanese%20JLPT%20N5--N1-8c4a27?style=for-the-badge)](#1-英日双语分级故事工坊-cefr-a2c1--jlpt-n5n1)
 
@@ -217,13 +217,13 @@ Leaflight 独创了 **Science × Fantasy（科学 × 奇幻/科幻/悬疑）** �
 
 ### 当前版本
 
-Mac 安装包是 v0.12.0，包含全窗口阅读／写作，并保留 ad-hoc 签名，尚未获得 Apple 公证。同一 Release 还附有未签名的 Windows x64 安装包，以及未签名、不能直接安装到设备的 iOS 阅读器 IPA。Android Reader 是 0.3.0-preview.6，阅读页可以进入全屏：隐藏页眉、底栏、状态栏和导航栏，左上角保留消息盒子和退出全屏。已发布的 iOS 阅读器仍是 0.1.0-preview.1，安装包里的页面还是上一版 Android 阅读页，不含这次全屏。各端都支持 AI Studio／Vertex Express 密钥来源选择。更新都是手动替换。详见 [v0.12.0 说明](docs/releases/v0.12.0.md)、[Android 0.3.0-preview.6 说明](docs/releases/android-v0.3.0-preview.6.md) 与 [共享书池指南](docs/community-pool.md)。
+Mac 安装包是 v0.12.0，包含全窗口阅读／写作，并保留 ad-hoc 签名，尚未获得 Apple 公证。同一 Release 还附有未签名的 Windows x64 安装包，以及未签名、不能直接安装到设备的 iOS 阅读器 IPA。Android Reader 是 0.3.0-preview.7，阅读页可以进入全屏：隐藏页眉、底栏、状态栏和导航栏，正文上不常驻按钮。轻点页面后，右上角会短暂出现「消息」和「退出」。已发布的 iOS 阅读器仍是 0.1.0-preview.1，安装包里的页面还是更早的 Android 阅读页，不含这次全屏。各端都支持 AI Studio／Vertex Express 密钥来源选择。更新都是手动替换。详见 [v0.12.0 说明](docs/releases/v0.12.0.md)、[Android 0.3.0-preview.7 说明](docs/releases/android-v0.3.0-preview.7.md) 与 [共享书池指南](docs/community-pool.md)。
 
 已用 24 章、约 20 万字符的合成作品完成真实 GitHub ZIP 投稿、自动收录反馈及 Android 最终 APK 全文借阅验收；测试条目已清理。[公开验收记录](https://github.com/jayson-sheyue/Leaflight/issues/2)。
 
 ### Android Pad 阅读预览
 
-独立的 **Leaflight Reader 0.3.0-preview.6** 安卓项目支持导入 Mac JSON 离线阅读，提供主题、字体、翻页、书签与进度，并同步支持「共享书池」免 Key 借阅、目录同步、按需下载与 ZIP / 单书 JSON 分享。阅读中可点「全屏阅读」：正文铺满屏幕，系统状态栏和导航栏一并隐藏，左上角仍可打开消息盒子或退出全屏，系统返回键会先退出全屏。可导入 UTF-8 TXT、未加密 EPUB、单书分享 JSON 或全库备份；也可配置自己的 Gemini Key，生成英日独立短篇或先试读后创建章节连载；支持下一章、连续多章、逐章保存、停止及手动补齐剩余章节，状态在消息盒子中查看。试读的「修改要求，重新试读」会修改原始创作要求并生成新试读与大纲。两端进度暂不自动同步；安卓版暂不包含写作、评审与选级对照等既有模块。Mac 与 Android 的构建和数据独立。[安装、构建与限制说明](android-reader/README.md)。 [下载 APK](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.6)。
+独立的 **Leaflight Reader 0.3.0-preview.7** 安卓项目支持导入 Mac JSON 离线阅读，提供主题、字体、翻页、书签与进度，并同步支持「共享书池」免 Key 借阅、目录同步、按需下载与 ZIP / 单书 JSON 分享。阅读中可点「全屏阅读」：正文铺满屏幕，系统状态栏和导航栏一并隐藏，页面上不放常驻按钮。轻点正文，右上角短暂出现「消息」和「退出」；系统返回键会先退出全屏。可导入 UTF-8 TXT、未加密 EPUB、单书分享 JSON 或全库备份；也可配置自己的 Gemini Key，生成英日独立短篇或先试读后创建章节连载；支持下一章、连续多章、逐章保存、停止及手动补齐剩余章节，状态在消息盒子中查看。试读的「修改要求，重新试读」会修改原始创作要求并生成新试读与大纲。两端进度暂不自动同步；安卓版暂不包含写作、评审与选级对照等既有模块。Mac 与 Android 的构建和数据独立。[安装、构建与限制说明](android-reader/README.md)。 [下载 APK](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.7)。
 
 ### 方式一：直接安装 macOS 桌面端（推荐）
 
