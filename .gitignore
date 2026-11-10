@@ -2,6 +2,7 @@ node_modules/
 dist/
 release/
 release-next/
+ios-reader/build/
 *.log
 .env*
 .DS_Store

@@ -1,6 +1,6 @@
 {
   "name": "novel-reading",
-  "version": "0.11.16",
+  "version": "0.12.0",
   "private": true,
   "description": "A local-first English and Japanese fiction studio and reader",
   "main": "electron/main.cjs",
@@ -11,7 +11,8 @@
     "test": "node --test tests/*.test.cjs",
     "package:mac": "npm run build && electron-builder --mac dir",
     "package:dmg": "npm run package:mac -- --config.electronDist=node_modules/electron/dist && node scripts/create-dmg.cjs",
-    "test:desktop": "npm run build && node tests/electron.smoke.cjs && node tests/difficulty.desktop.cjs && node tests/reader-updates.desktop.cjs && node tests/page-continuity.desktop.cjs && node tests/async-reader.desktop.cjs && node tests/chapter-batch.desktop.cjs && node tests/review-bookmarks.desktop.cjs && node tests/panel-focus.desktop.cjs && node tests/writing.desktop.cjs && node tests/writing-topics.desktop.cjs && node tests/science.desktop.cjs && node tests/guided-ui.desktop.cjs && node tests/writing-delete.desktop.cjs && node tests/visual-material.desktop.cjs && node tests/theme-settings.desktop.cjs && node tests/contrast.desktop.cjs && node tests/pool-transfer.desktop.cjs && node tests/gemini-gateway.desktop.cjs && node tests/story-import.desktop.cjs && node tests/long-import.desktop.cjs"
+    "package:win": "npm run build && electron-builder --win nsis --x64",
+    "test:desktop": "npm run build && node tests/electron.smoke.cjs && node tests/difficulty.desktop.cjs && node tests/reader-updates.desktop.cjs && node tests/page-continuity.desktop.cjs && node tests/async-reader.desktop.cjs && node tests/chapter-batch.desktop.cjs && node tests/review-bookmarks.desktop.cjs && node tests/panel-focus.desktop.cjs && node tests/focus-fullscreen.desktop.cjs && node tests/writing.desktop.cjs && node tests/writing-topics.desktop.cjs && node tests/science.desktop.cjs && node tests/guided-ui.desktop.cjs && node tests/writing-delete.desktop.cjs && node tests/visual-material.desktop.cjs && node tests/theme-settings.desktop.cjs && node tests/contrast.desktop.cjs && node tests/pool-transfer.desktop.cjs && node tests/gemini-gateway.desktop.cjs && node tests/story-import.desktop.cjs && node tests/long-import.desktop.cjs"
   },
   "dependencies": {
     "fflate": "^0.8.2"
@@ -41,6 +42,19 @@
       "entitlements": "build/entitlements.mac.plist",
       "entitlementsInherit": "build/entitlements.mac.plist",
       "strictVerify": true
+    },
+    "win": {
+      "target": [{"target": "nsis", "arch": ["x64"]}],
+      "artifactName": "Leaflight-${version}-win-${arch}-setup.exe",
+      "forceCodeSigning": false,
+      "signAndEditExecutable": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "allowElevation": true,
+      "uninstallDisplayName": "Leaflight"
     },
     "afterSign": "scripts/after-sign.cjs",
     "forceCodeSigning": true

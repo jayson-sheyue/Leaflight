@@ -23,6 +23,22 @@
     "en": "Press Esc to restore the layout",
     "ja": "Esc でレイアウトを戻す"
   },
+  "退出全窗口": {
+    "en": "Exit full window",
+    "ja": "全画面を終了"
+  },
+  "按 Esc 退出全窗口": {
+    "en": "Press Esc to leave the full window",
+    "ja": "Esc で全画面を終了"
+  },
+  "全窗口显示当前区域，并隐藏菜单栏": {
+    "en": "Fill the window and hide the menu bar",
+    "ja": "ウィンドウ全体に表示し、メニューバーを隠す"
+  },
+  "消息": {
+    "en": "Inbox",
+    "ja": "メッセージ"
+  },
   "写作编辑区": {
     "en": "Writing editor",
     "ja": "執筆エディター"

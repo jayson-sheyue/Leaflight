@@ -938,6 +938,15 @@ export function installWebBridge(): void {
         }
         return true;
       }
+      case 'window-focus': {
+        const active = !!(payload && (payload as {active?: boolean}).active);
+        try {
+          if (active) {
+            if (!document.fullscreenElement && document.documentElement.requestFullscreen) void document.documentElement.requestFullscreen().catch(() => {});
+          } else if (document.fullscreenElement) void document.exitFullscreen?.().catch(() => {});
+        } catch { /* The browser can reject fullscreen outside a user gesture. The panel still fills the page. */ }
+        return true;
+      }
       case 'preview':
       case 'create':
       case 'generate':

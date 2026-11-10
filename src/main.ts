@@ -101,6 +101,7 @@ declare global {
     interface Window {
         leaflight?: {
             onJobs?(handler:(jobs:Job[])=>void):()=>void;
+            onFocusEnded?(handler:()=>void):()=>void;
             onClose?(handler: () => Promise<void>): void;
             call(command: string, payload?: unknown): Promise<{
                 ok: boolean;
@@ -641,6 +642,7 @@ window.addEventListener('beforeunload', () => { void writer.flush(); void flushP
 async function init() { try {
     [books, settings,jobs] = await Promise.all([api<Book[]>('library'), api<Settings>('settings'),api<Job[]>('jobs')]);
     window.leaflight?.onJobs?.(next=>{void receiveJobs(next).catch(e=>toast(e.message));});
+    window.leaflight?.onFocusEnded?.(()=>{if(panels.active)panels.toggle(panels.active);});
     reader = { ...reader, ...settings.reader };
     setLocale(settings.uiLanguage);
     writer.tasks=jobs;
