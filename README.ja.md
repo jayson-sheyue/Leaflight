@@ -4,7 +4,7 @@
 
 英語・日本語の小説をオフラインで読むためのリーダー、AI物語生成、作文練習ツールです。
 
-[Mac v0.12.2](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.2) · [Android 0.3.0-preview.7](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.7) · [Webプレビュー](https://jayson-sheyue.github.io/Leaflight/)
+[Mac v0.12.3](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.3) · [Android 0.3.0-preview.8](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.8) · [Webプレビュー](https://jayson-sheyue.github.io/Leaflight/)
 
 ## 主な機能
 
@@ -16,11 +16,11 @@
 
 ## インストールと使い始め
 
-**Mac:** [v0.12.2 Release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.2)の`Leaflight-0.12.2-arm64.dmg`をダウンロードし、アプリをApplicationsへ移動します。Apple Silicon向け、宣言上の最低OSはmacOS 12です。ad-hoc署名のみでDeveloper ID署名・Apple公証はなく、ダウンロード後にGatekeeperで起動を止められる場合があります。[インストール手順](docs/macos-installation.md)をご確認ください。全画面ではボタンを常時置きません。ページをタップすると右上に「メッセージ」と「終了」がしばらく出ます。Intel版とLinux版はありません。
+**Mac:** [v0.12.3 Release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.3)の`Leaflight-0.12.3-arm64.dmg`をダウンロードし、アプリをApplicationsへ移動します。Apple Silicon向け、宣言上の最低OSはmacOS 12です。ad-hoc署名のみでDeveloper ID署名・Apple公証はなく、ダウンロード後にGatekeeperで起動を止められる場合があります。[インストール手順](docs/macos-installation.md)をご確認ください。全画面ではボタンを常時置きません。ページをタップすると右上に「メッセージ」と「終了」がしばらく出ます。Intel版とLinux版はありません。
 
-**Windows:** [v0.12.2 Release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.2)の`Leaflight-0.12.2-win-x64-setup.exe`を使います。未署名の64-bit NSISインストーラーで、Windowsが起動を止めることがあります。システム保護を無効にしないでください。フォルダを選べます。作品は`%APPDATA%\novel-reading`に保存されます。作文と全画面はMac版と同じです。GitHub Actionsでビルドし、Windows上での起動確認はしていません。[Windowsの手順](docs/windows-installation.md)。
+**Windows:** [v0.12.3 Release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.3)の`Leaflight-0.12.3-win-x64-setup.exe`を使います。未署名の64-bit NSISインストーラーで、Windowsが起動を止めることがあります。システム保護を無効にしないでください。フォルダを選べます。作品は`%APPDATA%\novel-reading`に保存されます。作文と全画面はMac版と同じです。GitHub Actionsでビルドし、Windows上での起動確認はしていません。[Windowsの手順](docs/windows-installation.md)。
 
-**Android:** [Androidプレビュー](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.7)の`Leaflight-Reader-0.3.0-preview.7-debug.apk`を使用します。最低Android 10（API 29）、target 36のデバッグ署名プレビューです。既存アプリに上書きインストールし、先にアンインストールしないでください。全画面読書では見出し、ページ操作、ステータスバー、ナビゲーションバーを隠し、本文の上にボタンを常時置きません。ページをタップすると右上に「メッセージ」と「終了」がしばらく出ます。戻る操作は先に全画面を終了します。[Androidの説明](android-reader/README.md)を参照してください。読書・物語生成・共有書庫に対応し、Mac/Windowsの作文評価や難易度調整テストは含みません。
+**Android:** [Androidプレビュー](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.8)の`Leaflight-Reader-0.3.0-preview.8-debug.apk`を使用します。最低Android 10（API 29）、target 36のデバッグ署名プレビューです。既存アプリに上書きインストールし、先にアンインストールしないでください。全画面読書では見出し、ページ操作、ステータスバー、ナビゲーションバーを隠し、本文の上にボタンを常時置きません。ページをタップすると右上に「メッセージ」と「終了」がしばらく出ます。戻る操作は先に全画面を終了します。[Androidの説明](android-reader/README.md)を参照してください。読書・物語生成・共有書庫に対応し、Mac/Windowsの作文評価や難易度調整テストは含みません。
 
 **iPhone / iPad:** [Webプレビュー](https://jayson-sheyue.github.io/Leaflight/)を開きます。iOSインストーラーはありません。全画面は横向きでも縦向きでもサイドバーと見出しを隠し、ボタンを常時置きません。ページをタップすると右上に「メッセージ」と「終了」がしばらく出ます。読書データはブラウザーに保存され、容量はMac、Windows、Androidより小さくなります。
 

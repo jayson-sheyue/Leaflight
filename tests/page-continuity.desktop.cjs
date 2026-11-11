@@ -29,9 +29,8 @@ const {Store}=require('../electron/store.cjs');const demo=require('../electron/d
    const mark=(await page.evaluate(()=>window.leaflight.call('library'))).value.find(b=>b.title.startsWith(language)).bookmarks[0];assert(Number.isInteger(mark.paragraph));
    await page.locator('[data-action=appearance]').click();await page.locator('[name=size]').fill('20');await page.locator('[name=size]').dispatchEvent('input');await page.locator('.close[data-action=close]').click();await page.waitForTimeout(300);await page.locator('.bookmark-item').click();await settled();
    const currentPage=await page.locator('#reader-scroll').evaluate(el=>Math.round(el.scrollLeft/el.clientWidth)+1);assert((await page.locator('.bookmark-item').textContent()).includes(`第 ${currentPage} 页`));
-   for(const effect of ['slide','paper','cube-in','cube-out','flip','bounce','fade','carousel']){
-    await page.locator('[data-action=appearance]').click();await page.selectOption('[name=effect]',effect);await page.locator('.close[data-action=close]').click();await settled();
-    await page.locator('[data-action=next]').click();await page.waitForFunction(()=>!!document.querySelector('.turn-incoming'));
+   async function verifyTurn(action,label){
+    await page.locator(`[data-action=${action}]`).click();await page.waitForFunction(()=>!!document.querySelector('.turn-incoming'));
     await page.waitForFunction(()=>{const animations=document.querySelector('.page-turn-stage')?.getAnimations({subtree:true});return animations?.length&&animations.every(a=>a.effect.getComputedTiming().progress===1);});
     const result=await page.evaluate(()=>{
      const stage=document.querySelector('.page-turn-stage'),next=stage.querySelector('.turn-incoming'),live=document.querySelector('#reader-scroll');
@@ -44,16 +43,21 @@ const {Store}=require('../electron/store.cjs');const demo=require('../electron/d
      }
      const v=live.getBoundingClientRect();return {max,count,clip:{x:Math.ceil(v.x)+1,y:Math.ceil(v.y)+1,width:Math.floor(v.width)-2,height:Math.floor(v.height)-2}};
     });
-    assert(!result.error,JSON.stringify(result));assert(result.count>20);assert(result.max<.1,`${language}/${effect}: character geometry drift ${result.max}`);
+    assert(!result.error,JSON.stringify(result));assert(result.count>20);assert(result.max<.1,`${label}: character geometry drift ${result.max}`);
     // Compare actual renderer pixels before/after the handoff, not just scrollLeft.
     await page.waitForTimeout(80);
     fs.writeFileSync('artifacts/continuity-incoming.png',Buffer.from(await app.evaluate(async({BrowserWindow},clip)=>{const image=await BrowserWindow.getAllWindows()[0].webContents.capturePage(clip);global.__incoming=image.toBitmap();return image.toPNG().toString('base64');},result.clip),'base64'));
     await page.evaluate(()=>document.querySelector('.page-turn-stage').style.visibility='hidden');await page.waitForTimeout(80);
     const pixels=await app.evaluate(async({BrowserWindow},clip)=>{const image=await BrowserWindow.getAllWindows()[0].webContents.capturePage(clip);const b=image.toBitmap(),a=global.__incoming;let changed=0;for(let i=0;i<b.length;i+=4)if(Math.abs(a[i]-b[i])+Math.abs(a[i+1]-b[i+1])+Math.abs(a[i+2]-b[i+2])>60)changed++;return {diff:changed/(b.length/4),png:image.toPNG().toString('base64')};},result.clip);const diff=pixels.diff;fs.writeFileSync('artifacts/continuity-live.png',Buffer.from(pixels.png,'base64'));
-    assert(diff<.003,`${language}/${effect}: terminal sheet differs from actual text by ${(diff*100).toFixed(2)}% pixels`);
+    assert(diff<.003,`${label}: terminal sheet differs from actual text by ${(diff*100).toFixed(2)}% pixels`);
     await page.evaluate(()=>{for(const a of document.querySelector('.page-turn-stage').getAnimations({subtree:true}))a.finish();});await settled();
-    console.log(`PASS ${language}/${effect}: geometry ${result.max.toFixed(3)}px, handoff ${(diff*100).toFixed(3)}% pixels`);
-    await page.locator('[data-action=prev]').click();await settled();
+    console.log(`PASS ${label}: geometry ${result.max.toFixed(3)}px, handoff ${(diff*100).toFixed(3)}% pixels`);
+   }
+   for(const effect of ['slide','paper','cube-in','cube-out','flip','bounce','fade','carousel']){
+    await page.locator('[data-action=appearance]').click();await page.selectOption('[name=effect]',effect);await page.locator('.close[data-action=close]').click();await settled();
+    await verifyTurn('next',`${language}/${effect}`);
+    if(effect==='paper')await verifyTurn('prev',`${language}/paper-prev`);
+    else{await page.locator('[data-action=prev]').click();await settled();}
    }
    await page.locator('.sidebar [data-action=library]').click();
   }

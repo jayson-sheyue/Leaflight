@@ -98,6 +98,44 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),http
   await page.locator('.page-turn-stage').waitFor();
   await settled();
   assert.equal(turns(beforeButton,await place()),1,'the next button still turns one page');
+  async function samplePaperMidTurn(){
+   await page.waitForFunction(()=>{const cast=document.querySelector('.page-turn-stage[data-effect=paper] .turn-paper-cast');return cast&&Number(cast.style.opacity)>0.35;});
+   return page.evaluate(()=>{
+    const stage=document.querySelector('.page-turn-stage'),flap=stage.querySelector('.turn-paper-flap'),back=flap?.querySelector('.turn-paper-back'),roll=back?.querySelector('.turn-paper-roll'),cast=stage.querySelector('.turn-paper-cast'),valley=stage.querySelector('.turn-paper-valley'),spine=stage.querySelector('.turn-paper-spine');
+    const pts=[...(back?.style.clipPath.matchAll(/([-\d.]+)px\s+([-\d.]+)px/g)||[])].map(m=>({x:Number(m[1]),y:Number(m[2])}));
+    return {tone:stage.dataset.tone,hasBackText:!!back?.querySelector('.reader-scroll .prose'),hasLayers:!!(roll&&cast&&valley&&spine),filter:flap?.style.filter||'',castOpacity:Number(cast?.style.opacity||0),pts,width:stage.clientWidth,height:stage.clientHeight};
+   });
+  }
+  await page.locator('[data-action=appearance]').click();
+  await page.selectOption('[name=effect]','paper');
+  await page.locator('button.close[data-action=close]').click();
+  const beforePaper=await place();
+  await page.locator('[data-action=next]').click();
+  const lightCurl=await samplePaperMidTurn();
+  assert.equal(lightCurl.tone,'light','paper theme uses light curl shading');
+  assert.equal(lightCurl.hasBackText,true,'paper curl back side carries mirrored page ink');
+  assert.equal(lightCurl.hasLayers,true,'paper curl mounts roll, cast, valley, and spine layers');
+  assert.match(lightCurl.filter,/drop-shadow/,'paper flap renders an unclipped directional shadow');
+  assert(lightCurl.castOpacity>0,'paper curl projects overhang shadow onto the revealed page');
+  assert(lightCurl.pts.length>=3&&lightCurl.pts.every(p=>p.x>=-0.5&&p.x<=lightCurl.width+0.5&&p.y>=-0.5&&p.y<=lightCurl.height+0.5),'paper crease stays anchored inside the spine-hinged sheet');
+  await settled();
+  assert.equal(turns(beforePaper,await place()),1,'paper curl turns forward one page');
+  await page.locator('[data-action=settings]').click();
+  await page.check('input[name=theme][value=night]');
+  await page.locator('button.close[data-action=close]').click();
+  const beforePaperPrev=await place();
+  await page.locator('[data-action=prev]').click();
+  const darkCurl=await samplePaperMidTurn();
+  assert.equal(darkCurl.tone,'dark','night theme uses dark curl shading');
+  assert(darkCurl.pts.length>=3&&darkCurl.pts.every(p=>p.x>=-0.5&&p.x<=darkCurl.width+0.5&&p.y>=-0.5&&p.y<=darkCurl.height+0.5),'backward paper unfold stays anchored to the left spine');
+  await settled();
+  assert.equal(turns(beforePaperPrev,await place()),-1,'paper curl unfolds backward one page');
+  await page.locator('[data-action=settings]').click();
+  await page.check('input[name=theme][value=paper]');
+  await page.locator('button.close[data-action=close]').click();
+  await page.locator('[data-action=appearance]').click();
+  await page.selectOption('[name=effect]','slide');
+  await page.locator('button.close[data-action=close]').click();
   await page.emulateMedia({reducedMotion:'reduce'});
   await page.evaluate(()=>{window.__sawStage=false;new MutationObserver(()=>{if(document.querySelector('.page-turn-stage'))window.__sawStage=true;}).observe(document.body,{childList:true,subtree:true});});
   const beforeReduced=await place();
