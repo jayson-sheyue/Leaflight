@@ -19,7 +19,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),http
   async function clearSelection(){await page.evaluate(()=>getSelection()?.removeAllRanges());}
   async function swipe(dx,dy){const box=await page.locator('#reader-scroll').boundingBox();const x=box.x+box.width*0.72,y=box.y+box.height*0.46;const cdp=await page.context().newCDPSession(page);const point=(px,py)=>({x:px,y:py,id:1});await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[point(x,y)]});for(let i=1;i<=8;i++){await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[point(x+dx*i/8,y+dy*i/8)]});await new Promise(resolve=>setTimeout(resolve,16));}const during=await place();await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await cdp.detach();return during;}
   await page.locator('[data-action=appearance]').click();
-  assert.match(await page.locator('#reader-form').innerText(),/拖动正文/);
+  assert.match(await page.locator('#reader-form').innerText(),/双指横滑/);
   await page.selectOption('[name=mode]','pages');
   await page.selectOption('[name=effect]','slide');
   await page.locator('button.close[data-action=close]').click();
@@ -106,6 +106,34 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),http
   assert.equal(await page.evaluate(()=>window.__sawStage),false,'reduced motion keeps the swipe but skips the effect');
   assert.equal(turns(beforeReduced,await place()),1);
   await page.emulateMedia({reducedMotion:'no-preference'});
+  const beforeWheel=await place();
+  const wheelBox=await page.locator('#reader-scroll').boundingBox();
+  await page.mouse.move(wheelBox.x+wheelBox.width*0.5,wheelBox.y+wheelBox.height*0.5);
+  await page.mouse.wheel(30,0);
+  await settled();
+  assert.equal(turns(beforeWheel,await place()),0,'a short trackpad swipe must not turn the page');
+  await page.mouse.wheel(0,180);
+  await settled();
+  assert.equal(turns(beforeWheel,await place()),0,'a vertical trackpad swipe must not turn the page');
+  await page.evaluate(()=>{const text=document.querySelector('#prose p')?.firstChild;if(!text)return;const range=document.createRange();range.setStart(text,0);range.setEnd(text,Math.min(8,text.textContent.length));const selection=getSelection();selection.removeAllRanges();selection.addRange(range);});
+  await page.mouse.wheel(200,0);
+  await settled();
+  assert.equal(turns(beforeWheel,await place()),0,'an existing text selection must keep a trackpad swipe from turning');
+  await clearSelection();
+  const wheelStage=page.locator('.page-turn-stage').waitFor();
+  await page.mouse.wheel(80,0);
+  await page.mouse.wheel(160,0);
+  await page.mouse.wheel(160,0);
+  await wheelStage;
+  assert.equal(await page.locator('.page-turn-stage').getAttribute('data-effect'),'slide');
+  await settled();
+  assert.equal(turns(beforeWheel,await place()),1,'one horizontal trackpad swipe turns one page and ignores the rest of the gesture');
+  await page.waitForTimeout(420);
+  const beforeNextWheel=await place();
+  await page.mouse.wheel(160,0);
+  await page.locator('.page-turn-stage').waitFor();
+  await settled();
+  assert.equal(turns(beforeNextWheel,await place()),1,'a trackpad swipe after the gesture ends turns the next page');
   await page.locator('[data-action=appearance]').click();
   await page.selectOption('[name=mode]','scroll');
   await page.locator('button.close[data-action=close]').click();
@@ -118,6 +146,10 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),http
   assert.equal(afterScroll.chapter,beforeScroll.chapter);
   assert.equal(afterScroll.turning,false);
   assert(Math.abs(afterScroll.top-beforeScroll.top)<40,'scroll mode keeps vertical reading instead of paging');
+  await page.mouse.move(wheelBox.x+40,wheelBox.y+40);
+  await page.mouse.wheel(200,0);
+  await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
+  assert.equal((await place()).turning,false,'scroll mode does not turn a page for a trackpad swipe');
   await page.locator('[data-action=appearance]').click();
   await page.selectOption('[name=mode]','pages');
   await page.locator('button.close[data-action=close]').click();

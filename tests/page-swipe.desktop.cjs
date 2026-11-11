@@ -10,7 +10,7 @@ try{
  await page.locator('.book-title').click();
  await page.locator('#reader-scroll').waitFor();
  await page.locator('[data-action=appearance]').click();
- assert.match(await page.locator('#reader-form').innerText(),/拖动正文/);
+ assert.match(await page.locator('#reader-form').innerText(),/双指横滑/);
  await page.selectOption('[name=mode]','pages');
  await page.selectOption('[name=effect]','slide');
  await page.locator('button.close[data-action=close]').click();
@@ -36,6 +36,15 @@ try{
  await settled();
  const once=await place();
  assert.equal(turns(before,once),1,'one mouse drag turns one page');
+ const beforeWheel=await place();
+ const wheelBox=await page.locator('#reader-scroll').boundingBox();
+ await page.mouse.move(wheelBox.x+wheelBox.width*0.5,wheelBox.y+wheelBox.height*0.5);
+ await page.mouse.wheel(40,0);
+ await page.mouse.wheel(180,0);
+ await page.mouse.wheel(180,0);
+ await page.waitForFunction(()=>document.querySelector('.page-turn-stage')?.getAttribute('data-effect')==='slide');
+ await settled();
+ assert.equal(turns(beforeWheel,await place()),1,'one trackpad swipe turns one page');
  const beforeButton=await place();
  const buttonEffect=page.waitForFunction(()=>document.querySelector('.page-turn-stage')?.getAttribute('data-effect')==='slide');
  await page.locator('[data-action=next]').click();
