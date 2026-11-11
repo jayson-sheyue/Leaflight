@@ -8,6 +8,6 @@ Install over 0.3.0-preview.8 with the same debug signature. Uninstalling first d
 
 | File | SHA-256 |
 | --- | --- |
-| `Leaflight-Reader-0.3.0-preview.9-debug.apk` | `pending` |
+| `Leaflight-Reader-0.3.0-preview.9-debug.apk` | `aa7dd8a2e37f3f1644b268aa210dad2c555676db6a13972f27eaadb6d5f0d84a` |
 
 iPhone and iPad use the [web preview](https://jayson-sheyue.github.io/Leaflight/).
