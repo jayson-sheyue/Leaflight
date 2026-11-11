@@ -19,7 +19,7 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),http
   async function clearSelection(){await page.evaluate(()=>getSelection()?.removeAllRanges());}
   async function swipe(dx,dy){const box=await page.locator('#reader-scroll').boundingBox();const x=box.x+box.width*0.72,y=box.y+box.height*0.46;const cdp=await page.context().newCDPSession(page);const point=(px,py)=>({x:px,y:py,id:1});await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[point(x,y)]});for(let i=1;i<=8;i++){await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[point(x+dx*i/8,y+dy*i/8)]});await new Promise(resolve=>setTimeout(resolve,16));}const during=await place();await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});await cdp.detach();return during;}
   await page.locator('[data-action=appearance]').click();
-  assert.match(await page.locator('#reader-form').innerText(),/滑动正文/);
+  assert.match(await page.locator('#reader-form').innerText(),/拖动正文/);
   await page.selectOption('[name=mode]','pages');
   await page.selectOption('[name=effect]','slide');
   await page.locator('button.close[data-action=close]').click();
@@ -35,16 +35,47 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),http
   await settled();
   assert.equal(turns(origin,await place()),0,'a short drag must not turn the page');
   const box=await page.locator('#reader-scroll').boundingBox();
+  const beforeMouse=await place();
+  await page.mouse.move(box.x+box.width*0.72,box.y+box.height*0.46);
+  await page.mouse.down();
+  await page.mouse.move(box.x+box.width*0.72-40,box.y+box.height*0.46,{steps:6});
+  during=await place();
+  await page.mouse.up();
+  await settled();
+  assert.equal(during.left,beforeMouse.left,'a short mouse drag must not scrub the page');
+  assert.equal(turns(beforeMouse,await place()),0,'a short mouse drag must not turn the page');
+  await page.mouse.move(box.x+box.width*0.55,box.y+box.height*0.3);
+  await page.mouse.down();
+  await page.mouse.move(box.x+box.width*0.55,box.y+box.height*0.3+180,{steps:6});
+  during=await place();
+  await page.mouse.up();
+  await settled();
+  assert.equal(during.left,beforeMouse.left,'a vertical mouse drag must not scrub the page');
+  assert.equal(turns(beforeMouse,await place()),0,'a vertical mouse drag must not turn the page');
+  await page.evaluate(()=>{const text=document.querySelector('#prose p')?.firstChild;if(!text)return;const range=document.createRange();range.setStart(text,0);range.setEnd(text,Math.min(8,text.textContent.length));const selection=getSelection();selection.removeAllRanges();selection.addRange(range);});
   await page.mouse.move(box.x+box.width*0.72,box.y+box.height*0.46);
   await page.mouse.down();
   await page.mouse.move(box.x+box.width*0.22,box.y+box.height*0.46,{steps:8});
   await page.mouse.up();
-  assert.equal(turns(origin,await place()),0,'mouse dragging must keep selecting text instead of turning');
+  await settled();
+  assert.equal(turns(beforeMouse,await place()),0,'an existing text selection must keep a mouse drag from turning');
   await clearSelection();
+  const mouseStage=page.locator('.page-turn-stage').waitFor();
+  await page.mouse.move(box.x+box.width*0.72,box.y+box.height*0.46);
+  await page.mouse.down();
+  await page.mouse.move(box.x+box.width*0.22,box.y+box.height*0.46,{steps:8});
+  during=await place();
+  await page.mouse.up();
+  assert.equal(during.left,beforeMouse.left,'a mouse drag must not scroll the columns before the page turn');
+  await mouseStage;
+  assert.equal(await page.locator('.page-turn-stage').getAttribute('data-effect'),'slide');
+  await settled();
+  assert.equal(turns(beforeMouse,await place()),1,'one horizontal mouse drag turns one page');
+  const held=await place();
   await page.evaluate(()=>{const text=document.querySelector('#prose p')?.firstChild;if(!text)return;const range=document.createRange();range.setStart(text,0);range.setEnd(text,Math.min(8,text.textContent.length));const selection=getSelection();selection.removeAllRanges();selection.addRange(range);});
   await swipe(-260,0);
   await settled();
-  assert.equal(turns(origin,await place()),0,'an existing text selection must keep the page still');
+  assert.equal(turns(held,await place()),0,'an existing text selection must keep the page still');
   await clearSelection();
   const beforeTurn=await place();
   const stage=page.locator('.page-turn-stage').waitFor();
@@ -98,6 +129,9 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),http
   const quiet=await page.locator('#reader-scroll').boundingBox();
   await page.touchscreen.tap(quiet.x+quiet.width*0.5,quiet.y+quiet.height*0.4);
   await page.locator('#focus-chrome.shown').waitFor();
+  await page.waitForFunction(()=>!document.querySelector('#focus-chrome')?.classList.contains('shown'),null,{timeout:4500});
+  await page.mouse.click(quiet.x+quiet.width*0.5,quiet.y+quiet.height*0.4);
+  await page.locator('#focus-chrome.shown').waitFor();
   await page.setViewportSize({width:834,height:1112});
   await page.waitForFunction(()=>{const el=document.querySelector('#reader-scroll'),pageWidth=Math.max(1,el.clientWidth);return Math.abs(el.scrollLeft-Math.round(el.scrollLeft/pageWidth)*pageWidth)<2;});
   await settled();
@@ -109,6 +143,6 @@ const {chromium}=require('playwright'),assert=require('node:assert/strict'),http
   await settled();
   assert.equal(turns(beforePortrait,await place()),1,'portrait drag turns one page');
   assert.deepEqual(errors,[]);
-  console.log('PASS: paged drag turns one page with the effect; short, vertical, selected, mouse, scroll-mode, and in-flight drags do not. Reduced motion still turns. A drag does not open full-window controls.');
+  console.log('PASS: paged touch and mouse drags each turn one page with the effect; short, vertical, selected, scroll-mode, and in-flight drags do not. Reduced motion still turns. A drag does not open full-window controls.');
  }finally{if(browser)await browser.close();await new Promise(resolve=>server.close(resolve));}
 })().catch(e=>{console.error(e);process.exitCode=1;});

@@ -1239,9 +1239,9 @@
     "en": "3D flip",
     "ja": "立体フリップ"
   },
-  "分页模式下，滑动正文、点按钮或用键盘翻页都会使用所选动效；系统开启减少动态效果时仍可翻页，但不再播放动效。": {
-    "en": "In paged mode, swiping the text, the buttons, and the keyboard all use the selected effect. Reduced motion still turns the page without the effect.",
-    "ja": "ページモードでは、本文のスワイプ、ボタン、キーボードのどれでも選んだ効果を使います。視差効果を減らす設定でもページは送れますが、効果は再生しません。"
+  "分页模式下，滑动或拖动正文、点按钮或用键盘翻页都会使用所选动效；系统开启减少动态效果时仍可翻页，但不再播放动效。": {
+    "en": "In paged mode, swiping or dragging the text, the buttons, and the keyboard all use the selected effect. Reduced motion still turns the page without the effect.",
+    "ja": "ページモードでは、本文のスワイプやドラッグ、ボタン、キーボードのどれでも選んだ効果を使います。視差効果を減らす設定でもページは送れますが、効果は再生しません。"
   },
   "消息盒子": {
     "en": "Inbox",
