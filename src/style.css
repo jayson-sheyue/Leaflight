@@ -46,7 +46,7 @@ body{background:var(--bg);color:var(--ink)}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important}.spinner{animation:none}.cover{transition:none}}
 /* A single centered measure in both reading modes. */
 .reader-pane{position:relative;min-width:0;isolation:isolate}
-.prose{width:min(var(--reading-width),calc(100% - 96px));max-width:none;padding:54px 0 72px;margin-inline:auto;text-align:start;overflow-wrap:break-word;word-break:normal}
+.prose{width:min(var(--reading-width),calc(100% - 96px));max-width:none;padding:54px 0 72px;margin-inline:auto;text-align:start;overflow-wrap:break-word;word-break:normal;user-select:text;-webkit-user-select:text}
 .prose p{orphans:3;widows:3}
 .reader-pane[data-mode=pages] .prose{width:100%;max-width:none;margin:0;padding:40px var(--page-margin);column-gap:calc(var(--page-margin) * 2)}
 .prose h1{text-wrap:balance}

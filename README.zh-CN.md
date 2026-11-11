@@ -9,9 +9,9 @@
 *A Local-First English (CEFR A2–C1) & Japanese (JLPT N5–N1) AI Fiction Studio, Tactile Graded Reader, Science × Fantasy Learning Companion, and 4D Writing Coach for macOS.*
 
 [![Web Preview](https://img.shields.io/badge/Web%20Preview-GitHub%20Pages%20%E5%85%8D%E5%AE%89%E8%A3%85%E5%9C%A8%E7%BA%BF%E8%AF%95%E7%8E%A9-b5651d?style=for-the-badge&logo=googlechrome&logoColor=white)](https://jayson-sheyue.github.io/Leaflight/)
-[![Release](https://img.shields.io/badge/Release-v0.12.3-2d5a46?style=for-the-badge)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.3)
-[![Platform](https://img.shields.io/badge/macOS-Apple%20Silicon%20(arm64)-1d1d1f?style=for-the-badge&logo=apple)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.3)
-[![Android](https://img.shields.io/badge/Android-0.3.0--preview.8-3ddc84?style=for-the-badge&logo=android&logoColor=white)](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.8)
+[![Release](https://img.shields.io/badge/Release-v0.12.4-2d5a46?style=for-the-badge)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.4)
+[![Platform](https://img.shields.io/badge/macOS-Apple%20Silicon%20(arm64)-1d1d1f?style=for-the-badge&logo=apple)](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.4)
+[![Android](https://img.shields.io/badge/Android-0.3.0--preview.9-3ddc84?style=for-the-badge&logo=android&logoColor=white)](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.9)
 [![Storage](https://img.shields.io/badge/Local--First-SQLite%20%2B%20Keychain-0f4c5c?style=for-the-badge)](#5-本地优先共享书池免-key-读与分享与非阻塞后台消息盒子)
 [![Languages](https://img.shields.io/badge/Bilingual-English%20CEFR%20A2--C1%20%7C%20Japanese%20JLPT%20N5--N1-8c4a27?style=for-the-badge)](#1-英日双语分级故事工坊-cefr-a2c1--jlpt-n5n1)
 
@@ -77,7 +77,7 @@
 
 ### 2. 拟真翻页阅读器与 10 套全局材质主题
 
-- **8 种拟真翻页动效**：支持 `Paper Curl（仿真卷页）`、`Cube In（内立方翻转）`、`Cube Out（外立方翻转）`、`Carousel（旋转木马）`、`Flip（中轴对折）`、`Bounce（弹性回跃）`、`Slide（平滑推页）` 与 `Fade（呼吸淡入）`。分页模式下，在正文上左右滑动、按住拖动或用触控板双指横滑会翻一页并播放当前动效；底栏按钮和方向键仍然可用。滑动过程中正文不再跟着滑走。系统开启减少动态效果时，仍会翻页，但不再播放动效。
+- **8 种拟真翻页动效**：支持 `Paper Curl（仿真卷页）`、`Cube In（内立方翻转）`、`Cube Out（外立方翻转）`、`Carousel（旋转木马）`、`Flip（中轴对折）`、`Bounce（弹性回跃）`、`Slide（平滑推页）` 与 `Fade（呼吸淡入）`。分页模式下，触屏左右滑动、触控板双指横滑、底栏按钮或键盘方向键会翻一页并播放当前动效；鼠标左键按住拖动、触控板按压拖动或触屏长按拖动则用于选取字符串复制粘贴，不会误触发翻页或带跑分栏。系统开启减少动态效果时，仍会翻页，但不再播放动效。
 - **自适应阅读与全窗口**：支持滚动与分页模式、字号、行距和正文宽度设置。点击「放大阅读区」「放大写作区」或「放大评审区」后，侧栏、页面顶栏和系统菜单栏全部让开，当前区域铺满窗口。横屏和竖屏都不常驻按钮；轻点页面后，右上角短暂出现「消息」和「退出」。Esc 先关闭弹窗和消息盒子，再退出全窗口，并保留当前阅读文字位置。网页预览会尽量进入浏览器全屏；若浏览器拒绝，阅读区仍然铺满页面。
 - **日语振假名注音（Furigana）**：针对 JLPT `N5–N3` 章节自动渲染标准 `<ruby>漢字<rt>かんじ</rt></ruby>` 假名注音，并在正文下方提炼核心语法句型。
 - **书签可添加也可取消**：书签按钮为开／关状态；目录中每条书签右侧「×」可直接删除，兼容旧记录和同页重复书签。
@@ -217,28 +217,28 @@ Leaflight 独创了 **Science × Fantasy（科学 × 奇幻/科幻/悬疑）** �
 
 ### 当前版本
 
-Mac 安装包是 v0.12.3，包含书脊锚定的拟真「右下角卷页」翻书动效与全窗口阅读／写作，并保留 ad-hoc 签名，尚未获得 Apple 公证。同一 Release 还附有未签名的 Windows x64 安装包。分页模式下，滑动、拖动或触控板双指横滑正文会翻一页并播放所选动效。这两个安装包放大后都不常驻按钮；横屏和竖屏都只在轻点页面后，于右上角短暂显示「消息」和「退出」。网页预览同样如此。Android Reader 是 0.3.0-preview.8，同步更新同一套拟真卷页动效，阅读页可以进入全屏：隐藏页眉、底栏、状态栏和导航栏，正文上不常驻按钮。轻点页面后，右上角会短暂出现「消息」和「退出」。网页预览在横屏和竖屏也使用同样的短暂文字，不再放常驻按钮。不再提供 iOS 安装包。各端都支持 AI Studio／Vertex Express 密钥来源选择。更新都是手动替换。详见 [v0.12.3 说明](docs/releases/v0.12.3.md)、[Android 0.3.0-preview.8 说明](docs/releases/android-v0.3.0-preview.8.md) 与 [共享书池指南](docs/community-pool.md)。
+Mac 安装包是 v0.12.4，修复了分页模式下长按拖动／鼠标左键拖动误触发翻页的问题，恢复按住拖动选取复制字符串与右键复制菜单，保留触控板双指横滑、触屏左右滑动与方向键翻页，并沿用 ad-hoc 签名（尚未获得 Apple 公证）。同一 Release 还附有未签名的 Windows x64 安装包。这两个安装包放大后都不常驻按钮；横屏和竖屏都只在轻点页面后，于右上角短暂显示「消息」和「退出」。网页预览同样如此。Android Reader 是 0.3.0-preview.9，同步区分触屏长按选取文字与左右轻滑翻页，阅读页可以进入全屏：隐藏页眉、底栏、状态栏和导航栏，正文上不常驻按钮。轻点页面后，右上角会短暂出现「消息」和「退出」。网页预览在横屏和竖屏也使用同样的短暂文字，不再放常驻按钮。不再提供 iOS 安装包。各端都支持 AI Studio／Vertex Express 密钥来源选择。更新都是手动替换。详见 [v0.12.4 说明](docs/releases/v0.12.4.md)、[Android 0.3.0-preview.9 说明](docs/releases/android-v0.3.0-preview.9.md) 与 [共享书池指南](docs/community-pool.md)。
 
 已用 24 章、约 20 万字符的合成作品完成真实 GitHub ZIP 投稿、自动收录反馈及 Android 最终 APK 全文借阅验收；测试条目已清理。[公开验收记录](https://github.com/jayson-sheyue/Leaflight/issues/2)。
 
 ### Android Pad 阅读预览
 
-独立的 **Leaflight Reader 0.3.0-preview.8** 安卓项目支持导入 Mac JSON 离线阅读，提供主题、字体、翻页、书签与进度，并同步支持「共享书池」免 Key 借阅、目录同步、按需下载与 ZIP / 单书 JSON 分享。阅读中可点「全屏阅读」：正文铺满屏幕，系统状态栏和导航栏一并隐藏，页面上不放常驻按钮。轻点正文，右上角短暂出现「消息」和「退出」；系统返回键会先退出全屏。可导入 UTF-8 TXT、未加密 EPUB、单书分享 JSON 或全库备份；也可配置自己的 Gemini Key，生成英日独立短篇或先试读后创建章节连载；支持下一章、连续多章、逐章保存、停止及手动补齐剩余章节，状态在消息盒子中查看。试读的「修改要求，重新试读」会修改原始创作要求并生成新试读与大纲。两端进度暂不自动同步；安卓版暂不包含写作、评审与选级对照等既有模块。Mac 与 Android 的构建和数据独立。[安装、构建与限制说明](android-reader/README.md)。 [下载 APK](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.8)。
+独立的 **Leaflight Reader 0.3.0-preview.9** 安卓项目支持导入 Mac JSON 离线阅读，提供主题、字体、翻页、书签与进度，并同步支持「共享书池」免 Key 借阅、目录同步、按需下载与 ZIP / 单书 JSON 分享。阅读中可点「全屏阅读」：正文铺满屏幕，系统状态栏和导航栏一并隐藏，页面上不放常驻按钮。轻点正文，右上角短暂出现「消息」和「退出」；系统返回键会先退出全屏。可导入 UTF-8 TXT、未加密 EPUB、单书分享 JSON 或全库备份；也可配置自己的 Gemini Key，生成英日独立短篇或先试读后创建章节连载；支持下一章、连续多章、逐章保存、停止及手动补齐剩余章节，状态在消息盒子中查看。试读的「修改要求，重新试读」会修改原始创作要求并生成新试读与大纲。两端进度暂不自动同步；安卓版暂不包含写作、评审与选级对照等既有模块。Mac 与 Android 的构建和数据独立。[安装、构建与限制说明](android-reader/README.md)。 [下载 APK](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.9)。
 
 ### 方式一：直接安装 macOS 桌面端（推荐）
 
-1. 前往本仓库的 [**v0.12.3 Release**](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.3)，下载安装包：
-   - 🍎 **`Leaflight-0.12.3-arm64.dmg`**（Apple Silicon Mac，含书脊锚定拟真卷页与全窗口阅读／写作。放大后不常驻按钮。分页下可拖动或双指横滑翻页。不提供 Intel / Linux 安装包。）
+1. 前往本仓库的 [**v0.12.4 Release**](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.4)，下载安装包：
+   - 🍎 **`Leaflight-0.12.4-arm64.dmg`**（Apple Silicon Mac，含书脊锚定拟真卷页与全窗口阅读／写作。放大后不常驻按钮。分页下双指横滑／方向键翻页，按住拖动选取复制文字。不提供 Intel / Linux 安装包。）
 2. 双击打开 `.dmg`，将 **Leaflight.app** 拖入 `Applications（应用程序）` 文件夹。
 3. 首次打开即可在「共享书池」免费借阅英日分级小说、阅读内置示范故事、导入本地 `TXT / EPUB` 电子书，或浏览 184 道写作题库；如需使用 **AI 生成新故事/章节** 或 **AI 写作批改**，请按下方指南填入你自己的 Gemini API Key。
 
-> **安装限制**：v0.12.3 沿用 ad-hoc 整包签名，没有 Developer ID 和 Apple 公证，macOS 默认仍可能阻止打开。严格签名校验通过不等于 Gatekeeper 放行。确认下载来源后，请参照 [macOS 安装与报错说明](docs/macos-installation.md) 及 Apple 官方的单应用允许方式；当前不能承诺所有 Mac 默认双击打开。
+> **安装限制**：v0.12.4 沿用 ad-hoc 整包签名，没有 Developer ID 和 Apple 公证，macOS 默认仍可能阻止打开。严格签名校验通过不等于 Gatekeeper 放行。确认下载来源后，请参照 [macOS 安装与报错说明](docs/macos-installation.md) 及 Apple 官方的单应用允许方式；当前不能承诺所有 Mac 默认双击打开。
 
 **手动更新**：先在系统设置导出全库备份，等待后台任务完成并退出应用，再下载新版安装包，将应用替换到原安装位置。不要删除 `~/Library/Application Support/novel-reading/`（Windows 为 `%APPDATA%\novel-reading`）用户数据目录。当前没有应用内检查更新或自动安装功能。
 
 ### Windows 桌面端（x64）
 
-从 [v0.12.3 Release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.3) 下载 `Leaflight-0.12.3-win-x64-setup.exe`。这是 64 位、未签名的 NSIS 安装程序，可以选择安装目录，默认安装到当前用户。Windows 可能拦截未签名安装包；不要为此关闭系统保护。作品、写作草稿和进度保存在 `%APPDATA%\novel-reading`，与 Mac 一样可以导出不含 API Key 的全库备份。写作批改和全窗口与 Mac 相同，放大后不常驻按钮。这个文件由 GitHub Actions 的 Windows 运行器构建，没有在 Windows 上启动过。[安装说明](docs/windows-installation.md)。
+从 [v0.12.4 Release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.4) 下载 `Leaflight-0.12.4-win-x64-setup.exe`。这是 64 位、未签名的 NSIS 安装程序，可以选择安装目录，默认安装到当前用户。Windows 可能拦截未签名安装包；不要为此关闭系统保护。作品、写作草稿和进度保存在 `%APPDATA%\novel-reading`，与 Mac 一样可以导出不含 API Key 的全库备份。写作批改和全窗口与 Mac 相同，放大后不常驻按钮。这个文件由 GitHub Actions 的 Windows 运行器构建，没有在 Windows 上启动过。[安装说明](docs/windows-installation.md)。
 
 ### iPhone / iPad
 
@@ -351,7 +351,8 @@ Leaflight/
 
 ## 📋 版本演进摘要（Changelog）
 
-- **`v0.12.3`（当前 Mac / Windows 版本）**：优化「Paper · 右下角卷页」拟真翻书过渡，采用左侧书脊锚定几何、纸背微透墨影、裁切于折页内的漫反射弧面高光，以及浅／深色主题自适应投射阴影与反向揭页。安装包为 `Leaflight-0.12.3-arm64.dmg` 与 `Leaflight-0.12.3-win-x64-setup.exe`。[说明](docs/releases/v0.12.3.md)。
+- **`v0.12.4`（当前 Mac / Windows 版本）**：修复分页模式下长按／按住拖动误触发翻页的问题——鼠标左键按住拖动、触控板按压拖动与触屏长按拖动恢复为选取字符串复制粘贴（桌面端补齐右键复制菜单，保留 `Shift + 方向键` 扩选），触控板双指横滑、触屏左右滑动、底栏按钮和方向键负责翻页并播放所选动效。安装包为 `Leaflight-0.12.4-arm64.dmg` 与 `Leaflight-0.12.4-win-x64-setup.exe`。[说明](docs/releases/v0.12.4.md)。
+- **`v0.12.3`**：优化「Paper · 右下角卷页」拟真翻书过渡，采用左侧书脊锚定几何、纸背微透墨影、裁切于折页内的漫反射弧面高光，以及浅／深色主题自适应投射阴影与反向揭页。安装包为 `Leaflight-0.12.3-arm64.dmg` 与 `Leaflight-0.12.3-win-x64-setup.exe`。[说明](docs/releases/v0.12.3.md)。
 - **`v0.12.2`**：分页模式下，按住拖动或触控板双指横滑正文会翻一页并播放所选动效，正文不再跟着滑走。安装包为 `Leaflight-0.12.2-arm64.dmg` 与 `Leaflight-0.12.2-win-x64-setup.exe`。[说明](docs/releases/v0.12.2.md)。
 - **`v0.12.1`**：已发布的 Mac DMG 和 Windows 安装包去掉放大后的常驻按钮。轻点页面后，右上角短暂显示「消息」和「退出」。安装包为 `Leaflight-0.12.1-arm64.dmg` 与 `Leaflight-0.12.1-win-x64-setup.exe`。[说明](docs/releases/v0.12.1.md)。
 - **`v0.12.0`**：阅读、写作和评审可以铺满整个窗口，并隐藏侧栏、顶栏和系统菜单栏。这一版已发布的安装包仍会留下两个常驻按钮，请改用 v0.12.1。iPhone / iPad 使用网页预览，不再提供 iOS 安装包。[说明](docs/releases/v0.12.0.md)。

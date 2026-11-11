@@ -1,6 +1,6 @@
 # Windows installation
 
-Leaflight 0.12.3 for Windows is a 64-bit desktop app with the same reading, story generation, writing practice, spine-hinged paper-curl effect, and full-window mode as the Mac source. In paged mode, dragging or a horizontal trackpad swipe turns one page. There is no 32-bit or ARM64 Windows package.
+Leaflight 0.12.4 for Windows is a 64-bit desktop app with the same reading, story generation, writing practice, spine-hinged paper-curl effect, and full-window mode as the Mac source. In paged mode, a two-finger horizontal trackpad scroll or the arrow keys turn one page, while press-and-drag selects text for copying. There is no 32-bit or ARM64 Windows package.
 
 ## Build
 
@@ -11,7 +11,7 @@ npm ci
 npm run package:win
 ```
 
-The published file is `Leaflight-0.12.3-win-x64-setup.exe` on the [v0.12.3 release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.3). SHA-256: `6e795580b67517a87ec8d4140a68c9e286a2574265535604d6ea656cea5001c3`. It was built on GitHub Actions `windows-latest` from commit `3bb99d7a93fa8579ede70ed17c2aef0508ffd06e`. It is an NSIS installer, not a one-click package: you can choose the folder. It installs for the current user.
+The published file is `Leaflight-0.12.4-win-x64-setup.exe` on the [v0.12.4 release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.4). SHA-256: `pending`. It was built on GitHub Actions `windows-latest` from commit `pending`. It is an NSIS installer, not a one-click package: you can choose the folder. It installs for the current user.
 
 A local macOS build can fail while downloading Electron for Windows when Node does not trust the download certificate. That does not change the file attached to the release. Do not disable certificate checks to force a local build.
 

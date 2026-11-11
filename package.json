@@ -1,6 +1,6 @@
 {
   "name": "novel-reading",
-  "version": "0.12.3",
+  "version": "0.12.4",
   "private": true,
   "description": "A local-first English and Japanese fiction studio and reader",
   "main": "electron/main.cjs",

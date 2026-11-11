@@ -40,6 +40,28 @@ const {Store}=require('../../electron/store.cjs'),demo=require('../../electron/d
   await page.locator('[data-action=settings]').click();await page.locator('[name=effect]').selectOption('paper');await page.locator('[data-action=close]').click();
   await page.locator('[data-action=next]').click();await page.locator('.page-turn-stage[data-effect=paper] .turn-paper-flap>.turn-paper-back>.reader-scroll').waitFor();assert.equal(await page.locator('.turn-paper-back>.reader-scroll').evaluate(el=>getComputedStyle(el).visibility),'visible','paper curl reverse sheet stays visible on Android');assert.equal(await page.locator('.page-turn-stage .turn-paper-roll').count(),1);assert.equal(await page.locator('.page-turn-stage .turn-paper-cast').count(),1);assert.equal(await page.locator('.page-turn-stage .turn-paper-spine').count(),1);await page.waitForSelector('.page-turn-stage',{state:'detached'});
   await page.locator('[data-action=prev]').click();await page.locator('.page-turn-stage[data-effect=paper]').waitFor();await page.waitForSelector('.page-turn-stage',{state:'detached'});
+  {
+   const box=await page.locator('#reader-scroll').boundingBox(),x=box.x+box.width*0.72,y=box.y+box.height*0.45;
+   const leftBeforeHold=await page.locator('#reader-scroll').evaluate(el=>el.scrollLeft);
+   await page.evaluate(()=>{window.__androidPrevented=0;const h=e=>{if(e.defaultPrevented)window.__androidPrevented++;};const el=document.querySelector('#reader-scroll');el.addEventListener('touchmove',h);window.__androidClean=()=>el.removeEventListener('touchmove',h);});
+   const cdp=await page.context().newCDPSession(page),pt=(px,py)=>({x:px,y:py,id:1});
+   await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[pt(x,y)]});
+   await new Promise(r=>setTimeout(r,280));
+   for(let i=1;i<=8;i++){await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[pt(x-260*i/8,y)]});await new Promise(r=>setTimeout(r,18));}
+   await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
+   await paint();
+   const prevented=await page.evaluate(()=>{window.__androidClean?.();return window.__androidPrevented||0;});
+   assert.equal(prevented,0,'Android long-press drag must not preventDefault on touchmove');
+   assert.equal(await page.locator('#reader-scroll').evaluate(el=>el.scrollLeft),leftBeforeHold,'Android long-press drag must not turn the page');
+   const swipeTurn=page.locator('.page-turn-stage[data-effect=paper]').waitFor();
+   await cdp.send('Input.dispatchTouchEvent',{type:'touchStart',touchPoints:[pt(x,y)]});
+   for(let i=1;i<=8;i++){await cdp.send('Input.dispatchTouchEvent',{type:'touchMove',touchPoints:[pt(x-260*i/8,y)]});await new Promise(r=>setTimeout(r,16));}
+   await cdp.send('Input.dispatchTouchEvent',{type:'touchEnd',touchPoints:[]});
+   await swipeTurn;
+   await page.waitForSelector('.page-turn-stage',{state:'detached'});
+   assert(await page.locator('#reader-scroll').evaluate(el=>el.scrollLeft)>leftBeforeHold,'Android quick horizontal swipe turns forward one page');
+   await cdp.detach();
+  }
   await page.screenshot({path:'artifacts/android/reader-landscape.png'});await page.locator('[data-action=library]').click();
   await page.locator('#import-file').setInputFiles({name:'broken.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify({...backup,books:[backup.books[0],{}]}))});await page.waitForFunction(()=>document.querySelector('#toast').textContent.includes('导入失败'));assert.equal(await page.locator('.book-card').count(),2);
   await page.locator('#import-file').setInputFiles({name:'new.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(newer))});await page.waitForFunction(()=>document.querySelector('#toast').textContent.includes('导入完成'));await open(b.id);await page.locator('[data-action=contents]').click();assert.equal(await page.locator('[data-action=chapter]').count(),4);await page.locator('[data-action=close]').click();await page.locator('[data-action=library]').click();

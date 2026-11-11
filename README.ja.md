@@ -4,11 +4,11 @@
 
 英語・日本語の小説をオフラインで読むためのリーダー、AI物語生成、作文練習ツールです。
 
-[Mac v0.12.3](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.3) · [Android 0.3.0-preview.8](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.8) · [Webプレビュー](https://jayson-sheyue.github.io/Leaflight/)
+[Mac v0.12.4](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.4) · [Android 0.3.0-preview.9](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.9) · [Webプレビュー](https://jayson-sheyue.github.io/Leaflight/)
 
 ## 主な機能
 
-- TXT/EPUB小説を読み込み、テーマ・字体・行間・ページ効果を調整。しおりと読書位置を端末に保存します。ページモードでは本文を左右にスワイプ、ドラッグ、またはトラックパッドで横スクロールすると1ページ送れ、選んだページ効果を再生します。ボタンと方向キーも使えます。操作中に本文は追従しません。視差効果を減らす設定でもページは送れますが、効果は再生しません。Mac、Windows、Webプレビューの「全画面」はサイドバー、ページ見出し、システムメニューバーを隠し、読書・執筆・レビューを画面全体に表示します。横向きでも縦向きでもボタンは常時置きません。ページをタップすると右上に「メッセージ」と「終了」がしばらく出ます。Escで文章位置を保ったまま戻ります。
+- TXT/EPUB小説を読み込み、テーマ・字体・行間・ページ効果を調整。しおりと読書位置を端末に保存します。ページモードでは画面の左右スワイプ、トラックパッドの2本指横スクロール、ボタン、方向キーで1ページ送れ、選んだページ効果を再生します。マウスやトラックパッドの押下ドラッグ、またはタッチ画面の長押しドラッグでは文字列を選択してコピー・貼り付けでき、誤ってページを送ったり段組みをずらしたりしません。視差効果を減らす設定でもページは送れますが、効果は再生しません。Mac、Windows、Webプレビューの「全画面」はサイドバー、ページ見出し、システムメニューバーを隠し、読書・執筆・レビューを画面全体に表示します。横向きでも縦向きでもボタンは常時置きません。ページをタップすると右上に「メッセージ」と「終了」がしばらく出ます。Escで文章位置を保ったまま戻ります。
 - ローカル作品は最大 **5000章・分割**。通常のHTML/XHTMLの文書型宣言と一般的な文字参照に対応し、長すぎる章は段落や単語の境界で分割して本文と順序を保ちます。
 - 自分のGeminiキーで、学習レベル・ジャンル・長さを指定して英日小説を生成。試読後に連載を作成し、1章ずつ、または複数章を続けて保存できます。状況はメッセージボックスで確認できます。
 - Macでは作文課題を選び、自分で書いてから文法・語彙・論理・流暢さの評価と表現改善の提案を受けられます。科学の作文課題は客観的な知識を扱い、物語生成では幻想文学などの楽しさも選べます。
@@ -16,11 +16,11 @@
 
 ## インストールと使い始め
 
-**Mac:** [v0.12.3 Release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.3)の`Leaflight-0.12.3-arm64.dmg`をダウンロードし、アプリをApplicationsへ移動します。Apple Silicon向け、宣言上の最低OSはmacOS 12です。ad-hoc署名のみでDeveloper ID署名・Apple公証はなく、ダウンロード後にGatekeeperで起動を止められる場合があります。[インストール手順](docs/macos-installation.md)をご確認ください。全画面ではボタンを常時置きません。ページをタップすると右上に「メッセージ」と「終了」がしばらく出ます。Intel版とLinux版はありません。
+**Mac:** [v0.12.4 Release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.4)の`Leaflight-0.12.4-arm64.dmg`をダウンロードし、アプリをApplicationsへ移動します。Apple Silicon向け、宣言上の最低OSはmacOS 12です。ad-hoc署名のみでDeveloper ID署名・Apple公証はなく、ダウンロード後にGatekeeperで起動を止められる場合があります。[インストール手順](docs/macos-installation.md)をご確認ください。全画面ではボタンを常時置きません。ページをタップすると右上に「メッセージ」と「終了」がしばらく出ます。Intel版とLinux版はありません。
 
-**Windows:** [v0.12.3 Release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.3)の`Leaflight-0.12.3-win-x64-setup.exe`を使います。未署名の64-bit NSISインストーラーで、Windowsが起動を止めることがあります。システム保護を無効にしないでください。フォルダを選べます。作品は`%APPDATA%\novel-reading`に保存されます。作文と全画面はMac版と同じです。GitHub Actionsでビルドし、Windows上での起動確認はしていません。[Windowsの手順](docs/windows-installation.md)。
+**Windows:** [v0.12.4 Release](https://github.com/jayson-sheyue/Leaflight/releases/tag/v0.12.4)の`Leaflight-0.12.4-win-x64-setup.exe`を使います。未署名の64-bit NSISインストーラーで、Windowsが起動を止めることがあります。システム保護を無効にしないでください。フォルダを選べます。作品は`%APPDATA%\novel-reading`に保存されます。作文と全画面はMac版と同じです。GitHub Actionsでビルドし、Windows上での起動確認はしていません。[Windowsの手順](docs/windows-installation.md)。
 
-**Android:** [Androidプレビュー](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.8)の`Leaflight-Reader-0.3.0-preview.8-debug.apk`を使用します。最低Android 10（API 29）、target 36のデバッグ署名プレビューです。既存アプリに上書きインストールし、先にアンインストールしないでください。全画面読書では見出し、ページ操作、ステータスバー、ナビゲーションバーを隠し、本文の上にボタンを常時置きません。ページをタップすると右上に「メッセージ」と「終了」がしばらく出ます。戻る操作は先に全画面を終了します。[Androidの説明](android-reader/README.md)を参照してください。読書・物語生成・共有書庫に対応し、Mac/Windowsの作文評価や難易度調整テストは含みません。
+**Android:** [Androidプレビュー](https://github.com/jayson-sheyue/Leaflight/releases/tag/android-v0.3.0-preview.9)の`Leaflight-Reader-0.3.0-preview.9-debug.apk`を使用します。最低Android 10（API 29）、target 36のデバッグ署名プレビューです。既存アプリに上書きインストールし、先にアンインストールしないでください。全画面読書では見出し、ページ操作、ステータスバー、ナビゲーションバーを隠し、本文の上にボタンを常時置きません。ページをタップすると右上に「メッセージ」と「終了」がしばらく出ます。戻る操作は先に全画面を終了します。[Androidの説明](android-reader/README.md)を参照してください。読書・物語生成・共有書庫に対応し、Mac/Windowsの作文評価や難易度調整テストは含みません。
 
 **iPhone / iPad:** [Webプレビュー](https://jayson-sheyue.github.io/Leaflight/)を開きます。iOSインストーラーはありません。全画面は横向きでも縦向きでもサイドバーと見出しを隠し、ボタンを常時置きません。ページをタップすると右上に「メッセージ」と「終了」がしばらく出ます。読書データはブラウザーに保存され、容量はMac、Windows、Androidより小さくなります。
 

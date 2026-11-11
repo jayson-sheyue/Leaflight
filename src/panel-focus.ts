@@ -15,6 +15,8 @@ export class PanelFocus{
  constructor(private beforeResize:()=>()=>void){
   document.addEventListener('click',event=>{
    if(!this.active)return;
+   const sel=getSelection();
+   if(sel&&!sel.isCollapsed&&sel.toString().length>0)return;
    const el=event.target as HTMLElement|null;
    if(!el||el.closest('#focus-chrome,button,a,input,textarea,select,label,summary,[contenteditable="true"],.inbox,.modal'))return;
    if(document.querySelector('#focus-chrome')?.classList.contains('shown'))this.hideChrome();else this.showChrome();

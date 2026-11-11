@@ -30,6 +30,7 @@ async function nativeStory(s:CatalogStory){
 const esc=(v:unknown)=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
 let db:Library,books:Book[]=[],settings:Settings={...defaults},book:Book|null=null,chapter=0,modal='',query='',busy=false,restoring=false,turning=false,transition:ReaderTransition|null=null,resize:ResizeObserver|undefined,logical:TextAnchor|null=null,saveTimer:ReturnType<typeof setTimeout>|undefined,toastTimer:ReturnType<typeof setTimeout>|undefined;
 let pending=Promise.resolve(),layoutRevision=0;
+let touch:{x:number;y:number;t:number;left:number;mode:'pending'|'swipe'|'hold'}|null=null,holdTimer=0,pointerPinLeft:number|null=null;
 let draft:Draft={...initialDraft},jobs:Job[]=[],queue:GenerationQueue,planJobId='';
 type CatalogStory=Omit<PoolStory,'chapters'|'outline'|'bible'>&{chapters?:PoolStory['chapters'];chapterCount?:number;content?:{path:string;sha256:string;bytes:number}};
 let poolStories:CatalogStory[]=[],poolLang='all',poolLevel='all',poolSyncing=false,shareBookId='';
@@ -74,12 +75,13 @@ function flush(){clearTimeout(saveTimer);if(book){captureProgress();clearTimeout
 function restorePosition(p:Book['progress']){const el=scroller();let range=Number.isInteger(p.paragraph)&&Number.isInteger(p.index)?anchorRange(el,{paragraph:p.paragraph!,index:p.index!}):null;if(range)restoreAnchor(el,range,settings.mode);else{const {extent}=metrics();if(settings.mode==='pages')el.scrollLeft=Math.round(p.fraction*extent/Math.max(1,el.clientWidth))*el.clientWidth;else el.scrollTop=p.fraction*extent;}logical=range?{paragraph:p.paragraph!,index:p.index!}:captureTextAnchor(el);showProgress();}
 function reflow(){if(!book)return;cancelTurn();const revision=++layoutRevision;restoring=true;applySettings();const saved={...book.progress,...logical};restorePosition(saved);requestAnimationFrame(()=>requestAnimationFrame(()=>{if(revision===layoutRevision){restoring=false;if(book){book.progress={chapter,fraction:metrics().fraction,...logical};enqueueSave();showProgress();}}}));}
 async function openBook(id:string){await flush();book=(await db.list()).find(b=>b.id===id)||null;logical=null;if(!book)return;if(!book.chapters.length&&!book.series){book=null;toast(t('这部作品没有正文，请重新导入完整备份。'));return;}chapter=book.progress.chapter;renderReader();}
-function renderReader(){cancelTurn();resize?.disconnect();restoring=true;root.innerHTML=`<main class="reader"><header class="reader-header"><div class="actions">${btn('library','书架','subtle')}<div class="reader-title">${esc(book!.title)}<small>${esc(book!.source==='import'?t('难度未评定'):book!.preset.level)} · ${book!.preset.language.toUpperCase()}</small></div></div><div class="actions">${btn('contents','目录与书签','subtle')}${btn('inbox','消息盒子','subtle')}${btn('settings','阅读设置','subtle')}${btn('focus','全屏阅读','subtle')}</div></header><section class="reader-pane" data-mode="${settings.mode}" data-ruby="${settings.readings}"><div id="reader-scroll" class="reader-scroll" tabindex="0" aria-label="${esc(book!.title)}"><article class="prose" lang="${book!.preset.language}">${proseHtml()}</article></div></section><footer class="reading-bottom">${btn('prev','上一页','subtle')}<button id="bookmark" data-action="bookmark" class="mark" aria-pressed="false"></button><span id="progress" role="status"></span>${btn('next','下一页','primary')}</footer><div class="focus-bar"><button class="focus-inbox" data-action="inbox" aria-label="${t('消息盒子')}">${t('消息')}</button><button class="focus-restore" data-action="focus" aria-label="${t('退出全屏')}">${t('退出')}</button></div></main><div id="modal-host"></div>`;applySettings();requestAnimationFrame(()=>{restorePosition(book!.progress);requestAnimationFrame(()=>{restoring=false;captureProgress();});});scroller().addEventListener('scroll',()=>captureProgress(),{passive:true});resize=new ResizeObserver(()=>reflow());resize.observe(scroller());}
+function renderReader(){cancelTurn();resize?.disconnect();restoring=true;root.innerHTML=`<main class="reader"><header class="reader-header"><div class="actions">${btn('library','书架','subtle')}<div class="reader-title">${esc(book!.title)}<small>${esc(book!.source==='import'?t('难度未评定'):book!.preset.level)} · ${book!.preset.language.toUpperCase()}</small></div></div><div class="actions">${btn('contents','目录与书签','subtle')}${btn('inbox','消息盒子','subtle')}${btn('settings','阅读设置','subtle')}${btn('focus','全屏阅读','subtle')}</div></header><section class="reader-pane" data-mode="${settings.mode}" data-ruby="${settings.readings}"><div id="reader-scroll" class="reader-scroll" tabindex="0" aria-label="${esc(book!.title)}"><article class="prose" lang="${book!.preset.language}">${proseHtml()}</article></div></section><footer class="reading-bottom">${btn('prev','上一页','subtle')}<button id="bookmark" data-action="bookmark" class="mark" aria-pressed="false"></button><span id="progress" role="status"></span>${btn('next','下一页','primary')}</footer><div class="focus-bar"><button class="focus-inbox" data-action="inbox" aria-label="${t('消息盒子')}">${t('消息')}</button><button class="focus-restore" data-action="focus" aria-label="${t('退出全屏')}">${t('退出')}</button></div></main><div id="modal-host"></div>`;applySettings();requestAnimationFrame(()=>{restorePosition(book!.progress);requestAnimationFrame(()=>{restoring=false;captureProgress();});});scroller().addEventListener('scroll',()=>{const el=scroller(),lockLeft=pointerPinLeft??touch?.left??null;if(settings.mode==='pages'&&!turning&&!restoring&&lockLeft!==null&&Math.abs(el.scrollLeft-lockLeft)>0.5){el.scrollLeft=lockLeft;return;}captureProgress();},{passive:true});resize=new ResizeObserver(()=>reflow());resize.observe(scroller());}
 function currentMarks(){if(!book)return [];const el=scroller(),m=metrics();return book.bookmarks.filter(mark=>{if(mark.chapter!==chapter)return false;const range=Number.isInteger(mark.paragraph)&&Number.isInteger(mark.index)?anchorRange(el,{paragraph:mark.paragraph!,index:mark.index!}):null;if(settings.mode==='pages')return (range?placeOfRange(el,range,'pages').page-1:Math.round(mark.fraction*m.extent/Math.max(1,el.clientWidth)))===m.page;if(range){const r=range.getBoundingClientRect(),v=el.getBoundingClientRect();return r.bottom>v.top&&r.top<v.bottom;}return Math.abs(mark.fraction-m.fraction)*m.extent<Math.max(24,el.clientHeight*.5);});}
 function showProgress(){if(!book)return;const m=metrics(),mark=document.querySelector<HTMLButtonElement>('#bookmark');if(!mark)return;mark.disabled=!book.chapters.length;const marked=currentMarks().length>0;mark.textContent=marked?'◆':'◇';mark.title=mark.ariaLabel=t(marked?'取消书签':'添加书签');mark.setAttribute('aria-pressed',String(marked));document.querySelector('#progress')!.textContent=`${chapter+1} / ${book.chapters.length} · ${settings.mode==='pages'?`${m.page+1} / ${m.pages}`:Math.round(m.fraction*100)+'%'}`;}
 function cancelTurn(){transition?.cancel();transition=null;turning=false;scroller()?.style.removeProperty('visibility');}
 async function turn(direction:number){if(!book||turning||restoring)return;const el=scroller(),m=metrics(),pages=settings.mode==='pages',step=pages?el.clientWidth:el.clientHeight*.85,target=Math.max(0,Math.min(m.extent,m.offset+direction*step));
- if(Math.abs(target-m.offset)<1){const next=chapter+direction;if(next>=0&&next<book.chapters.length){await flush();chapter=next;book.progress={chapter,fraction:direction>0?0:1};logical=null;renderReader();}return;}
+ if(Math.abs(target-m.offset)<1){const next=chapter+direction;if(next>=0&&next<book.chapters.length){getSelection()?.removeAllRanges();await flush();chapter=next;book.progress={chapter,fraction:direction>0?0:1};logical=null;renderReader();}return;}
+ getSelection()?.removeAllRanges();
  const effect=settings.effect as TurnEffect,animate=pages&&effect!=='none'&&!matchMedia('(prefers-reduced-motion:reduce)').matches;
  turning=true;if(animate)transition=new ReaderTransition(effect,direction,el);if(pages)el.scrollLeft=target;else el.scrollTop=target;showProgress();
  try{if(transition){el.style.visibility='hidden';await transition.play(el);}}finally{transition?.cancel();transition=null;el.style.removeProperty('visibility');turning=false;captureProgress();}
@@ -172,10 +174,72 @@ async function act(el:HTMLButtonElement){switch(el.dataset.action){
 function reflowOrApply(){if(book)reflow();else applySettings();}
 root.addEventListener('input',event=>{const el=event.target as HTMLInputElement;if(el.id==='batch-count'){updateBatch();return;}if(el.name==='story-mode'){readDraft();showModal('generate');return;}if(el.name==='story-language'){readDraft();draft.language=el.value as 'en'|'ja';draft.level=draft.language==='en'?'B1':'N5';showModal('generate');return;}if(el.id==='search'){query=el.value;renderCards();return;}if(['size','line','width'].includes(el.name)){(settings as any)[el.name]=Number(el.value);document.querySelector('#output-'+el.name)!.textContent=el.value;reflowOrApply();void db.saveSettings(settings).catch(()=>toast(t('无法保存，请检查可用存储空间并导出备份。')));}});
 root.addEventListener('change',event=>{const el=event.target as HTMLInputElement;if(el.id==='import-file'){if(el.files?.[0])void importFile(el.files[0]);el.value='';return;}if(el.name==='pool-lang'){poolLang=el.value;poolLevel='all';showModal('pool');return;}if(el.name==='pool-level'){poolLevel=el.value;showModal('pool');return;}if(['font','mode','effect','language','readings'].includes(el.name)){(settings as any)[el.name]=el.name==='readings'?el.checked:el.value;reflowOrApply();void db.saveSettings(settings).then(async()=>{if(el.name==='language'){await flush();if(book)renderReader();else await renderLibrary();showModal('settings');}}).catch(()=>toast(t('无法保存，请检查可用存储空间并导出备份。')));}});
-let touch:{x:number;y:number;time:number}|null=null;
-root.addEventListener('touchstart',e=>{if((e.target as HTMLElement).closest('#reader-scroll')&&e.touches.length===1)touch={x:e.touches[0].clientX,y:e.touches[0].clientY,time:Date.now()};else touch=null;},{passive:true});
-root.addEventListener('touchend',e=>{if(!touch||!book||modal)return;const end=e.changedTouches[0],dx=end.clientX-touch.x,dy=end.clientY-touch.y,ms=Date.now()-touch.time;touch=null;if(settings.mode==='pages'&&Math.abs(dx)>70&&Math.abs(dx)>Math.abs(dy)*1.7&&ms<1500&&!getSelection()?.toString()){ignoreReaderClick=true;window.setTimeout(()=>ignoreReaderClick=false,500);void turn(dx<0?1:-1);}},{passive:true});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){window.readerBack();return;}if(book&&!modal&&!['INPUT','SELECT','TEXTAREA'].includes((e.target as HTMLElement).tagName)){if(['ArrowRight','PageDown'].includes(e.key)){e.preventDefault();void turn(1);}if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();void turn(-1);}}});
+const HOLD_MS=220,SWIPE_LOCK_PX=14,SWIPE_COMMIT_PX=64;
+const hasSelection=()=>{const s=getSelection();return Boolean(s&&!s.isCollapsed&&s.toString().length>0);};
+const clearHold=()=>{if(holdTimer){window.clearTimeout(holdTimer);holdTimer=0;}};
+const clearPointerPin=()=>{if(pointerPinLeft!==null&&settings.mode==='pages'&&!turning){const host=document.querySelector<HTMLElement>('#reader-scroll');if(host&&Math.abs(host.scrollLeft-pointerPinLeft)>0.5)host.scrollLeft=pointerPinLeft;}pointerPinLeft=null;};
+document.addEventListener('selectionchange',()=>{if(touch&&hasSelection()){clearHold();touch.mode='hold';}});
+root.addEventListener('contextmenu',()=>{if(touch){clearHold();touch.mode='hold';}});
+root.addEventListener('pointerdown',e=>{if(e.pointerType==='touch'||e.button!==0)return;const host=(e.target as HTMLElement|null)?.closest<HTMLElement>('#reader-scroll');pointerPinLeft=host&&book&&!modal&&!turning&&settings.mode==='pages'?host.scrollLeft:null;});
+window.addEventListener('pointerup',clearPointerPin);
+window.addEventListener('pointercancel',clearPointerPin);
+window.addEventListener('blur',clearPointerPin);
+root.addEventListener('touchstart',e=>{
+ clearHold();
+ const host=(e.target as HTMLElement|null)?.closest<HTMLElement>('#reader-scroll');
+ if(!host||!book||modal||turning||settings.mode!=='pages'||e.touches.length!==1){touch=null;return;}
+ const p=e.touches[0];
+ if(hasSelection()){touch={x:p.clientX,y:p.clientY,t:performance.now(),left:host.scrollLeft,mode:'hold'};return;}
+ touch={x:p.clientX,y:p.clientY,t:performance.now(),left:host.scrollLeft,mode:'pending'};
+ holdTimer=window.setTimeout(()=>{holdTimer=0;if(touch?.mode==='pending')touch.mode='hold';},HOLD_MS);
+},{passive:true});
+root.addEventListener('touchmove',e=>{
+ if(!touch)return;
+ if(e.touches.length!==1){clearHold();touch=null;return;}
+ const p=e.touches[0],dx=p.clientX-touch.x,dy=p.clientY-touch.y,elapsed=performance.now()-touch.t,host=document.querySelector<HTMLElement>('#reader-scroll');
+ if(touch.mode==='pending'){
+  if(elapsed>=HOLD_MS||hasSelection()){clearHold();touch.mode='hold';}
+  else if(Math.abs(dy)>SWIPE_LOCK_PX&&Math.abs(dy)>=Math.abs(dx)){clearHold();touch=null;return;}
+  else if(Math.abs(dx)>SWIPE_LOCK_PX&&Math.abs(dx)>Math.abs(dy)*1.35){clearHold();touch.mode='swipe';}
+ }
+ if(touch.mode==='swipe'){
+  if(hasSelection())touch.mode='hold';
+  else{if(e.cancelable)e.preventDefault();if(host&&settings.mode==='pages'&&Math.abs(host.scrollLeft-touch.left)>0.5)host.scrollLeft=touch.left;return;}
+ }
+ if(touch.mode==='hold'&&host&&settings.mode==='pages'&&Math.abs(host.scrollLeft-touch.left)>0.5)host.scrollLeft=touch.left;
+},{passive:false});
+root.addEventListener('touchend',e=>{
+ clearHold();
+ if(!touch)return;
+ const cur=touch;touch=null;
+ const host=document.querySelector<HTMLElement>('#reader-scroll');
+ if(host&&settings.mode==='pages'&&Math.abs(host.scrollLeft-cur.left)>0.5)host.scrollLeft=cur.left;
+ if(cur.mode!=='swipe'||!book||modal||turning||settings.mode!=='pages')return;
+ const end=e.changedTouches[0],dx=end.clientX-cur.x,dy=end.clientY-cur.y,elapsed=performance.now()-cur.t;
+ if(elapsed<=750&&Math.abs(dx)>=SWIPE_COMMIT_PX&&Math.abs(dx)>Math.abs(dy)*1.7&&!hasSelection()){ignoreReaderClick=true;window.setTimeout(()=>ignoreReaderClick=false,500);void turn(dx<0?1:-1);}
+},{passive:true});
+root.addEventListener('touchcancel',()=>{clearHold();if(touch){const host=document.querySelector<HTMLElement>('#reader-scroll');if(host&&settings.mode==='pages'&&Math.abs(host.scrollLeft-touch.left)>0.5)host.scrollLeft=touch.left;touch=null;}},{passive:true});
+let wheelCarry=0,wheelSeen=0,wheelUsed=false,wheelIdle=0,wheelSign=0;
+root.addEventListener('wheel',e=>{
+ if(!(e.target as HTMLElement|null)?.closest('#reader-scroll,.reading-bottom'))return;
+ const host=document.querySelector<HTMLElement>('#reader-scroll');
+ if(!host||!book||settings.mode!=='pages'||e.ctrlKey)return;
+ let x=e.deltaX,y=e.deltaY;
+ if(e.deltaMode===1){x*=16;y*=16;}else if(e.deltaMode===2){x*=host.clientWidth;y*=host.clientHeight;}
+ if(Math.abs(x)<=Math.abs(y)||Math.abs(x)<1)return;
+ if(e.cancelable)e.preventDefault();
+ const now=Date.now(),sign=x>0?1:-1;
+ if(now-wheelSeen>350||(wheelSign!==0&&sign!==wheelSign&&Math.abs(x)>=12&&!turning)){wheelUsed=false;wheelCarry=0;}
+ wheelSeen=now;wheelSign=sign;
+ window.clearTimeout(wheelIdle);
+ wheelIdle=window.setTimeout(()=>{wheelUsed=false;wheelCarry=0;wheelSign=0;},350);
+ if(wheelUsed||modal||turning)return;
+ wheelCarry+=x;
+ if(Math.abs(wheelCarry)<70)return;
+ wheelUsed=true;const dir=wheelCarry;wheelCarry=0;
+ void turn(dir>0?-1:1);
+},{passive:false});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){window.readerBack();return;}if(!e.shiftKey&&!e.metaKey&&!e.ctrlKey&&!e.altKey&&book&&!modal&&!['INPUT','SELECT','TEXTAREA'].includes((e.target as HTMLElement).tagName)){if(['ArrowRight','PageDown'].includes(e.key)){e.preventDefault();void turn(1);}if(['ArrowLeft','PageUp'].includes(e.key)){e.preventDefault();void turn(-1);}}});
 window.addEventListener('resize',()=>{if(book){restoring=true;reflow();}});
 document.addEventListener('visibilitychange',()=>{if(document.hidden)void flush();});
 window.readerBack=()=>{if(modal){closeModal();return true;}if(document.body.classList.contains('focused')){clearTimeout(focusChromeTimer);document.body.classList.remove('focused');window.ReaderNative?.setImmersive?.(false);reflow();return true;}if(book){void flush().then(()=>renderLibrary());return true;}return false;};
