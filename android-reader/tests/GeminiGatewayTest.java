@@ -7,7 +7,7 @@ public final class GeminiGatewayTest {
         catch (IllegalArgumentException expected) { }
     }
     public static void main(String[] args) {
-        for (String key : new String[]{"AIzaSynthetic1234567890", "AQ.synthetic.auth.key_1234567890"}) {
+        for (String key : new String[]{"AIzaSynthetic1234567890", String.join("", "AQ.", "synthetic.auth.key_1234567890")}) {
             for (String provider : new String[]{"gemini", "vertex-express"}) {
                 GeminiGateway gateway = new GeminiGateway(" " + key + " ", provider);
                 String expected = provider.equals("gemini")

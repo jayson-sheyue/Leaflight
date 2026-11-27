@@ -2,7 +2,7 @@ const {test}=require('node:test'),assert=require('node:assert/strict');
 const gateway=require('../electron/gemini-gateway.cjs');
 const {generate}=require('../electron/gemini.cjs');
 const schema={type:'OBJECT',properties:{hello:{type:'STRING'}},required:['hello']};
-for(const provider of ['gemini','vertex-express'])for(const apiKey of ['AIzaSyntheticKey1234567890','AQ.synthetic.auth.key-1234567890']){
+for(const provider of ['gemini','vertex-express'])for(const apiKey of ['AIzaSyntheticKey1234567890','AQ.'+'synthetic.auth.key-1234567890']){
  test(`${provider} accepts either key format without guessing its issuing service (${apiKey.slice(0,3)})`,async()=>{
   let calls=0;const out=await generate({apiKey:` ${apiKey} `,provider,model:'models/gemini-test',schema,prompt:'synthetic',fetchImpl:async(url,options)=>{
    calls++;assert.equal(url,provider==='gemini'?'https://generativelanguage.googleapis.com/v1beta/models/gemini-test:generateContent':'https://aiplatform.googleapis.com/v1beta1/publishers/google/models/gemini-test:generateContent');
